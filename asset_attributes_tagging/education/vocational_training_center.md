@@ -112,11 +112,13 @@ for this criteria.
 
 The score will increase in a non-linear fashion. i.e. score
 gaps between consecutive input values will differ depending
-on where they lie in the input range.
+on where they lie in the input range. For smaller values, the
+gap will be larger. But for larger values the score gaps will
+be smaller.
 
 Hence, the scoring equation is given as follows,
 \[
-	C = (\dfrac{NC}{threshold})^{2}.
+	C = (\dfrac{\sqrt{NC}}{\sqrt{threshold}}).
 \]
 where, $C$ is the score and, $NC$ is the average number of companies
 visiting.
@@ -136,7 +138,7 @@ below.
 
 The overall score for job placement variable is given as follows,
 \[
-	J = S \times (w_c \times C | w_p \times P.
+	J = S \times (w_c \times C | w_p \times P).
 \]
 where,
 \[

@@ -2,3 +2,9 @@ resource
 *.swp
 misc
 *~
+*.log
+*.pdf
+*.aux
+#*#
+*#
+.#*

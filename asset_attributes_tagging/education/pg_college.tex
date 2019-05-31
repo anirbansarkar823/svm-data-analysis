@@ -1,0 +1,295 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+\setcounter{secnumdepth}{0}
+
+\title{Attributes tagging for 'PG college'.}
+\author{Kipa Tachak}
+\date{Friday 31 May 2019}
+
+\begin{document}
+\maketitle
+
+\section{About the document}
+This file documents the method choosen and the process of
+selecting those methods for the asset 'PG College'.
+\section{Attributes for scoring the asset}
+The following are the tentative list of variables and their
+sub-parameters used for scoring the asset.
+\begin{itemize}
+\item General Information
+  \begin{itemize}
+  \item Departments
+  \item Job Placements
+  \item Parent-Teacher Meetings
+  \end{itemize}
+\item Partnerships
+  \begin{itemize}
+  \item Affiliations
+  \end{itemize}
+\item Organizations
+  \begin{itemize}
+  \item Student Union
+  \item Societies
+  \end{itemize}
+\end{itemize}
+\section{Overall scoring}
+The scoring of the asset 'PG College' is carried out
+according to the following equation,
+\begin{align*}
+  \text{score}_{\text{asset}} &= w_{\text{General Info.}} \times \text{score}_{\text{General Info.}} \\
+  &\times w_{\text{Partnerships}} \times \text{score}_{\text{Partnerships}} \\
+  &\times w_{\text{Organisations}} \times \text{score}_{\text{Organisations}}.
+\end{align*}
+\section{Attribute scoring and the process}
+\subsection{General Information}
+The general information variable has three sub-paramters, i.e.,
+Departments, Job placement, and Parent-Teacher Meetings. The scoring will be
+done as follows,
+\begin{align*}
+	\text{General Info.} &= w_{Dpts} \times Dpts \\
+	   &+ w_{Jps} \times Jps \\
+	   &+ w_{parent-teacher} \times \text{Parent-Teacher}
+\end{align*}
+where,
+\begin{align*}
+	Dpts &= \text{score of department variable.} \\
+	Jps &= \text{score of job placement variable.}
+\end{align*}
+
+The scoring of sub-paraters are given below.
+
+\subsubsection{Departments}
+The input for this variable is a a string containing the
+names of the depatment present in the asset. Assuming, we
+can separate the department names, we can classify the
+departments into the field they are related to. Then, first
+we need to set the weight of a department class.
+
+For the purpose of our analysis, we consider the following
+classes of departments and their weights.
+\begin{center}
+  \begin{tabular}{c|c}
+    \hline
+    Department type & Weight \\ \hline
+    Engineering     & 6 \\
+    Medicine        & 6 \\
+    Biology         & 5 \\
+    Physics         & 5 \\
+    Chemistry       & 5 \\
+    Social Sciences & 3 \\
+    Arts            & 3 \\
+    Law             & 4 \\ \hline
+  \end{tabular}
+\end{center}
+
+Also, a threshold has to be set for the optimum number of
+department for each department class. Above, the threshold
+the full score for a department class will be added.
+
+Depending on the number of matched classification for each
+class from an input, we will calculate the score as follows,
+
+\begin{align*}
+  \text{Dept}_{\text{score}} &= \dfrac{w_1 \times \dfrac{D_1}{thresh}}{w_1 \times w_2 \times \dots} \dfrac{+ w_2 \times \dfrac{D_2}{thresh} +}{} \\
+  &\dots \dfrac{+ w_n \times \dfrac{D_n}{thresh}}{\dots \times w_n}
+\end{align*}
+
+where,
+\begin{align*}
+  D_1, D_2, \dots, D_n =& \text{ Match count of department classes.} \\
+  w_1, w_2, \dots, w_n =& \text{ Weight of each department class.} \\
+  \text{thresh} =& \text{ Optimum match count for a} \\
+                &\text{department class.}
+\end{align*}
+Note that, if the match count is above the threshold then
+the department class match count \(D_i\) is set to \(thresh\).
+
+\subsubsection{Job Placement}
+This is a binary yes/no type of question. The input will be
+either yes or no depending on whether the college provides
+placement i.e., has a placement department dedicated for the
+taskor. The variable describes the presence/absence of
+placment and the quality of placement in the training college.
+\paragraph{Scoring}
+Scoring is done as follows,
+\begin{align*}
+	S &= 0, \text{if selected no} \\
+     	  &= 1, \text{if selected yes}
+\end{align*}
+where, \(S = \text{denotes the presence/absence of placement}\).
+
+If there some placement facilites then score will be based on
+the following criterias:
+\begin{enumerate}
+  \item The average number of companies that come to the
+  campus each year: \\
+  \textbf{Suggestion}: This should be numeric type question. \\
+
+  We assume that this will be a numeric type question. A numerical
+  values representing the average number of companies will be
+  given as input.
+
+  A threshhold value will be set. If the input is equal or greater
+  that the threshold then the asset will have maximum score
+  for this criteria. 
+
+  The score will increase in a non-linear fashion. i.e. score
+  gaps between consecutive input values will differ depending
+  on where they lie in the input range. For smaller values, the
+  gap will be larger. But for larger values the score gaps will
+  be smaller.
+
+  Hence, the scoring equation is given as follows,
+  \[
+	C = \dfrac{\sqrt{NC}}{\sqrt{threshold}}.
+  \]
+  where, \(C\) is the score and, \(NC\) is the average number of companies
+  visiting.
+
+  \item The percentage of students that get placed: \\
+  \textbf{Suggestion}: There should be more choices, so that
+  score could be finegrained. \\  
+
+  This is a multiple chocice single select question. There are
+  three choices available for ranges in terms of percentage
+  students that get placed. The score for each choice is given
+  below.
+  \begin{center}
+    \begin{tabular}{c | c | c} \hline
+      Placement percentage & score & Description \\ \hline
+      0-25\%		     & 0.20  & Good score \\
+      25-50\%		     & 0.70  & Better Score \\
+      \(>\)50\%	             & 1.00  & Best Score \\ \hline
+    \end{tabular}
+  \end{center}
+  \end{enumerate}
+
+The overall score for job placement variable is given as follows,
+\[
+	\text{score}_{\text{Job placement}} = S \times (w_c \times C + w_p \times P).
+\]
+where,
+\begin{align*}
+	S &= \text{value for selected.} \\
+	C &= \text{score for average companies visiting.} \\
+	P &= \text{score for student placement.} \\
+	w_c &= \text{weight for companies visiting.} \\
+	w_p &= \text{weight for student placement.} \\
+\end{align*}
+
+\subsubsection{Parent-Teacher Meetings}
+The parent-teacher meeting has a binary yes/no question
+depicting the presence/absence of parent-teacher meeting.
+
+So, we use a present variable, denoting absence and presence
+of meetings, which is assigned as,
+\begin{align*}
+  \text{present}_{\text{meetings}} =& 0, \text{if not present.} \\
+  =& 1, \text{if present.}
+\end{align*}
+
+If the value of \(present_{meetings}\), is 1 (i.e. yes), then
+we have the nested question for how frequently the meetings
+occur. The options for answer is divided into four classes.
+The classes and corresponding values are also given in the
+table below.
+\begin{center}
+  \begin{tabular}{c|c}
+    \hline
+    Frequency of meetings & Score values \\ \hline
+    Once a year & 1 \\
+    Twice a year & 2 \\
+    Thrice a year & 3 \\
+    More than 3 times a year & 4 \\ \hline
+  \end{tabular}
+\end{center}
+Therefore the scoring equation for Parent-Teacher Meetings
+is given as follows;
+\[
+\text{score}_{\text{meetings}} = \text{present}_{\text{meetings}} \times \dfrac{\text{frequency of meetings}}{\text{score of max. frequency}}.
+\]
+
+\section{Partnerships}
+The variable has only one sub-parameter 'Affiliations'.
+Hence, the scoring is to be done as follows,
+\[
+\text{score}_{\text{partnerships}} = \text{score }_{\text{Affiliations}}.
+\]
+\subsection{Affiliations}
+The input for this sub-parameter is a a string containing the
+affiliations of the insitute. Assuming, we can classify the
+affiliations into sets of classes with their own rank. We can
+set a threshold for the optimum number of affiliations. If the
+number of affiliations for a particular affilation class is
+greater than the threshold, then this sub-parameter will get the
+full value (i.e. weight) for that affiliation class.
+
+Depending on the number of matched classification for each
+class from an input, we will calculate the score as follows,
+
+\begin{align*}
+  \text{Affiliation}_{\text{score}} &= \dfrac{w_1 \times \dfrac{A_1}{thresh}}{w_1 \times w_2 \times \dots} \dfrac{+ w_2 \times \dfrac{A_2}{thresh} +}{} \\
+  &\dots \dfrac{+ w_n \times \dfrac{A_n}{thresh}}{\dots \times w_n}
+\end{align*}
+
+where,
+\begin{align*}
+  A_1, A_2, \dots, A_n =& \text{ Match count of affilation} \\
+  & \text{ classes for an input string.} \\
+  w_1, w_2, \dots, w_n =& \text{ Weight of each affiliation class.} \\
+  \text{thresh} =& \text{ Optimum match count for a} \\
+                &\text{department class.}
+\end{align*}
+Note that, if the match count is above the threshold then
+the affiliation class match count \(A_i\) is set to \(thresh\).
+
+\section{Organizations}
+This variable quantifies the organisational activities
+occuring in the institute.
+
+The variable has two sub-parameters, Student Unions and
+Societies. The overall scoring of the variable will be done
+as,
+\begin{align*}
+  \text{score}_{\text{Org.}} &= w_{\text{student union}} \times \text{Student Union} \\
+  &+ w_{\text{societies}} \times \text{Societies}
+\end{align*}
+
+\subsubsection{Student Union}
+The sub-parameter 'Student Union' has two questions.
+\begin{enumerate}
+\item Is there any student union in the institute?: \\
+  Only if there is a student union in the institute we
+  proceed to the next question. Hence, we have the
+  following equation for this question,
+  \begin{align*}
+    \text{present}_{Union} =& 0, \text{if not present.} \\
+    =& 1, \text{if present.}
+  \end{align*}
+\item How many active student unions are there?: \\
+  This would have a numerical answer denoting the number
+  of active student unions.
+\end{enumerate}
+
+\paragraph{Scoring}
+A threshold have to be established at which or above,
+the student union sub-parameter will be assigned full
+score.
+
+The scoring of student union sub-parameter is given as,
+\[
+\text{score}_{\text{union}} = \text{present}_{union} \times 
+\dfrac{\text{no. of unions}}{\text{threshold}}
+\]
+
+\subsubsection{Societies}
+This sub-parameter only has one question asking whether
+there is any societal activities happening e.g., NSS, NCC, etc.
+
+So the scoring proceeds as follows,
+\begin{align*}
+  \text{present}_{\text{societies}} =& 0, \text{if not present.} \\
+  =& 1, \text{if present.}
+\end{align*}
+\end{document}
