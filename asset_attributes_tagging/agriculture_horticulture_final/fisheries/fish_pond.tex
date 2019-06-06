@@ -1,0 +1,437 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+%% ADD PACKAGES %%
+
+\title{Attributes tagging for Fish Pond.}
+\author{Kipa Tachak}
+\date{Monday  3 June 2019}
+
+\setcounter{secnumdepth}{0}
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newenvironment{ttable}
+               {\begin{center}
+                   \begin{tabular}{c|c}
+                     \hline
+               }
+               {\end{tabular}
+                 \end{center}
+               }
+               
+\begin{document}
+\maketitle
+
+%% BODY %%
+\section{About the document}
+In this document, we analyze the attributes of the asset 'Fish Pond' and assign suitable scoring criteria based on the attributes.
+\section{Attributes}
+The attributes of the asset are divided into three sections, Observation,
+General, and Specific. The methods for scoring Observation, and General,
+are same for other assets. Hence, in this document, we will only discuss
+the specific section.
+
+A tentative list of variables and sub-parameters for Specific section
+is given below;
+\begin{itemize}
+  \item Inputs:
+    \begin{itemize}
+    \item Procurement
+    \item Chemical Inputs
+    \item Organic Inputs
+    \end{itemize}
+  \item Irrigation
+    \begin{itemize}
+      \item Type
+    \end{itemize}
+  \item Marketing
+    \begin{itemize}
+      \item Advertisement
+    \end{itemize}
+  \item Products
+    \begin{itemize}
+    \item Quantity
+    \item Type
+    \item Cost
+    \item Cost Policy
+    \end{itemize}
+  \item Best Practices
+    \begin{itemize}
+    \item Inter-cropping
+    \item Farm Equipment
+    \end{itemize}
+  \item Customers
+    \begin{itemize}
+    \item Type
+    \end{itemize}
+  \item Logistics
+    \begin{itemize}
+    \item Transport of goods
+    \end{itemize}
+  \item Inventory
+    \begin{itemize}
+    \item Inventory Capacity
+    \item Cold Storage
+    \end{itemize}
+  \item Food Wastage
+    \begin{itemize}
+    \item Wastage
+    \item Documentation
+    \end{itemize}
+  \item Market
+    \begin{itemize}
+    \item Buyer
+    \end{itemize}
+\end{itemize}
+\section{Overall scoring}
+The overall scoring of the asset is done according to the following equation;
+\begin{align*}
+  score_{\text{asset}} &= W_{\text{Observation}} \times score_{\text{Observation}} \\
+  &+ W_{\text{General}} \times score_{\text{General}} \\
+  &+ W_{\text{Specific}} \times score_{\text{Specific}}.
+\end{align*}
+\section{Attributes scoring and the process}
+The overall score for the specific section is given as,
+\begin{align*}
+  \text{Score}_{\text{specific}} &= W_{\text{Inputs}} \times \text{Score}_{\text{Inputs}}
+  \\
+  &+ W_{\text{Irrigation}} \times \text{Score}_{\text{Irrigation}} \\
+  &+ \dots + W_{\text{Market}} \times \text{Score}_{\text{Market}}.
+\end{align*}
+
+\subsection{Inputs}
+This variable denotes the strategy used in availing inputs for the asset. It has three sub-parameters, Procurement, Chemical Inputs, and Organic Inputs. The overall
+score of the variable is given as,
+\begin{align*}
+  \text{Score}_{\text{Inputs}} &= W_{\text{procurement}} \times \text{Score}_{\text{procurement}} \\
+  &+ W_{\text{chemical inputs}} \times \text{Score}_{\text{chemical inputs}} \\
+  &+ W_{\text{organic inputs}} \times \text{Score}_{\text{organic inputs}}.
+\end{align*}
+
+\subsubsection{Procurement}
+The available places for procurement are given with their
+respective rank in the table below.
+\begin{center}
+  \begin{tabular}{c | c}
+    \hline
+    Procurement Options & Rank \\ \hline
+    None & 0 \\
+    others & 1 \\
+    Supplier in other states & 2 \\
+    Local Supplier & 3 \\
+    Research Organization & 4 \\
+    Government Agency & 5 \\ \hline
+    Sum of ranks & 15 \\ \hline
+  \end{tabular}
+\end{center}
+The score for inputs is calculated as,
+\begin{align*}
+  score_{\text{procurement}} = \dfrac{\text{sum of selected options}}{\text{sum of ranks}}.
+\end{align*}
+
+\paragraph{Note}
+The score is relative i.e., it only shows one set of options is better or
+worse than other. However, it does not show by how much the goodness or badness differs.
+
+\subsubsection{Chemical Inputs}
+This sub-parameter scores the asset based on its chemical inputs. The options available for the sub-parameter are given below,
+\begin{ttable}
+  Chemical Input types & Rank \\ \hline
+  None & 0 \\
+  Others & 1 \\
+  Fertilizer & 2 \\
+  Pesticide & 2 \\
+  Growth Hormones & 3 \\ \hline
+  Sum of ranks & 8 \\ \hline
+\end{ttable}
+The score is calculated as,
+\[
+\tsub{Score}{chemical inputs} = \dfrac{\text{sum of selected chemicals}}{\text{Sum of ranks}}.
+\]
+
+\subsubsection{Organic Inputs}
+This sub-parameter scores the asset based on its organic inputs. The options available for the sub-parameter are given below,
+\begin{ttable}
+  Organic Input types & Rank \\ \hline
+  None & 0 \\
+  Others & 1 \\
+  Fertilizer & 2 \\
+  Pesticide & 2 \\
+  Growth Hormones & 3 \\ \hline
+  Sum of ranks & 8 \\ \hline
+\end{ttable}
+The score is calculated as,
+\[
+\tsub{Score}{organic inputs} = \dfrac{\text{sum of selected organics}}{\text{Sum of ranks}}.
+\]
+\subsection{Irrigation}
+This variable scores the asset based on the type of irrigation present. The options present for irrigation are,
+\begin{ttable}
+  Irrigation Type & Ranks \\ \hline
+  Others & 1 \\
+  Rose can & 2 \\
+  Sprinklers & 3 \\
+  Drip Irrigation & 4 \\
+  Canal Irrigation & 5 \\ \hline
+  Sum of ranks & 15 \\ \hline
+\end{ttable}
+The scoring is done as follows.
+\[
+\tsub{Score}{Irrigation} = \dfrac{\text{sum of selected Irrig. methods}}{\text{Sum of ranks}}.
+\]
+\subsection{Marketing}
+This variable is about the advertisement options available. The available
+options with ranks are given below.
+\begin{center}
+  \begin{tabular}{c|c}
+    \hline
+    Advertisement options & Ranks \\ \hline
+    None & 0 \\
+    Others & 1 \\
+    Village meetings & 2 \\
+    Announcements/Broadcasts & 3 \\
+    Posters/Display boards & 4 \\
+    Multimedia & 5 \\
+    Marketing team & 6 \\
+    Sales agent & 7 \\ \hline
+    Sum of ranks & 28 \\ \hline
+  \end{tabular}
+\end{center}
+The score is calculated as,
+\[
+\text{score}_{\text{Marketing}} = \dfrac{\text{Sum of selected options}}{\text{sum of ranks}}.
+\]
+
+\subsection{Products}
+The variable products measures the overall product diversity and quality from the asset.
+The overall scoring is done as follows,
+\begin{align*}
+  \text{Score}_{\text{products}} &= W_{\text{Quantity}} \times \text{Score}_{\text{Quantity}} \\
+  &= W_{\text{Cost}} \times \text{Score}_{\text{Cost}} \\
+  &= W_{\text{Cost Policy}} \times \text{Score}_{\text{Cost policy}}.
+\end{align*}
+
+\subsubsection{Quantity}
+The sub-parameters scores the asset on the basis of the amount of produce in a year from the asset. The score calculation is as follows,
+\begin{align*}
+  \tsub{Score}{Quantity} &= 1 &, \text{produce} > \text{Threshold}. \\
+  &= \sqrt{\dfrac{\text{produce}}{\text{Threshold}}} &, \text{produce} \le \text{Threshold}.
+\end{align*}
+where, \text{produce} is in kilograms.
+
+\subsubsection{Type}
+We have avoided including the variable Type for scoring. We regard this variable as used for 'information and clarity'.
+
+\subsubsection{Cost}
+This variable is used for evaluating the average cost per unit of the products produced from the asset. The score is calculated as,
+\begin{align*}
+  \text{Score}_{\text{Cost}} &= 0 &, \text{avg. cost} > \text{Threshold} \\
+  &= \sqrt{\dfrac{\text{Threshold} - \text{avg. cost}}{\text{Threshold}}} &, \text{avg. cost} \le \text{Threshold}.
+\end{align*}
+Where, \text{avg. cost} is average cost per unit of the products produced.
+
+\subsubsection{Cost Policy}
+Sub-parameter for evaluating the modes of determining the selling price of the products. The available modes are given below.
+\begin{center}
+  \begin{tabular}{c|c}
+    \hline
+    Modes & Ranks \\ \hline
+    other & 1 \\
+    based on market price & 2 \\
+    depended on buyers & 3 \\
+    bargaining & 4 \\
+    government fixed & 5 \\ \hline
+    sum of ranks & 15 \\ \hline
+  \end{tabular}
+\end{center}
+The score is calculated as,
+\[
+\text{Score}_{\text{Cost Policy}} = \dfrac{\text{sum of selected price modes}}{\text{sum of ranks}}.
+\]
+
+\subsection{Best Practices}
+This variable scores the asset based on the good practices used in maintaining the asset.
+The score for best practices is calculated as,
+\begin{align*}
+  \tsub{Score}{best practices} &= 0.25 \times \text{Inter-cropping used} \\
+  &+ 0.75 \times \tsub{Score}{farm equipment}.
+\end{align*}
+
+\subsubsection{Inter-cropping}
+This sub-parameter denotes the use of inter-cropping technique and is given as,
+\begin{align*}
+\text{Inter-cropping used} &= 0 &, \text{if inter-cropping not used}. \\
+&= 1 &, \text{if inter-cropping used}.
+\end{align*}
+
+\subsubsection{Farm Equipment}
+Available options for Farm equipment are given as,
+\begin{ttable}
+  Farm Equipment Option & Rank \\ \hline
+  None & 0 \\
+  Other & 1 \\
+  Ploughing & 2 \\
+  Sowing & 2 \\
+  Spraying Inputs & 3 \\
+  Removing Unwanted crops & 2 \\
+  Harvesting & 2 \\
+  Transportation & 2 \\ \hline
+  sum of ranks & 14 \\ \hline
+\end{ttable}
+The score is calculated as,
+\[
+\tsub{Score}{farm equipment} = \dfrac{\text{sum of selected farm equipment}}{\text{sum of ranks}}.
+\]
+\subsection{Customers}
+The scoring for customers is done as,
+\[
+  \text{Score}_{\text{customers}} = \text{Score}_{\text{Type}}.
+\]
+
+\subsubsection{Type}
+Evaluate the type of customers. The available customers types are,
+\begin{center}
+  \begin{tabular}{c|c}
+    \hline
+    Customer type & Rank \\ \hline
+    None & 0 \\
+    Others & 1 \\
+    Farmers & 2 \\
+    NGOs & 3 \\
+    Research Orgs. & 4 \\
+    Govt. Agencies & 5 \\ \hline
+    Sum of ranks & 15 \\ \hline
+  \end{tabular}
+\end{center}
+The score is calculated as,
+\[
+\text{Score}_{\text{type}} = \dfrac{\text{sum of selected types}}{\text{sum of ranks}}.
+\]
+
+\subsection{Logistics}
+The variable has only one sub-parameter 'Transport of goods'. The available options for transporting goods are given below.
+\begin{center}
+  \begin{tabular}{c | c}
+    \hline
+    Transport Option & Rank \\ \hline
+    Head load & 1 \\
+    Two wheeler & 2 \\
+    Tempo/Auto & 3 \\
+    Sumo/Tracker & 4 \\
+    Mini Luggage Transport Vehicle & 5 \\
+    Huge Luggage Transport Vehicle & 6 \\ \hline
+    Sum of ranks & 21 \\ \hline
+  \end{tabular}
+\end{center}
+
+The score for logistics is calculated as,
+\[
+\text{Score}_{\text{Logistics}} = \dfrac{\text{sum of selected transports}}{\text{sum of ranks}}.
+\]
+
+\subsection{Inventory}
+The variable has two sub-parameters, Inventory capacity and Cold storage. The scoring of Inventory variable is given as,
+\begin{align*}
+  \text{Score}_{\text{Inventory}} &= W_{\text{capacity}} \times \text{Score}_{\text{capacity}} \\
+  &+ W_{\text{cold storage}} \times \text{Score}_{\text{cold storage}}.
+\end{align*}
+
+\subsubsection{Inventory Capacity}
+If the inventory is water proof, we give the score as calculated from its capacity. If the inventory is partially water proof, we will deduct 5\% from the score and if water proofing is unavailable we will deduct 10\% from the score.
+
+Now depending on whether water proofing is available or not we have,
+\begin{align*}
+  \text{water proofing} &= 0 &, \text{if fully water proof.} \\
+  &= 0.05 &, \text{if partially water proof.} \\
+  &= 0.10 &, \text{if no water proofing.}
+\end{align*}
+
+Hence, the score of inventory capacity is calculated as,
+\[
+\text{Score}_{\text{capacity}} = \text{Score}_{\text{Volume}} ( \dfrac{100 - \text{water proofing}}{100} )
+\]
+where,
+\[
+\text{Score}_{\text{Volume}} = \dfrac{\text{Volume in } m^{3}}{\text{Threshold}}.
+\]
+
+\subsubsection{Cold Storage}
+For, availability of cold storage, we have,
+\begin{align*}
+  \text{available} =& 0 &, \text{ if cold storage not available.} \\
+  =& 1 &, \text{ if cold storage available.}
+\end{align*}
+
+If cold storage is available we will be given its capacity. Hence, the score is given by,
+\[
+\text{Score}_{\text{cold storage}} = \text{available} \times \text{Score}_{\text{volume}}.
+\]
+where,
+\[
+\text{Score}_{\text{Volume}} = \dfrac{\text{Volume in } m^{3}}{\text{Threshold}}.
+\]
+
+\subsection{Food Wastage}
+The variable has two sub-parameters for evaluating wastage of food. The score is given as,
+\begin{align*}
+\text{Score}_{\text{food wastage}} &= W_{\text{wastage}} \times \text{Score}_{\text{wastage}} \\
+&+ W_{\text{documentation}} \times \text{Score}_{\text{documentation}}.
+\end{align*}
+\subsubsection{Wastage}
+Score for wastage is calculated as,
+\[
+\text{Score}_{\text{wastage}} = \dfrac{(\text{Threshold} - \text{Frequency of wastage})^2}{\text{Threshold}^2}.
+\]
+
+\subsubsection{Documentation}
+The options for wastage documentation are given in the table.
+\begin{center}
+  \begin{tabular}{c | c}
+    \hline
+    Documentation mode & Rank \\ \hline
+    None & 0 \\
+    Others & 1 \\
+    Book keeping & 2 \\
+    Digital tools (offline) & 3 \\
+    Digital tools (online) & 4 \\ \hline
+    sum of ranks & 10 \\ \hline
+  \end{tabular}
+\end{center}
+The score is calculated as,
+\[
+\text{Score}_{\text{documentation}} = \dfrac{\text{sum of selected modes}}{\text{sum of ranks}}.
+\]
+
+\subsection{Market}
+This variable scores the asset based on its access to market. It has one sub-parameter
+Buyer. The score is given as,
+\[
+\tsub{Score}{market} = \tsub{Score}{Buyer}.
+\]
+
+\subsubsection{Buyer}
+Buyer has to sub-question, one for the type of buyer and another for the quantity of buyer.
+\paragraph{Buyer Type}
+The available type of buyers are given below.
+\begin{ttable}
+  Buyer type & Rank \\ \hline
+  Private & 1 \\
+  Govt. & 2 \\ \hline
+  sum of ranks & 3 \\ \hline
+\end{ttable}
+The score for buyer type is calculated as,
+\[
+\tsub{Score}{buyer type} = \dfrac{\text{sum of selected types}}{\text{sum of ranks}}.
+\]
+
+\paragraph{Number of buyers}
+The score for number of buyers is given as,
+\begin{align*}
+  \tsub{Score}{No. of buyers} =& 1 &, \text{if buyers} > \text{threshold}. \\
+  =& \sqrt{\dfrac{\text{Number of buyers}}{Threshold}} &, \text{if buyers} \leq \text{threshold}.
+\end{align*}
+
+Then, the score of Buyer is given as,
+\[
+\tsub{Score}{buyer} = 0.25 \times \tsub{Score}{type} + 0.75 \times \tsub{Score}{Number}.
+\]
+\end{document}

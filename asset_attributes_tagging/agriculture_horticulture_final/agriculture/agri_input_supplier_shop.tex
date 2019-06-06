@@ -1,0 +1,295 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+\setcounter{secnumdepth}{0}
+
+\title{Attributes tagging for Agriculture Inputs shop/Supplier.}
+\author{Kipa Tachak}
+\date{Tuesday 4 June 2019}
+
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newenvironment{ttable}
+               {
+                 \begin{center}
+                   \begin{tabular}{c|c}
+                     \hline
+               }
+               {
+                 \\ \hline
+                   \end{tabular}
+                 \end{center}
+               }
+
+               \begin{document}
+               \maketitle
+
+               \section{About the document}
+               This file documents the process of asset tagging for the asset
+               'Agriculture Inputs Shop/Supplier' in agriculture and horticulture.
+               \section{Variables and questions}
+               There are three sections Observation, General, and Specific. Most of
+               the questions in Observation and General are similar to other
+               assets. So, we will only analyze the parts where there is some
+               change. Hence, the list of questions in each section to be
+               analyzed is given below.
+               \begin{itemize}
+               \item Observation
+               \item General
+               \item Specific
+                 \begin{enumerate}
+                 \item Where do you procure inputs required for the facility?
+                 \item What are different chemical inputs available in the facility?
+                 \item What are different organic inputs available in the facility?
+                 \item Where do you store the agri inputs sold in the shop?
+                 \item How many cubic meters are available for storage?
+                 \item How does the facility advertise about the services available?
+                 \item What is the average operational cost per month to run
+                   the facility? (Excluding salary of the employees)
+                 \item What is the total average income per month generated from the facility?
+                 \item How many types of inputs are available in the
+                   facility?
+                 \item What are the five major type of inputs purchased
+                   by the customers from the facility?
+                 \item What is the average cost of the top 5 most purchased goods in facility?(In Rupees)
+                 \item Which type of customers purchase the inputs from
+                   the facility?
+                 \item How many customers purchase the inputs from the facility in a year?
+                 \item How do the customers transport goods from the facility?
+                 \end{enumerate}
+               \end{itemize}
+
+               \section{Overall scoring}
+               The overall scoring of the asset is given  as,
+               \begin{align*}
+                 \tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+                 &+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+                 &+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+               \end{align*}
+               
+               \section{Scoring and the process}
+               \subsection{Specific}
+               \subsubsection{Where do you procure inputs required for the facility?}
+               The available options for procuring inputs are,
+               \begin{ttable}
+                 Sources & Rank \\ \hline
+                 None & 0 \\
+                 Others & 1 \\
+                 Local supplier & 2 \\
+                 Supplier in other states & 3 \\
+                 Research organization & 4 \\
+                 Govt. agency & 5 \\ \hline
+                 Sum of ranks & 15
+               \end{ttable}
+
+               The score is calculated as,
+               \[
+               \tsub{Score}{input source} = \dfrac{\text{sum of selected sources}}{\text{sum of ranks}}.
+               \]
+
+               \subsubsection{What are different chemical inputs available in the facility?}
+               The options for chemical inputs are,
+               \begin{ttable}
+                 Chemical Inputs & Rank \\ \hline
+                 None & 0 \\
+                 Others & 1 \\
+                 Fertilizers & 2 \\
+                 Pesticides & 3 \\
+                 Growth hormones & 4 \\ \hline
+                 Sum of ranks & 10
+               \end{ttable}
+
+               The score is calculated as,
+               \[
+               \tsub{Score}{chemical inputs} = \dfrac{\text{Sum of selected chemicals}}{\text{Sum of ranks}}.
+               \]
+
+               \subsubsection{What are different organic inputs available in the facility?}
+               The options for organic inputs are,
+               \begin{ttable}
+                 Organic Inputs & Rank \\ \hline
+                 None & 0 \\
+                 Others & 1 \\
+                 Fertilizers & 2 \\
+                 Pesticides & 3 \\
+                 Growth hormones & 4 \\ \hline
+                 Sum of ranks & 10
+               \end{ttable}
+
+               The score is calculated as,
+               \[
+               \tsub{Score}{organic inputs} = \dfrac{\text{Sum of selected chemicals}}{\text{Sum of ranks}}.
+               \]
+
+               \subsubsection{Where do you store the agri inputs sold in the shop?}
+               This variable denotes the storage options used. The question asked is a
+multi-choice multi-select type of question. The options with ranks are
+given below.
+\begin{center}
+  \begin{tabular}{c|c}
+    \hline
+    Storage Options & Rank \\ \hline
+    None & 0 \\
+    Others & 1 \\
+    Home & 2 \\
+    Within the shop & 3 \\
+    Private Godown/Warehouse & 4 \\ \hline
+    Sum of ranks & 10 \\ \hline
+  \end{tabular}
+\end{center}
+The scoring of storage mode is given as.
+\[
+score_{storage mode} = \dfrac{\text{sum of selected options}}{\text{sum of ranks}}.
+\]
+ \subsubsection{How many cubic meters are available for storage?}
+               The score for volume of storage is given as,
+               \begin{align*}
+                 \tsub{Score}{volume} &= 1, V_{storage} \ge thresh \\
+                 &= 10 \times \sqrt{\dfrac{V_{storage}}{thresh}}, otherwise.
+               \end{align*}
+
+               Now, depending on whether the storage is water proofed or not
+               we set,
+               \[
+               \tsub{Present}{water proofing} = 0 \text{ or } 1.
+               \]
+               Then the score of storage is given as,
+               \begin{align*}
+                 \tsub{Score}{storage} &= 0.80 \times \tsub{Score}{volume} \\
+                 &+ 0.20 \times \tsub{Present}{water proofing}.
+               \end{align*}
+               
+               \subsubsection{How does the facility advertise about the services available?}
+               The available advertisement methods are,
+               \begin{ttable}
+                 Advertisement Mode & Rank \\ \hline
+                 Posters/Display boards & 1 \\
+                 Notice & 2 \\
+                 Village Meeting & 3 \\
+                 Announcements/Broadcast & 4 \\
+                 Marketing team/Sales & 5 \\ \hline
+                 Sum of ranks & 15
+               \end{ttable}
+
+               The score is calculated as,
+               \[
+               \tsub{Score}{advertisement} = \dfrac{\text{Sum of selected modes}}{\text{Sum of ranks}}.
+               \]
+
+               \subsubsection{What is the average operational cost per month to run the facility?(Excluding Salary of the Employees)}
+               The score for operational cost is calculated as,
+               \begin{align*}
+                 \tsub{Score}{Op. cost} &= 0, C_{op} > thresh \\
+                 &= 1, C_{op} \le 0 \\
+                 &= \Big(\dfrac{thresh - C_{op}}{thresh}\Big)^2, \text{otherwise}
+               \end{align*}
+               where,
+               \begin{align*}
+                 C_{op} &= \text{Avg. operational cost}. \\
+                 thresh &= \text{Threshold Op. cost}.
+               \end{align*}
+
+               \subsubsection{What is the total average income per month generated from the facility?}
+               The score for average income per month generated from the facility is given
+               as,
+               \begin{align*}
+                 \tsub{Score}{avg. income} &= 1, I_{per month} \ge threshold \\
+                 &= \Big(\dfrac{I_{per month}}{threshold}\Big)^{2}.
+               \end{align*}
+               where,
+               \[
+               I_{per month} = \text{Avg. Income generated per month.}
+               \]
+               \subsubsection{How many types of inputs are available in the facility?}
+               The score for the amount of input types available in the facility is
+               given as,
+               \begin{align*}
+                 \tsub{Score}{input types} &= 1, C_{input types} \ge thresh \\
+                 &= 10 \times \sqrt{\dfrac{C_{input types}}{thresh}}, \text{otherwise}
+               \end{align*}
+               where,
+               \begin{align*}
+                 C_{input types} &= \text{Type count of inputs.} \\
+                 thresh &= \text{Threshold}
+               \end{align*}
+
+               \subsubsection{What are the 5 major type of inputs purchased by the customers from the facility?}
+               Classified as question for 'Information and Clarity'.
+
+               \subsubsection{What is the average cost of the top 5 most purchased goods in facility?(In Rupees)}
+               The options for payment bill are given as,
+               \begin{ttable}
+                 Payment bill mode & Rank \\ \hline
+                 None & 0 \\
+                 Others & 1 \\
+                 Hand Written & 2 \\
+                 Computerized Bill & 3 \\ \hline
+                 Sum of ranks & 6
+               \end{ttable}
+               
+               The score for the question is calculated as,
+               \begin{align*}
+                 \tsub{Score}{avg. cost} &= 0 &, c > thresh \\
+                 &= 1 &, c \le 0 \\
+                 &= 10 \times \sqrt{\dfrac{thresh - c}{thresh}} &, \text{otherwise}.
+               \end{align*}
+               where,
+               \begin{align*}
+                 c &= \text{avg. cost of 5 most purchased goods}. \\
+                 thresh &= \text{threshold cost}.
+               \end{align*}
+
+               The score for payment bill mode is given as,
+               \[
+               \tsub{Score}{payment bill mode} = \dsub{sum of selected methods}{sum of ranks}.
+               \]
+
+               Then, the combined score for average cost for 5 most purchased goods and
+               payment bill mode is given as,
+               \begin{align*}
+                 \tsub{Score}{avg. cost\&bill mode} &= 0.90 \times \tsub{Score}{avg. cost} \\
+                 &+ 0.10 \times \tsub{Score}{bill mode}.
+               \end{align*}
+
+               \subsubsection{Which type of customers purchase the inputs from the facility?}
+               The options for customer types are,
+               \begin{ttable}
+                 Customer types & Rank \\ \hline
+                 None & 0 \\
+                 Others & 1 \\
+                 Farmers & 2 \\
+                 NGO & 3 \\
+                 Research Organizations & 4 \\
+                 Govt. Agencies & 5 \\ \hline
+                 Sum of ranks & 15
+               \end{ttable}
+               The score is calculated as,
+               \[
+               \tsub{Score}{customer type} = \dsub{Sum of selected types}{Sum of ranks}.
+               \]
+
+               \subsubsection{How many customers purchase the inputs from the facility in a year?}
+               The score is calculated as,
+               \begin{align*}
+                 \tsub{Score}{no. of customer} &= 1, \text{no. of customer} \ge \text{Threshold} \\
+                 &= 10 \times \sqrt{\dsub{no. of customers}{Threshold}}, \text{otherwise}.
+               \end{align*}
+
+               \subsubsection{How do the customers transport goods from the facility?}
+               The options for transport are,
+               \begin{ttable}
+                 Transport Mode & Rank \\ \hline
+                 Head Load & 1 \\
+                 Two Wheeler & 2 \\
+                 Tempo/Auto & 3 \\
+                 Sumo/Tracker & 4 \\
+                 Mini Luggage Transport Vehicle & 5 \\
+                 Huge Luggage Transport Vehicle & 6 \\ \hline
+                 Sum of ranks & 21
+               \end{ttable}
+               The scoring is done as,
+               \[
+               \tsub{Score}{customer tranp.} = \dsub{Sum of selected modes}{Sum of ranks}
+               \]
+               \end{document}

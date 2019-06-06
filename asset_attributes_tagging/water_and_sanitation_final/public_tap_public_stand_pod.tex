@@ -1,0 +1,273 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+%% ADD PACKAGES %%
+
+\title{Attributes tagging for Public Taps/Public Stand Pod.}
+\author{Kipa Tachak}
+\date{Thursday  6 June 2019}
+
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newenvironment{ttable}
+{
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+}
+{
+\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+%% BODY %%
+\section{About the document}
+This file documents the process of asset tagging for the asset
+'Public Taps/Public Stand Pod' in the category 'Water and
+Sanitation'.
+\section{Attributes and questions}
+There are three sections 'Observation', 'General', and 'Specific'
+, each containing their own list of variables and sub-parameters.
+For each sub-parameter, there is associated a question for
+gathering data related to that sub-parameter.
+
+Since, the structure and to some extend the content of questions
+in Observation and General are similar to other assets, we will
+analyze from these sections only the variables which differ
+significantly from that in other assets. As always, in-depth analysis of section 'Specific' will be given.
+
+The list of variables and questions that will be analyzed is given below:
+\begin{itemize}
+	\item General:
+		\begin{itemize}
+			\item Sanitation:
+				\begin{enumerate}
+					\item Waste Management: Where does the waste water generated from the asset goes to?
+				\end{enumerate}
+		\end{itemize}
+	\item Specific:
+		\begin{itemize}
+			\item Availability:
+				\begin{enumerate}
+					\item Asset condition: Is that Tap in working condition?
+					\item Asset condition: Is check valve working in the tap?
+					\item Rate of Discharge: How far is the tap from the water tank/source?
+					\item Capacity: What is the diameter of the pipe?
+					\item Discharge Rate: How many taps are connected to one stand-pod?
+					\item Discharge Rate: What is the length of the service tap?
+					\item Infrastructure: What is the basement/foundation made of?
+					\item Durability: Is there any rust on the tap?
+					\item Condition: Were people drinking water while you visited this spot?
+					\item Quality: Would you drink the water?
+					\item Charges: Are there any charges which come when getting water from this tap?
+					\item Maintenance: What is the frequency of technical maintenance or safety audit? 
+				\end{enumerate}
+		\end{itemize}
+\end{itemize}
+
+\section{Overall scoring}
+The overall scoring of the asset is given as:
+\begin{align*}
+	\tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+	&+\tsubb{W}{general} \times \tsub{Score}{general} \\
+	&+ \tsub{W}{specific} \times \tsub{Score}{specific}
+\end{align*}
+\section{Attribute scoring and the process}
+\subsection{General}
+In General section we will consider only 'Waste Management'. The scoring for waste management is given as follows.
+\paragraph{Waste Management: Where does the waster water generated from the asset goes to?}
+The available options for discarding waste water generated from the asset is given as,
+\begin{ttable}
+	Options & Rank \\ \hline
+	None & 0 \\
+	Others & 1 \\
+	Discarded in open field & 2 \\
+	Mixes with near by waste bodies & 3 \\
+	Discarded in govt. designated structures & 4 \\ \hline
+	Sum of ranks & 10  
+\end{ttable}
+
+The scoring is done as,
+\[
+	\tsub{Score}{waste management} = \dsub{Sum of selected options}{Sum of ranks}.
+\]
+
+\subsection{Availability}
+\subsubsection{Asset condition}
+The overall scoring of the asset condition is given as,
+\begin{align*}
+	\tsub{Score}{asset condition} &= \tsubb{W}{tap condition} \times \tsub{Score}{tap condition} \\
+	&+ \tsubb{W}{valve condition} \times \tsub{Score}{valve condition}
+\end{align*}
+The questions associated with this sub-parameter are discussed below.
+\paragraph{Is the tap in working condition?} 
+This is a binary yes/no question. The scoring is done as,
+\begin{align*}
+	\tsub{Score}{tap condition} &= 0, \text{If tap not in working condition}. \\
+	&= 1, \text{otherwise}.
+\end{align*}
+
+\paragraph{Is check valve working in the tap?}
+This is also a binary yes/no question and the scoring is done as,
+\begin{align*}
+	\tsub{Score}{valve condition} &= 0, \text{If no} \\
+	&= 1, \text{If yes}.
+\end{align*}
+
+\subsubsection{Rate of discharge}
+\paragraph{How far is the tap from the water tank/Source?}
+The options available are,
+\begin{ttable}
+	Options & Rank \\ \hline
+	Below 200m & 3 \\
+	Between 200-500m & 2 \\
+	Above 500m & 1 \\ \hline
+	Max. rank & 3 
+\end{ttable}
+The score is given as,
+\[
+	\tsub{Score}{discharge rate} = \dsub{Rank of selected}{Max. rank}
+\]
+
+\subsubsection{Capacity}
+\paragraph{What is the diameter of the pipe?}
+This is a multiple-choice single-select question. The options are given as follows,
+\begin{ttable}
+	Diameter options & Rank \\ \hline
+	Others & 1 \\
+	12 mm & 2 \\
+	24 mm & 3 \\
+	36 mm & 4 \\
+	48 mm & 5 \\ \hline
+	Max. Rank & 5 
+\end{ttable}
+The score is calculated as,
+\[
+	\tsub{Score}{capacity} = \dsub{Rank of selected}{Max. rank}.
+\]
+
+\subsubsection{Discharge rate}
+The score for discharge rate is calculated as,
+\begin{align*}
+	\tsub{Score}{discharge rate} &= \tsubb{W}{no. of taps} \times \tsub{Score}{no. of taps} \\
+	&+ \tsubb{W}{length} \times \tsub{Score}{length}.
+\end{align*}
+\paragraph{How many taps are connected to one stand pod?}
+The options given are,
+\begin{ttable}
+	Options (no. of taps) & Rank \\ \hline
+	1 & 1 \\
+	2 & 2 \\
+	3 & 3 \\
+	4 & 4 \\
+	Above 5 & 5 \\ \hline
+	Max. rank & 5 
+\end{ttable}
+The score is calculated as,
+\[
+	\tsub{Score}{no. of taps} = \dsub{Rank of selected}{Max. rank}
+\]
+\paragraph{What is the length of the service tap?}
+The input to this question is numeric. The score is calculated as,
+\begin{align*}
+	\tsub{Score}{length} &= 1, \tsubb{L}{tap} \ge \text{Threshold} \\
+	&= \sqrt{\dfrac{\tsubb{L}{tap}}{\text{Threshold}}}, \text{Otherwise}.
+\end{align*}
+
+\subsubsection{Infrastructure}
+\paragraph{What is the basement/foundation made of?}
+The available options are,
+\begin{ttable}
+	Material & Rank \\ \hline
+	Others & 1 \\
+	Rock like structure & 2 \\
+	Cement & 3 \\
+	Bricks & 4 \\ \hline
+	Sum of ranks & 10 
+\end{ttable}
+This is a multiple-choice multiple-select question. The scoring is done as,
+\[
+	\tsub{Score}{infrastructure} = \dsub{Sum of selected options}{Sum of ranks.}
+\]
+
+\subsubsection{Durability}
+\paragraph{Is there any rust on the tap?}
+The score is given as,
+\begin{align*}
+	\tsub{Score}{durability} &= 0, \text{If yes} \\
+	&= 1, \text{if no}.
+\end{align*}
+\subsubsection{Condition}
+\paragraph{Were people drinking water while you visited this spot?}
+\begin{align*}
+	\tsub{Score}{condition} &= 0, \text{If no} \\
+	&= 1, \text{if yes}.
+\end{align*}
+
+\subsubsection{Quality}
+\paragraph{Would you drink the water?}
+\begin{align*}
+	\tsub{Score}{quality} &= 0, \text{If no} \\
+	&= 1, \text{if yes}.
+\end{align*}
+
+\subsubsection{Charges}
+The presence/absence of charges is given as,
+\begin{align*}
+	\text{Pr}{charges} &= 0, \text{If no} \\
+	&= 1, \text{if yes}.
+\end{align*}
+Then, the score for water charges is given as,
+\begin{align*}
+	\tsub{Score}{charges} &= 0, \tsubb{Ch}{water} \ge \text{Threshold} \\
+	&= 1 - \Big( \dfrac{\tsubb{Ch}{water}}{\text{Threshold}} \Big), \text{Otherwise}.
+\end{align*}
+where,
+\[
+	\tsubb{Ch}{water} = \text{Charges on water in rupees}.
+\]
+\subsubsection{Maintenance}
+\paragraph{What is the frequency of technical maintenance or safety audit?}
+The options for technical maintenance are,
+\begin{ttable}
+	Maintenance Frequency & Rank \\ \hline
+	Never & 0 \\
+	Others & 1 \\
+	Irregular & 2 \\
+	Yearly & 3 \\
+	Monthly & 4 \\ \hline
+	Max. rank & 4 
+\end{ttable}
+The score for technical maintenance is,
+\[
+	\tsub{Score}{technical maint.} = \dsub{Rank of selected}{Max. Rank}.
+\]
+
+The options for safety audit are,
+\begin{ttable}
+	Audit Frequency & Rank \\ \hline
+	Never & 0 \\
+	Others & 1 \\
+	Irregular & 2 \\
+	Yearly & 3 \\
+	Monthly & 4 \\ \hline
+	Max. rank & 4 
+\end{ttable}
+The score for safety audit is given as,
+\[
+	\tsub{Score}{safety audit} = \dsub{Rank of selected}{Max. Rank}.
+\]
+
+The overall score for maintenance is,
+\begin{align*}
+	\tsub{Score}{maintenance} &= \tsubb{W}{technical maint.} \times \tsub{Score}{technical maint.} \\
+	&+ \tsubb{W}{safety audit} \times \tsub{Score}{safety audit}.
+\end{align*}
+
+\end{document}
+

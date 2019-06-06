@@ -1,0 +1,316 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+\setcounter{secnumdepth}{0}
+
+\title{Attributes tagging for Plant/Seed Unit.}
+\author{Kipa Tachak}
+\date{Tuesday 4 June 2019}
+
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newenvironment{ttable}
+               {
+                 \begin{center}
+                   \begin{tabular}{c|c}
+                     \hline
+               }
+               {
+                 \\ \hline
+                   \end{tabular}
+                 \end{center}
+               }
+
+               \begin{document}
+               \maketitle
+
+               \section{About the document}
+               This file documents the process of asset tagging for the asset
+               'Plant/Seed Unit' in agriculture and horticulture.
+               \section{Variables and questions}
+               There are three sections Observation, General, and Specific. Most of
+               the questions in Observation and General are similar to other
+               assets. So, we will only analyze the parts where there is some
+               change. Hence, the list of questions in each section to be
+               analyzed is given below.
+               \begin{itemize}
+               \item Observation
+               \item General
+               \item Specific
+                 \begin{enumerate}
+                 \item Where do you procure inputs required for the soil lab?
+                 \item What are different chemical inputs used in the unit?
+                 \item What type(s) of green house present in the unit?
+                 \item What is the water source used for irrigation mechanism?
+                 \item What is the type of irrigation mechanism used in the unit?
+                 \item How does the unit advertise about the services
+                   available?
+                 \item What is the average operational cost per month to run
+                   the unit? (Excluding salary of the employees)
+                 \item How may square meters are available for storage of the
+                   seeds/plants produced?
+                 \item How many types of plants/seeds are available in the
+                   unit?
+                 \item What are the five major type of plants/seeds purchased
+                   by the customers from the unit?
+                 \item Are the seeds/plants sold to the customers organic?
+                 \item What is the average cost per plant/per sack of seed in
+                   the unit? (in rupees)
+                 \item Which type of customers purchase the plants/seeds from
+                   the unit?
+                 \item How many customers purchase the plants/seeds from the
+                   unit in a year?
+                 \item How does the customers transport the goods purchased
+                   from the unit?
+                 \end{enumerate}
+               \end{itemize}
+
+               \section{Overall scoring}
+               The overall scoring of the asset is given  as,
+               \begin{align*}
+                 \tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+                 &+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+                 &+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+               \end{align*}
+               
+               \section{Scoring and the process}
+               \subsection{Specific}
+               \subsubsection{Where do you procure inputs required for the unit?}
+               The available options for procuring inputs are,
+               \begin{ttable}
+                 Sources & Rank \\ \hline
+                 None & 0 \\
+                 Others & 1 \\
+                 Local supplier & 2 \\
+                 Supplier in other states & 3 \\
+                 Research organization & 4 \\
+                 Govt. agency & 5 \\ \hline
+                 Sum of ranks & 15
+               \end{ttable}
+
+               The score is calculated as,
+               \[
+               \tsub{Score}{input source} = \dfrac{\text{sum of selected sources}}{\text{sum of ranks}}.
+               \]
+
+               \subsubsection{What are different chemical inputs used in the unit?}
+               The options for chemical inputs are,
+               \begin{ttable}
+                 Chemical Inputs & Rank \\ \hline
+                 None & 0 \\
+                 Others & 1 \\
+                 Fertilizers & 2 \\
+                 Pesticides & 3 \\
+                 Growth hormones & 4 \\ \hline
+                 Sum of ranks & 10
+               \end{ttable}
+
+               The score is calculated as,
+               \[
+               \tsub{Score}{chemical inputs} = \dfrac{\text{Sum of selected chemicals}}{\text{Sum of ranks}}.
+               \]
+
+               \subsubsection{What type(s) of green house present in the unit?}
+               The options for green house are,
+               \begin{ttable}
+                 Green house type & Rank \\ \hline
+                 None & 0 \\
+                 Others & 1 \\
+                 Bamboo house & 2 \\
+                 Lath house & 3 \\
+                 Poly house & 4 \\
+                 Mesh house & 5 \\
+                 Glass house & 6 \\ \hline
+                 Sum of ranks & 21
+               \end{ttable}
+
+               The score is calculated as,
+               \[
+               \tsub{Score}{green house} = \dsub{Sum of selected types}{Sum of ranks}.
+               \]
+
+               \subsubsection{What is the water source used for irrigation mechanism?}
+               The options for irrigation source are,
+               \begin{ttable}
+                 Irrigation Source & Rank \\ \hline
+                 Others & 1 \\
+                 Rain fed & 2 \\
+                 Lake/Pond & 3 \\
+                 Ground & 4 \\
+                 River/Stream & 5 \\ \hline
+                 Sum of ranks & 15
+               \end{ttable}
+
+               The score of irrigation source is calculated as,
+               \[
+               \tsub{Score}{irrig. source} = \dsub{Sum of selected sources}{Sum of ranks}.
+               \]
+
+               \subsubsection{What is the type of irrigation mechanism used in the unit?}
+               The options for irrigation mechanisms are,
+               \begin{ttable}
+                 Irrigation Mechanism & Rank \\ \hline
+                 Others & 1 \\
+                 Rose Can & 2 \\
+                 Sprinklers & 3 \\
+                 Drip Irrigation & 4 \\
+                 Canal Irrigation & 5 \\ \hline
+                 Sum of ranks & 15
+               \end{ttable}
+
+               The score is calculated as,
+               \[
+               \tsub{Score}{irrig. mechanism} = \dsub{Sum of selected mechanism}{Sum of ranks}.
+               \]
+               
+               \subsubsection{How does the unit advertise about the services available?}
+               The available advertisement methods are,
+               \begin{ttable}
+                 Advertisement Mode & Rank \\ \hline
+                 Posters/Display boards & 1 \\
+                 Notice & 2 \\
+                 Village Meeting & 3 \\
+                 Announcements/Broadcast & 4 \\
+                 Marketing team/Sales & 5 \\ \hline
+                 Sum of ranks & 15
+               \end{ttable}
+
+               The score is calculated as,
+               \[
+               \tsub{Score}{advertisement} = \dfrac{\text{Sum of selected modes}}{\text{Sum of ranks}}.
+               \]
+
+               \subsubsection{What is the average operational cost per month to run the unit? (Excluding salary of the employees)}
+               The score for operational cost is calculated as,
+               \begin{align*}
+                 \tsub{Score}{Op. cost} &= 0, C_{op} > thresh \\
+                 &= 1, C_{op} \le 0 \\
+                 &= \Big(\dfrac{thresh - C_{op}}{thresh}\Big)^2, \text{otherwise}
+               \end{align*}
+               where,
+               \begin{align*}
+                 C_{op} &= \text{Avg. operational cost}. \\
+                 thresh &= \text{Threshold Op. cost}.
+               \end{align*}
+
+               \subsubsection{How many square meters are available for storage of the seeds/plants produced?}
+               The score for volume of storage is given as,
+               \begin{align*}
+                 \tsub{Score}{volume} &= 1, V_{storage} \ge thresh \\
+                 &= 10 \times \sqrt{\dfrac{V_{storage}}{thresh}}, otherwise.
+               \end{align*}
+
+               Now, depending on whether the storage is water proofed or not
+               we set,
+               \[
+               \tsub{Present}{water proofing} = 0 \text{ or } 1.
+               \]
+               Then the score of storage is given as,
+               \begin{align*}
+                 \tsub{Score}{storage} &= 0.80 \times \tsub{Score}{volume} \\
+                 &+ 0.20 \times \tsub{Present}{water proofing}.
+               \end{align*}
+
+               \subsubsection{How many types of plants/seeds are available in the unit?}
+               The score for the amount of plants/seeds available in the unit is
+               given as,
+               \begin{align*}
+                 \tsub{Score}{plants/seeds} &= 1, C_{plant/seeds} \ge thresh \\
+                 &= 10 \times \sqrt{\dfrac{C_{plant/seeds}}{thresh}}, \text{otherwise}
+               \end{align*}
+               where,
+               \begin{align*}
+                 C_{plants/seeds} &= \text{Type count of plants/seeds.} \\
+                 thresh &= \text{Threshold}
+               \end{align*}
+
+               \subsubsection{What are the five major type of plants/seeds purchased by the customers from the unit?}
+               Classified as question for 'Information and Clarity'.
+
+               \subsubsection{Are the seeds/plants sold to the customers organic?}
+               The score is calculated as,
+               \[
+               \tsub{Score}{organic} = 0.5 \times yes_{organic} + 0.5 \times Pr_{certification}
+               \]
+               where,
+               \begin{align*}
+                 yes_{organic} &= 0 \text{ or } 1 \\
+                 Pr_{certification} &= \text{0 or 1 depending on certificate presence.}
+               \end{align*}
+
+               \subsubsection{What is the average cost per plant/per pack of seed in the unit? (in rupees)}
+               The options for payment mechanism are given as,
+               \begin{ttable}
+                 Payment mechanism & Rank \\ \hline
+                 Others & 1 \\
+                 Cash & 2 \\
+                 POS Machine & 3 \\
+                 Mobile Apps (Paytm, BHIM) & 4 \\ \hline
+                 Sum of ranks & 10
+               \end{ttable}
+
+               The score for the question is calculated as,
+               \begin{align*}
+                 \tsub{Score}{cost per nos.} &= 0 &, c > thresh \\
+                 &= 1 &, c \le 0 \\
+                 &= 10 \times \sqrt{\dfrac{thresh - c}{thresh}} &, \text{otherwise}.
+               \end{align*}
+               where,
+               \begin{align*}
+                 c &= \text{avg. cost per plant/per pack seeds in rupees}. \\
+                 thresh &= \text{threshold cost}.
+               \end{align*}
+
+               The score for payment method is given as,
+               \[
+               \tsub{Score}{payment method} = \dsub{sum of selected methods}{sum of ranks}.
+               \]
+
+               Then, the combined score for cost per plant/per pack seeds is given as,
+               \begin{align*}
+                 \tsub{Score}{cost plants/seeds} &= 0.80 \times \tsub{Score}{cost} \\
+                 &+ 0.20 \times \tsub{Score}{payment}.
+               \end{align*}
+
+               \subsubsection{Which type of customers purchase the plants/seeds from the unit?}
+               The options for customer types are,
+               \begin{ttable}
+                 Customer types & Rank \\ \hline
+                 None & 0 \\
+                 Others & 1 \\
+                 Farmers & 2 \\
+                 NGO & 3 \\
+                 Research Organizations & 4 \\
+                 Govt. Agencies & 5 \\ \hline
+                 Sum of ranks & 15
+               \end{ttable}
+               The score is calculated as,
+               \[
+               \tsub{Score}{customer type} = \dsub{Sum of selected types}{Sum of ranks}.
+               \]
+
+               \subsubsection{How many customers purchase the plants/seeds from the unit in a year?}
+               The score is calculated as,
+               \begin{align*}
+                 \tsub{Score}{no. of customer} &= 1, \text{no. of customer} \ge \text{Threshold} \\
+                 &= 10 \times \sqrt{\dsub{no. of customers}{Threshold}}, \text{otherwise}.
+               \end{align*}
+
+               \subsubsection{How does the customers transport the goods purchased from the unit?}
+               The options for transport are,
+               \begin{ttable}
+                 Transport Mode & Rank \\ \hline
+                 Head Load & 1 \\
+                 Two Wheeler & 2 \\
+                 Tempo/Auto & 3 \\
+                 Sumo/Tracker & 4 \\
+                 Mini Luggage Transport Vehicle & 5 \\
+                 Huge Luggage Transport Vehicle & 6 \\ \hline
+                 Sum of ranks & 21
+               \end{ttable}
+               The scoring is done as,
+               \[
+               \tsub{Score}{customer tranp.} = \dsub{Sum of selected modes}{Sum of ranks}
+               \]
+               \end{document}
