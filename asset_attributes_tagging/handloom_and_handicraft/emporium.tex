@@ -7,10 +7,23 @@
 \author{Kipa Tachak}
 \date{Thursday  6 June 2019}
 
-\setcounter{secnumdepth}{1}
+\setcounter{secnumdepth}{3}
 \newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
 \newcommand{\tsubb}[2]{#1_{\text{#2}}}
 \newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newcommand{\multsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Sum of selected}{Sum of ranks}
+	\]
+}
+\newcommand{\singsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Rank of selected}{Max. rank}.
+	\]
+}
+
 \newenvironment{ttable}
 {
 \begin{center}
@@ -28,14 +41,257 @@
 
 %% BODY %%
 \section{About the document}
+This file documents the process of asset tagging for the asset 'Emporium' in 'Hand loom and Handicrafts'.
 
 \section{Attributes and questions}
+The sections Observation and General are similar to other assets. Hence we will be only discussing the specific section in this document.
+
+The list of variables and questions are given as:
+\begin{itemize}
+	\item Initial Observation.
+	\item General
+	\item Specific
+		\begin{itemize}
+			\item Basic Info
+				\begin{enumerate}
+					\item Description: Which of the following products are sold in the emporium?
+				\end{enumerate}
+			\item Business specific
+				\begin{enumerate}
+					\item Revenue: What is the month revenue generated?
+					\item Operational Cost: How must is the operations cost of the emporium?
+				\end{enumerate}
+			\item Customers
+				\begin{enumerate}
+					\item No. of customers: How many customers do you get in a month?
+					\item Customer type: Who among the above selected are you major customers?
+				\end{enumerate}
+			\item Operations
+				\begin{enumerate}
+					\item Suppliers: Whom among the following do you procure the finished products from?
+					\item Procurement: Do you procure products from artisans in bulk?
+					\item Order placement: How can orders be placed for the products in the emporium?
+					\item Payment mode: Which mode of payment do you accept?
+					\item Accessibility: How is the products from the artisans brought to the emporium?
+					\item Accessibility: How many outlets do you have in town and cities?
+				\end{enumerate}
+			\item Market potential
+				\begin{enumerate}
+					\item Product reach: Are your products being displayed at exhibitions and expos?
+					\item Market potential: Do you get bulk orders for you products?
+					\item Market potential: Are the products sold in your emporium branded?
+				\end{enumerate}
+			\item Customer services
+				\begin{enumerate}
+					\item Services: Do you provide delivery services for your products?
+					\item Catalog: Do you have a cataloger of your products?
+				\end{enumerate}
+		\end{itemize}
+\end{itemize}
 
 \section{Overall scoring}
+The overall scoring of the asset is given as,
+\begin{align*}
+	\tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+	&+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+	&+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+\end{align*}
 
 \section{Attribute scoring and the process}
+\subsection{Specific}
+\subsubsection{Basic Info}
+\paragraph{Description: Which of the following products are sold in the emporium?}
+The options given are,
+\begin{ttable}
+	Items sold & Rank \\ \hline
+	Others & 1 \\
+	Items of daily use & 2 \\
+	Clothes & 3 \\
+	Decors and home furnishing & 4 \\ \hline
+	Sum of ranks & 10
+\end{ttable}
+The score is calculated as,
+\multsel{basic info}
+\subsubsection{Business specific}
+\paragraph{Revenue: What is the month revenue generated?}
+The score for revenue generated is given as,
+\begin{align*}
+	\tsub{Score}{revenue} &= 1, \tsubb{R}{rupees} \ge \text{Threshold} \\
+	&= \Big( \dfrac{\tsubb{R}{rupees}}{\text{Threshold}} \Big)^{2}, \text{Otherwise}.
+\end{align*}
+where,
+\[
+	\tsubb{R}{rupees} = \text{Monthly revenue generated in rupees}.
+\]	
+\paragraph{Operational Cost: How much is the operations cost of the emporium?}
+The score for operational cost is given as,
+\begin{align*}
+	\tsub{Score}{op. cost} &= 0, \tsubb{OC}{rupees} \ge \text{Threshold} \\
+	&= \sqrt{\dfrac{\text{Threshold}-\tsubb{OC}{rupees}}{\text{Threshold}}}, \text{Otherwise}.
+\end{align*}
+where,
+\[
+	\tsubb{OC}{rupees} = \text{operating cost in rupees}.
+\]	
 
-\section{Comments and suggestions}
+The overall score for Business Specific is given as,
+\begin{align*}
+	\tsub{Score}{business specific} &= \tsubb{W}{revenue} \times \tsub{Score}{revenue} \\
+	&+ \tsubb{W}{op. cost} \times \tsub{Score}{op. cost}
+\end{align*}
 
+\subsubsection{Customers}
+\paragraph{No. of customers: How many customers do you get in a month?}
+The score for number of customers in a month is given as,
+\begin{align*}
+	\tsub{Score}{no. of custom.} &= 1, \tsubb{N}{customers} \ge \text{Threshold} \\
+	&= \Big(\dfrac{\tsubb{N}{customers}}{\text{Threshold}}\Big).
+\end{align*}
+where,
+\[
+	\tsubb{N}{customers} = \text{No. of customers in a month.}
+\]
+\paragraph{Customer type: Who among the above selected are you major customers?}
+The options given for customer type are,
+\begin{ttable}
+	Customer type & Rank \\ \hline
+	Customers within the state & 1 \\
+	Other traders & 2 \\
+	Tourists from other Indian states & 3 \\
+	Foreign Tourists & 4 \\ \hline
+	Sum of ranks & 10
+\end{ttable}
+The score is given as,
+\multsel{customer type}
+
+The overall score for customers is given as,
+\begin{align*}
+	\tsub{Score}{customers} &= \tsubb{W}{no. of custom.} \times \tsub{Score}{no. of custom.} \\
+	&+ \tsubb{W}{customer type} \times \tsub{Score}{customer type}
+\end{align*}
+\subsubsection{Operations}
+\paragraph{Suppliers: Whom among the following do you procure the finished products from?}
+The options given are,
+\begin{ttable}
+	Supplier & Rank \\ \hline
+	Individual artisans or weaver & 1 \\
+	Clusters of rural artisans and villagers & 2 \\
+	Societies and SHG groups & 3 \\
+	Craft centers & 4 \\
+	Common facility center & 5 \\
+	Manufacturing & 6 \\ \hline
+	Sum of ranks & 21
+\end{ttable}
+The score of suppliers is given as,
+\multsel{suppliers}
+\paragraph{Procurement: Do you procure products from artisans in bulk?}
+Now depending on the answer, the score is given as,
+\begin{align*}
+	\tsub{Score}{procurement} &= 0, \text{If no} \\
+	&= 1, \text{If yes}.
+\end{align*}
+\paragraph{Order placement: How can orders be placed for the products in the emporium?}
+The options given are,
+\begin{ttable}
+	Order placement & Rank \\ \hline
+	Others & 1 \\
+	Direct orders placed in the emporium & 2 \\
+	Through phone calls & 3 \\
+	Online requests & 4 \\ \hline
+	Sum of ranks. & 10
+\end{ttable}
+The score is calculated as,
+\multsel{order placement}
+\paragraph{Payment mode: Which mode of payment do you accept?}
+The options given are,
+\begin{ttable}
+	Payment mode & Rank \\ \hline
+	Others & 1 \\
+	Cash Payment & 2 \\
+	Debit and Credit card & 3 \\
+	Online payments & 4 \\ \hline
+	Sum of ranks. & 10
+\end{ttable}
+The score is calculated as,
+\multsel{payment mode}
+\paragraph{Accessibility: How is the products from the artisans brought to the emporium?}
+The options given are,
+\begin{ttable}
+	Transport for acquiring & Rank \\ \hline
+	Artisans transport the product & 1 \\
+	Emporiums provides transportation for the products & 2 \\ \hline
+	Sum of ranks & 3
+\end{ttable}
+The score is calculated as,
+\multsel{transp. acq.}
+\paragraph{Accessibility: How many outlets do you have in town and cities?}
+The score is calculated based on number of outlets as,
+\begin{align*}
+	\tsub{Score}{outlets} &= 1, \tsubb{N}{outlets} \ge \text{Threshold} \\
+	&= \sqrt{\dfrac{\tsubb{N}{outlets}}{\text{Threshold}}}, \text{Otherwise}.
+\end{align*}
+where,
+\[
+	\tsubb{N}{outlets} = \text{No. of outlets}.
+\]
+The accessibility score is calculated as,
+\begin{align*}
+	\tsub{Score}{accessibility} &= \tsubb{W}{transp. acq.} \times \tsub{Score}{transp. acq.} \\
+	&+ \tsubb{W}{outlets} \times \tsub{Score}{outlets}.
+\end{align*}
+
+The overall score for 'Operations' is given as,
+\begin{align*}
+	\tsub{Score}{operations} &= \tsubb{W}{suppliers} \times \tsub{Score}{suppliers} \\
+	&+ \tsubb{W}{order placement} \times \tsub{Score}{order placement} \\
+	&+ \tsubb{W}{payment mode} \times \tsub{Score}{payment mode} \\
+	&+ \tsubb{W}{accessibility} \times \tsub{Score}{accessibility} \\
+	&+ \tsubb{W}{procurement} \times \tsub{Score}{procurement}
+\end{align*}
+\subsubsection{Market potential}
+\paragraph{Product reach: Are your products being displayed at exhibitions and expos?}
+The score is given as,
+\begin{align*}
+	\tsub{Score}{product reach} &= 0, \text{If no} \\
+	&= 1, \text{If yes}.
+\end{align*}
+\paragraph{Market potential: Do you get bulk orders for you products?}
+the score is given as,
+\begin{align*}
+	\tsub{Score}{bulk orders} &= 0, \text{if no} \\
+	&= 1, \text{if yes}.
+\end{align*}
+\paragraph{Market potential: Are the products sold in your emporium branded?}
+the score is given as,
+\begin{align*}
+	\tsub{Score}{branded} &= 0, \text{if no} \\
+	&= 1, \text{if yes}.
+\end{align*}
+
+The overall score for market potential is given as,
+\begin{align*}
+	\tsub{Score}{market potential} &= \tsubb{W}{reach} \times \tsub{Score}{reach} \\
+	&+ \tsubb{W}{bulk orders} \times \tsub{Score}{bulk orders} \\
+	&+ \tsubb{W}{branded} \times \tsub{Score}{branded}
+\end{align*}
+\subsubsection{Customer services}
+\paragraph{Services: Do you provide delivery services for your products?}
+The score is given as,
+\begin{align*}
+	\tsub{Score}{delivery} &= 0, \text{if no} \\
+	&= 1, \text{if yes}.
+\end{align*}
+\paragraph{Catalog: Do you have a catalog of your products?}
+the score is given as,
+\begin{align*}
+	\tsub{Score}{catalog} &= 0, \text{if no} \\
+	&= 1, \text{if yes}.
+\end{align*}
+
+The overall score for 'Customer Services' is given as,
+\begin{align*}
+	\tsub{Score}{customer services} &= \tsubb{W}{delivery} \times \tsub{Score}{delivery} \\
+	&+ \tsubb{W}{catalog} \times \tsub{Score}{catalog}
+\end{align*}
 \end{document}
 
