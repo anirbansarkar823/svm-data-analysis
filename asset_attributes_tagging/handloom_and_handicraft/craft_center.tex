@@ -1,0 +1,264 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+%% ADD PACKAGES %%
+
+\title{Attributes tagging for Craft Center}
+\author{Kipa Tachak}
+\date{Thursday  6 June 2019}
+
+\setcounter{secnumdepth}{3}
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newcommand{\multsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Sum of selected}{Sum of ranks}
+	\]
+}
+\newcommand{\singsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Rank of selected}{Max. rank}.
+	\]
+}
+
+\newenvironment{ttable}
+{
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+}
+{
+\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+%% BODY %%
+\section{About the document}
+This file documents the process of asset tagging for the asset 'Craft Center' in 'Hand loom and Handicrafts'.
+
+\section{Attributes and questions}
+The sections Observation and General are similar to other assets. Hence we will be only discussing the specific section in this document.
+
+The list of variables and questions are given as:
+\begin{itemize}
+	\item Initial Observation.
+	\item General
+	\item Specific
+		\begin{itemize}
+			\item Basic Info
+				\begin{enumerate}
+					\item Description: Which of the following training is provided in the center?
+					\item Number of seats: How many seats are available in the craft centers?
+					\item Students enrolled: How many students are enrolled in the craft center?
+					\item Trainers employed: How many trainers are employed in the craft center?
+					\item Duration: What are the duration of the courses you offer?
+					\item Asset potential: Which courses has the maximum number of enrollments?
+				\end{enumerate}
+			\item Asset Utilization
+				\begin{enumerate}
+					\item Course completion: What percentage of enrolled students successfully complete the course?
+					\item Professional undertaking: What proportion of the passed-out students take the training into the professional front?
+				\end{enumerate}
+			\item Operations
+				\begin{enumerate}
+					\item Incentive for students: What incentives are provided to the students enrolled in the center?
+					\item Product market: Where are the finished products sold?
+					\item Payment mode: Which mode of payment do you accept?
+				\end{enumerate}
+			\item Marketing and advertisement
+				\begin{enumerate}
+					\item Means of advertisement: How are the courses advertised to prospective trainees?
+				\end{enumerate}
+			\item Market potential
+				\begin{enumerate}
+					\item Market potential: Are the products sold in your emporium branded?
+				\end{enumerate}
+			\item Customer services
+				\begin{enumerate}
+					\item Catalog: Do you have a cataloger of your products?
+				\end{enumerate}
+		\end{itemize}
+\end{itemize}
+
+\section{Overall scoring}
+The overall scoring of the asset is given as,
+\begin{align*}
+	\tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+	&+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+	&+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+\end{align*}
+
+The overall scoring of each variable is done as,
+\[
+	\tsub{Score}{var.} = \sum_{i=1}^{n} \tsubb{W}{i} \times \tsub{Score}{sub param.}
+\]
+\section{Attribute scoring and the process}
+\subsection{Specific}
+\subsubsection{Basic Info}
+\paragraph{Description: Which of the following training is provided in the center?} 
+The options given are,
+\begin{ttable}
+	Training provided & Rank \\ \hline
+	Knitting & 1 \\
+	Cane and Bamboo & 2 \\
+	Carpet making & 3 \\
+	Weaving & 4 \\
+	Tailoring & 5 \\
+	Carpentry & 6 \\
+	Monpa & 7 \\
+	Bell metal & 8 \\
+	Black Smiting & 9 \\
+	Jewelry making & 10 \\ \hline
+	Sum of ranks & 48 
+\end{ttable}
+The score is calculated as,
+\multsel{description}
+\paragraph{Number of seats: How many seats are available in the craft centers?}
+The score is given as,
+\begin{align*}
+	\tsub{Score}{seats} &= 1, \tsubb{N}{seats} \ge \text{Threshold} \\
+	&= \sqrt{\dfrac{\tsubb{N}{seats}}{\text{Threshold}}}, \text{Otherwise}
+\end{align*}
+\paragraph{Students enrolled: How many students are enrolled in the craft center?}
+The score is given as,
+\begin{align*}
+	\tsub{Score}{enrollment} &= 1, \tsubb{N}{enrolls} \ge \text{Threshold} \\
+	&= \sqrt{\dfrac{\tsubb{N}{enrolls}}{\text{Threshold}}}, \text{Otherwise}
+\end{align*}
+\paragraph{Trainers employed: How many trainers are employed in the craft center?}
+The score is given as,
+\begin{align*}
+	\tsub{Score}{trainers} &= 1, \tsubb{N}{trainers} \ge \text{Threshold} \\
+	&= \sqrt{\dfrac{\tsubb{N}{trainers}}{\text{Threshold}}}, \text{Otherwise}
+\end{align*}
+\paragraph{Duration: What are the duration of the courses you offer?}
+The options are given as,
+\begin{ttable}
+	Duration & Ranks \\ \hline
+	< 1 year & 1 \\
+	1 year & 2 \\
+	2 years & 3 \\
+	3 years & 4 \\
+	4 years & 5 \\
+	5 years & 6 \\ \hline
+	Sum of ranks & 21
+\end{ttable}
+\multsel{duration}
+
+\paragraph{Asset potential: Which courses has the maximum number of enrollments?}
+The options given are,
+\begin{ttable}
+	Training provided & Rank \\ \hline
+	Knitting & 1 \\
+	Cane and Bamboo & 2 \\
+	Carpet making & 3 \\
+	Weaving & 4 \\
+	Tailoring & 5 \\
+	Carpentry & 6 \\
+	Monpa & 7 \\
+	Bell metal & 8 \\
+	Black Smiting & 9 \\
+	Jewelry making & 10 \\ \hline
+	Sum of ranks & 48 
+\end{ttable}
+The score is calculated as,
+\multsel{asset potential}
+
+\subsubsection{Asset Utilization}
+\paragraph{Course completion: What percentage of enrolled students successfully complete the course?}
+The score is given as,
+\[
+	\tsub{Score}{completion} = \dfrac{\% \text{completion}}{100}.
+\]	
+\paragraph{Professional undertaking: What proportion of the passed-out students take the training into the professional front?}
+The available options are,
+\begin{ttable}
+	Percentage & Rank \\ \hline
+	0-20\% & 1 \\
+	20-40\% & 2 \\
+	40-60\% & 3 \\
+	60-80\% & 4 \\
+	80-100\% & 5 \\ \hline
+	Sum of ranks & 15
+\end{ttable}
+The score is given as,
+\singsel{prof. under.}
+
+\subsubsection{Operations}
+\paragraph{Incentives for students: What incentives are provided to the students enrolled in the center?}
+The options given are,
+\begin{ttable}
+	Incentives & Rank \\ \hline
+	None & 0 \\
+	Stipend & 1 \\
+	Certification & 2 \\
+	Placement opportunities & 3 \\
+	Scholarships & 4 \\ \hline
+	Sum of ranks & 10
+\end{ttable}
+The score of incentives is given as,
+\multsel{incentives}
+\paragraph{Product market: Where are the finished products sold?}
+The options given as,
+\begin{ttable}
+	Market options & Ranks \\ \hline
+	Sold directly from the craft center & 1 \\
+	Sold to emporium & 2 \\
+	Sold to retail shops & 3 \\
+	Sold to wholesale markets & 4 \\
+	Sold in exhibitions/expos & 5 \\ \hline
+	Sum of ranks & 15
+\end{ttable}
+The score is given as,
+\multsel{prod. market}
+\paragraph{Payment mode: Which mode of payment do you accept?}
+The options given are,
+\begin{ttable}
+	Payment mode & Rank \\ \hline
+	Others & 1 \\
+	Cash Payment & 2 \\
+	Debit and Credit card & 3 \\
+	Online payments & 4 \\ \hline
+	Sum of ranks. & 10
+\end{ttable}
+The score is calculated as,
+\multsel{payment mode}
+\subsubsection{Marketing and advertisement}
+\paragraph{Means of advertisement: How are the courses advertised to prospective trainees?}
+The options given are,
+\begin{ttable}
+	Advertisement options & Rank \\ \hline
+	Others & 1 \\
+	Word of mouth & 2 \\
+	Social media & 3 \\
+	Newspaper and print & 4 \\
+	Govt. websites & 5 \\ \hline
+	Sum of ranks & 15
+\end{ttable}
+The score is given as,
+\multsel{advertisement}
+\subsubsection{Market potential}
+\paragraph{Branding: Are the products sold in your emporium branded?}
+The score is given as,
+\begin{align*}
+	\tsub{Score}{branded} &= 0, \text{if no} \\
+	&= 1, \text{if yes}.
+\end{align*}
+
+\subsubsection{Customer services}
+\paragraph{Catalog: Do you have a catalog of your products?}
+the score is given as,
+\begin{align*}
+	\tsub{Score}{catalog} &= 0, \text{if no} \\
+	&= 1, \text{if yes}.
+\end{align*}
+
+\end{document}
+
