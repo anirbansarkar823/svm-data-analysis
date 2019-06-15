@@ -1,0 +1,291 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+%% ADD PACKAGES %%
+
+\title{Attributes tagging for Petrol Station}
+\author{Kipa Tachak}
+\date{Sunday  9 June 2019}
+
+\setcounter{secnumdepth}{3}
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newcommand{\multsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Sum of selected}{Sum of ranks}
+	\]
+}
+\newcommand{\singsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Rank of selected}{Max. rank}.
+	\]
+}
+\newenvironment{ttable}
+{
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+}
+{
+\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+%% BODY %%
+\section{About the document}
+This file documents the process of asset tagging for the asset 'Petrol Station' in the
+vertical 'Energy \& ICT'.
+
+\section{Attributes and questions}
+The list of sections, variables, and questions are:
+    \begin{itemize}
+    \item Observation
+    \item General
+    \item Asset Specific
+    \begin{itemize}
+\item Specs
+\begin{enumerate}
+\item Capacity: What is the storage capacity in total (in liter)?
+\item Metering: What type of meter box is used ?
+\end{enumerate}
+
+\item Issues
+\begin{enumerate}
+\item Technical: How often do you face technical issues which affect supply per week?
+\item Emergency: How often did you face emergencies like e.g. brands last year?
+\end{enumerate}
+
+\item Documentation
+\begin{enumerate}
+\item Failures: How do you document technical failures?
+\end{enumerate}
+
+\item Operations
+\begin{enumerate}
+\item Supplier: Which oil company is the supplier of oil here ?
+\item Maintenance Issues: What are the issues pertaining to maintenance this asset to ensure functionality?
+\item Customers: How many customers do you have per week on average?
+\item Petrol Sold: How many tons of petrol do you sell per week on average?
+\item Diesel Sold: How many tons of diesel do you sell per week on average?
+\end{enumerate}
+
+\item Safety
+\begin{enumerate}
+\item Medikits: Has the petrol pump an inventory of the medical intervention equipment?
+\item Fire Equipment: Is sufficient and adequate fire fighting equipment available?
+\item Medikits: Are sufficient eye wash/ safety showers located at this petrol pump?
+\end{enumerate}
+
+\item Transportation
+\begin{enumerate}
+\item Means: How is the supply is being transported to the station
+\end{enumerate}
+
+\item Maintenance
+\begin{enumerate}
+\item Frequency: What is the frequency of  maintenance or safety audit ?
+\end{enumerate}
+
+\end{itemize}
+
+    \end{itemize}
+\section{Overall scoring}
+The overall scoring of the asset is given as,
+\begin{align*}
+	\tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+	&+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+	&+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+\end{align*}
+
+The score of a section or a variable is given as,
+\[
+	\tsub{Score}{var} = \sum_{l \in P} \tsubb{W}{l} \times \tsub{Score}{l}.
+\]
+where,
+\[
+	P = \text{Set of sub-parameter labels.}
+\]
+\section{Attribute scoring and the
+process}
+\subsection{Asset Specific}
+\subsubsection{Specs}
+
+\paragraph{Capacity: What is the storage capacity in total (in liter)?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Capacity} &= 1, \tsubb{N}{Capacity} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{Capacity}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\paragraph{Metering: What type of meter box is used ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Analog/Mechanical & 1 \\
+digital & 2 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Metering}
+\subsubsection{Issues}
+
+\paragraph{Technical: How often do you face technical issues which affect supply per week?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+\textgreater20 & 1 \\
+11-20 & 2 \\
+6-10 & 3 \\
+1-5 & 4 \\
+0 & 5 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Technical}
+\paragraph{Emergency: How often did you face emergencies like e.g. brands last year?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Emergency} &= 1, \tsubb{N}{Emergency} \ge \text{Threshold} \\
+        &=
+1 - \Big(\dfrac{\tsubb{N}{Emergency}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\subsubsection{Documentation}
+
+\paragraph{Failures: How do you document technical failures?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+No Documentation & 1 \\
+traditional book keeping & 2 \\
+digital & 3 \\
+others & 4 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{Failures}
+\subsubsection{Operations}
+
+\paragraph{Supplier: Which oil company is the supplier of oil here ?}
+
+Classified as variable for "Information and         clarity"
+\paragraph{Maintenance Issues: What are the issues pertaining to maintenance this asset to ensure functionality?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Others & 1 \\
+Training & 2 \\
+Skilled manpower & 3 \\
+Timely funds for maintenance & 4 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{Maintenance Issues}
+\paragraph{Customers: How many customers do you have per week on average?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Customers} &= 1, \tsubb{N}{Customers} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{Customers}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\paragraph{Petrol Sold: How many tons of petrol do you sell per week on average?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Petrol Sold} &= 1, \tsubb{N}{Petrol Sold} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{Petrol Sold}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\paragraph{Diesel Sold: How many tons of diesel do you sell per week on average?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Diesel Sold} &= 1, \tsubb{N}{Diesel Sold} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{Diesel Sold}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\subsubsection{Safety}
+
+\paragraph{Medikits: Has the petrol pump an inventory of the medical intervention equipment?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+no & 0 \\
+yes & 1 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Medikits}
+\paragraph{Fire Equipment: Is sufficient and adequate fire fighting equipment available?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+no & 0 \\
+yes & 1 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Fire Equipment}
+\paragraph{Medikits: Are sufficient eye wash/ safety showers located at this petrol pump?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+no & 0 \\
+yes & 1 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Medikits}
+\subsubsection{Transportation}
+
+\paragraph{Means: How is the supply is being transported to the station}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+others & 1 \\
+oil Tankers & 2 \\
+rail & 3 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{Means}
+\subsubsection{Maintenance}
+
+\paragraph{Frequency: What is the frequency of  maintenance or safety audit ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+never & 1 \\
+Others & 2 \\
+Irregular & 3 \\
+Yearly & 4 \\
+Monthly & 5 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Frequency}
+
+\end{document}

@@ -1,0 +1,163 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+%% ADD PACKAGES %%
+
+\title{Attributes tagging for Radio Tower}
+\author{Kipa Tachak}
+\date{Sunday  9 June 2019}
+
+\setcounter{secnumdepth}{3}
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newcommand{\multsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Sum of selected}{Sum of ranks}
+	\]
+}
+\newcommand{\singsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Rank of selected}{Max. rank}.
+	\]
+}
+\newenvironment{ttable}
+{
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+}
+{
+\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+%% BODY %%
+\section{About the document}
+This file documents the process of asset tagging for the asset 'Radio Tower' in the
+vertical 'Energy \& ICT'.
+
+\section{Attributes and questions}
+The list of sections, variables, and questions are:
+    \begin{itemize}
+    \item Observation
+    \item General
+    \item Asset Specific
+    \begin{itemize}
+\item Specs
+\begin{enumerate}
+\item Material: What material is the tower made of ?
+\item Transmit: What is transmitted with this tower?
+\item Distance: What distance can be broadcasted (in km)?
+\item Height: What height has this station (in meters)?
+\end{enumerate}
+
+\item Operations
+\begin{enumerate}
+\item Proximity Energy Supply: How far is the nearest Substation or Switch yard (in km)?
+\item Maintenance: What is the frequency of  maintenance or safety audit ?
+\end{enumerate}
+
+\end{itemize}
+
+    \end{itemize}
+\section{Overall scoring}
+The overall scoring of the asset is given as,
+\begin{align*}
+	\tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+	&+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+	&+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+\end{align*}
+
+The score of a section or a variable is given as,
+\[
+	\tsub{Score}{var} = \sum_{l \in P} \tsubb{W}{l} \times \tsub{Score}{l}.
+\]
+where,
+\[
+	P = \text{Set of sub-parameter labels.}
+\]
+\section{Attribute scoring and the
+process}
+\subsection{Asset Specific}
+\subsubsection{Specs}
+
+\paragraph{Material: What material is the tower made of ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+wood & 1 \\
+Fiberglass and other composite networks & 2 \\
+Reinforced concrete & 3 \\
+Tubular steel & 4 \\
+Steel lattice & 5 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{Material}
+\paragraph{Transmit: What is transmitted with this tower?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Radio & 1 \\
+Cellular Network & 2 \\
+Municipal Wireless Network & 3 \\
+TV & 4 \\
+Others & 5 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{Transmit}
+\paragraph{Distance: What distance can be broadcasted (in km)?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Distance} &= 1, \tsubb{N}{Distance} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{Distance}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\paragraph{Height: What height has this station (in meters)?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Height} &= 1, \tsubb{N}{Height} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{Height}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\subsubsection{Operations}
+
+\paragraph{Proximity Energy Supply: How far is the nearest Substation or Switch yard (in km)?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Proximity Energy Supply} &= 1, \tsubb{Distance}{Proximity Energy Supply} \ge \text{Threshold} \\
+        &=
+1 - \Big(\dfrac{\tsubb{Distance}{Proximity Energy Supply}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\paragraph{Maintenance: What is the frequency of  maintenance or safety audit ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+never & 1 \\
+Others & 2 \\
+Irregular & 3 \\
+Yearly & 4 \\
+Monthly & 5 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Maintenance}
+
+\end{document}

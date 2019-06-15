@@ -1,0 +1,205 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+%% ADD PACKAGES %%
+
+\title{Attributes tagging for 
+Over Head Tanks 
+}
+\author{Kipa Tachak}
+\date{Monday 10 June 2019}
+
+\setcounter{secnumdepth}{3}
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newcommand{\multsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Sum of selected}{Sum of ranks}
+	\]
+}
+\newcommand{\singsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Rank of selected}{Max. rank}.
+	\]
+}
+\newenvironment{ttable}
+{
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+}
+{
+\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+%% BODY %%
+\section{About the document}
+This file documents the process of asset tagging for the asset '
+Over Head Tanks 
+' in the
+vertical 'Water and Sanitation'.
+
+\section{Attributes and questions}
+The list of sections, variables, and questions are:
+    \begin{itemize}
+    \item Observation
+    \item General
+    \item Asset Specific
+    \begin{itemize}
+\item Basic Info
+\begin{enumerate}
+\item Infrastructure: 
+The Overhead water tank is made up of which Material? 
+
+\item Damages: 
+Are there any leakages on the tank structure? 
+
+\item Capacity: What is the storage capacity of the tank?
+\item Connections: 
+How many pipes have been connected to the tank? 
+
+\end{enumerate}
+
+\item Working
+\begin{enumerate}
+\item Flow: 
+How many valves are visible to the pipes connected to the tank 
+
+\item Tools: 
+Are there any devices connected to see the water level? 
+
+\end{enumerate}
+
+\item Maintenance
+\begin{enumerate}
+\item Frequency: What is the frequency of technical maintenance or safety audit ?
+\end{enumerate}
+
+\end{itemize}
+
+    \end{itemize}
+\section{Overall scoring}
+The overall scoring of the asset is given as,
+\begin{align*}
+	\tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+	&+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+	&+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+\end{align*}
+
+The score of a section or a variable is given as,
+\[
+	\tsub{Score}{var} = \sum_{l \in P} \tsubb{W}{l} \times \tsub{Score}{l}.
+\]
+where,
+\[
+	P = \text{Set of sub-parameter labels.}
+\]
+\section{Attribute scoring and the
+process}
+\subsection{Asset Specific}
+\subsubsection{Basic Info}
+
+\paragraph{Infrastructure: 
+The Overhead water tank is made up of which Material? 
+}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Bamboo & 1 \\
+PVC & 2 \\
+Concrete & 3 \\
+iron & 4 \\
+steel & 5 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Infrastructure}
+\paragraph{Damages: 
+Are there any leakages on the tank structure? 
+}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Damages} &= 0, \text{If no} \\
+        &= 1, \text{If yes}.
+\end{align*}
+\paragraph{Capacity: What is the storage capacity of the tank?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Capacity} &= 1, \tsubb{N}{Capacity} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{Capacity}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\paragraph{Connections: 
+How many pipes have been connected to the tank? 
+}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+None & 0 \\
+1 & 1 \\
+2 & 2 \\
+3 & 3 \\
+4 & 4 \\
+Above 4 & 5 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Connections}
+\subsubsection{Working}
+
+\paragraph{Flow: 
+How many valves are visible to the pipes connected to the tank 
+}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+None & 0 \\
+1 & 1 \\
+2 & 2 \\
+3 & 3 \\
+4 & 4 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Flow}
+\paragraph{Tools: 
+Are there any devices connected to see the water level? 
+}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Tools} &= 0, \text{If no} \\
+        &= 1, \text{If yes}.
+\end{align*}
+\subsubsection{Maintenance}
+
+\paragraph{Frequency: What is the frequency of technical maintenance or safety audit ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+never & 0 \\
+Others & 1 \\
+Irregular & 2 \\
+Yearly & 3 \\
+Monthly & 4 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Frequency}
+
+\end{document}

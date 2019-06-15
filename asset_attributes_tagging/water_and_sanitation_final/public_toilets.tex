@@ -1,0 +1,265 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+%% ADD PACKAGES %%
+
+\title{Attributes tagging for PUBLIC TOILETS}
+\author{Kipa Tachak}
+\date{Monday 10 June 2019}
+
+\setcounter{secnumdepth}{3}
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newcommand{\multsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Sum of selected}{Sum of ranks}
+	\]
+}
+\newcommand{\singsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Rank of selected}{Max. rank}.
+	\]
+}
+\newenvironment{ttable}
+{
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+}
+{
+\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+%% BODY %%
+\section{About the document}
+This file documents the process of asset tagging for the asset 'PUBLIC TOILETS' in the
+vertical 'Water and Sanitation'.
+
+\section{Attributes and questions}
+The list of sections, variables, and questions are:
+    \begin{itemize}
+    \item Observation
+    \item General
+    \item Asset Specific
+    \begin{itemize}
+\item Basic Info
+\begin{enumerate}
+\item Water: 
+What is the source of Water to the Public toilet ? 
+
+\item Area: 
+What is the area of the Public toilet ? 
+
+\item Ownership: 
+Who constructed the Public toilet ? 
+
+\item Infrastructure: 
+The Asset is Constructed by which Material ?
+
+\item Damages: Are there any leakages from the Public Toilet ? 
+
+\end{enumerate}
+
+\item Availability
+\begin{enumerate}
+\item For men: How many toilets are available for men?
+\item For women: How many toilets are available for women?
+\item water: Is there running water available in the toilets at this asset?
+\item Hygiene: Is there soap for hand wash available at this asset?
+\end{enumerate}
+
+\item Working
+\begin{enumerate}
+\item Charges: How much is the fee for using this toilet (in rupees)?
+\item cleaning: Was the toilet clean when you used it (please do it for assessment)?
+\item Sanitation: Is the public toilet connected with a sewer drainage?
+\item Usage: How many people are using this public toilet on average per day?
+\end{enumerate}
+
+\item Maintenance
+\begin{enumerate}
+\item Frequency: What is the frequency of technical maintenance or safety audit ?
+\end{enumerate}
+
+\end{itemize}
+
+    \end{itemize}
+\section{Overall scoring}
+The overall scoring of the asset is given as,
+\begin{align*}
+	\tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+	&+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+	&+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+\end{align*}
+
+The score of a section or a variable is given as,
+\[
+	\tsub{Score}{var} = \sum_{l \in P} \tsubb{W}{l} \times \tsub{Score}{l}.
+\]
+where,
+\[
+	P = \text{Set of sub-parameter labels.}
+\]
+\section{Attribute scoring and the
+process}
+\subsection{Asset Specific}
+\subsubsection{Basic Info}
+
+\paragraph{Water: 
+What is the source of Water to the Public toilet ? 
+}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Over head tank & 1 \\
+Normal Storage Tank & 2 \\
+ Others & 3 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Water}
+\paragraph{Area: 
+What is the area of the Public toilet ? 
+}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Area} &= 1, \tsubb{N}{Area} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{Area}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\paragraph{Ownership: 
+Who constructed the Public toilet ? 
+}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+NGOS & 1 \\
+Missionaries & 2 \\
+Government & 3 \\
+Others & 4 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Ownership}
+\paragraph{Infrastructure: 
+The Asset is Constructed by which Material ?
+}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Bamboo & 1 \\
+Plastic & 2 \\
+Rocks & 3 \\
+Concrete & 4 \\
+Iron & 5 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Infrastructure}
+\paragraph{Damages: Are there any leakages from the Public Toilet ? 
+}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Damages} &= 0, \text{If no} \\
+        &= 1, \text{If yes}.
+\end{align*}
+\subsubsection{Availability}
+
+\paragraph{For men: How many toilets are available for men?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{For men} &= 1, \tsubb{N}{For men} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{For men}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\paragraph{For women: How many toilets are available for women?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{For women} &= 1, \tsubb{N}{For women} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{For women}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\paragraph{water: Is there running water available in the toilets at this asset?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{water} &= 0, \text{If no} \\
+        &= 1, \text{If yes}.
+\end{align*}
+\paragraph{Hygiene: Is there soap for hand wash available at this asset?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Hygiene} &= 0, \text{If no} \\
+        &= 1, \text{If yes}.
+\end{align*}
+\subsubsection{Working}
+
+\paragraph{Charges: How much is the fee for using this toilet (in rupees)?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Charges} &= 1, \tsubb{N}{Charges} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{Charges}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\paragraph{cleaning: Was the toilet clean when you used it (please do it for assessment)?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{cleaning} &= 0, \text{If no} \\
+        &= 1, \text{If yes}.
+\end{align*}
+\paragraph{Sanitation: Is the public toilet connected with a sewer drainage?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Sanitation} &= 0, \text{If no} \\
+        &= 1, \text{If yes}.
+\end{align*}
+\paragraph{Usage: How many people are using this public toilet on average per day?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Usage} &= 1, \tsubb{N}{Usage} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{Usage}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\subsubsection{Maintenance}
+
+\paragraph{Frequency: What is the frequency of technical maintenance or safety audit ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+never & 0 \\
+Others & 1 \\
+Irregular & 2 \\
+Yearly & 3 \\
+Monthly & 4 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Frequency}
+
+\end{document}

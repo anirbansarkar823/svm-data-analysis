@@ -1,0 +1,227 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+%% ADD PACKAGES %%
+
+\title{Attributes tagging for Eateries}
+\author{Kipa Tachak}
+\date{Saturday  8 June 2019}
+
+\setcounter{secnumdepth}{3}
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newcommand{\multsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Sum of selected}{Sum of ranks}
+	\]
+}
+\newcommand{\singsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Rank of selected}{Max. rank}.
+	\]
+}
+\newenvironment{ttable}
+{
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+}
+{
+\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+%% BODY %%
+\section{About the document}
+This file documents the process of asset tagging for the asset 'Eateries' in the vertical 'Lodging and Boarding'.
+\section{Attributes and questions}
+The list of sections, variables, and questions are:
+\begin{itemize}
+	\item Initial Observation
+	\item General
+	\item Asset Specific
+		\begin{itemize}
+			\item Basic Info
+				\begin{enumerate}
+					\item Description: Select the category applicable.
+					\item Seating capacity: What is the seating capacity in your restaurant/shop?
+					\item Specialty: Which type of food is served?
+					\item Range of food: Which of the following is served?
+				\end{enumerate}
+			\item Specialty
+				\begin{enumerate}
+					\item Famous food: What dish is your restaurant/shop most famous for?
+				\end{enumerate}
+			\item Strength/Capacity
+				\begin{enumerate}
+					\item Customers: How many customers does the place serve per day?
+				\end{enumerate}
+			\item Payment
+				\begin{enumerate}
+					\item Mode of payment: Which of the following modes of payment do you accept?
+				\end{enumerate}
+			\item Facilities
+				\begin{enumerate}
+					\item Home-delivery: Do you offer home-delivery services?
+				\end{enumerate}
+			\item Cold Storage: Are you processing perishable goods?
+			\item Marketing and advertisement
+				\begin{enumerate}
+					\item Online presence: Which online portal are you registered with?
+					\item Means of advertisement: How is the eatery advertised to prospective visitors?
+					\item Means of advertisement: Which of the following means of advertisement bring you the maximum customers?
+					\item Tracking: Are you asking your customers how they got to know about your place?
+				\end{enumerate}
+		\end{itemize}
+\end{itemize}
+\section{Overall scoring}
+The overall scoring of the asset is given as,
+\begin{align*}
+	\tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+	&+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+	&+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+\end{align*}
+
+The score of a section or a variable is given as,
+\[
+	\tsub{Score}{var} = \sum_{l \in P} \tsubb{W}{l} \times \tsub{Score}{l}.
+\]
+where,
+\[
+	P = \text{Set of sub-parameter labels.}
+\]	
+\section{Attribute scoring and the process}
+\subsection{Specific}
+\subsubsection{Basic Info}
+\paragraph{Description: Select the category applicable.}
+The options given are,
+\begin{ttable}
+	Category & Rank \\ \hline
+	Tea or Coffee & 1 \\
+	Home cooked food shop & 2 \\
+	Restaurant & 3 \\ \hline
+	Max. rank & 3
+\end{ttable}
+The score is given as,
+\singsel{description}
+\paragraph{Seating capacity: What is the seating capacity in your restaurant/shop?}
+The score for seating capacity is given as,
+\begin{align*}
+	\tsub{Score}{seat. capacity} &= 1, \text{Seat count} \ge \text{Threshold}, \\
+	&= \dsub{Seat count}{Threshold}, \text{otherwise}.
+\end{align*}
+\paragraph{Specialty: Which type of food is served?}
+The options given are,
+\begin{ttable}
+	Cuisine & Rank \\ \hline
+	Chinese & 1 \\
+	Indian & 2 \\
+	Tribal & 3 \\ \hline
+	Max. rank & 3
+\end{ttable}
+The score is given as,
+\singsel{cuisine}
+\paragraph{Range of food: Which of the following is served?}
+The options are,
+\begin{ttable}
+	Type & Rank \\ \hline
+	Veg & 1 \\
+	Non Veg & 1 \\
+	Both & 2 \\ \hline
+	Max. rank & 2
+\end{ttable}
+The score is calculated as,
+\singsel{food range}
+
+\subsubsection{Specialty}
+\paragraph{Famous food: What dish is your restaurant/shop most famous for?}
+Classified as parameter for 'Information and clarity'.
+\subsubsection{Strength/Capacity}
+\paragraph{Customers: How many customers does the place serve per day?}
+The score is given as,
+\begin{align*}
+	\tsub{Score}{customers} &= 1, \tsubb{N}{customers} \ge \text{Threshold} \\
+	&= \Big( \dfrac{\tsubb{N}{customers}}{\text{Threshold}} \Big)^{2}, \text{Otherwise}.
+\end{align*}
+\subsubsection{Payment}
+\paragraph{Mode of payment: Which of the following modes of payment do you accept?}
+The options given are,
+\begin{ttable}
+	Payment mode & Rank \\ \hline
+	Others & 1 \\
+	Cash Payment & 2 \\
+	Debit card & 3 \\
+	Credit card & 4 \\
+	E-payment & 5 \\ \hline
+	Sum of ranks. & 15
+\end{ttable}
+The score is calculated as,
+\multsel{payment mode}
+\subsubsection{Facilities}
+\paragraph{Home-delivery: Do you offer home-delivery services?}
+The score is given as,
+\begin{align*}
+	\tsub{Score}{home-delivery} &= 0, \text{if no} \\
+	&= 1, \text{if yes}.
+\end{align*}
+\subsubsection{Cold Storage}
+\paragraph{Are you processing perishable goods?}
+The score is given as,
+\begin{align*}
+	\tsub{Score}{peris. process} &= 0, \text{if no} \\
+	&= 1, \text{if yes}.
+\end{align*}
+\paragraph{Do you possess a cold storage?}
+The score is given as,
+\begin{align*}
+	\tsub{Score}{storage present} &= 0, \text{if no} \\
+	&= 1, \text{if yes}.
+\end{align*}
+\subsubsection{Marketing and advertisement}
+\paragraph{Online presence: Which online portal are you registered with?}
+The options given are,
+\begin{ttable}
+	Portals & Rank \\ \hline
+	Others & 1 \\
+	Swiggy & 2 \\
+	Zomato & 2 \\
+	Tripadvisor & 2 \\ \hline
+	Sum of ranks & 7
+\end{ttable}
+The score is given as,
+\multsel{online presence}
+\paragraph{Means of advertisement: How is the eatery advertised to prospective visitors?}
+The options given are,
+\begin{ttable}
+	Advertisement means & Rank \\ \hline
+	Newspaper & 1 \\
+	Online Portals and articles & 2 \\ \hline
+	Sum of ranks & 3
+\end{ttable}
+The score is given as,
+\multsel{ad. means}
+\paragraph{Means of advertisement: Which of the following means of advertisement bring you the maximum customers?}
+The options given are,
+\begin{ttable}
+	Advertisement means & Rank \\ \hline
+	Newspaper & 1 \\
+	Online Portals and articles & 2 \\ \hline
+	Sum of ranks & 3
+\end{ttable}
+The score is given as,
+\multsel{ads. with max cus.}
+\paragraph{Tracking: Are you asking your customers how they got to know about your place?}
+The score is given as,
+\begin{align*}
+	\tsub{Score}{tracking} &= 0, \text{if no} \\
+	&= 1, \text{if yes}.
+\end{align*}
+\end{document}
+

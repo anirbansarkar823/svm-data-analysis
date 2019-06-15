@@ -1,0 +1,267 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+%% ADD PACKAGES %%
+
+\title{Attributes tagging for Renewable Energy Unit}
+\author{Kipa Tachak}
+\date{Sunday  9 June 2019}
+
+\setcounter{secnumdepth}{3}
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newcommand{\multsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Sum of selected}{Sum of ranks}
+	\]
+}
+\newcommand{\singsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Rank of selected}{Max. rank}.
+	\]
+}
+\newenvironment{ttable}
+{
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+}
+{
+\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+%% BODY %%
+\section{About the document}
+This file documents the process of asset tagging for the asset 'Renewable Energy Unit' in the
+vertical 'Energy \& ICT'.
+
+\section{Attributes and questions}
+The list of sections, variables, and questions are:
+    \begin{itemize}
+    \item Observation
+    \item General
+    \item Asset Specific
+    \begin{itemize}
+\item Specs
+\begin{enumerate}
+\item Type: What is the type of renewable energy unit ?
+\item Voltage: What is the type of operating voltage? 
+\item Generated Power: What is the generated power of this unit (in kW) ?
+\item Energy: What is the created energy of this unit (in kWh)?
+\item Peak Power: What is the peak power of this unit (kWp)?
+\item Kilowatt: What is the amount of kWh shipped last year?
+\item Capacity: How many villagers can be provided sufficient electricity from this unit?
+\item Metering: Do you use smart metering ?
+\item Issues: What are the issues pertaining to maintenance ?
+\end{enumerate}
+
+\item Target Audience
+\begin{enumerate}
+\item Customer: What are the categories of customers availing power from this asset?
+\item Near connection: Where is the nearest grid connected Solar PV Power generating station?
+\item Bio gas: Have you ever initiated or tried a Biomass gasifier project in Arunachal Pradesh?
+\item Size: What is the size of Biogas plant implemented by the APEDA?
+\end{enumerate}
+
+\item Maintenance
+\begin{enumerate}
+\item Frequency: What is the frequency of  maintenance or safety audit ?
+\end{enumerate}
+
+\end{itemize}
+
+    \end{itemize}
+\section{Overall scoring}
+The overall scoring of the asset is given as,
+\begin{align*}
+	\tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+	&+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+	&+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+\end{align*}
+
+The score of a section or a variable is given as,
+\[
+	\tsub{Score}{var} = \sum_{l \in P} \tsubb{W}{l} \times \tsub{Score}{l}.
+\]
+where,
+\[
+	P = \text{Set of sub-parameter labels.}
+\]
+\section{Attribute scoring and the
+process}
+\subsection{Asset Specific}
+\subsubsection{Specs}
+
+\paragraph{Type: What is the type of renewable energy unit ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Integrated & 1 \\
+Solar & 2 \\
+Hydro & 3 \\
+Biomass & 4 \\
+Wind & 5 \\
+Others & 6 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{Type}
+\paragraph{Voltage: What is the type of operating voltage? }
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Medium voltage & 1 \\
+High voltage & 2 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Voltage}
+\paragraph{Generated Power: What is the generated power of this unit (in kW) ?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Generated Power} &= 1, \tsubb{N}{Generated Power} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{Generated Power}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\paragraph{Energy: What is the created energy of this unit (in kWh)?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Energy} &= 1, \tsubb{N}{Energy} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{Energy}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\paragraph{Peak Power: What is the peak power of this unit (kWp)?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Peak Power} &= 1, \tsubb{N}{Peak Power} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{Peak Power}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\paragraph{Kilowatt: What is the amount of kWh shipped last year?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Kilowatt} &= 1, \tsubb{N}{Kilowatt} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{Kilowatt}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\paragraph{Capacity: How many villagers can be provided sufficient electricity from this unit?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Capacity} &= 1, \tsubb{N}{Capacity} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{Capacity}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\paragraph{Metering: Do you use smart metering ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+No & 0 \\
+Yes & 1 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Metering}
+\paragraph{Issues: What are the issues pertaining to maintenance ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Others & 1 \\
+Training & 2 \\
+Skilled manpower & 3 \\
+Timely funds for maintenance & 4 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{Issues}
+\subsubsection{Target Audience}
+
+\paragraph{Customer: What are the categories of customers availing power from this asset?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Households & 1 \\
+Household & 2 \\
+Commercial & 3 \\
+Agriculture & 4 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{Customer}
+\paragraph{Near connection: Where is the nearest grid connected Solar PV Power generating station?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Papum Pare & 1 \\
+West Siang & 1 \\
+Changlang district & 1 \\
+others & 1 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{Near connection}
+\paragraph{Biogas: Have you ever initiated or tried a Biomass gasifier project in Arunachal Pradesh?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+No & 0 \\
+Yes & 1 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Biogas}
+\paragraph{Size: What is the size of Biogas plant implemented by the APEDA?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+not applicable & 1 \\
+3CuM & 2 \\
+2CuM & 3 \\
+4CuM & 4 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Size}
+\subsubsection{Maintenance}
+
+\paragraph{Frequency: What is the frequency of  maintenance or safety audit ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+never & 1 \\
+Others & 2 \\
+Irregular & 3 \\
+Yearly & 4 \\
+Monthly & 5 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Frequency}
+
+\end{document}

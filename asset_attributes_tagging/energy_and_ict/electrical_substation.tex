@@ -1,0 +1,306 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+%% ADD PACKAGES %%
+
+\title{Attributes tagging for Electrical Substation}
+\author{Kipa Tachak}
+\date{Sunday  9 June 2019}
+
+\setcounter{secnumdepth}{3}
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newcommand{\multsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Sum of selected}{Sum of ranks}
+	\]
+}
+\newcommand{\singsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Rank of selected}{Max. rank}.
+	\]
+}
+\newenvironment{ttable}
+{
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+}
+{
+\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+%% BODY %%
+\section{About the document}
+This file documents the process of asset tagging for the asset 'Electrical Substation' in the
+vertical 'Energy \& ICT'.
+
+\section{Attributes and questions}
+The list of sections, variables, and questions are:
+    \begin{itemize}
+    \item Observation
+    \item General
+    \item Asset Specific
+    \begin{itemize}
+\item Quality
+\begin{enumerate}
+\item Load: How many hours on average do you apply load shedding per day meaning facing Brown Outs?
+\item Power cuts: How many hours are you facing power cuts on average per day meaning black outs?
+\item Records: How do you record hours of load shedding and blackouts?
+\item Training: How are staff trained to handle transformers ?
+\end{enumerate}
+
+\item Infrastructure
+\begin{enumerate}
+\item Type: What type of substation?
+\item Voltage: What is the type of operating voltage? 
+\item Quantity: What is the number of transformers linked to the substation ?
+\item Maintenance: What are the issues pertaining to maintenance to ensure technical functionality ?
+\item Metering: Do you use smart metering ?
+\end{enumerate}
+
+\item Target Audience
+\begin{enumerate}
+\item customers: What are the categories of customers availing power from this substation?
+\end{enumerate}
+
+\item Source of Energy
+\begin{enumerate}
+\item Energy: What types of energy sources?
+\end{enumerate}
+
+\item Solar Energy
+\begin{enumerate}
+\item Grid Con: Where is the nearest grid connected Solar PV Power generating station?
+\item Off Grid: Where is the nearest Off grid Solar PV generating station ?
+\end{enumerate}
+
+\item Maintenance
+\begin{enumerate}
+\item Frequency: What is the frequency of  maintenance or safety audit ?
+\end{enumerate}
+
+\end{itemize}
+
+    \end{itemize}
+\section{Overall scoring}
+The overall scoring of the asset is given as,
+\begin{align*}
+	\tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+	&+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+	&+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+\end{align*}
+
+The score of a section or a variable is given as,
+\[
+	\tsub{Score}{var} = \sum_{l \in P} \tsubb{W}{l} \times \tsub{Score}{l}.
+\]
+where,
+\[
+	P = \text{Set of sub-parameter labels.}
+\]
+\section{Attribute scoring and the
+process}
+\subsection{Asset Specific}
+\subsubsection{Quality}
+
+\paragraph{Load: How many hours on average do you apply load shedding per day meaning facing Brown Outs?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+\textgreater 24hrs & 1 \\
+12-24hrs & 2 \\
+8-12hrs & 3 \\
+4-8hrs & 4 \\
+0-4hrs & 5 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Load}
+\paragraph{Power cuts: How many hours are you facing power cuts on average per day meaning black outs?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+\textgreater 24hrs & 1 \\
+12-24hrs & 2 \\
+8-12hrs & 3 \\
+4-8hrs & 4 \\
+0-4hrs & 5 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Power cuts}
+\paragraph{Records: How do you record hours of load shedding and blackouts?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+no records & 1 \\
+traditional book keeping & 2 \\
+digital records - using computers/mobile & 3 \\
+digital records online & 4 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{Records}
+\paragraph{Training: How are staff trained to handle transformers ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Others  & 1 \\
+Previous experience & 2 \\
+On the job & 3 \\
+By the Department & 4 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{Training}
+\subsubsection{Infrastructure}
+
+\paragraph{Type: What type of substation?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Transmission & 1 \\
+distribution & 2 \\
+collector & 3 \\
+converter & 4 \\
+switching & 5 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{Type}
+\paragraph{Voltage: What is the type of operating voltage? }
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+High voltage & 1 \\
+Medium Voltage & 2 \\
+Low Voltage & 3 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Voltage}
+\paragraph{Quantity: What is the number of transformers linked to the substation ?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Quantity} &= 1, \tsubb{N}{Quantity} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{Quantity}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\paragraph{Maintenance: What are the issues pertaining to maintenance to ensure technical functionality ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Others & 1 \\
+Training & 2 \\
+Skilled manpower & 3 \\
+Timely funds for maintenance & 4 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{Maintenance}
+\paragraph{Metering: Do you use smart metering ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Yes & 1 \\
+no & 2 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Metering}
+\subsubsection{Target Audience}
+
+\paragraph{customers: What are the categories of customers availing power from this substation?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Households & 1 \\
+Agriculture & 2 \\
+Industrial & 3 \\
+Commercial & 4 \\
+Others & 5 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{customers}
+\subsubsection{Source of Energy}
+
+\paragraph{Energy: What types of energy sources?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Others & 1 \\
+Biomass & 2 \\
+Hydro & 3 \\
+Solar & 4 \\
+Integrated & 5 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{Energy}
+\subsubsection{Solar Energy}
+
+\paragraph{Grid Con: Where is the nearest grid connected Solar PV Power generating station?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Papum Pare & 1 \\
+West Siang & 1 \\
+Changlang district & 1 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{Grid Con}
+\paragraph{Off Grid: Where is the nearest Off grid Solar PV generating station ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+  West Kameng & 1 \\
+  East Siang & 1 \\
+  Kurung Kumey & 1 \\
+  East Kameng district & 1 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{Off Grid}
+\subsubsection{Maintenance}
+
+\paragraph{Frequency: What is the frequency of  maintenance or safety audit ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+never & 1 \\
+Others & 2 \\
+Irregular & 3 \\
+Yearly & 4 \\
+Monthly & 5 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Frequency}
+
+\end{document}

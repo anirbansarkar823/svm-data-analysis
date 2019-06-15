@@ -1,0 +1,135 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+%% ADD PACKAGES %%
+
+\title{Attributes tagging for Shops}
+\author{Kipa Tachak}
+\date{Sunday  9 June 2019}
+
+\setcounter{secnumdepth}{3}
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newcommand{\multsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Sum of selected}{Sum of ranks}
+	\]
+}
+\newcommand{\singsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Rank of selected}{Max. rank}.
+	\]
+}
+\newenvironment{ttable}
+{
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+}
+{
+\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+%% BODY %%
+\section{About the document}
+This file documents the process of asset tagging for the asset 'Shops' in the
+vertical 'Food and Civil Supplies'.
+
+\section{Attributes and questions}
+The list of sections, variables, and questions are:
+    \begin{itemize}
+    \item Observation
+    \item General
+    \item Asset Specific
+    \begin{itemize}
+\item Tech Scope
+\begin{enumerate}
+\item Digital Technology: Do you have a POS device in your shop?
+\end{enumerate}
+
+\item Market Reach
+\begin{enumerate}
+\item Partnership: What is your source for procuring supply?
+\item Services: What other types of services are provided?
+\end{enumerate}
+
+\item Transportation
+\begin{enumerate}
+\item Operations: How are the goods transported to the shop?
+\end{enumerate}
+
+\end{itemize}
+
+    \end{itemize}
+\section{Overall scoring}
+The overall scoring of the asset is given as,
+\begin{align*}
+	\tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+	&+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+	&+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+\end{align*}
+
+The score of a section or a variable is given as,
+\[
+	\tsub{Score}{var} = \sum_{l \in P} \tsubb{W}{l} \times \tsub{Score}{l}.
+\]
+where,
+\[
+	P = \text{Set of sub-parameter labels.}
+\]
+\section{Attribute scoring and the
+process}
+\subsection{Asset Specific}
+\subsubsection{Tech Scope}
+
+\paragraph{Digital Technology: Do you have a POS device in your shop?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Digital Technology} &= 0, \text{If no} \\
+        &= 1, \text{If yes}.
+\end{align*}
+\subsubsection{Market Reach}
+
+\paragraph{Partnership: What is your source for procuring supply?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Whole Seller & 1 \\
+Other Shop & 2 \\
+Govt. & 3 \\
+Authorized Distributor & 4 \\
+Online & 5 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Partnership}
+\paragraph{Services: What other types of services are provided?}
+
+Classified as variable for "Information and         clarity"
+\subsubsection{Transportation}
+
+\paragraph{Operations: How are the goods transported to the shop?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Load Carriage & 1 \\
+Rental Vehicle & 2 \\
+Bike & 3 \\
+Private Car & 4 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{Operations}
+
+\end{document}

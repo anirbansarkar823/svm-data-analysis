@@ -1,0 +1,169 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+%% ADD PACKAGES %%
+
+\title{Attributes tagging for HAND PUMPS}
+\author{Kipa Tachak}
+\date{Monday 10 June 2019}
+
+\setcounter{secnumdepth}{3}
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newcommand{\multsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Sum of selected}{Sum of ranks}
+	\]
+}
+\newcommand{\singsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Rank of selected}{Max. rank}.
+	\]
+}
+\newenvironment{ttable}
+{
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+}
+{
+\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+%% BODY %%
+\section{About the document}
+This file documents the process of asset tagging for the asset 'HAND PUMPS' in the
+vertical 'Water and Sanitation'.
+
+\section{Attributes and questions}
+The list of sections, variables, and questions are:
+    \begin{itemize}
+    \item Observation
+    \item General
+    \item Asset Specific
+    \begin{itemize}
+\item Basic Info
+\begin{enumerate}
+\item Damages: 
+Have you observed any leakages from the Hand pump ? 
+
+\item Ownership: Who installed the hand pump? 
+
+\end{enumerate}
+
+\item Infrastructure
+\begin{enumerate}
+\item Pump Material: Which material used for constructing that hand pump? 
+
+\item Base Material: The Hand Pump Platform/ Basement is made up of which material ?
+\end{enumerate}
+
+\item Operations
+\begin{enumerate}
+\item status: 
+What is the Condition of the hand pump? 
+
+\end{enumerate}
+
+\end{itemize}
+
+    \end{itemize}
+\section{Overall scoring}
+The overall scoring of the asset is given as,
+\begin{align*}
+	\tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+	&+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+	&+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+\end{align*}
+
+The score of a section or a variable is given as,
+\[
+	\tsub{Score}{var} = \sum_{l \in P} \tsubb{W}{l} \times \tsub{Score}{l}.
+\]
+where,
+\[
+	P = \text{Set of sub-parameter labels.}
+\]
+\section{Attribute scoring and the
+process}
+\subsection{Asset Specific}
+\subsubsection{Basic Info}
+
+\paragraph{Damages: 
+Have you observed any leakages from the Hand pump ? 
+}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Damages} &= 0, \text{If no} \\
+        &= 1, \text{If yes}.
+\end{align*}
+\paragraph{Ownership: Who installed the hand pump? 
+}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Naturally found & 1 \\
+Communities  & 2 \\
+Government & 3 \\
+NGOs & 4 \\
+Missionaries & 5 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Ownership}
+\subsubsection{Infrastructure}
+
+\paragraph{Pump Material: Which material used for constructing that hand pump? 
+}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+cast iron & 1 \\
+Copper  & 2 \\
+Galvanized Steel & 3 \\
+Others ( specify ) & 4 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Pump Material}
+\paragraph{Base Material: The Hand Pump Platform/ Basement is made up of which material ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+None & 0 \\
+Rocks & 1 \\
+Concrete & 2 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Base Material}
+\subsubsection{Operations}
+
+\paragraph{status: 
+What is the Condition of the hand pump? 
+}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+cracking sound & 1 \\
+Rusted & 2 \\
+others & 3 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{status}
+
+\end{document}

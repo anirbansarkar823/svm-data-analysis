@@ -1,0 +1,145 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+%% ADD PACKAGES %%
+
+\title{Attributes tagging for LPG Dealer/Shop}
+\author{Kipa Tachak}
+\date{Sunday  9 June 2019}
+
+\setcounter{secnumdepth}{3}
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newcommand{\multsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Sum of selected}{Sum of ranks}
+	\]
+}
+\newcommand{\singsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Rank of selected}{Max. rank}.
+	\]
+}
+\newenvironment{ttable}
+{
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+}
+{
+\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+%% BODY %%
+\section{About the document}
+This file documents the process of asset tagging for the asset 'LPG Dealer/Shop' in the
+vertical 'Food and Civil Supplies'.
+
+\section{Attributes and questions}
+The list of sections, variables, and questions are:
+    \begin{itemize}
+    \item Observation
+    \item General
+    \item Asset Specific
+    \begin{itemize}
+\item Govt. Support
+\begin{enumerate}
+\item Support: What are the areas the asset gets support from government agencies?
+\end{enumerate}
+
+\item Transportation
+\begin{enumerate}
+\item Services: Is Home delivery service available?
+\item Services: Is there Telephone booking facility available?
+\end{enumerate}
+
+\item Emergency Tools
+\begin{enumerate}
+\item Maintenance: Is there any fire equipment in that centre?
+\item Employment: Employees are sufficient or not in the shop?
+\end{enumerate}
+
+\end{itemize}
+
+    \end{itemize}
+\section{Overall scoring}
+The overall scoring of the asset is given as,
+\begin{align*}
+	\tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+	&+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+	&+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+\end{align*}
+
+The score of a section or a variable is given as,
+\[
+	\tsub{Score}{var} = \sum_{l \in P} \tsubb{W}{l} \times \tsub{Score}{l}.
+\]
+where,
+\[
+	P = \text{Set of sub-parameter labels.}
+\]
+\section{Attribute scoring and the
+process}
+\subsection{Asset Specific}
+\subsubsection{Govt. Support}
+
+\paragraph{Support: What are the areas the asset gets support from government agencies?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+None & 1 \\
+Financial Support & 2 \\
+Technical Support & 3 \\
+Marketing Support & 4 \\
+Insurance Support & 5 \\
+Transport Support & 6 \\
+Support via Schemes & 7 \\
+Support via Subsidies & 8 \\
+Others & 9 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{Support}
+\subsubsection{Transportation}
+
+\paragraph{Services: Is Home delivery service available?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Services} &= 0, \text{If no} \\
+        &= 1, \text{If yes}.
+\end{align*}
+\paragraph{Services: Is there Telephone booking facility available?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Services} &= 0, \text{If no} \\
+        &= 1, \text{If yes}.
+\end{align*}
+\subsubsection{Emergency Tools}
+
+\paragraph{Maintenance: Is there any fire equipment in that centre?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Maintenance} &= 0, \text{If no} \\
+        &= 1, \text{If yes}.
+\end{align*}
+\paragraph{Employment: Employees are sufficient or not in the shop?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Employment} &= 0, \text{If no} \\
+        &= 1, \text{If yes}.
+\end{align*}
+
+\end{document}

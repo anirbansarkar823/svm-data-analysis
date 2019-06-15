@@ -1,0 +1,176 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+%% ADD PACKAGES %%
+
+\title{Attributes tagging for Ration Shop/ Fair Price Shop}
+\author{Kipa Tachak}
+\date{Sunday  9 June 2019}
+
+\setcounter{secnumdepth}{3}
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newcommand{\multsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Sum of selected}{Sum of ranks}
+	\]
+}
+\newcommand{\singsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Rank of selected}{Max. rank}.
+	\]
+}
+\newenvironment{ttable}
+{
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+}
+{
+\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+%% BODY %%
+\section{About the document}
+This file documents the process of asset tagging for the asset 'Ration Shop/ Fair Price Shop' in the
+vertical 'Food and Civil Supplies'.
+
+\section{Attributes and questions}
+The list of sections, variables, and questions are:
+    \begin{itemize}
+    \item Observation
+    \item General
+    \item Asset Specific
+    \begin{itemize}
+\item Tech Scope
+\begin{enumerate}
+\item Digital Technology: Do you have a POS device in your shop?
+\end{enumerate}
+
+\item Availability
+\begin{enumerate}
+\item Maintenance: What is the frequency of getting supply for your shop?
+\item Services: What are the foodgrains/items available in the fair price shop?
+\end{enumerate}
+
+\item Technology Used
+\begin{enumerate}
+\item Transparency: How do you weigh any goods?
+\end{enumerate}
+
+\item Outreach
+\begin{enumerate}
+\item Market Reach: How many people (villagers) are enrolled as beneficiaries in the fair price shop?
+\end{enumerate}
+
+\item Potential
+\begin{enumerate}
+\item Market Reach: How many villages do your fair price shop cover?
+\end{enumerate}
+
+\end{itemize}
+
+    \end{itemize}
+\section{Overall scoring}
+The overall scoring of the asset is given as,
+\begin{align*}
+	\tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+	&+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+	&+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+\end{align*}
+
+The score of a section or a variable is given as,
+\[
+	\tsub{Score}{var} = \sum_{l \in P} \tsubb{W}{l} \times \tsub{Score}{l}.
+\]
+where,
+\[
+	P = \text{Set of sub-parameter labels.}
+\]
+\section{Attribute scoring and the
+process}
+\subsection{Asset Specific}
+\subsubsection{Tech Scope}
+
+\paragraph{Digital Technology: Do you have a POS device in your shop?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Digital Technology} &= 0, \text{If no} \\
+        &= 1, \text{If yes}.
+\end{align*}
+\subsubsection{Availability}
+
+\paragraph{Maintenance: What is the frequency of getting supply for your shop?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Weekly & 5 \\
+Monthly & 4 \\
+Quarterly & 3 \\
+Half Yearly & 2 \\
+Yearly & 1 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Maintenance}
+\paragraph{Services: What are the foodgrains/items available in the fair price shop?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Rice & 1 \\
+Wheat & 2 \\
+Flour & 3 \\
+Sugar & 4 \\
+Kerosene & 5 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{Services}
+\subsubsection{Technology Used}
+
+\paragraph{Transparency: How do you weigh any goods?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Manual & 1 \\
+Electronic & 2 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Transparency}
+\subsubsection{Outreach}
+
+\paragraph{Market Reach: How many people (villagers) are enrolled as beneficiaries in the fair price shop?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Market Reach} &= 1, \tsubb{N}{villagers} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{villagers}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\subsubsection{Potential}
+
+\paragraph{Market Reach: How many villages do your fair price shop cover?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Market Reach} &= 1, \tsubb{N}{villages} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{villages}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+
+\end{document}

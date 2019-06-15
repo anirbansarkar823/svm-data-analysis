@@ -1,0 +1,144 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+%% ADD PACKAGES %%
+
+\title{Attributes tagging for CHECK DAMS}
+\author{Kipa Tachak}
+\date{Monday 10 June 2019}
+
+\setcounter{secnumdepth}{3}
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newcommand{\multsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Sum of selected}{Sum of ranks}
+	\]
+}
+\newcommand{\singsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Rank of selected}{Max. rank}.
+	\]
+}
+\newenvironment{ttable}
+{
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+}
+{
+\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+%% BODY %%
+\section{About the document}
+This file documents the process of asset tagging for the asset 'CHECK DAMS' in the
+vertical 'Water and Sanitation'.
+
+\section{Attributes and questions}
+The list of sections, variables, and questions are:
+    \begin{itemize}
+    \item Observation
+    \item General
+    \item Asset Specific
+    \begin{itemize}
+\item Basic Info
+\begin{enumerate}
+\item Ownership: Who Constructed the Check dams?
+\end{enumerate}
+
+\item Infrastructure
+\begin{enumerate}
+\item Area: What is the area of the check dam?
+\item Height: What is the height of the check dam that you observe?
+\item Material: The check dam is made up of which material?
+\end{enumerate}
+
+\end{itemize}
+
+    \end{itemize}
+\section{Overall scoring}
+The overall scoring of the asset is given as,
+\begin{align*}
+	\tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+	&+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+	&+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+\end{align*}
+
+The score of a section or a variable is given as,
+\[
+	\tsub{Score}{var} = \sum_{l \in P} \tsubb{W}{l} \times \tsub{Score}{l}.
+\]
+where,
+\[
+	P = \text{Set of sub-parameter labels.}
+\]
+\section{Attribute scoring and the
+process}
+\subsection{Asset Specific}
+\subsubsection{Basic Info}
+
+\paragraph{Ownership: Who Constructed the Check dams?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Farmers & 1 \\
+Missionaries & 2 \\
+NGOs & 3 \\
+Government & 4 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Ownership}
+\subsubsection{Infrastructure}
+
+\paragraph{Area: What is the area of the check dam?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+0-1 acres & 1 \\
+2-3acres & 2 \\
+Above 3acres & 3 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Area}
+\paragraph{Height: What is the height of the check dam that you observe?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+0-1 feet & 1 \\
+1-2feet & 2 \\
+2-3feet & 3 \\
+Above 3feet & 4 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Height}
+\paragraph{Material: The check dam is made up of which material?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Bamboo & 1 \\
+Big Rocks & 2 \\
+Sandbags & 3 \\
+Concrete & 4 \\
+others & 5 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Material}
+
+\end{document}

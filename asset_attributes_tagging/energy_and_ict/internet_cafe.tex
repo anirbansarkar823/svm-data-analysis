@@ -1,0 +1,134 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+%% ADD PACKAGES %%
+
+\title{Attributes tagging for Internet Cafe}
+\author{Kipa Tachak}
+\date{Sunday  9 June 2019}
+
+\setcounter{secnumdepth}{3}
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newcommand{\multsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Sum of selected}{Sum of ranks}
+	\]
+}
+\newcommand{\singsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Rank of selected}{Max. rank}.
+	\]
+}
+\newenvironment{ttable}
+{
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+}
+{
+\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+%% BODY %%
+\section{About the document}
+This file documents the process of asset tagging for the asset 'Internet Cafe' in the
+vertical 'Energy \& ICT'.
+
+\section{Attributes and questions}
+The list of sections, variables, and questions are:
+    \begin{itemize}
+    \item Observation
+    \item General
+    \item Asset Specific
+    \begin{itemize}
+\item Operations
+\begin{enumerate}
+\item Internet Charge: What is the average charge for internet surfing per hour ?
+\item Printout cost: What is the average charge for printouts ?
+\end{enumerate}
+
+\item Offered Services
+\begin{enumerate}
+\item services: What are the other services provided here ?
+\item user training: Is there any training for available for your customers?
+\end{enumerate}
+
+\end{itemize}
+
+    \end{itemize}
+\section{Overall scoring}
+The overall scoring of the asset is given as,
+\begin{align*}
+	\tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+	&+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+	&+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+\end{align*}
+
+The score of a section or a variable is given as,
+\[
+	\tsub{Score}{var} = \sum_{l \in P} \tsubb{W}{l} \times \tsub{Score}{l}.
+\]
+where,
+\[
+	P = \text{Set of sub-parameter labels.}
+\]
+\section{Attribute scoring and the
+process}
+\subsection{Asset Specific}
+\subsubsection{Operations}
+
+\paragraph{Internet Charge: What is the average charge for internet surfing per hour ?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Internet Charge} &= 1, \tsubb{N}{Internet Charge} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{Internet Charge}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\paragraph{Printout cost: What is the average charge for printouts ?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Printout cost} &= 1, \tsubb{N}{Printout cost} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{Printout cost}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\subsubsection{Offered Services}
+
+\paragraph{services: What are the other services provided here ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Aadhar & 1 \\
+Desktop Publishing & 2 \\
+Paying Bills & 3 \\
+Others & 4 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{services}
+\paragraph{user training: Is there any training for available for your customers?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+no & 0 \\
+yes & 1 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{user training}
+
+\end{document}

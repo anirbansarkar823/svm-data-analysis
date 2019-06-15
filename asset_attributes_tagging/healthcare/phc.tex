@@ -1,0 +1,525 @@
+\documentclass[oneside]{article}
+\usepackage{mathtools}
+
+%% ADD PACKAGES %%
+
+\title{Attributes tagging for PHC}
+\author{Kipa Tachak}
+\date{Thursday 13 June 2019}
+
+\setcounter{secnumdepth}{3}
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newcommand{\multsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Sum of selected}{Sum of ranks}
+	\]
+}
+\newcommand{\singsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Rank of selected}{Max. rank}.
+	\]
+}
+\newenvironment{ttable}
+{
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+}
+{
+\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+%% BODY %%
+\section{About the document}
+This file documents the process of asset tagging for the asset 'PHC' in the
+vertical 'Healthcare'.
+
+\section{Attributes and questions}
+The list of sections, variables, and questions are:
+    \begin{itemize}
+    \item Observation
+    \item General
+    \item Asset Specific
+    \begin{itemize}
+\item Operations
+\begin{enumerate}
+\item Presence: Who is present at this point?
+\item Presence: Is FRU functional 24*7 hours?
+\item Patients: How many patients visit this facility on an average in a month?
+\item Traction: Which months have maximum footfall ?
+\end{enumerate}
+
+\item Employment
+\begin{enumerate}
+\item  Please name the number of persons working in respective fields.
+\end{enumerate}
+
+\item Capacity
+\begin{enumerate}
+\item  Available beds in this facility?
+\item  Average occupancy rate?
+\end{enumerate}
+
+\item Assets
+\begin{enumerate}
+\item  What Medicines are available?
+\item  Does this facility have a bloodbank?
+\item  Is this facility equipped for operation of telemedicine?
+\item  Is there an emergency vehicle available ?
+\end{enumerate}
+
+\item Services
+\begin{enumerate}
+\item  What kind of specialist services are available ?
+\item  What kind of tests are being conducted ?
+\item  What services are available in FRU of this PHC?
+\item  What kind of emergency services are available?
+\item  Do you conduct health camps?
+\item  Do you have in house Pharmacy ?
+\item  Is at least one doctor available during your operational hours?
+\item  Are offered services free of cost?
+\end{enumerate}
+
+\item Digital Tools
+\begin{enumerate}
+\item  Which of the following data is maintained online?
+\item  Which digital tools are you using, if any?
+\end{enumerate}
+
+\item Others
+\begin{enumerate}
+\item  Are you running Jan Aushadhi Kendras ?
+\item  What are the 3 most common cases of your patients?
+\item  Did you tie up with any health insurance company?
+\item  Are there areas which need to be improved?
+\end{enumerate}
+
+\end{itemize}
+
+    \end{itemize}
+\section{Overall scoring}
+The overall scoring of the asset is given as,
+\begin{align*}
+	\tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+	&+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+	&+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+\end{align*}
+
+The score of a section or a variable is given as,
+\[
+	\tsub{Score}{var} = \sum_{l \in P} \tsubb{W}{l} \times \tsub{Score}{l}.
+\]
+where,
+\[
+	P = \text{Set of sub-parameter labels.}
+\]
+\section{Attribute scoring and the
+process}
+\subsection{Asset Specific}
+\subsubsection{Operations}
+
+\paragraph{Presence: Who is present at this point?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Number Doctors & 1 \\
+Number Nurses & 2 \\
+Number Staff & 3 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Presence}
+\paragraph{Presence: Is FRU functional 24*7 hours?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Presence} &= 0, \text{If no} \\
+        &= 1, \text{If yes}.
+\end{align*}
+\paragraph{Patients: How many patients visit this facility on an average in a month?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Patients} &= 1, \tsubb{N}{Patients} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{Patients}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\paragraph{Traction: Which months have maximum footfall ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+January & 1 \\
+ ....  & 2 \\
+December & 3 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{Traction}
+\subsubsection{Employment}
+
+\paragraph{ Please name the number of persons working in respective fields.}
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+BMO/MS & $W_1$ \\
+Public Health Specialist & $W_2$ \\
+Public Health Nurse & $W_3$ \\
+General Surgeon & $W_4$ \\
+Physician & $W_5$ \\
+OBG & $W_6$ \\
+Pediatrician & $W_7$ \\
+Anesthetist & $W_8$ \\
+Dental Surgeon & $W_9$ \\
+	GDMO & $W_{10}$ \\
+	MO AYUSH & $W_{11}$ \\
+	Staff Nurse & $W_{12}$ \\
+	GNM & $W_{13}$ \\
+	ANM & $W_{14}$ \\
+	Others & $W_{15}$ \\
+	Pharmacist & $W_{16}$ \\
+	Pharmacist (AYUSH) & $W_{17}$ \\
+	Lab. Technician & $W_{18}$ \\
+	Radiographer & $W_{19}$ \\
+	Dietitian & $W_{20}$ \\
+	Ophthalmic Assistant & $W_{21}$ \\
+	Dental Assistant & $W_{22}$ \\
+	Cold chain \& Vaccine Logistic Assistant & $W_{23}$ \\
+	OT Assistant & $W_{24}$ \\
+	Multi Rehabilitation/ CBR Worker & $W_{25}$ \\
+	Counselor & $W_{26}$ \\
+\hline
+\end{ttable}
+The score is given as,
+\[
+	\tsub{Score}{} = \sum_{\text{selection i}} \tsubb{W}{selection} \times \dfrac{\tsubb{N}{selection}}{\text{thresh}}
+\]
+\subsubsection{Capacity}
+
+\paragraph{ Available beds in this facility?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+5-10 bedded & 1 \\
+10-20 bedded & 2 \\
+20-30 bedded & 3 \\
+31- 50 bedded & 4 \\
+51- 100 bedded & 5 \\
+101 - 200 bedded & 6 \\
+201 - 300 bedded & 7 \\
+301 - 500 bedded & 8 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{}
+\paragraph{ Average occupancy rate?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{} &= 1, \tsubb{N}{} \ge \text{Threshold} \\
+        &=
+\Big(\dfrac{\tsubb{N}{}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\subsubsection{Assets}
+
+\paragraph{ What Medicines are available?}
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Antipyretics & 1 \\
+Analgesics & 1 \\
+Antimalarial drugs & 1 \\
+Antibiotics inhibiting germ growth & 1 \\
+Antiseptics & 1 \\
+Mood stabilizers & 1 \\
+Hormone replacements & 1 \\
+Oral contraceptives & 1 \\
+Stimulants & 1 \\
+Tranquilizers & 1 \\
+Statins & 1 \\
+ORS & 1 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{}
+\paragraph{ Does this facility have a bloodbank?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{} &= 0, \text{If no} \\
+        &= 1, \text{If yes}.
+\end{align*}
+\paragraph{ Is this facility equipped for operation of telemedicine?}
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+yes & 1 \\
+no & 0 \\
+I don't know. & 0 \\
+\hline
+\end{ttable}
+For the presence or absence of telemedicine,
+\begin{align*}
+	\text{Present} &= 0, \text{If no} \\
+	&= 1, \text{If yes}
+\end{align*}
+
+The variable has a nested question for the means used for telemedicine. The options given are,
+\begin{ttable}
+	Options & Rank \\ \hline
+	Telephone service & 1 \\
+	Data exchange & 2 \\
+	Mobile app & 3 \\
+	Video conference & 4 \\ \hline
+\end{ttable}
+The score for telemedicine is given as,
+\[
+	\tsub{Score}{telemedicine} = \text{Present} \times \dsub{Sum of selected}{Sum of ranks}
+\]	
+\paragraph{ Is there an emergency vehicle available ?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{} &= 0, \text{If no} \\
+        &= 1, \text{If yes}.
+\end{align*}
+\subsubsection{Services}
+
+\paragraph{ What kind of specialist services are available ?}
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+ENT & 1 \\
+Dermatology & 1 \\
+Gynecologist & 1 \\
+OBG & 1 \\
+Ophthalmologist & 1 \\
+Anesthetist & 1 \\
+Pediatrician & 1 \\
+Orthopedic & 1 \\
+General Surgeon & 1 \\
+Physician & 1 \\
+Public Health Specialist & 1 \\
+Public Health Nurse & 1 \\
+Physiotherapy & 1 \\
+Homeopathy & 1 \\
+Ayurveda & 1 \\
+None & 0 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{}
+\paragraph{ What kind of tests are being conducted ?}
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Hemoglobin estimation & 1 \\
+Total Leukocyte count & 1 \\
+Differential Leukocyte count & 1 \\
+Absolute Eosinophil count & 1 \\
+Reticulocyte count & 1 \\
+Total RBC count & 1 \\
+E.S.R. & 1 \\
+Peripheral Blood Smear & 1 \\
+Malaria/Filaria Parasite & 1 \\
+Platelet count & 1 \\
+Packed Cell volume & 1 \\
+Blood grouping & 1 \\
+Rh typing & 1 \\
+Blood Cross matching & 1 \\
+Urine Analysis & 1 \\
+Stool Analysis & 1 \\
+Sputum Cytology & 1 \\
+Smear for AFB, KLB & 1 \\
+Grams Stain & 1 \\
+VDRL & 1 \\
+Pregnancy test (Urine gravindex) & 1 \\
+WIDAL test & 1 \\
+Blood Sugar & 1 \\
+Blood urea & 1 \\
+Liver function tests & 1 \\
+kidney function tests & 1 \\
+Blood lipid profile & 1 \\
+ECG & 1 \\
+Refraction by using Snellen's chart & 1 \\
+Retinoscopy & 1 \\
+Ophthalmoscopy & 31 \\
+x ray for Chest, Skull, Spine, Abdomen, bones & 1 \\
+Dental x ray & 1 \\
+None & 0 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{}
+\paragraph{ What services are available in FRU of this PHC?}
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Provision of warmth & 1 \\
+Resuscitation & 1 \\
+Supportive care including oxygen, drugs, IV fluids & 1 \\
+Monitoring of vital signs, including blood pressure & 1 \\
+Breastfeeding/feeding support & 1 \\
+Referral Services & 1 \\
+Maternal health & 1 \\
+Child Heath & 1 \\
+Family planning services & 1 \\
+None & 0 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{}
+\paragraph{ What kind of emergency services are available?}
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Stroke & 1 \\
+Cardiac Arrest & 1 \\
+Road Traffic Accidents & 1 \\
+Burns and Trauma & 1 \\
+Pediatrics & 1 \\
+Gynecology & 1 \\
+Others & 1 \\
+None & 0 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{}
+\paragraph{ Do you conduct health camps?}
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Yes & 1 \\
+No & 0 \\
+I don't know & 0 \\
+\hline
+\end{ttable}
+The score is given as,
+\[
+	\tsub{Score}{} = \tsub{Selected}{option} \times \dsub{frequency}{thresh}
+\]
+\paragraph{ Do you have in house Pharmacy ?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{} &= 0, \text{If no} \\
+        &= 1, \text{If yes}.
+\end{align*}
+\paragraph{ Is at least one doctor available during your operational hours?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{} &= 0, \text{If no} \\
+        &= 1, \text{If yes}.
+\end{align*}
+\paragraph{ Are offered services free of cost?}
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Most are for free & 3 \\
+Most are at cost & 2 \\
+Services are free & 4 \\
+half/half & 1 \\
+I don't know & 0 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{}
+\subsubsection{Digital Tools}
+
+\paragraph{ Which of the following data is maintained online?}
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Inventory & 1 \\
+Health service delivery data & 1 \\
+Equipment, drugs & 1 \\
+Attendance of employees & 1 \\
+Diagnostics & 1 \\
+Accounts & 1 \\
+None & 0 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{}
+\paragraph{ Which digital tools are you using, if any?}
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Biomedical Equipment Mapping & 1 \\
+Maintenance Software & 1 \\
+General Management Software & 1 \\
+None & 0 \\
+\hline
+\end{ttable}
+The score is given as,
+\multsel{}
+\subsubsection{Others}
+
+\paragraph{ Are you running Jan Aushadhi Kendras ?}
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Yes & 1 \\
+No & 0 \\
+Not aware & 0 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{}
+\paragraph{ What are the 3 most common cases of your patients?}
+Option Missing.
+\paragraph{ Did you tie up with any health insurance company?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{} &= 0, \text{If no} \\
+        &= 1, \text{If yes}.
+\end{align*}
+\paragraph{ Are there areas which need to be improved?}
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+Quality of care & 1 \\
+Discharge time & 1 \\
+Cleanliness & 1 \\
+Ventilation & 1 \\
+On time payment of salaries & 1 \\
+On time reporting of doctors, staff etc & 1 \\
+Stock of medicines \& consumables & 1 \\
+Requisition of medical equipment & 1 \\
+Appointment of vacant posts & 1 \\
+Pharmacy & 1 \\
+Diagnostic services & 1 \\
+Direct Benefit transfer & 1 \\
+Need for new medical equipment & 1 \\
+Infrastructure of the facility such as water supply, climating of the rooms, etc. & 1 \\
+\hline
+\end{ttable}
+The score is given as,
+\[
+	\tsub{Score}{} = 1 - \dsub{Sum of selected}{Sum of ranks}
+\]
+\subsubsection{How many villages does this PHC serve?}
+The score is given as,
+\[
+	\tsub{Score}{} = \Big(\dfrac{\tsubb{N}{villages}}{\text{thresh}}\Big)^{2}
+\]
+\subsubsection{}
+
+
+
+\end{document}

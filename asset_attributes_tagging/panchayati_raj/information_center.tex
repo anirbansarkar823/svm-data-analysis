@@ -1,0 +1,122 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+%% ADD PACKAGES %%
+
+\title{Attributes tagging for Information Center}
+\author{Kipa Tachak}
+\date{Saturday  8 June 2019}
+
+\setcounter{secnumdepth}{3}
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newcommand{\multsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Sum of selected}{Sum of ranks}
+	\]
+}
+\newcommand{\singsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Rank of selected}{Max. rank}.
+	\]
+}
+\newenvironment{ttable}
+{
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+}
+{
+\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+%% BODY %%
+\section{About the document}
+This file documents the process of asset tagging for the asset 'Information Center' in the vertical 'Panchayati Raj'.
+
+\section{Attributes and questions}
+The list of sections, variables, and questions are:
+\begin{itemize}
+	\item Observation
+	\item General
+	\item Asset Specific
+		\begin{itemize}
+			\item Availability
+				\begin{enumerate}
+					\item Services:  Which of the following services are available in the center?
+				\end{enumerate}
+			\item Service
+				\begin{enumerate}
+					\item Reach: How many people visit the information center in a week?
+				\end{enumerate}
+			\item Facility
+				\begin{enumerate}
+					\item Services: What other facilities does the information center offer?
+				\end{enumerate}
+		\end{itemize}
+\end{itemize}
+
+\section{Overall scoring}
+The overall scoring of the asset is given as,
+\begin{align*}
+	\tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+	&+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+	&+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+\end{align*}
+
+The score of a section or a variable is given as,
+\[
+	\tsub{Score}{var} = \sum_{l \in P} \tsubb{W}{l} \times \tsub{Score}{l}.
+\]
+where,
+\[
+	P = \text{Set of sub-parameter labels.}
+\]	
+
+\section{Attribute scoring and the process}
+\subsection{Asset Specific}
+\subsubsection{Availability}
+\paragraph{Services: Which of the following services are available in the center?}
+The options given are,
+\begin{ttable}
+	Services & Rank \\ \hline
+	Others & 1 \\
+	Payment of bill & 2 \\
+	Banking & 3 \\
+	Issue of Official documents & 3 \\ \hline
+	Sum of ranks & 9
+\end{ttable}
+The score is given as,
+\multsel{availability}
+\subsubsection{Service}
+\paragraph{Reach: How many people visit the information center in a week?} 
+The score is given as,
+\begin{align*}
+	\tsub{Score}{service} &= 1, \tsubb{N}{visitors} \ge \text{Threshold} \\
+	&= \Big( \dfrac{\tsubb{N}{visitors}}{\text{Threshold}} \Big)^{2}, \text{Otherwise}.
+\end{align*}
+
+\subsubsection{Facility}
+\paragraph{Services: What other facilities does the information center offer?}
+The options given are,
+\begin{ttable}
+	Services & Rank \\ \hline
+	Printing & 1 \\
+	Scanning & 1 \\
+	Photocopy & 1 \\
+	Lamination & 1 \\ \hline
+	Sum. of ranks & 4
+\end{ttable}
+The score is given as,
+\multsel{facility}
+\paragraph{Suggestion} The variable facility is treated as a multi-choice multi-select option.
+\end{document}
+

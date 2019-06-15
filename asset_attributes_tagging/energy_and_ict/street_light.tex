@@ -1,0 +1,155 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+%% ADD PACKAGES %%
+
+\title{Attributes tagging for Street Light}
+\author{Kipa Tachak}
+\date{Sunday  9 June 2019}
+
+\setcounter{secnumdepth}{3}
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newcommand{\multsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Sum of selected}{Sum of ranks}
+	\]
+}
+\newcommand{\singsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Rank of selected}{Max. rank}.
+	\]
+}
+\newenvironment{ttable}
+{
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+}
+{
+\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+%% BODY %%
+\section{About the document}
+This file documents the process of asset tagging for the asset 'Street Light' in the
+vertical 'Energy'.
+
+\section{Attributes and questions}
+The list of sections, variables, and questions are:
+    \begin{itemize}
+    \item Observation
+    \item General
+    \item Asset Specific
+    \begin{itemize}
+\item Specs
+\begin{enumerate}
+\item Type: What type of lamp technology is used for this street light ?
+\item Distance: How far is this street light from the nearest substation or transformer (in km)?
+\item On/Off grid: Is this street light on-grid or off grid ?
+\item Solar/Traditional: Is this street light traditional system or solar ?
+\end{enumerate}
+
+\item Support
+\begin{enumerate}
+\item APEDA: Has this been implemented with the support of APEDA  ?
+\end{enumerate}
+
+\end{itemize}
+
+    \end{itemize}
+\section{Overall scoring}
+The overall scoring of the asset is given as,
+\begin{align*}
+	\tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+	&+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+	&+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+\end{align*}
+
+The score of a section or a variable is given as,
+\[
+	\tsub{Score}{var} = \sum_{l \in P} \tsubb{W}{l} \times \tsub{Score}{l}.
+\]
+where,
+\[
+	P = \text{Set of sub-parameter labels.}
+\]
+\section{Attribute scoring and the
+process}
+\subsection{Asset Specific}
+\subsubsection{Specs}
+
+\paragraph{Type: What type of lamp technology is used for this street light ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+High Pressure Mercury Vapor & 1 \\
+Metal Halide   & 2 \\
+High Pressure Sodium
+Vapor  & 3 \\
+Low Pressure Mercury
+Fluorescent Tubular
+Lamp & 4 \\
+Energy-efficient
+Fluorescent Tubular
+Lamp  & 5 \\
+Light Emitting Diode & 6 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Type}
+\paragraph{Distance: How far is this street light from the nearest substation or transformer (in km)?}
+
+The score is given as,
+\begin{align*}
+\tsub{Score}{Distance} &= 1, \tsubb{N}{Distance} \ge \text{Threshold} \\
+        &=
+1 - \Big(\dfrac{\tsubb{N}{Distance}}{\text{Threshold}}\Big)^{2}
+\text{Otherwise}.
+\end{align*}
+\paragraph{On/Off grid: Is this street light on-grid or off grid ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+on grid & 1 \\
+off grid & 2 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{On/Off grid}
+\paragraph{Solar/Traditional: Is this street light traditional system or solar ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+traditional system & 1 \\
+solar powered & 2 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{Solar/Traditional}
+\subsubsection{Support}
+
+\paragraph{APEDA: Has this been implemented with the support of APEDA  ?}
+
+The options given are,
+\begin{ttable}
+Options & Rank \\ \hline
+no & 0 \\
+yes & 1 \\
+\hline
+\end{ttable}
+The score is given as,
+\singsel{APEDA}
+
+\end{document}

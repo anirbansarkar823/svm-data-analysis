@@ -1,0 +1,168 @@
+\documentclass[oneside,twocolumn]{article}
+\usepackage{mathtools}
+
+%% ADD PACKAGES %%
+
+\title{Attributes tagging for Gram Panchayat Building}
+\author{Kipa Tachak}
+\date{Saturday  8 June 2019}
+
+\setcounter{secnumdepth}{3}
+\newcommand{\tsub}[2]{\text{#1}_{\text{#2}}}
+\newcommand{\tsubb}[2]{#1_{\text{#2}}}
+\newcommand{\dsub}[2]{\dfrac{\text{#1}}{\text{#2}}}
+\newcommand{\multsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Sum of selected}{Sum of ranks}
+	\]
+}
+\newcommand{\singsel}[1]
+{
+	\[
+		\tsub{Score}{#1} = \dsub{Rank of selected}{Max. rank}.
+	\]
+}
+\newenvironment{ttable}
+{
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+}
+{
+\\ \hline
+\end{tabular}
+\end{center}
+}
+
+\begin{document}
+\maketitle
+
+%% BODY %%
+\section{About the document}
+This file documents the process of asset tagging for the asset 'Gram Panchayat Building' in the vertical 'Panchayati Raj'.
+
+\section{Attributes and questions}
+The list of sections, variables, and questions are:
+\begin{itemize}
+	\item Observation
+	\item General
+	\item Asset Specific
+		\begin{itemize}
+			\item Infrastructure
+				\begin{enumerate}
+					\item Utility: Is the building being utilized currently?
+				\end{enumerate}
+			\item Services
+				\begin{enumerate}
+					\item Availability:  What kinds of services are available there?
+				\end{enumerate}
+			\item Records Maintenance
+				\begin{enumerate}
+					\item Records: Is the village data maintained in the building?
+				\end{enumerate}
+			\item Frequency
+				\begin{enumerate}
+					\item Efficiency: How frequently are the gram sabhas held?
+				\end{enumerate}
+			\item Community Outreach
+				\begin{enumerate}
+					\item Reach: How many people attend these gram sabha meetings on an average?
+				\end{enumerate}
+			\item Communication
+				\begin{enumerate}
+					\item Mass Gathering: How does the panchayat pass information to the community?
+				\end{enumerate}
+		\end{itemize}
+\end{itemize}
+
+\section{Overall scoring}
+The overall scoring of the asset is given as,
+\begin{align*}
+	\tsub{Score}{asset} &= \tsubb{W}{observation} \times \tsub{Score}{observation} \\
+	&+ \tsubb{W}{general} \times \tsub{Score}{general} \\
+	&+ \tsubb{W}{specific} \times \tsub{Score}{specific}.
+\end{align*}
+
+The score of a section or a variable is given as,
+\[
+	\tsub{Score}{var} = \sum_{l \in P} \tsubb{W}{l} \times \tsub{Score}{l}.
+\]
+where,
+\[
+	P = \text{Set of sub-parameter labels.}
+\]	
+
+\section{Attribute scoring and the process}
+\subsection{Asset Specific}
+\subsubsection{Infrastructure}
+\paragraph{Utility: Is the building being utilized currently?}
+The score is given as,
+\begin{align*}
+	\tsub{Score}{utility} &= 0, \text{if no} \\
+	&= 1, \text{if yes}.
+\end{align*}
+\subsubsection{Services}
+\paragraph{Availability:  What kinds of services are available there?}
+The options given are,
+\begin{ttable}
+	Services & Rank \\ \hline
+	None & 0 \\
+	Application Schemes & 1 \\
+	Aadhar Enrollment & 2 \\
+	Both & 3 \\ \hline
+	Max. rank & 3
+\end{ttable}
+The score is given as,
+\singsel{services}
+\subsubsection{Records Maintenance}
+\paragraph{Records: Is the village data maintained in the building?}
+The options given are,
+\begin{ttable}
+	Maintenance & Rank \\ \hline
+	Not maintained & 0 \\
+	Manually recorded & 1 \\
+	Digitized & 2 \\ \hline
+	Max. rank & 2
+\end{ttable}
+The score is given as,
+\singsel{records}
+\subsubsection{Frequency}
+\paragraph{Efficiency: How frequently are the gram sabhas held?}
+The options given are,
+\begin{ttable}
+	Frequency & Rank \\ \hline
+	Whenever required & 1 \\
+	Yearly & 2 \\
+	Quarterly & 3 \\
+	Once in two months & 4 \\
+	At least once a month & 5 \\ \hline
+	Max. rank & 5
+\end{ttable}
+The score is given as,
+\singsel{frequency}
+\subsubsection{Community Outreach}
+\paragraph{Reach: How many people attend these gram sabha meetings on an average?}
+The score is given as,
+\begin{align*}
+	\tsub{Score}{reach} &= 1, \tsubb{N}{attendees} \ge \text{Threshold} \\
+	&= \Big( \dfrac{\tsubb{N}{attendees}}{\text{Threshold}} \Big)^{2}, \text{Otherwise}.
+\end{align*}
+\subsubsection{Communication}
+\paragraph{Mass Gathering: How does the panchayat pass information to the community?}
+The options given are,
+\begin{ttable}
+	Sharing options & Rank \\ \hline
+	Others & 1 \\
+	In Panchayat meetings & 2 \\
+	Door to door & 3 \\
+	Pamphlets & 4 \\
+	Phone calls & 5 \\
+	Messages & 6 \\ \hline
+	Sum of ranks & 21
+\end{ttable}
+The score is calculated as,
+\multsel{communication}
+
+\end{document}
+
