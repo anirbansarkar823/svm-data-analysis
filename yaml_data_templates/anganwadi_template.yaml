@@ -1,0 +1,150 @@
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:
+                        access:
+                                start: 15
+                                end: 16
+                        road_connectivity:
+                                start: 16
+                                end: 17
+                        public_transport:
+                                start: 17
+                                end: 18
+                        school_buses:
+                                start: 79
+                                end: 80
+                        mobile_connectivity:
+                                start: 18
+                                end: 19
+                infrastructure:
+                        building_type:
+                                start: 25
+                                end: 26
+                        security:
+                                start: 26
+                                end: 27
+                        land: 
+                                start: 59
+                                end: 60
+
+        general:
+                availability:
+                        working_hours:
+                                start: 27
+                                end: 28
+                        working_days:
+                                start: 28
+                                end: 29
+                employability:
+                        teachers:
+                                start: 29
+                                end: 30
+                        support_staff:
+                                start: 30
+                                end: 31
+                water:
+                        drinking_water:
+                                start: 31
+                                end: 33
+                sanitation:
+                        toilets:
+                                start: 33
+                                end: 37
+                        waste_management:
+                                start: 37
+                                end: 38
+                        general_cleanliness:
+                                start: 39
+                                end: 41
+                energy:
+                        electricity:
+                                start: 41
+                                end: 43
+                alternate_energy:
+                        alternate_energy:
+                                start: 43
+                                end: 45
+                communication:
+                        telephone:
+                                start: 50
+                                end: 51
+                        broadband:
+                                start: 52
+                                end: 53
+                        mobile:
+                                start: 19
+                                end: 20
+                record_maintenance:
+                        records:
+                                start: 54
+                                end: 55
+                govt_support:
+                        support:
+                                start: 56
+                                end: 58
+                educational_materials:
+                        textbooks:
+                                start: 58
+                                end: 59
+                        curriculum:
+                                start: 60
+                                end: 61
+                digital_technologies:
+                        awareness:
+                                start: 61
+                                end: 62
+                health:
+                        checkups:
+                                start: 63
+                                end: 65
+                        meals:
+                                start: 65
+                                end: 67
+                facilities:
+                        recreational:
+                                start: 67
+                                end: 68
+                        residential:
+                                start: 68
+                                end: 69
+                        classrooms:
+                                start: 69
+                                end: 70
+                educational_statistics:
+                        enrollment_population:
+                                start: 70
+                                end: 71
+                        extra_curriculars:
+                                start: 71
+                                end: 72
+                        dropouts:
+                                start: 72
+                                end: 74
+                disaster_preparedness:
+                        disaster_drills:
+                                start: 77
+                                end: 78
+        specific:
+                diversity:
+                        gender_equality:
+                                start: 78
+                                end: 79
+                govt_supplies:
+                        supplies:
+                                start: 80
+                                end: 82
+                        funding:
+                                start: 82
+                                end: 83
