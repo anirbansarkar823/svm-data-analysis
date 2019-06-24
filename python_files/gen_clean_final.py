@@ -52,7 +52,9 @@ def gen_final_yaml_for_weights(df, attrd, attrseq, refrmtd):
         if len(atrd) <= 0:
             continue
 
-        nptr[label] = OrderedDict()
+        if not nptr.get(label):
+            nptr[label] = OrderedDict()
+
         for tag, tagd in atrd.items():
             frmt = tagd.get('format')
             if frmt:
@@ -61,7 +63,9 @@ def gen_final_yaml_for_weights(df, attrd, attrseq, refrmtd):
                 REFORMAT[frmt](df, tag)
                 inner_tag = TAG_FOR_FRMT[frmt]
                 val_str = STR_FOR_TAG[inner_tag]
-                nptr[label][tag] = OrderedDict()
+                
+                if not nptr[label].get(tag):
+                    nptr[label][tag] = OrderedDict()
                 nptr[label][tag]['weight'] = '# fill with weights #'
                 nptr[label][tag][inner_tag] = val_str
                 if frmt in [FR_T_STR_NR, FR_T_MULT_SEL]:
@@ -83,6 +87,7 @@ def gen_final_yaml_for_weights(df, attrd, attrseq, refrmtd):
 if __name__ == '__main__':
     import argparse
     import os
+    import ntpath
     
     parser = argparse.ArgumentParser(description='Correct data in the processed csv data and generated YAML file for weights assignment.')
     parser.add_argument('-df', help='Path to the processed csv file to be corrected')
@@ -90,11 +95,18 @@ if __name__ == '__main__':
     parser.add_argument('-s', help='Separator used in the csv file.')
 
     args = parser.parse_args()
+    csv_dir = os.getenv('CSV_CLN')
+    yml_dir = os.getenv('YML_WTV')
 
-    infile, sep, ymlfile = args.df, args.s, args.yml
-    filename = infile.split('.')[0]
-    out_yaml_file = filename+'_weights_thresh_vals.yaml'
-    out_csv_file = filename+'_cleaned.csv'
+    if not (csv_dir and yml_dir):
+        print('Output directories not set')
+        exit()
+
+    csvfile, sep, ymlfile = args.df, args.s, args.yml
+    csvfilename = ntpath.basename(csvfile).split('.')[0] + '.csv'
+    ymlfilename = ntpath.basename(ymlfile).split('.')[0] + '.yaml'
+    out_yaml_file = os.path.join(yml_dir, ymlfilename)
+    out_csv_file = os.path.join(csv_dir, csvfilename)
 
     out_yaml_exists = os.path.isfile(out_yaml_file)
     out_csv_exists = os.path.isfile(out_csv_file)
@@ -104,7 +116,7 @@ if __name__ == '__main__':
     elif out_csv_exists:
         print(out_csv_file, 'exists!')
     else:
-        df = pd.read_csv(infile, sep=sep)
+        df = pd.read_csv(csvfile, sep=sep)
         attrd_corr = from_yaml(ymlfile)
         corr_data = attrd_corr['correct']
         colsd = attrd_corr['rename']
@@ -114,6 +126,6 @@ if __name__ == '__main__':
 
         correct_df(df, corr_data)
         rename_cols(df, colsd)
-        df.to_csv(out_csv_file, sep=',', na_rep='N/A')
+        df.to_csv(out_csv_file, sep=',', na_rep='N/A', index=False)
         to_yaml(out_yaml_file,
                 gen_final_yaml_for_weights(df, attrd, attr_seq, reformatd))

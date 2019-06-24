@@ -19,7 +19,6 @@ reformat:
   How many teachers are employed in the facility?: number
   How many support staff are employed in the facility?: number
   How many hours per day are you facing power cuts?: number
-
 sections:
   observation:
     accessibility:
@@ -47,7 +46,7 @@ sections:
           format: multi_select
       land:
         What is the total campus area?:
-          format: normal_string
+          format: number
   general:
     availability:
       working_hours:
@@ -59,30 +58,44 @@ sections:
     employability:
       teachers:
         How many teachers are employed in the facility?:
-          format: normal_string
+          format: number
       support_staff:
         How many support staff are employed in the facility?:
-          format: normal_string
+          format: number
     water:
       drinking_water:
-        distance travelled in km to avail public transport:
+        Where do you get drinking water from?:
+          format: normal_string
+        cost per litre of bottled water in rupees:
           format: number
     sanitation:
       toilets:
+        Are there toilets available for public usage?:
+          format: normal_string
+        Are there toilets available separately as per gender?:
+          format: normal_string
+        Is there running water available in the toilets at this asset?:
+          format: normal_string
         Is there soap for handwash available at this asset?:
           format: normal_string
       waste_management:
         How do you deal with the waste generated from the facility?:
           format: normal_string
       general_cleanliness:
+        Are the premises cleaned with disinfectant regularly?:
+          format: normal_string
         How frequently are the premises cleaned with disinfectant in a week?:
           format: normal_string
     energy:
       electricity:
-        How many hours per day are you facing power cuts?:
+        Do you have grid connection for energy supply?:
           format: normal_string
+        How many hours per day are you facing power cuts?:
+          format: number
     alternate_energy:
       alternate_energy:
+        What is the alternative energy source available in the facility?:
+          format: normal_string
         How many hours do you rely on the alternative energy source in a day?:
           format: number
     communication:
@@ -101,6 +114,8 @@ sections:
           format: normal_string
     govt_support:
       support:
+        What are the areas you get support from government agencies for the facility?:
+          format: multi_select
         What are the areas you get support from government agencies for your students?:
           format: multi_select
     educational_materials:
@@ -116,9 +131,13 @@ sections:
           format: normal_string
     health:
       checkups:
+        Are there checkups or medical facilities available?:
+          format: normal_string
         What is the frequency of these checkups?:
           format: normal_string
       meals:
+        Are there any meals served?:
+          format: normal_string
         Is the nutritional value monitored?:
           format: normal_string
     facilities:
@@ -139,6 +158,8 @@ sections:
         Apart from academics what are the co-curricular activities available for students ?:
           format: multi_select
       dropouts:
+        What is the percentage of drop-outs?:
+          format: normal_string
         What is the reason for dropouts?:
           format: multi_select
     disaster_preparedness:
@@ -152,6 +173,8 @@ sections:
           format: normal_string
     govt_supplies:
       supplies:
+        Do the centers get timely supplies of the government goods?:
+          format: normal_string
         What is the source of the supplies?:
           format: multi_select
       funding:

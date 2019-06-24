@@ -128,11 +128,14 @@ def group_sec_and_format(df, secd):
     while len(dq) > 0:
         scd, grpd = dq.pop()
         for tag, tagd in scd.items():
+            print(tag, tagd)
             if tagd.get('start'):
                 start, end = tagd['start'], tagd['end']
                 for ques in df.columns[start:end]:
-                    grpd[tag] = OrderedDict()
-                    grpd[tag][ques] = OrderedDict()
+                    if not grpd.get(tag):
+                        grpd[tag] = OrderedDict()
+                    if not grpd.get(ques):
+                        grpd[tag][ques] = OrderedDict()
                     ques_list.append(ques)
                     if not(str(df[ques].dtype) in ['int64', 'float64']):
                         vals = [v for v in df[ques].unique()
@@ -186,6 +189,7 @@ def clean(df, attrd):
 if __name__ == '__main__':
     import os
     import argparse
+    import ntpath
 
     parser = argparse.ArgumentParser(description="Clean data in the input csv file and generate output csv and yaml files.")
     parser.add_argument('-df', help='Path to the input csv file')
@@ -194,11 +198,18 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    infile, sep, ymlfile = args.df, args.s, args.yml
-    filename = infile.split('.')[0]
+    csv_dir = os.getenv('CSV_PR')
+    yml_dir = os.getenv('YML_ATR')
 
-    out_yaml_file = filename+'_attr_template.yaml'
-    out_csv_file = filename+'_processed.csv'
+    if not (csv_dir and yml_dir):
+        print('Output directories not set')
+        exit()
+        
+    csvfile, sep, ymlfile = args.df, args.s, args.yml
+    csvfilename = ntpath.basename(csvfile).split('.')[0] + '.csv'
+    ymlfilename = ntpath.basename(ymlfile).split('.')[0] + '.yaml'
+    out_yaml_file = os.path.join(yml_dir, ymlfilename)
+    out_csv_file = os.path.join(csv_dir, csvfilename)
 
     out_yaml_exists = os.path.isfile(out_yaml_file)
     out_csv_exists = os.path.isfile(out_csv_file)
@@ -209,8 +220,8 @@ if __name__ == '__main__':
         print(out_csv_file, 'exists!')
     else:
 
-        df = pd.read_csv(infile, sep=sep)
+        df = pd.read_csv(csvfile, sep=sep)
         attrd = from_yaml(ymlfile)
         groupped, df = clean(df, attrd)
-        df.to_csv(out_csv_file, sep=',', na_rep='N/A')
+        df.to_csv(out_csv_file, sep=',', na_rep='N/A', index=False)
         to_yaml(out_yaml_file, groupped)

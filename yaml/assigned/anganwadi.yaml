@@ -1,0 +1,426 @@
+sections:
+  observation:
+    weight: 20
+    variables:
+      accessibility:
+        weight: 40
+        sub_parameters:
+          access:
+            weight: 20
+            questions:
+              How many times did you go there until it was open?:
+                weight: 100
+                threshold: 10
+          road_connectivity:
+            weight: 40
+            questions:
+              What is the type of the road available to the asset?:
+                weight: 100
+                values:
+                  kacha road with block point: 1
+                  pakka road: 4
+                  kacha road: 2
+                  footway: 0
+          public_transport:
+            weight: 15
+            questions:
+              distance travelled in km to avail public transport:
+                weight: 100
+                threshold: 1
+          school_buses:
+            weight: 0
+            questions:
+              How many buses go to this asset?:
+                weight: 100
+                threshold: 1
+          mobile_connectivity:
+            weight: 25
+            questions:
+              What is the type of the mobile network available at the asset?:
+                weight: 100
+                values:
+                  3g unreliable: 3
+                  4g+ reliable: 6
+                  2g unreliable: 1
+                  none: 0
+                  3g reliable: 4
+                  4g unreliable: 5
+                  2g reliable: 2
+      infrastructure:
+        weight: 60
+        sub_parameters:
+          building_type:
+            weight: 50
+            questions:
+              What is the type of structure of this asset?:
+                weight: 100
+                values:
+                  kacha/temporary(wood,bamboo,etc.,): 0
+                  pakka/permanent(steel,concrete,etc.): 1
+          security:
+            weight: 10
+            questions:
+              What is the type of security available for the asset?:
+                weight: 100
+                values:
+                  watchman: 1
+                  others: 1
+                  compound wall/fencing: 2
+                  none: 0
+          land:
+            weight: 40
+            questions:
+              What is the total campus area?:
+                weight: 100
+                threshold: 1000
+  general:
+    weight: 60
+    variables:
+      availability:
+        weight: 5
+        sub_parameters:
+          working_hours:
+            weight: 50
+            questions:
+              work duration per day in minutes:
+                weight: 100
+                threshold: 6
+          working_days:
+            weight: 50
+            questions:
+              What are the working days of the facility?:
+                weight: 6
+                values:
+                  thursday: 1
+                  sunday: 1
+                  wednesday: 1
+                  monday: 1
+                  friday: 1
+                  tuesday: 1
+                  saturday: 1
+      employability:
+        weight: 10
+        sub_parameters:
+          teachers:
+            weight: 50
+            questions:
+              How many teachers are employed in the facility?:
+                weight: 100
+                threshold: 1
+          support_staff:
+            weight: 50
+            questions:
+              How many support staff are employed in the facility?:
+                weight: 100
+                threshold: 1
+      water:
+        weight: 10
+        sub_parameters:
+          drinking_water:
+            weight: 100
+            questions:
+              Where do you get drinking water from?:
+                weight: 100
+                values:
+                  ground water: 2
+                  spring water: 2
+                  others: 2
+                  bottled water: 2
+                  tap water from government: 1
+      sanitation:
+        weight: 10
+        sub_parameters:
+          toilets:
+            weight: 40
+            questions:
+              Are there toilets available for public usage?:
+                weight: 100
+                values:
+                  no: 0
+                  yes: 1
+          waste_management:
+            weight: 30
+            questions:
+              How do you deal with the waste generated from the facility?:
+                weight: 100
+                values:
+                  discarded in open field: 0
+                  burnt within the premises: 1
+                  discarded in water bodies: 0
+                  none: 0
+                  discarded in govt. designated sites: 1
+          general_cleanliness:
+            weight: 30
+            questions:
+              Are the premises cleaned with disinfectant regularly?:
+                weight: 100
+                values:
+                  no: 0
+                  yes: 1
+              How frequently are the premises cleaned with disinfectant in a week?:
+                weight: 100
+                values:
+                  7: 7
+                  1: 1
+                  3: 3
+                  4: 4
+                  6: 6
+                  5: 5
+                  2: 2
+                  more than 7 times a week: 7
+      energy:
+        weight: 5
+        sub_parameters:
+          electricity:
+            weight: 100
+            questions:
+              Do you have grid connection for energy supply?:
+                weight: 100
+                values:
+                  no: 0
+                  yes: 1
+      alternate_energy:
+        weight: 5
+        sub_parameters:
+          alternate_energy:
+            weight: 100
+            questions:
+              What is the alternative energy source available in the facility?:
+                weight: 100
+                values:
+                  others: 1
+                  inverter: 1
+                  diesel generator: 1
+                  kerosene generator: 1
+                  biomas unit : 2
+                  none: 0
+                  solar unit: 2
+      communication:
+        weight: 5
+        sub_parameters:
+          telephone:
+            weight: 10
+            questions:
+              Do you have landline connectivity:
+                weight: 100
+                values:
+                  yes: 1               
+                  no: 0
+          broadband:
+            weight: 10
+            questions:
+              Do you have wired internet connection?:
+                weight: 100
+                values:
+                  yes: 1
+                  no: 0
+          mobile:
+            weight: 80
+            questions:
+              What are different Mobile network service providers available at the location of this asset?:
+                weight: 100
+                values:
+                  bsnl: 1
+                  jio: 1
+                  vodafone: 1
+                  airtel: 1
+      record_maintenance:
+        weight: 5
+        sub_parameters:
+          records:
+            weight: 100
+            questions:
+              How do you maintain records for operations?:
+                weight: 100
+                values:
+                  others: 1
+                  traditional book: 3
+                  record is not maintained: 0
+      govt_support:
+        weight: 10
+        sub_parameters:
+          support:
+            weight: 100
+            questions:
+              What are the areas you get support from government agencies for the facility?:
+                weight: 100
+                values:
+                  technical support: 2
+                  none: 0
+                  others: 0
+                  financial support: 3
+                  transport support: 1
+              What are the areas you get support from government agencies for your students?:
+                weight: 100
+                values:
+                  others: 0
+                  none: 0
+                  financial support: 3
+                  technical support: 2
+                  transportation support: 1
+      educational_materials:
+        weight: 5
+        sub_parameters:
+          textbooks:
+            weight: 52
+            questions:
+              Where do you gets textbooks for the children?:
+                weight: 100
+                values:
+                  supplier in other states: 1
+                  government agency: 3
+                  none: 0
+                  local supplier: 2
+          curriculum:
+            weight: 48
+            questions:
+              Where do you get the curriculum for classes and educational programs?:
+                weight: 100
+                values:
+                  supplier in other states: 1
+                  government agency: 4
+                  local supplier: 2
+                  self-created: 3
+                  others: 0
+      digital_technologies:
+        weight: 5
+        sub_parameters:
+          awareness:
+            weight: 100
+            questions:
+              Are you using digital tools for teaching?:
+                weight: 100
+                values:
+                  yes: 1
+                  no: 0
+      health:
+        weight: 10
+        sub_parameters:
+          checkups:
+            weight: 40
+            questions:
+              Are there checkups or medical facilities available?:
+                weight: 100
+                values: 
+                   yes: 1
+                   no: 0
+              What is the frequency of these checkups?:
+                weight: 100
+                values:
+                  atleast once a month: 4
+                  atleast once a six month: 3
+                  not fixed: 0
+                  atleast once in three month: 2
+                  once a year: 1
+          meals:
+            weight: 60
+            questions:
+              Are there any meals served?:
+                weight: 100
+                values:
+                  no: 0
+                  yes: 1
+      facilities:
+        weight: 10
+        sub_parameters:
+          recreational:
+            weight: 40
+            questions:
+              Is there presence of any recreational/playing material for the kids?:
+                weight: 100
+                values:
+                  yes: 1
+                  no: 0
+          residential:
+            weight: 10
+            questions:
+              What kind of residential facilities are available?:
+                weight: 100
+                values:
+                  none: 0
+                  dormitories: 2
+                  off-site residential areas: 1
+          classrooms:
+            weight: 50
+            questions:
+              How many classrooms are there in the institute ?:
+                weight: 100
+                threshold: 2
+      educational_statistics:
+        weight: 5
+        sub_parameters:
+          enrollment_population:
+            weight: 50
+            questions:
+              How many people are enrolled or are students at this asset?:
+                weight: 100
+                threshold: 25
+          extra_curriculars:
+            weight: 20
+            questions:
+              Apart from academics what are the co-curricular activities available for students ?:
+                weight: 100
+                values:
+                  others: 1
+                  dance: 1
+                  sports: 1
+                  art: 1
+          dropouts:
+            weight: 30
+            questions:
+              What is the percentage of drop-outs?:
+                weight: 100
+                values:
+                  0-10%: 1
+                  10-20%: 2
+                  20-40%: 3
+                  >40%: 4
+      disaster_preparedness:
+        weight: 5
+        sub_parameters:
+          disaster_drills:
+            weight: 100
+            questions:
+              Are there any disaster management courses or drills practice at the institute?:
+                weight: 100
+                values:
+                  yes: 1
+                  no: 0
+  specific:
+    weight: 20
+    variables:
+      diversity:
+        weight: 20
+        sub_parameters:
+          gender_equality:
+            weight: 100
+            questions:
+              To how many women is this institution providing services?:
+                weight: 100
+                values:
+                  21-40: 4
+                  0-5: 1
+                  6-10: 2
+                  11-20: 3
+      govt_supplies:
+        weight: 80
+        sub_parameters:
+          supplies:
+            weight: 55
+            questions:
+              Do the centers get timely supplies of the government goods?:
+                weight: 100
+                values:
+                  no: 0
+                  yes: 1
+          funding:
+            weight: 45
+            questions:
+              For what all materials the government is providing fund ?:
+                weight: 100
+                values:
+                  other: 1
+                  travel: 1
+                  food: 1
+                  books: 1
+                  uniform: 1
