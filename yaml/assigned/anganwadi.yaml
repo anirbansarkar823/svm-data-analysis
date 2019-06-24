@@ -11,6 +11,7 @@ sections:
               How many times did you go there until it was open?:
                 weight: 100
                 threshold: 10
+                format: number
           road_connectivity:
             weight: 40
             questions:
@@ -21,18 +22,21 @@ sections:
                   pakka road: 4
                   kacha road: 2
                   footway: 0
+                format: multi_select
           public_transport:
             weight: 15
             questions:
               distance travelled in km to avail public transport:
                 weight: 100
                 threshold: 1
+                format: number
           school_buses:
             weight: 0
             questions:
               How many buses go to this asset?:
                 weight: 100
                 threshold: 1
+                format: number
           mobile_connectivity:
             weight: 25
             questions:
@@ -46,6 +50,7 @@ sections:
                   3g reliable: 4
                   4g unreliable: 5
                   2g reliable: 2
+                format: normal_string
       infrastructure:
         weight: 60
         sub_parameters:
@@ -57,6 +62,7 @@ sections:
                 values:
                   kacha/temporary(wood,bamboo,etc.,): 0
                   pakka/permanent(steel,concrete,etc.): 1
+                format: normal_string
           security:
             weight: 10
             questions:
@@ -67,12 +73,14 @@ sections:
                   others: 1
                   compound wall/fencing: 2
                   none: 0
+                format: multi_select
           land:
             weight: 40
             questions:
               What is the total campus area?:
                 weight: 100
                 threshold: 1000
+                format: number
   general:
     weight: 60
     variables:
@@ -84,7 +92,8 @@ sections:
             questions:
               work duration per day in minutes:
                 weight: 100
-                threshold: 6
+                threshold: 360
+                format: time
           working_days:
             weight: 50
             questions:
@@ -98,6 +107,7 @@ sections:
                   friday: 1
                   tuesday: 1
                   saturday: 1
+                format: multi_select
       employability:
         weight: 10
         sub_parameters:
@@ -107,12 +117,14 @@ sections:
               How many teachers are employed in the facility?:
                 weight: 100
                 threshold: 1
+                format: number
           support_staff:
             weight: 50
             questions:
               How many support staff are employed in the facility?:
                 weight: 100
                 threshold: 1
+                format: number
       water:
         weight: 10
         sub_parameters:
@@ -127,6 +139,7 @@ sections:
                   others: 2
                   bottled water: 2
                   tap water from government: 1
+                format: multi_select
       sanitation:
         weight: 10
         sub_parameters:
@@ -138,6 +151,7 @@ sections:
                 values:
                   no: 0
                   yes: 1
+                format: normal_string
           waste_management:
             weight: 30
             questions:
@@ -149,6 +163,7 @@ sections:
                   discarded in water bodies: 0
                   none: 0
                   discarded in govt. designated sites: 1
+                format: multi_select
           general_cleanliness:
             weight: 30
             questions:
@@ -157,6 +172,7 @@ sections:
                 values:
                   no: 0
                   yes: 1
+                format: normal_string
               How frequently are the premises cleaned with disinfectant in a week?:
                 weight: 100
                 values:
@@ -168,6 +184,7 @@ sections:
                   5: 5
                   2: 2
                   more than 7 times a week: 7
+                format: normal_string
       energy:
         weight: 5
         sub_parameters:
@@ -179,6 +196,7 @@ sections:
                 values:
                   no: 0
                   yes: 1
+                format: normal_string
       alternate_energy:
         weight: 5
         sub_parameters:
@@ -195,6 +213,7 @@ sections:
                   biomas unit : 2
                   none: 0
                   solar unit: 2
+                format: multi_select
       communication:
         weight: 5
         sub_parameters:
@@ -206,6 +225,7 @@ sections:
                 values:
                   yes: 1               
                   no: 0
+                format: normal_string
           broadband:
             weight: 10
             questions:
@@ -214,6 +234,7 @@ sections:
                 values:
                   yes: 1
                   no: 0
+                format: normal_string
           mobile:
             weight: 80
             questions:
@@ -224,6 +245,7 @@ sections:
                   jio: 1
                   vodafone: 1
                   airtel: 1
+                format: multi_select
       record_maintenance:
         weight: 5
         sub_parameters:
@@ -236,6 +258,7 @@ sections:
                   others: 1
                   traditional book: 3
                   record is not maintained: 0
+                format: normal_string
       govt_support:
         weight: 10
         sub_parameters:
@@ -250,6 +273,7 @@ sections:
                   others: 0
                   financial support: 3
                   transport support: 1
+                format: multi_select
               What are the areas you get support from government agencies for your students?:
                 weight: 100
                 values:
@@ -258,6 +282,7 @@ sections:
                   financial support: 3
                   technical support: 2
                   transportation support: 1
+                format: multi_select
       educational_materials:
         weight: 5
         sub_parameters:
@@ -271,6 +296,7 @@ sections:
                   government agency: 3
                   none: 0
                   local supplier: 2
+                format: normal_string
           curriculum:
             weight: 48
             questions:
@@ -282,6 +308,7 @@ sections:
                   local supplier: 2
                   self-created: 3
                   others: 0
+                format: normal_string
       digital_technologies:
         weight: 5
         sub_parameters:
@@ -293,6 +320,7 @@ sections:
                 values:
                   yes: 1
                   no: 0
+                format: normal_string
       health:
         weight: 10
         sub_parameters:
@@ -304,6 +332,7 @@ sections:
                 values: 
                    yes: 1
                    no: 0
+                format: normal_string
               What is the frequency of these checkups?:
                 weight: 100
                 values:
@@ -312,6 +341,7 @@ sections:
                   not fixed: 0
                   atleast once in three month: 2
                   once a year: 1
+                format: normal_string
           meals:
             weight: 60
             questions:
@@ -320,6 +350,7 @@ sections:
                 values:
                   no: 0
                   yes: 1
+                format: normal_string
       facilities:
         weight: 10
         sub_parameters:
@@ -331,6 +362,7 @@ sections:
                 values:
                   yes: 1
                   no: 0
+                format: normal_string
           residential:
             weight: 10
             questions:
@@ -340,12 +372,14 @@ sections:
                   none: 0
                   dormitories: 2
                   off-site residential areas: 1
+                format: normal_string
           classrooms:
             weight: 50
             questions:
               How many classrooms are there in the institute ?:
                 weight: 100
                 threshold: 2
+                format: number
       educational_statistics:
         weight: 5
         sub_parameters:
@@ -355,6 +389,7 @@ sections:
               How many people are enrolled or are students at this asset?:
                 weight: 100
                 threshold: 25
+                format: number
           extra_curriculars:
             weight: 20
             questions:
@@ -365,6 +400,7 @@ sections:
                   dance: 1
                   sports: 1
                   art: 1
+                format: multi_select
           dropouts:
             weight: 30
             questions:
@@ -374,7 +410,8 @@ sections:
                   0-10%: 1
                   10-20%: 2
                   20-40%: 3
-                  >40%: 4
+                  '>40%': 4
+                format: normal_string
       disaster_preparedness:
         weight: 5
         sub_parameters:
@@ -386,6 +423,7 @@ sections:
                 values:
                   yes: 1
                   no: 0
+                format: normal_string
   specific:
     weight: 20
     variables:
@@ -402,6 +440,7 @@ sections:
                   0-5: 1
                   6-10: 2
                   11-20: 3
+                format: normal_string
       govt_supplies:
         weight: 80
         sub_parameters:
@@ -413,6 +452,7 @@ sections:
                 values:
                   no: 0
                   yes: 1
+                format: normal_string
           funding:
             weight: 45
             questions:
@@ -424,3 +464,4 @@ sections:
                   food: 1
                   books: 1
                   uniform: 1
+                format: multi_select

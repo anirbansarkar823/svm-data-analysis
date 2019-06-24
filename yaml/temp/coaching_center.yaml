@@ -29,9 +29,6 @@ grouping:
                                 start: 19  
                                 end: 20  
                 infrastructure:
-                        building_type:
-                                start:   
-                                end:   
                         security:
                                 start: 26  
                                 end: 27  

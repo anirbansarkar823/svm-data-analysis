@@ -45,6 +45,8 @@ then
 fi
 
 export SVM_DIR
+export YML_TMP
+export YML_ASS
 export YML_DIR 
 export YML_ATR
 export YML_WTV

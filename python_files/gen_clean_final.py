@@ -58,15 +58,17 @@ def gen_final_yaml_for_weights(df, attrd, attrseq, refrmtd):
         for tag, tagd in atrd.items():
             frmt = tagd.get('format')
             if frmt:
-                reformat = refrmtd.get(tag)
-                frmt = reformat or frmt
-                REFORMAT[frmt](df, tag)
+                if refrmtd:
+                    reformat = refrmtd.get(tag)
+                    frmt = reformat or frmt
+                    REFORMAT[frmt](df, tag)
                 inner_tag = TAG_FOR_FRMT[frmt]
                 val_str = STR_FOR_TAG[inner_tag]
                 
                 if not nptr[label].get(tag):
                     nptr[label][tag] = OrderedDict()
                 nptr[label][tag]['weight'] = '# fill with weights #'
+                nptr[label][tag]['format'] = frmt
                 nptr[label][tag][inner_tag] = val_str
                 if frmt in [FR_T_STR_NR, FR_T_MULT_SEL]:
                     vals = set(v for v in df[tag].unique()

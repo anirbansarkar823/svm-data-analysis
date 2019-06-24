@@ -39,10 +39,9 @@ yaml.add_representer(OrderedDict,
 yaml.add_constructor(yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG,
         lambda ldr, nd: OrderedDict(ldr.construct_pairs(nd)))
 
-
 def to_yaml(fname, data):
     with open(fname, 'w', encoding='utf-8') as f:
-        f.write(yaml.dump(data, default_flow_style=False))
+        f.write(yaml.dump(data, indent=6, default_flow_style=False))
 
 
 def from_yaml(fname):
@@ -128,7 +127,6 @@ def group_sec_and_format(df, secd):
     while len(dq) > 0:
         scd, grpd = dq.pop()
         for tag, tagd in scd.items():
-            print(tag, tagd)
             if tagd.get('start'):
                 start, end = tagd['start'], tagd['end']
                 for ques in df.columns[start:end]:
