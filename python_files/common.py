@@ -17,6 +17,9 @@ REGEX = {
         FR_T_TIME: '[0-9]{1,2}',
         }
 
+class DataFrameEmptyError(Exception):
+    pass
+
 
 yaml.add_representer(OrderedDict,
         lambda dmpr, dt: dmpr.represent_dict(dt.items()))
@@ -35,6 +38,10 @@ def from_yaml(fname):
     with open(fname, 'r', encoding='utf-8') as f:
         s = f.read()
         return yaml.load(s)
+
+
+def df_to_csv(df, fpath):
+    df.to_csv(fpath, sep=',', na_rep='N/A', index=False)
 
 
 def del_cols(df, cols, inplace=False):

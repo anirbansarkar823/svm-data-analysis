@@ -175,7 +175,7 @@ if __name__ == '__main__':
     import argparse
     import ntpath
 
-    from cleaning_pipeline import from_yaml
+    from common import from_yaml, df_to_csv
 
     parser = argparse.ArgumentParser(description="Clean data in the input csv file and generate output csv and yaml files.")
     parser.add_argument('-df', help='Path to the input csv file')
@@ -219,5 +219,5 @@ if __name__ == '__main__':
 
         variabledf = outdf[list(df.columns[:q_start])+variable_list+[assetname]]
 
-        outdf.to_csv(out_csv_file, index=False)
-        variabledf.to_csv(variablesheet, index=False)
+        df_to_csv(outdf, out_csv_file)
+        df_to_csv(variabledf, variablesheet)

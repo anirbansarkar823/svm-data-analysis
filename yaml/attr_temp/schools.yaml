@@ -6,12 +6,6 @@ attr_seq:
 correct:
 rename:
 reformat:
-        How many classrooms are there in the institute ?: number
-        How many hours do you rely on the alternative energy source in a day?: number
-        How many active student unions are there?: number
-        What is the average number of companies that come to the campus each year?: number
-        Which departments are there in the institute?: multi_select
-        What is the average fee per student?: number
 sections:
       observation:
             accessibility:
@@ -43,14 +37,14 @@ sections:
       general:
             availability:
                   working_hours:
-                        What are the working hours of the facility?:
+                        'What are the working hours of the facility?(Ex: 9.00A.M-5.A.M)':
                               format: time
                   working_days:
                         What are the working days of the facility?:
                               format: multi_select
             employability:
                   teachers:
-                        How many teachers are employed in the facility ?:
+                        How many teachers are employed in the facility?:
                               format: number
                   support_staff:
                         How many support staff are employed in the facility?:
@@ -65,11 +59,11 @@ sections:
                   toilets:
                         Are there toilets available for public usage?:
                               format: normal_string
-                        Is there toilets available separately for boys and girls?:
+                        Are there toilets available seperately as per gender?:
                               format: normal_string
                         Is there running water available in the toilets at this asset?:
                               format: normal_string
-                        Is there soap for hand-wash available at this asset?:
+                        Is there soap for handwash available next to the sink?:
                               format: normal_string
                   waste_management:
                         How do you deal with the waste generated from the facility?:
@@ -83,14 +77,14 @@ sections:
                   electricity:
                         Do you have grid connection for energy supply?:
                               format: normal_string
-                        How many hours per day are you facing power cuts at this asset?:
+                        How many hours per day are you facing power cuts?:
                               format: number
             alternate_energy:
                   alternate_energy:
                         What is the alternative energy source available in the facility?:
                               format: normal_string
                         How many hours do you rely on the alternative energy source in a day?:
-                              format: normal_string
+                              format: number
             communication:
                   telephone:
                         Do you have landline connectivity?:
@@ -111,7 +105,7 @@ sections:
                               format: multi_select
             educational_materials:
                   textbooks:
-                        Where do you get textbooks for educational purposes?:
+                        Where do you majorly get textbooks for educational purposes?:
                               format: normal_string
                   curriculum:
                         Where do you get the curriculum for classes and educational programs?:
@@ -132,12 +126,15 @@ sections:
                         Is the nutritional value monitored?:
                               format: normal_string
             facilities:
+                  recreational:
+                        Is there presence of any recreational/playing material for the kids?:
+                              format: normal_string
                   residential:
                         What kind of residential facilities are available?:
                               format: normal_string
                   classrooms:
                         How many classrooms are there in the institute ?:
-                              format: normal_string
+                              format: number
                   auditorium:
                         Does the institute have a hall or auditorium?:
                               format: normal_string
@@ -149,7 +146,7 @@ sections:
                               format: normal_string
             educational_statistics:
                   enrollment_population:
-                        How many students are enrolled at this asset?:
+                        How many people are students at this asset?:
                               format: number
                   extra_curriculars:
                         Apart from academics what are the co-curricular activities available for students ?:
@@ -157,33 +154,35 @@ sections:
                   dropouts:
                         What is the percentage of drop-outs?:
                               format: normal_string
+                        What is the reason for dropouts?:
+                              format: multi_select
             disaster_preparedness:
                   disaster_drills:
                         Are there any disaster management courses or drills practice at the institute?:
                               format: normal_string
       specific:
             general_information:
-                  departments:
-                        Which departments are there in the institute?:
+                  school_type:
+                        Is this a primary, secondary, or senior secondary school?:
                               format: normal_string
-                  job_placement:
-                        What is the average number of companies that come to the campus each year?:
+                  counselors:
+                        Are there any counselors at this institute?:
                               format: normal_string
-                  fees:
-                        What is the average fee per student?:
+                  parent_teacher_meetings:
+                        Do parent-teacher meetings take place?:
                               format: normal_string
-            organizations:
-                  student_union:
-                        How many active student unions are there?:
+                        How often do parent-teacher meetings occur?:
                               format: normal_string
-                  societies:
-                        Are there Societies (NSS, NCC, etc.) or other organizations in the institute?:
+                  uniforms:
+                        Does the institute require uniforms?:
+                              format: normal_string
+                  certification:
+                        Are the teachers certified?:
+                              format: normal_string
+                  training:
+                        How frequently does the teacher trainer visit the school?:
                               format: normal_string
             partnerships:
-                  affiliations:
-                        What affiliations does this institute have?:
-                              format: normal_string
-            scholarships:
-                  scholarship_opportunities:
-                        Are there scholarship opportunities in the institute?:
+                  affiliation:
+                        Which Board/University is this school affiliated with?:
                               format: normal_string

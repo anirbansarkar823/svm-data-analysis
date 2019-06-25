@@ -6,12 +6,20 @@ from collections import OrderedDict, deque
 
 from common import FR_T_STR_NR, FR_T_TIME, \
         FR_T_MULT_SEL, FR_T_NUM
-from common import reformat_df
 
 
 def reformat_df(df, col, frmt):
     if frmt == FR_T_TIME or FR_T_NUM:
         df.loc[:,col] = pd.to_numeric(df[col])
+    elif frmt == FR_T_MULT_SEL:
+        unique = [v for v in df[col].unique()
+                if pd.notnull(v)]
+        for v in unique:
+            new_v = v
+            if ',' in v:
+                new_v = '#'.join(v.strip().split(','))
+                print(new_v)
+            df.loc[df[col] == v, col] = new_v
 
 
 REFORMAT = {
@@ -35,12 +43,15 @@ STR_FOR_TAG = {
 
 
 def correct_df(df, cols_correct_dat):
+    cols_correct_dat = cols_correct_dat or {}
     for col, corr_dat in cols_correct_dat.items():
         o_val = list(corr_dat.keys())[0]
         df.loc[df[col] == o_val,col] = corr_dat[o_val]
 
 def rename_cols(df, colsd):
-    df.rename(columns=colsd, inplace=True)
+    colsd = colsd or {}
+    if len(colsd) > 0:
+        df.rename(columns=colsd, inplace=True)
 
 
 def gen_final_yaml_for_weights(df, attrd, attrseq, refrmtd):
@@ -92,7 +103,7 @@ if __name__ == '__main__':
     import ntpath
     
     
-    from cleaning_pipeline import to_yaml, from_yaml
+    from common import to_yaml, from_yaml, df_to_csv
 
 
     parser = argparse.ArgumentParser(description='Correct data in the processed csv data and generated YAML file for weights assignment.')
@@ -132,6 +143,6 @@ if __name__ == '__main__':
 
         correct_df(df, corr_data)
         rename_cols(df, colsd)
-        df.to_csv(out_csv_file, sep=',', na_rep='N/A', index=False)
+        df_to_csv(df, out_csv_file)
         to_yaml(out_yaml_file,
                 gen_final_yaml_for_weights(df, attrd, attr_seq, reformatd))

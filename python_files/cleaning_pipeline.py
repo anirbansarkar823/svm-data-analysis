@@ -25,6 +25,7 @@ import pandas as pd
 from common import to_yaml, from_yaml, del_cols
 from common import REGEX, FR_T_MULT_SEL, \
         FR_T_STR_NR, FR_T_TIME, FR_T_NUM
+from common import DataFrameEmptyError
 
 
 def format_multi_choice_multi_select(df, col):
@@ -136,14 +137,18 @@ def clean(df, attrd):
     filter_attr = attrd['filter']['attribute']
     filter_val = attrd['filter']['value']
     df = df.loc[df[filter_attr] == filter_val, :].copy()
+    if len(df) == 0:
+        raise DataFrameEmptyError('Data not available!')
     ques_i = attrd['questions_starting_index']
     grouping = attrd['grouping']
     colsdel = [df.columns[i] for i in attrd['delete_cols']]
 
     ques_list, groupedd = del_cols_group_sec_and_format(df, ques_i, colsdel, grouping, inplace=True)
 
-    labels = ['correct', 'rename', 'attr_seq', 'reformat', 'sections']
-    values = ['# to be filled manually #' for i in range(4)] + [groupedd]
+    labels = ['correct', 'rename', 'reformat', 'sections']
+    values = ['# to be filled manually #' for i in range(len(labels)-1)] + [groupedd]
+    labels = ['attr_seq'] + labels
+    values = [['sections', 'variables', 'sub_parameters', 'questions']] + values
     return OrderedDict(zip(labels, values)),df
 
 
@@ -151,6 +156,8 @@ if __name__ == '__main__':
     import os
     import argparse
     import ntpath
+
+    from common import df_to_csv
 
     parser = argparse.ArgumentParser(description="Clean data in the input csv file and generate output csv and yaml files.")
     parser.add_argument('-df', help='Path to the input csv file')
@@ -183,6 +190,10 @@ if __name__ == '__main__':
 
         df = pd.read_csv(csvfile, sep=sep)
         attrd = from_yaml(ymlfile)
-        groupped, df = clean(df, attrd)
-        df.to_csv(out_csv_file, sep=',', na_rep='N/A', index=False)
+        try:
+            groupped, df = clean(df, attrd)
+        except DataFrameEmptyError as e:
+            print(e)
+            exit()
+        df_to_csv(df, out_csv_file)
         to_yaml(out_yaml_file, groupped)
