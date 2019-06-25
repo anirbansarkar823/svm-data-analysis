@@ -142,6 +142,31 @@ def score(df, dfout, attrd):
     return ques
 
 
+def gen_score_sheet(df, attrd, assetname, attrseq=['sections', 'variables', 'sub_parameters', 'questions']):
+    variable_list = []
+    def gen(prevtag, currd):
+        if currd.get('format'):
+            return
+        for tag, tagd in currd.items():
+            if tag == 'weight' or tag in attrseq:
+                if tag in attrseq:
+                    gen(prevtag, tagd)
+                    multiplier = np.divide(1,100) if tag in attrseq[:3] else 1
+                    prevtag_score = pd.Series(np.zeros(len(df)), index=df.index)
+                    for k in tagd.keys():
+                        if tag == 'variables':
+                            variable_list.append(k)
+                        weighted = np.multiply(tagd[k]['weight'], df[k])
+                        prevtag_score = np.add(prevtag_score, np.multiply(multiplier, weighted))
+                    # df.assign(prevtag = prevtag_score)
+                    df.loc[:,prevtag] = prevtag_score
+                continue
+            else:
+                gen(tag, tagd)
+    gen(assetname, {'sections': attrd['sections']})
+    return variable_list
+
+
 if __name__ == '__main__':
     import os
     import argparse
@@ -163,7 +188,9 @@ if __name__ == '__main__':
         exit()
         
     csvfile, sep, ymlfile = args.df, args.s, args.yml
-    csvfilename = ntpath.basename(csvfile).split('.')[0] + '.csv'
+    filename = ntpath.basename(csvfile).split('.')[0]
+    csvfilename = filename + '.csv'
+    variablesheet = os.path.join(csv_dir, filename + '_variable.csv')
     out_csv_file = os.path.join(csv_dir, csvfilename)
 
     out_csv_exists = os.path.isfile(out_csv_file)
@@ -182,6 +209,12 @@ if __name__ == '__main__':
         drop_cols = [v for v in df.columns if not (v in ques or v in non_ques)]
         outdf.drop(columns=drop_cols, axis=1, inplace=True)
 
+        assetname = 'anganwadi_score'
+        variable_list = gen_score_sheet(outdf, attrd, assetname)
+
         set_prec(outdf, q_start)
 
+        variabledf = outdf[list(df.columns[:q_start])+variable_list+[assetname]]
+
         outdf.to_csv(out_csv_file, index=False)
+        variabledf.to_csv(variablesheet, index=False)
