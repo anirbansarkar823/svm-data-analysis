@@ -61,6 +61,7 @@ def score_thresh_general(dfin, dfout, col, thresh):
     score = np.divide(df[col], thresh)
     valseries = np.add(valseries, np.multiply(df[col] < thresh, score))
     dfout.loc[:,col] = valseries
+    dfout.loc[pd.isnull(valseries), col] = 0
 
 
 def score_thresh_upper_lower_lim_low(dfin, dfout, col, threshL, threshH):
@@ -72,6 +73,7 @@ def score_thresh_upper_lower_lim_low(dfin, dfout, col, threshL, threshH):
     score = np.divide(high_minus_val, high_minus_low)
     valseries = np.add(valseries, np.multiply(inbetween, score))
     dfout.loc[:,col] = valseries
+    dfout.loc[pd.isnull(valseries), col] = 0
 
 
 def score_thresh_upper_lower_lim_high(dfin, dfout, col, threshL, threshH):
@@ -83,6 +85,7 @@ def score_thresh_upper_lower_lim_high(dfin, dfout, col, threshL, threshH):
     score = np.divide(val_minus_low, high_minus_low)
     valseries = np.add(valseries, np.multiply(inbetween, score))
     dfout.loc[:,col] = valseries
+    dfout.loc[pd.isnull(valseries), col] = 0
     
 
 def set_prec(df, start, decimals=4):
