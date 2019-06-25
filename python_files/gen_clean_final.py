@@ -4,9 +4,9 @@ import pandas as pd
 
 from collections import OrderedDict, deque
 
-from cleaning_pipeline import (
-        FR_T_STR_NR, FR_T_TIME, FR_T_MULT_SEL, FR_T_NUM)
-from cleaning_pipeline import to_yaml, from_yaml
+from common import FR_T_STR_NR, FR_T_TIME, \
+        FR_T_MULT_SEL, FR_T_NUM
+from common import reformat_df
 
 
 def reformat_df(df, col, frmt):
@@ -91,6 +91,10 @@ if __name__ == '__main__':
     import os
     import ntpath
     
+    
+    from cleaning_pipeline import to_yaml, from_yaml
+
+
     parser = argparse.ArgumentParser(description='Correct data in the processed csv data and generated YAML file for weights assignment.')
     parser.add_argument('-df', help='Path to the processed csv file to be corrected')
     parser.add_argument('-yml', help='Path to the YAML file with template and correction data.')

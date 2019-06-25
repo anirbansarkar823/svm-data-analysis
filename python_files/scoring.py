@@ -30,18 +30,33 @@ def str_to_num(numstr):
         except ValueError:
             raise ValueError('String %s cannot be converted to a number!' %numstr)
 
+
 def score_mult_sing_sel_general(dfin, dfout, col, valscore):
     maxval = max(valscore.values())
-    for v, sc in valscore.items():
-        dfout.loc[dfin[col] == v, col] = np.divide(sc,maxval)
-    dfout.loc[pd.isnull(dfin[col]), col] = 0
+    dfvalues = [v for v in df[col].unique()]
+    valseries = pd.Series(np.zeros(len(dfin[col])), index=dfin.index)
+    for v in dfvalues:
+        print(col, v, valscore.get(v))
+        vscore = np.divide(valscore.get(v,0), maxval)
+        valseries += np.multiply(dfin[col] == v, vscore)
+    dfout.loc[:,col] = valseries
+
 
 def score_mult_mult_sel_general(dfin, dfout, col, valscore):
     sumval = sum(valscore.values())
     option_s = [v for v in dfin[col].unique() if pd.notnull(v)]
-    for o_str in option_s:
-        dfout.loc[dfin[col] == o_str, col] = np.divide(sum([valscore[s] for s in o_str.split('#')]), sumval)
-    dfout.loc[pd.isnull(dfin[col]), col] = 0
+    valseries = pd.Series(np.zeros(len(dfin[col])), index=dfin.index)
+    for vstr in option_s:
+        if pd.notnull(vstr):
+            vscore = np.divide(sum(valscore[v] for v in vstr.split('#')), sumval)
+        else:
+            vscore = 0
+        valseries += np.multiply(dfin[col]==vstr, vscore)
+
+    dfout.loc[:,col] = valseries
+    #    dfout.loc[dfin[col] == o_str, col] = np.divide(sum([valscore[s] for s in o_str.split('#')]), sumval)
+    #dfout.loc[pd.isnull(dfin[col]), col] = 0
+
 
 def score_thresh_general(dfin, dfout, col, thresh):
     dfin.loc[pd.isnull(dfin[col]), col] = 0
@@ -93,6 +108,7 @@ FUNCS = {
         #F_TR_UP_LM_H: score_thresh_upper_lower_lim_high,
         }
 
+
 def score(df, dfout, attrd):
     dq = deque()
     dq.append(attrd)
@@ -103,15 +119,12 @@ def score(df, dfout, attrd):
                 continue
             frmt = tagd.get('format', False)
             if frmt:
-                print(tag)
                 if frmt == FR_T_NUM or frmt == FR_T_TIME:
                     thresh = tagd.get('threshold', False)
                     # calculate score using threshold formula.
-                    print('Threshold: ', thresh, ', type: ', type(thresh))
                     score_thresh_general(df, dfout, tag, thresh)
                 else:
                     values = tagd.get('values', False)
-                    print('Values: ', values)
                     # calculate score using multiselect or single select.
                     FUNCS[frmt](df, dfout, tag, values)
             else:

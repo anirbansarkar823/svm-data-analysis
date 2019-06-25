@@ -1,0 +1,138 @@
+correct: '# to be filled manually #'
+rename: '# to be filled manually #'
+attr_seq: '# to be filled manually #'
+reformat: '# to be filled manually #'
+sections:
+      observation:
+            accessibility:
+                  access:
+                        How many times did you go there until it was open?:
+                              format: number
+                  road_connectivity:
+                        What is the type of the road available to the asset?: null
+                  public_transport:
+                        How much distance should one travel to avail public transport facility? (in K.M):
+                              format: number
+                  school_buses:
+                        How many school buses go to this asset?:
+                              format: number
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the asset?: null
+            infrastructure:
+                  building_type:
+                        What is the type of structure of this asset?: null
+                  security:
+                        What is the type of security available for the asset?: null
+                  land:
+                        What is the total campus area?:
+                              format: number
+      general:
+            availability:
+                  working_hours:
+                        'What are the working hours of the facility?(Ex: 9.00A.M-5:00P.M)': null
+                  working_days:
+                        What are the working days of the facility?: null
+            employability:
+                  teachers:
+                        How many teachers are employed in the facility?:
+                              format: number
+                  support_staff:
+                        How many support staff are employed in the facility?:
+                              format: number
+            water:
+                  drinking_water:
+                        Where do you get drinking water from?: null
+                        How much do you pay per litre of bottled water? (In Rupees):
+                              format: number
+            sanitation:
+                  toilets:
+                        Are there toilets available for public and employees usage?: null
+                        Are there toilets available seperately as per gender?: null
+                        Is there running water available in the toilets at this asset?: null
+                  waste_management:
+                        How do you deal with the trash generated from the facility?: null
+                  general_cleanliness:
+                        Are the premises cleaned with disinfectant regularly: null
+                        How frequently are the premises cleaned with disinfectant in a week?:
+                              format: number
+            energy:
+                  electricity:
+                        Do you have grid connection for energy supply?: null
+                        How many hours per day are you facing power cuts?:
+                              format: number
+            alternate_energy:
+                  alternate_energy:
+                        What is the alternative energy source available in the facility?: null
+                        How many hours do you rely on the alternative energy source in a day?:
+                              format: number
+            communication:
+                  telephone:
+                        Do you have landline connectivity?: null
+                  broadband:
+                        Do you have wired internet connection?: null
+                  mobile:
+                        What are different Mobile network service providers available at the location?.1: null
+            record_maintenance:
+                  records:
+                        How do you maintain records?: null
+            govt_support:
+                  support:
+                        What are the areas you get support from government agencies?: null
+            educational_materials:
+                  textbooks:
+                        Where do you get textbooks for educational purposes?: null
+                  curriculum:
+                        Where do you get the curriculum for classes and educational programs?: null
+            digital_technologies:
+                  awareness:
+                        Are you using digital tools for your operations?: null
+            health:
+                  checkups:
+                        What is the frequency of these checkups?: null
+                        Are there checkups or medical facilities available?: null
+                  meals:
+                        Are there any meals served?: null
+                        Is the nutritional value monitored?: null
+            facilities:
+                  recreational:
+                        Is there presence of any recreational/playing material for the kids?: null
+                  residential:
+                        What kind of residential facilities are available?: null
+                  classrooms:
+                        How many classrooms are there in the institute ?: null
+                  auditorium:
+                        Does the institute have a hall or auditorium?: null
+                  labs:
+                        Which labs are present in the institute?: null
+                  libraries:
+                        Does the institute have a designated library?: null
+            educational_statistics:
+                  enrollment_population:
+                        How many people are enrolled or are students at this asset?:
+                              format: number
+                  extra_curriculars:
+                        Apart from academics what are the co-curricular activities available for students ?: null
+                  dropouts:
+                        What is the percentage of drop-outs?: null
+                        What is the reason for dropouts?: null
+      specific:
+            general_information:
+                  demand:
+                        Which three courses are most in demand?: null
+                  job_placement:
+                        Are there placement opportunities available?: null
+                        What is the average number of companies that come to the campus each year?: null
+                  fees:
+                        What is the average fee per student?:
+                              format: number
+                  soft_skills:
+                        Are there soft skills & IT training available in the institute?: null
+                        Are there any private partners involved in training?: null
+            infrastructure:
+                  equipment:
+                        Are the tools and equipment sufficient for training?: null
+            partnerships:
+                  affiliations:
+                        What affiliations does this institute have?: null
+                  placement:
+                        Are there any partnerships with other institutions for placement?: null
