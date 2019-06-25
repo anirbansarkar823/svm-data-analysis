@@ -1,3 +1,4 @@
+ques_start_index: 8
 sections:
   observation:
     weight: 20
@@ -28,7 +29,7 @@ sections:
             questions:
               distance travelled in km to avail public transport:
                 weight: 100
-                threshold: 1
+                threshold: '0#1'
                 format: number
           school_buses:
             weight: 0

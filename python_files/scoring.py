@@ -36,7 +36,6 @@ def score_mult_sing_sel_general(dfin, dfout, col, valscore):
     dfvalues = [v for v in df[col].unique()]
     valseries = pd.Series(np.zeros(len(dfin[col])), index=dfin.index)
     for v in dfvalues:
-        print(col, v, valscore.get(v))
         vscore = np.divide(valscore.get(v,0), maxval)
         valseries += np.multiply(dfin[col] == v, vscore)
     dfout.loc[:,col] = valseries
@@ -54,44 +53,41 @@ def score_mult_mult_sel_general(dfin, dfout, col, valscore):
         valseries += np.multiply(dfin[col]==vstr, vscore)
 
     dfout.loc[:,col] = valseries
-    #    dfout.loc[dfin[col] == o_str, col] = np.divide(sum([valscore[s] for s in o_str.split('#')]), sumval)
-    #dfout.loc[pd.isnull(dfin[col]), col] = 0
 
 
 def score_thresh_general(dfin, dfout, col, thresh):
-    dfin.loc[pd.isnull(dfin[col]), col] = 0
-    colvals = dfin.loc[:,col]
-    gr_arr = np.greater_equal(colvals, thresh)
-    sm_arr = np.less(colvals, thresh)
-    colvals = np.divide(colvals, thresh)
-    nvals = np.multiply(sm_arr, colvals)
-    hvals = gr_arr.astype(int)
-    dfout.loc[:,col] = np.add(nvals, hvals)
+    valseries = pd.Series(np.zeros(len(dfin[col])), index=dfin.index)
+    valseries = np.add(valseries, dfin[col] >= thresh)
+    score = np.divide(df[col], thresh)
+    valseries = np.add(valseries, np.multiply(df[col] < thresh, score))
+    dfout.loc[:,col] = valseries
 
 
 def score_thresh_upper_lower_lim_low(dfin, dfout, col, threshL, threshH):
-    dfin.loc[pd.isnull(dfin[col]), col] = 0
-    colvals = dfin.loc[:,col]
-    #gr_arr = np.logical_not(np.greater_equal(colvals, threshH))
-    sm_arr = np.less_equal(colvals, threshL)
-    between = np.logical_and(np.greater(colvals,threshL), np.less(colvals, threshH))
-    #bools = np.logical_or(sm_arr, between).astype(int)
-    colvals = np.divide(np.subtract(threshH, colvals), threshH-threshL)
-    betvals = np.multiply(between, colvals)
-    dfout.loc[:,col] = np.add(sm_arr.astype(int), betvals)
+    valseries = pd.Series(np.zeros(len(dfin[col])), index=dfin.index)
+    valseries = np.add(valseries, dfin[col] <= threshL)
+    inbetween = np.logical_and(dfin[col] > threshL, dfin[col] < threshH)
+    high_minus_val = np.subtract(threshH, dfin[col])
+    high_minus_low = threshH - threshL
+    score = np.divide(high_minus_val, high_minus_low)
+    valseries = np.add(valseries, np.multiply(inbetween, score))
+    dfout.loc[:,col] = valseries
 
 
 def score_thresh_upper_lower_lim_high(dfin, dfout, col, threshL, threshH):
-    dfin.loc[pd.isnull(dfin[col]), col] = 0
-    colvals = dfin.loc[:,col]
-    gr_arr = np.greater_equal(colvals, threshH)
-    #sm_arr = np.less_equal(colvals, threshL)
-    between = np.logical_and(np.greater(colvals,threshL), np.less(colvals, threshH))
-    colvals = np.divide(np.subtract(colvals, threshL), threshH-threshL)
-    #hvals = gr_arr.astype(int)
-    #lvals = sm_arr.astype(int)
-    betvals = np.multiply(between, colvals)
-    dfout.loc[:,col] = np.add(gr_arr.astype(int), betvals)
+    valseries = pd.Series(np.zeros(len(dfin[col])), index=dfin.index)
+    valseries = np.add(valseries, dfin[col] >= threshH)
+    inbetween = np.logical_and(dfin[col] > threshL, dfin[col] < threshH)
+    val_minus_low = np.subtract(dfin[col], threshL)
+    high_minus_low = thresh_H - threshL
+    score = np.divide(val_minus_low, high_minus_low)
+    valseries = np.add(valseries, np.multiply(inbetween, score))
+    dfout.loc[:,col] = valseries
+    
+
+def set_prec(df, start, decimals=4):
+    for col in df.columns[start:]:
+        df.loc[:,col] = np.round(df[col], decimals=decimals)
 
 
 # F_TR_G = 'thresh_general'
@@ -110,7 +106,7 @@ FUNCS = {
 
 
 def score(df, dfout, attrd):
-    dq = deque()
+    dq, ques = deque(), []
     dq.append(attrd)
     while len(dq) > 0:
         atr = dq.pop()
@@ -119,30 +115,73 @@ def score(df, dfout, attrd):
                 continue
             frmt = tagd.get('format', False)
             if frmt:
+                ques.append(tag)
                 if frmt == FR_T_NUM or frmt == FR_T_TIME:
                     thresh = tagd.get('threshold', False)
-                    # calculate score using threshold formula.
-                    score_thresh_general(df, dfout, tag, thresh)
+                    if thresh:
+                        thresh = [str_to_num(t.strip()) for t in str(thresh).strip().split('#')]
+                        if len(thresh) == 1:
+                            # calculate score using threshold formula.
+                            score_thresh_general(df, dfout, tag, thresh[0])
+                        elif len(thresh) == 2:
+                            if thresh[0] > thresh[1]:
+                                high, low = thresh[0], thresh[1]
+                                score_thresh_upper_lower_lim_high(df, dfout, tag, low, high)
+                            else:
+                                low, high = thresh[0], thresh[1]
+                                score_thresh_upper_lower_lim_low(df, dfout, tag, low, high)
+                        else:
+                            raise ValueError('Threshold not defined correctly')
+
                 else:
                     values = tagd.get('values', False)
                     # calculate score using multiselect or single select.
                     FUNCS[frmt](df, dfout, tag, values)
             else:
                 dq.append(tagd)
+    return ques
 
 
 if __name__ == '__main__':
     import os
+    import argparse
+    import ntpath
 
     from cleaning_pipeline import from_yaml
 
-    svm_dir = os.getenv('SVM_DIR')
-    attrd = from_yaml(os.path.join(svm_dir, 'yaml/assigned/anganwadi.yaml'))
+    parser = argparse.ArgumentParser(description="Clean data in the input csv file and generate output csv and yaml files.")
+    parser.add_argument('-df', help='Path to the input csv file')
+    parser.add_argument('-yml', help='Path to the input yaml template.')
+    parser.add_argument('-s', help='Separator used in the csv file')
 
-    df = pd.read_csv(os.path.join(svm_dir, 'csv/cleaned/anganwadi.csv'))
+    args = parser.parse_args()
 
-    outdf = pd.DataFrame(columns=df.columns)
-    score(df, outdf, attrd)
+    csv_dir = os.getenv('CSV_SC')
 
-    outdf.to_csv('~/anganwadi_output.csv', index=False)
-    print(outdf.describe())
+    if not (csv_dir):
+        print('Output directories not set')
+        exit()
+        
+    csvfile, sep, ymlfile = args.df, args.s, args.yml
+    csvfilename = ntpath.basename(csvfile).split('.')[0] + '.csv'
+    out_csv_file = os.path.join(csv_dir, csvfilename)
+
+    out_csv_exists = os.path.isfile(out_csv_file)
+
+    if out_csv_exists:
+        print(out_csv_file, 'exists!')
+    else:
+        attrd = from_yaml(ymlfile)
+        df = pd.read_csv(csvfile)
+        q_start = attrd['ques_start_index']
+        outdf = pd.DataFrame(columns=df.columns)
+        non_ques = df.columns[:q_start]
+        for col in non_ques:
+            outdf.loc[:,col] = df[col]
+        ques = score(df, outdf, {'sections': attrd['sections']})
+        drop_cols = [v for v in df.columns if not (v in ques or v in non_ques)]
+        outdf.drop(columns=drop_cols, axis=1, inplace=True)
+
+        set_prec(outdf, q_start)
+
+        outdf.to_csv(out_csv_file, index=False)

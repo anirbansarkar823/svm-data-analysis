@@ -8,6 +8,7 @@ CSV_DIR="$SVM_DIR/csv"
 CSV_OR="$CSV_DIR/original"
 CSV_PR="$CSV_DIR/processed"
 CSV_CLN="$CSV_DIR/cleaned"
+CSV_SC="$CSV_DIR/score_sheets"
 
 if [ ! -d "$YML_TMP" ];
 then
@@ -44,6 +45,11 @@ then
 	mkdir -p "$CSV_CLN"
 fi
 
+if [ ! -d "$CSV_SC" ];
+then
+	mkdir -p "$CSV_SC"
+fi
+
 export SVM_DIR
 export YML_TMP
 export YML_ASS
@@ -54,3 +60,4 @@ export CSV_DIR
 export CSV_PR
 export CSV_OR
 export CSV_CLN
+export CSV_SC
