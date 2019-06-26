@@ -267,7 +267,7 @@ sections:
             weight: 100
             questions:
               What are the areas you get support from government agencies for the facility?:
-                weight: 100
+                weight: 50
                 values:
                   technical support: 2
                   none: 0
@@ -276,7 +276,7 @@ sections:
                   transport support: 1
                 format: multi_select
               What are the areas you get support from government agencies for your students?:
-                weight: 100
+                weight: 50
                 values:
                   others: 0
                   none: 0
@@ -329,13 +329,13 @@ sections:
             weight: 40
             questions:
               Are there checkups or medical facilities available?:
-                weight: 100
+                weight: 50
                 values: 
                    yes: 1
                    no: 0
                 format: normal_string
               What is the frequency of these checkups?:
-                weight: 100
+                weight: 50
                 values:
                   atleast once a month: 4
                   atleast once a six month: 3
