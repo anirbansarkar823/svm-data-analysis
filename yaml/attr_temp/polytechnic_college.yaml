@@ -1,0 +1,201 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  access:
+                        How many times did you go there until it was open?:
+                              format: number
+                  road_connectivity:
+                        What is the type of the road available to the asset?:
+                              format: normal_string
+                  public_transport:
+                        How much distance should one travel to avail public transport facility? (in K.M):
+                              format: number
+                  school_buses:
+                        How many school buses go to this asset?:
+                              format: number
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the asset?:
+                              format: normal_string
+            infrastructure:
+                  building_type:
+                        What is the type of structure of this asset?:
+                              format: normal_string
+                  security:
+                        What is the type of security available for the asset?:
+                              format: multi_select
+                  land:
+                        What is the total campus area?:
+                              format: number
+      general:
+            availability:
+                  working_hours:
+                        'What are the working hours of the facility?(Ex: 9.00A.M-5.00P.M)':
+                              format: time
+                  working_days:
+                        What are the working days of the facility?:
+                              format: multi_select
+            employability:
+                  teachers:
+                        How many teachers are employed in the facility?:
+                              format: number
+                  support_staff:
+                        How many support staff are employed in the facility?:
+                              format: number
+            water:
+                  drinking_water:
+                        Where do you get drinking water from?:
+                              format: normal_string
+                        How much do you pay per litre of bottled water? (In Rupees):
+                              format: number
+            sanitation:
+                  toilets:
+                        Are there toilets available for public usage?:
+                              format: normal_string
+                        Are there toilets available seperately as per gender?:
+                              format: number
+                        Is there running water available in the toilets at this asset?:
+                              format: number
+                        Is there soap for handwash available next to the sink?:
+                              format: number
+                  waste_management:
+                        How do you deal with the waste generated from the facility?:
+                              format: normal_string
+                  general_cleanliness:
+                        Are the premises cleaned with disinfectant regularly?:
+                              format: normal_string
+                        How frequently are the premises cleaned with disinfectant in a week?:
+                              format: number
+            energy:
+                  electricity:
+                        Do you have grid connection for energy supply?:
+                              format: normal_string
+                        How many hours per day are you facing power cuts?:
+                              format: number
+            alternate_energy:
+                  alternate_energy:
+                        What is the alternative energy source available in the facility?:
+                              format: normal_string
+                        How many hours do you rely on the alternative energy source in a day?:
+                              format: number
+            communication:
+                  telephone:
+                        Do you have landline connectivity:
+                              format: normal_string
+                  broadband:
+                        Do you have wired internet connection?:
+                              format: normal_string
+                  mobile:
+                        What are different Mobile network service providers available at the location?:
+                              format: multi_select
+            record_maintenance:
+                  records:
+                        How do you maintain records?:
+                              format: normal_string
+            govt_support:
+                  support:
+                        What are the areas you get support from government agencies?:
+                              format: multi_select
+            educational_materials:
+                  textbooks:
+                        Where do you get textbooks for educational purposes?:
+                              format: normal_string
+                  curriculum:
+                        Where do you get the curriculum for classes and educational programs?:
+                              format: normal_string
+            digital_technologies:
+                  awareness:
+                        Are you using digital tools for your operations?:
+                              format: normal_string
+            health:
+                  checkups:
+                        Are there checkups or medical facilities available?:
+                              format: normal_string
+                        What is the frequency of these checkups?:
+                              format: number
+                  meals:
+                        Are there any meals served?:
+                              format: normal_string
+                        Is the nutritional value monitored?:
+                              format: number
+            facilities:
+                  recreational:
+                        Is there presence of any recreational/playing material for the kids?:
+                              format: normal_string
+                  residential:
+                        What kind of residential facilities are available?:
+                              format: normal_string
+                  classrooms:
+                        How many classrooms are there in the institute ?:
+                              format: number
+                  auditorium:
+                        Does the institute have a hall or auditorium?:
+                              format: normal_string
+                  labs:
+                        Which labs are present in the institute?:
+                              format: multi_select
+                  libraries:
+                        Does the institute have a designated library?:
+                              format: normal_string
+            educational_statistics:
+                  enrollment_population:
+                        How many students are enrolled at this asset?:
+                              format: number
+                  extra_curriculars:
+                        Apart from academics what are the co-curricular activities available for students ?:
+                              format: multi_select
+                  dropouts:
+                        What is the percentage of drop-outs?:
+                              format: normal_string
+                        What is the reason for dropouts?:
+                              format: multi_select
+            disaster_preparedness:
+                  disaster_drills:
+                        Are there any disaster management courses or drills practice at the institute?:
+                              format: normal_string
+      specific:
+            general_information:
+                  demand:
+                        Which three courses are most in demand?:
+                              format: normal_string
+                  course:
+                        Which course has the highest enrollment?:
+                              format: number
+                  parent_teacher_meetings:
+                        Do parent-teacher meetings take place?:
+                              format: normal_string
+                        How often do parent-teacher meetings occur?:
+                              format: number
+                  training:
+                        Is there training available?:
+                              format: normal_string
+                  job_placement:
+                        Is there a job placement department?:
+                              format: normal_string
+                        What is the average number of companies that come to the campus each year?:
+                              format: number
+                  soft_skills:
+                        Are there soft skills & IT training available in the institute?:
+                              format: normal_string
+                        Are there any private partners involved in training?:
+                              format: number
+            organizations:
+                  student_union:
+                        Is there a Student Union in the institute?:
+                              format: normal_string
+                        How many active student unions are there?:
+                              format: number
+                  societies:
+                        Are there Societies (NSS, NCC, etc.) or other organizations in the institute?:
+                              format: normal_string
+            partnerships:
+                  affiliations:
+                        What affiliations does this institute have?:
+                              format: normal_string
