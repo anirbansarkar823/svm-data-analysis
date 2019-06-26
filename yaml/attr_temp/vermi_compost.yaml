@@ -1,0 +1,128 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  access:
+                        How many times did you go to the vermi compost until it was open?:
+                              format: number
+                  road_connectivity:
+                        What is the type of the road available to the vermi compost?:
+                              format: normal_string
+                  public_transport:
+                        How much distance should one travel from the vermi compost to avail public transport facility? (Approx in K.M):
+                              format: number
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the vermi compost?:
+                              format: normal_string
+            infrastructure:
+                  building_type:
+                        What is the type of structure of the vermi compost?:
+                              format: normal_string
+                  security:
+                        What is the type of security available for the vermi compost?:
+                              format: multi_select
+      general:
+            employability:
+                  staff:
+                        How many are employed in the vermi compost?:
+                              format: number
+            water:
+                  water_for_operational_purposes:
+                        Where do you get water for operational purposes for the vermi compost?:
+                              format: normal_string
+            sanitation:
+                  waste_management:
+                        How do you deal with the agricultural waste generated from the vermi compost?:
+                              format: normal_string
+                  general_cleanliness:
+                        Are the premises of vermi compost cleaned with disinfectant regularly?:
+                              format: normal_string
+                        How frequently are the premises at the vermi compost cleaned with disinfectant in a week?:
+                              format: number
+            energy:
+                  electricity:
+                        Do you have grid connection for energy supply for the vermi compost?:
+                              format: normal_string
+                        How many hours per day are you facing power cuts in the vermi compost?:
+                              format: number
+            alternate_energy:
+                  alternate_energy:
+                        What is the alternative energy source available for the vermi compost?:
+                              format: normal_string
+                        How many hours do you rely on the alternative energy source in a day for the vermi compost?:
+                              format: number
+            communication:
+                  mobile:
+                        What are different Mobile network service providers available at the location of the vermi compost?:
+                              format: multi_select
+            record_maintenance:
+                  records:
+                        How do you maintain records for operations of the vermi compost?:
+                              format: normal_string
+            govt_support:
+                  support:
+                        What are the areas the vermi compost gets support from government agencies (not for your customers)?:
+                              format: multi_select
+            ngo_support:
+                  support:
+                        Do you get any support from NGO(s) for the vermi compost?:
+                              format: normal_string
+            digital_technologies:
+                  awareness:
+                        Are you using any digital technologies that can be used in the vermi compost?:
+                              format: normal_string
+      specific:
+            inputs:
+                  procurement:
+                        Where do you procure inputs required for the vermi compost?:
+                              format: normal_string
+                  chemical_inputs:
+                        What are different chemical inputs used in the vermi compost?:
+                              format: multi_select
+            infrastructure:
+                  covering_material:
+                        What is the type of covering material used in the vermi compost?:
+                              format: normal_string
+            irrigation:
+                  water_source:
+                        What is the water source used for irrigation mechanism?:
+                              format: normal_string
+                  type:
+                        What is the type of irrigation mechanism used in the vermi compost?:
+                              format: normal_string
+            marketing:
+                  advertisement:
+                        How does the vermi compost advertise about the services available?:
+                              format: multi_select
+            operations:
+                  operational_cost:
+                        What is the average operational cost per month to run the vermi compost?(Excluding Salary of the Employees):
+                              format: number
+                  inventory_capacity:
+                        How many cubic meters are available for storage?:
+                              format: number
+            products:
+                  quantity:
+                        How much amount of manure is produced in the vermi compost in a week?(In K.G):
+                              format: number
+                  cost:
+                        What is the average cost per K.G of the manure from the vermi compost?(In Rupees):
+                              format: normal_string
+            customers:
+                  type:
+                        Which type of customers purchase the manure from the vermi compost?:
+                              format: multi_select
+                  number:
+                        How many customers purchase the manure from the vermi compost in a year?:
+                              format: number
+            logistics:
+                  transport_of_goods:
+                        How does the customers transport the goods purchased from the vermi compost?:
+                              format: multi_select

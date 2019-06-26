@@ -1,0 +1,129 @@
+# sheet 11 : vermi compost
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:
+                        access:
+                                start: 15          
+                                end: 16        
+                        road_connectivity:
+                                start: 16         
+                                end: 17       
+                        public_transport:
+                                start: 17       
+                                end: 18       
+                        mobile_connectivity:
+                                start: 18      
+                                end: 19      
+                infrastructure:
+                        building_type: 
+                                start: 25    
+                                end: 26    
+                        security:
+                                start: 26      
+                                end: 27      
+
+        general:     
+                employability:
+                        staff:
+                                start: 27      
+                                end: 28           
+                water:
+                        water_for_operational_purposes:
+                                start: 28
+                                end: 29     
+                sanitation:       
+                        waste_management:
+                                start: 30      
+                                end: 31     
+                        general_cleanliness:
+                                start: 32      
+                                end: 34      
+                energy:
+                        electricity:
+                                start: 34       
+                                end: 36      
+                alternate_energy:
+                        alternate_energy:  
+                                start: 36       
+                                end: 38      
+                communication: 
+                        mobile:
+                                start: 19
+                                end: 20      
+                record_maintenance:
+                        records:
+                                start: 38      
+                                end: 39      
+                govt_support:
+                        support:
+                                start: 40      
+                                end: 41
+                ngo_support:
+                        support:
+                                start: 41 
+                                end: 42    
+                digital_technologies:
+                        awareness:
+                                start: 43      
+                                end: 44      
+        specific:
+                inputs:
+                        procurement:
+                                start: 45        
+                                end: 46
+                        chemical_inputs:
+                                start: 47 
+                                end: 48
+                infrastructure:    
+                        covering_material: 
+                                start: 48   
+                                end: 49
+                irrigation:
+                        water_source:
+                                start: 50
+                                end: 51
+                        type:
+                                start: 52 
+                                end: 53 
+                marketing:
+                        advertisement:
+                                start: 54
+                                end: 55
+                operations:
+                        operational_cost:
+                                start: 55 
+                                end: 56
+                        inventory_capacity:
+                                start: 57
+                                end: 58
+                products:
+                        quantity:
+                                start: 56
+                                end: 57
+                        cost:
+                                start: 58
+                                end: 59 
+                customers:
+                        type:
+                                start: 63 
+                                end:  64 
+                        number:
+                                start: 64 
+                                end: 65
+                logistics:
+                        transport_of_goods:
+                                start: 65  
+                                end: 66
+                
