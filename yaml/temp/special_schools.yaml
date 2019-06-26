@@ -1,0 +1,157 @@
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:
+                        access:
+                                start: 15          
+                                end: 16        
+                        road_connectivity:
+                                start: 16         
+                                end: 17       
+                        public_transport:
+                                start: 17       
+                                end: 18       
+                        school_buses:
+                                start: 18      
+                                end: 19       
+                        mobile_connectivity:
+                                start: 19      
+                                end: 20      
+                infrastructure:
+                        building_type: 
+                                start: 20    
+                                end: 21    
+                        security:
+                                start: 21      
+                                end: 22      
+                        land: 
+                                start: 22      
+                                end: 23      
+
+        general:
+                availability:
+                        working_hours: 
+                                start: 23       
+                                end: 24    
+                        working_days:
+                                start: 24      
+                                end: 25      
+                employability:
+                        teachers:
+                                start: 25      
+                                end: 26      
+                        support_staff:
+                                start: 26      
+                                end: 27       
+                water:
+                        drinking_water:
+                                start: 27      
+                                end: 29      
+                sanitation:
+                        toilets:
+                                start: 29      
+                                end: 33      
+                        waste_management:
+                                start: 33      
+                                end: 34       
+                        general_cleanliness:
+                                start: 35      
+                                end: 37      
+                energy:
+                        electricity:
+                                start: 37       
+                                end: 39      
+                alternate_energy:
+                        alternate_energy:  
+                                start: 39       
+                                end: 41      
+                communication:
+                        telephone:
+                                start: 46      
+                                end: 47        
+                        broadband:
+                                start: 48      
+                                end: 49      
+                record_maintenance:
+                        records:
+                                start: 50      
+                                end: 51      
+                govt_support:
+                        support:
+                                start: 52      
+                                end: 53      
+                educational_materials:
+                        textbooks:
+                                start: 53      
+                                end: 54      
+                        curriculum:
+                                start: 55      
+                                end: 56      
+                digital_technologies:
+                        awareness:
+                                start: 57      
+                                end: 58      
+                health:
+                        checkups:
+                                start: 59      
+                                end: 61      
+                        meals:
+                                start: 61      
+                                end: 63      
+                facilities:
+                        recreational:
+                                start: 63
+                                end: 64
+                        residential:
+                                start: 64      
+                                end: 65      
+                        classrooms:
+                                start: 65      
+                                end: 66    
+                        auditorium:
+                                start: 66    
+                                end: 67    
+                        libraries:
+                                start: 68    
+                                end: 69     
+                educational_statistics:
+                        enrollment_population:
+                                start: 69      
+                                end: 70  
+                        extra_curriculars:
+                                start: 70  
+                                end: 71      
+                        dropouts:
+                                start: 71      
+                                end: 73
+                disaster_preparedness:
+                        disaster_drills:
+                                start: 77
+                                end: 78      
+        specific:
+                general_information:
+                        age_group:
+                                start: 78      
+                                end: 79    
+                        funding:
+                                start: 79    
+                                end: 80  
+                        certification:
+                                start: 80  
+                                end: 81  
+                partnerships:
+                        affiliations:
+                                start: 81  
+                                end: 82
+
