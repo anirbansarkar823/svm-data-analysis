@@ -38,7 +38,7 @@ def format_multi_choice_multi_select(df, col):
 
 
 def format_time(df, col):
-    vals = [v for v in df[col] if pd.notnull(v)]
+    vals = [v for v in df[col].unique() if pd.notnull(v)]
     for o_val in vals:
         digit_list = re.findall(REGEX['time'], o_val)
         digit_list = list(map(int, digit_list))
