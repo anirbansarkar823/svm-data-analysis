@@ -1,0 +1,418 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              access:
+                                    weight: ''
+                                    questions:
+                                          How many times did you go to the facility until it was open?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel from the facility to avail public transport facility? (Approx in K.M):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      4g+ reliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of the facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka/permenant(steel,concrete,etc.,): ''
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the type of security available for the facility?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+                                                      compound wall\/ fencing: ''
+      general:
+            weight: ''
+            variables:
+                  availability:
+                        weight: ''
+                        sub_parameters:
+                              working_hours:
+                                    weight: ''
+                                    questions:
+                                          'What are the working hours of the facility?(Ex: 9.00A.M-5.P.M)':
+                                                weight: ''
+                                                format: time
+                                                threshold: ''
+                              working_days:
+                                    weight: ''
+                                    questions:
+                                          What are the working days of the facility?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      tuesday: ''
+                                                      friday: ''
+                                                      saturday: ''
+                                                      thursday: ''
+                                                      monday: ''
+                                                      sunday: ''
+                                                      wednesday: ''
+                  employability:
+                        weight: ''
+                        sub_parameters:
+                              non_technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many labour are employed in the facility?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many staff are employed in the facility?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  water:
+                        weight: ''
+                        sub_parameters:
+                              drinking_water:
+                                    weight: ''
+                                    questions:
+                                          Where do you get drinking water from for using at the facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      tap water from government: ''
+                                                      ground water: ''
+                                          How much do you pay per litre of bottled water?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              water_for_operational_purposes:
+                                    weight: ''
+                                    questions:
+                                          Where do you get water for operational purposes for the facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      water from government: ''
+                                                      ground water: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              toilets:
+                                    weight: ''
+                                    questions:
+                                          Are there toilets available for public and employees' usage at the facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                          Are there toilets available seperately as per gender at the unit?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                          Is there running water available in the toilets at the unit?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                                          Is there soap for handwash available at the unit?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          How do you deal with the agricultural waste generated from the facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      discarded in govt. designated sites: ''
+                                                      burnt within the premises: ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of facility cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                          How frequently are the premises at the facility cleaned with disinfectant in a week?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      '4': ''
+                                                      '7': ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply for the facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                                          How many hours per day are you facing power cuts in the unit?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available in the facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      none: ''
+                                          How many hours do you rely on the alternative energy source in a day for the unit?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              telephone:
+                                    weight: ''
+                                    questions:
+                                          Is there landline connectivity for the facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              broadband:
+                                    weight: ''
+                                    questions:
+                                          Does the facility have wired internet connection?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of the unit?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      bsnl: ''
+                                                      jio: ''
+                                                      idea: ''
+                                                      airtel: ''
+                                                      vodafone: ''
+                  record_maintenance:
+                        weight: ''
+                        sub_parameters:
+                              records:
+                                    weight: ''
+                                    questions:
+                                          How do you maintain records for operations of the facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      traditional book keeping: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the facility gets support from government agencies (not for your customers)?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+                                                      support via schemes: ''
+                                                      transport support: ''
+                                                      marketing support: ''
+                                                      technical support: ''
+                                                      financial support: ''
+                  ngo_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          Do you get any support from NGO(s) for the facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  digital_technologies:
+                        weight: ''
+                        sub_parameters:
+                              awareness:
+                                    weight: ''
+                                    questions:
+                                          Are you using any digital technologies that can be used in the facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+      specific:
+            weight: ''
+            variables:
+                  inputs:
+                        weight: ''
+                        sub_parameters:
+                              procurement:
+                                    weight: ''
+                                    questions:
+                                          Where do you procure inputs required for the facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      local supplier: ''
+                  products:
+                        weight: ''
+                        sub_parameters:
+                              organic_inputs:
+                                    weight: ''
+                                    questions:
+                                          What are different organic inputs available in the facility?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      fertilizers: ''
+                                                      growth hormones: ''
+                                                      pesticides: ''
+                              number:
+                                    weight: ''
+                                    questions:
+                                          How many types of inputs are available in the facility?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              type:
+                                    weight: ''
+                                    questions:
+                                          What are the 5 major type of inputs purchased by the customers from the facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      variouse vegetable seeds: ''
+                                                      tractor,watering can,spade,shovel,powertrill: ''
+                              cost:
+                                    weight: ''
+                                    questions:
+                                          What is the average cost of the top 5 most purchased goods in facility?(In Rupees):
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      1-100: ''
+                                                      '>300': ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              storage:
+                                    weight: ''
+                                    questions:
+                                          Where do you store the agri inputs sold in the shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      within the shop: ''
+                                                      others: ''
+                  operations:
+                        weight: ''
+                        sub_parameters:
+                              inventory_capacity:
+                                    weight: ''
+                                    questions:
+                                          How many cubic meters are available for storage?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              operational_cost:
+                                    weight: ''
+                                    questions:
+                                          What is the average operational cost per month to run the facility?(Excluding Salary of the Employees):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              income:
+                                    weight: ''
+                                    questions:
+                                          What is the total average income per month generated from the facility?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  marketing:
+                        weight: ''
+                        sub_parameters:
+                              advertisement:
+                                    weight: ''
+                                    questions:
+                                          How does the facility advertise about the services available?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      posters\/ display boards: ''
+                                                      marketing team\/ sales agents: ''
+                                                      village meeting: ''
+                  customers:
+                        weight: ''
+                        sub_parameters:
+                              type:
+                                    weight: ''
+                                    questions:
+                                          Which type of customers purchase the inputs from the facility?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      farmers: ''
+                              number:
+                                    weight: ''
+                                    questions:
+                                          How many customers purchase the inputs from the facility in a year?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  logistics:
+                        weight: ''
+                        sub_parameters:
+                              transport_of_goods:
+                                    weight: ''
+                                    questions:
+                                          How do the customers transport goods from the facility?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      mini luggage transport vehicle: ''
+                                                      tempo\/auto: ''
