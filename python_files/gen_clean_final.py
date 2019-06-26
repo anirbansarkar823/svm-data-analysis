@@ -37,8 +37,8 @@ TAG_FOR_FRMT = {
         }
 
 STR_FOR_TAG = {
-        'values' : '# fill with value #',
-        'threshold': '# fill with threshold #',
+        'values' :'',
+        'threshold': '',
         }
 
 
@@ -69,6 +69,7 @@ def gen_final_yaml_for_weights(df, attrd, attrseq, refrmtd):
         for tag, tagd in atrd.items():
             frmt = tagd.get('format')
             if frmt:
+                print(tag)
                 if refrmtd:
                     reformat = refrmtd.get(tag)
                     frmt = reformat or frmt
@@ -78,7 +79,7 @@ def gen_final_yaml_for_weights(df, attrd, attrseq, refrmtd):
                 
                 if not nptr[label].get(tag):
                     nptr[label][tag] = OrderedDict()
-                nptr[label][tag]['weight'] = '# fill with weights #'
+                nptr[label][tag]['weight'] = ''
                 nptr[label][tag]['format'] = frmt
                 nptr[label][tag][inner_tag] = val_str
                 if frmt in [FR_T_STR_NR, FR_T_MULT_SEL]:
@@ -87,11 +88,11 @@ def gen_final_yaml_for_weights(df, attrd, attrseq, refrmtd):
                     if frmt == FR_T_MULT_SEL:
                         join_func = itertools.chain.from_iterable
                         vals = set(join_func(v.split('#') for v in vals))
-                    valued = OrderedDict((v, val_str) for v in vals)
+                    valued = OrderedDict((str(v), val_str) for v in vals)
                     nptr[label][tag][inner_tag] = valued
             else:
                 nptr[label][tag] = OrderedDict()
-                nptr[label][tag]['weight'] = '# fill with weights #'
+                nptr[label][tag]['weight'] = ''
                 dq.append((lvl+1,tagd, nptr[label][tag]))
 
     return weightsd
