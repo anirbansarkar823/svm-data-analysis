@@ -50,6 +50,10 @@ then
 	mkdir -p "$CSV_SC"
 fi
 
+alias clean='python cleaning_pipeline.py'
+alias gen_wtv='python gen_clean_final.py'
+alias score='python scoring.py'
+
 export SVM_DIR
 export YML_TMP
 export YML_ASS

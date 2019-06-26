@@ -1,0 +1,166 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  access:
+                        How many times did you go to the unit until it was open?:
+                              format: number
+                  road_connectivity:
+                        What is the type of the road available to the unit?:
+                              format: normal_string
+                  public_transport:
+                        How much distance should one travel from the unit to avail public transport facility? (Approx in K.M):
+                              format: number
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the unit?:
+                              format: normal_string
+            infrastructure:
+                  building_type:
+                        What is the type of structure of the unit?:
+                              format: normal_string
+                  security:
+                        What is the type of security available for the unit?:
+                              format: multi_select
+      general:
+            availability:
+                  working_hours:
+                        'What are the working hours of the unit?(Ex: 9.00A.M-5.A.M)':
+                              format: time
+                  working_days:
+                        What are the working days of the unit?:
+                              format: multi_select
+            employability:
+                  non_technical_staff:
+                        How many Non Technical staff are employed in the unit?:
+                              format: number
+                  technical_staff:
+                        How many Technical staff are employed in the unit?:
+                              format: number
+            water:
+                  drinking_water:
+                        Where do you get drinking water from for using at the unit?:
+                              format: normal_string
+                  water_for_operational_purposes:
+                        Where do you get water for operational purposes for the unit?:
+                              format: normal_string
+            sanitation:
+                  toilets:
+                        Are there toilets available for public and employees' usage at the unit?:
+                              format: normal_string
+                        Are there toilets available seperately as per gender at the unit?:
+                              format: number
+                        Is there running water available in the toilets at the unit?:
+                              format: number
+                        Is there soap for handwash available at the unit?:
+                              format: number
+                  waste_management:
+                        How do you deal with the agricultural waste generated from the unit?:
+                              format: normal_string
+                  general_cleanliness:
+                        Are the premises of unit cleaned with disinfectant regularly?:
+                              format: normal_string
+                        How frequently are the premises at the unit cleaned with disinfectant in a week?:
+                              format: number
+            energy:
+                  electricity:
+                        Do you have grid connection for energy supply for the unit?:
+                              format: normal_string
+                        How many hours per day are you facing power cuts in the unit?:
+                              format: number
+            alternate_energy:
+                  alternate_energy:
+                        What is the alternative energy source available for the unit?:
+                              format: normal_string
+                        How many hours do you rely on the alternative energy source in a day for the unit?:
+                              format: number
+            communication:
+                  telephone:
+                        Is there landline connectivity for the unit?:
+                              format: normal_string
+                  broadband:
+                        Does the unit have wired internet connection?:
+                              format: normal_string
+                  mobile:
+                        What are different Mobile network service providers available at the location of the unit?:
+                              format: multi_select
+            record_maintenance:
+                  records:
+                        How do you maintain records for operations of the unit?:
+                              format: normal_string
+            govt_support:
+                  support:
+                        What are the areas the unit gets support from government agencies (not for your customers)?:
+                              format: multi_select
+            ngo_support:
+                  support:
+                        Do you get any support from NGO(s) for the unit?:
+                              format: normal_string
+            digital_technologies:
+                  awareness:
+                        Are you using any digital technologies that can be used in the unit?:
+                              format: normal_string
+                        For what purpose are you using digital tools here at the unit?:
+                              format: number
+      specific:
+            inputs:
+                  procurement:
+                        Where do you procure inputs required for the unit?:
+                              format: normal_string
+                  chemical_inputs:
+                        What are different chemical inputs used in the unit?:
+                              format: multi_select
+            infrastructure:
+                  farm_land:
+                        What is the type of farm land is available in the unit?:
+                              format: multi_select
+            classification:
+                  type:
+                        What is the type of processing unit?:
+                              format: normal_string
+            marketing:
+                  advertisement:
+                        How does the unit advertise about the services available?:
+                              format: multi_select
+            operations:
+                  operational_cost:
+                        What is the average operational cost per month to run the unit?(Excluding Salary of the Employees):
+                              format: number
+            products:
+                  type:
+                        What is the product purchased by the customers from the unit?:
+                              format: normal_string
+                  cost:
+                        What is the average cost per unit of the produce from the unit?(In Rupees):
+                              format: time
+            customers:
+                  type:
+                        Which type of customers purchase the products from the unit?:
+                              format: multi_select
+                  number:
+                        How many customers purchase the products from the unit in a year?:
+                              format: number
+            logistics:
+                  transport_of_goods:
+                        How does the customers transport the goods purchased from the unit?:
+                              format: multi_select
+            inventory:
+                  inventory_capacity:
+                        How many cubic meters are available for storage?:
+                              format: number
+                  cold_storage:
+                        Do you have a cold storage facility?:
+                              format: normal_string
+            food_wastage:
+                  x:
+                        How often did you need to throw away agricultural produce last week?:
+                              format: number
+                  documentation:
+                        How do you document wastage of food?:
+                              format: normal_string
