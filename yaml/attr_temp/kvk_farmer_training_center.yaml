@@ -1,0 +1,178 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  access:
+                        How many times did you go there until it was open?:
+                              format: number
+                  road_connectivity:
+                        What is the type of the road available to the Training Center?:
+                              format: normal_string
+                  public_transport:
+                        How much distance should one travel from the Training Center to avail public transport facility? (in K.M):
+                              format: number
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the Training Center?:
+                              format: normal_string
+            infrastructure:
+                  building_type:
+                        What is the type of structure of the Training Center?:
+                              format: normal_string
+                  security:
+                        What is the type of security available for the Training Center?:
+                              format: multi_select
+      general:
+            availability:
+                  working_hours:
+                        'What are the working hours of the Training Centre?(Ex: 9.00A.M-5.A.M)':
+                              format: time
+                  working_days:
+                        What are the working days of the Training Centre?:
+                              format: multi_select
+            employability:
+                  non_technical_staff:
+                        How many Non Technical staff are employed in the Training Centre?:
+                              format: number
+                  technical_staff:
+                        How many Technical staff are employed in the Training Centre?:
+                              format: number
+            water:
+                  drinking_water:
+                        Where do you get drinking water from for using at the Training Centre?:
+                              format: normal_string
+                        How much do you pay per litre of bottled water? (In Rupees):
+                              format: number
+                  water_for_operational_purposes:
+                        Where do you get water for operational purposes for the Training Centre?:
+                              format: normal_string
+            sanitation:
+                  toilets:
+                        Are there toilets available for public usage at the Training Centre?:
+                              format: normal_string
+                        Are there toilets available seperately as per gender at the Training Centre?:
+                              format: normal_string
+                        Is there running water available in the toilets at the Training Centre?:
+                              format: normal_string
+                        Is there soap for handwash available at the unit?:
+                              format: normal_string
+                  waste_management:
+                        How do you deal with the waste generated from the Training Centre?:
+                              format: normal_string
+                  general_cleanliness:
+                        Are the premises of Training Centre cleaned with disinfectant regularly?:
+                              format: normal_string
+                        How frequently are the premises at the Training Centre cleaned with disinfectant in a week?:
+                              format: number
+            energy:
+                  electricity:
+                        Do you have grid connection for energy supply for the Training Centre?:
+                              format: normal_string
+                        How many hours per day are you facing power cuts in the Training Centre?:
+                              format: number
+            alternate_energy:
+                  alternate_energy:
+                        What is the alternative energy source available for the Training Centre?:
+                              format: normal_string
+                        How many hours do you rely on the alternative energy source in a day for the Training Centre?:
+                              format: number
+            communication:
+                  telephone:
+                        Is there landline connectivity for the Training Centre?:
+                              format: normal_string
+                  broadband:
+                        Does the Training Centre have wired internet connection?:
+                              format: normal_string
+                  mobile:
+                        What are different Mobile network service providers available at the location of the asset?:
+                              format: multi_select
+            record_maintenance:
+                  records:
+                        How do you maintain records for operatotoins of the Training Centre?:
+                              format: normal_string
+            govt_support:
+                  support:
+                        What are the areas the Training Centre gets support from government agencies (not for your customers)?:
+                              format: multi_select
+            ngo_support:
+                  support:
+                        Do you get any support from NGO(s) for the Training Centre?:
+                              format: normal_string
+            digital_technologies:
+                  awareness:
+                        Are you using digital technologies that can be used in the Training Centre?:
+                              format: normal_string
+                        For what purpose are you using digital tools here at the unit?:
+                              format: multi_select
+      specific:
+            course:
+                  course_with_highest_enrollment:
+                        Which course has the highest enrollment in the institute?:
+                              format: normal_string
+            strength:
+                  students:
+                        Whats is the strength of the farmers getting trained in the institute ?:
+                              format: normal_string
+            infrastructure:
+                  classrooms:
+                        Whats is the total number of Classrooms in the institute?:
+                              format: normal_string
+                  adequacy:
+                        Is the tools and equipment available for training sufficient?:
+                              format: normal_string
+                  auditorium:
+                        Does the institute have an Auditorium ?:
+                              format: normal_string
+                  research_fields:
+                        Does the institute have research fields ?:
+                              format: normal_string
+                  total_capacity:
+                        What is the number of farmers the center can train ?:
+                              format: normal_string
+                  library:
+                        Does the institute have Library ?:
+                              format: normal_string
+                  labs:
+                        Does the institute have Labs ?:
+                              format: normal_string
+            post_training:
+                  post_training:
+                        What kind of support does the institute provide to the trained farmers ?:
+                              format: multi_select
+            dropouts:
+                  course:
+                        Which course have the highest dropout rate?:
+                              format: normal_string
+                  rate:
+                        What is the percentage of the farmers dropped out ?:
+                              format: normal_string
+                  reason:
+                        What is the reason for the students dropping out of the institute?:
+                              format: multi_select
+            Medical_facility:
+                  medical_facility:
+                        Is there presence of medical facilities in the institute ?:
+                              format: normal_string
+            government_support:
+                  support_materials:
+                        For what all material does the government provide support?:
+                              format: multi_select
+                  scholarships:
+                        Is there availability of scholarships for the students?:
+                              format: normal_string
+            digital_technology:
+                  digital_classroom:
+                        Is there presence of digital (projector or TV) classrooms in the institute?:
+                              format: normal_string
+                  computer1:
+                        Does the institute have computers ?:
+                              format: normal_string
+                  computer2:
+                        Are the computers being used by the students ?:
+                              format: normal_string
