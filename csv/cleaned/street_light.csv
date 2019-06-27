@@ -1,0 +1,287 @@
+id,category,sub-category,district,circle,village,latitude,longitude,What is the type of the road available to the asset?,What is the type of the mobile network available at the asset?,What are different Mobile network service providers available at the location?,How far is this street light from the nearest substation or transformer ?,Which type of street light is this?,What is the system of street lights used?,Has the street light been installed with the help of APEDA ?
+2466,Energy & ICT,Street Light,Tawang,Kitpi,Kitpi,27.57268,91.90197,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,off- grid,traditional,no
+2472,Energy & ICT,Street Light,Tawang,Kitpi,Kitpi,27.573220000000006,91.89774,kacha road,2g reliable,vodafone#bsnl#airtel,0.0,off- grid,solar,yes
+2475,Energy & ICT,Street Light,Tawang,Kitpi,Kitpi,27.57313,91.89776,pakka road,2g reliable,vodafone#bsnl#airtel,0.0,off- grid,solar,yes
+2509,Energy & ICT,Street Light,Tawang,Kitpi,Kitpi,27.57251,91.89716,kacha road,2g unreliable,vodafone#bsnl#airtel,0.4,off- grid,solar,yes
+2634,Energy & ICT,Street Light,Tawang,Kitpi,Kitpi,27.57256,91.89714,footway,2g reliable,vodafone#bsnl#airtel,0.0,off- grid,solar,yes
+2651,Energy & ICT,Street Light,Tawang,Lumla,Manpat,27.532090000000004,91.71387,pakka road,4g unreliable,vodafone#bsnl#airtel,0.65,on-grid,traditional,no
+2652,Energy & ICT,Street Light,Tawang,Lumla,Manpat,27.53146,91.71283,pakka road,4g unreliable,vodafone#bsnl#airtel,0.6,on-grid,traditional,no
+2653,Energy & ICT,Street Light,Tawang,Lumla,Manpat,27.53122,91.71287,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+2663,Energy & ICT,Street Light,Tawang,Lumla,Lumla,27.54063,91.72637,kacha road,4g unreliable,vodafone#bsnl#airtel,0.4,on-grid,traditional,no
+2664,Energy & ICT,Street Light,Tawang,Lumla,Manpat,27.53782,91.72018,pakka road,4g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+2665,Energy & ICT,Street Light,Tawang,Lumla,Manpat,27.53088,91.71341,pakka road,4g unreliable,vodafone#bsnl#airtel,0.1,on-grid,traditional,no
+2958,Energy & ICT,Street Light,Tawang,Lumla,Manpat,27.52946,91.71053,pakka road,4g unreliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+2993,Energy & ICT,Street Light,West Kameng,Shergaon,Shergaon,27.12876,92.26012,pakka road,4g unreliable,bsnl#airtel,2.0,on-grid,traditional,no
+3025,Energy & ICT,Street Light,West Kameng,Dirang,Dirang,27.34037,92.27285,pakka road,4g unreliable,vodafone#bsnl#airtel,0.0,off- grid,traditional,no
+3026,Energy & ICT,Street Light,West Kameng,Dirang,Dirang,27.86879,93.59852,pakka road,4g unreliable,vodafone#bsnl#airtel,0.0,off- grid,traditional,no
+3252,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58376,93.84467,pakka road,2g unreliable,vodafone#bsnl#airtel,3.0,on-grid,traditional,no
+3254,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58369,93.84467,pakka road,2g unreliable,vodafone#bsnl#airtel,3.0,on-grid,traditional,no
+3330,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58097,93.84119,kacha road,2g unreliable,vodafone#bsnl#airtel,0.0,off- grid,traditional,no
+3333,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.580990000000003,93.84213,kacha road,2g unreliable,vodafone#bsnl#airtel,0.0,off- grid,traditional,no
+3397,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hija,27.56933,93.83154,footway,2g reliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,no
+3405,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hija,27.58348,93.84551,pakka road,2g reliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,yes
+3423,Energy & ICT,Street Light,Lower Subansiri,Ziro,Bamin,27.56987,93.83068,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+3425,Energy & ICT,Street Light,Lower Subansiri,Ziro,Bamin,27.56924,93.83003,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,yes
+3426,Energy & ICT,Street Light,Lower Subansiri,Ziro,Bamin,27.569540000000003,93.82972,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+3443,Energy & ICT,Street Light,Lower Subansiri,Ziro,Bamin,27.569840000000006,93.83011,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+3444,Energy & ICT,Street Light,Lower Subansiri,Ziro,Bamin,27.56981,93.82995,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+3445,Energy & ICT,Street Light,Lower Subansiri,Ziro,Bamin,27.569640000000003,93.82934,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+3553,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.556,93.84023,kacha road,2g reliable,vodafone#bsnl#airtel,1.5,off- grid,traditional,yes
+3556,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.55712,93.83842,kacha road,2g reliable,vodafone#bsnl#airtel,1.5,off- grid,traditional,yes
+3579,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.55768,93.83824,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,off- grid,traditional,yes
+3581,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.55752,93.83806,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,off- grid,traditional,yes
+3584,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.55672,93.83995,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,off- grid,traditional,no
+3586,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.55712,93.83869,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,off- grid,traditional,yes
+3588,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.55648,93.83869,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,off- grid,traditional,no
+3602,Energy & ICT,Street Light,Tawang,Lumla,Manpat,27.53133,91.71386,pakka road,4g unreliable,vodafone#bsnl#airtel,0.6,on-grid,traditional,no
+3603,Energy & ICT,Street Light,Tawang,Lumla,Manpat,27.53278,91.71416,pakka road,4g unreliable,vodafone#bsnl#airtel,0.9,on-grid,traditional,no
+3604,Energy & ICT,Street Light,Tawang,Lumla,Manpat,27.53194,91.71348,pakka road,4g unreliable,vodafone#bsnl#airtel,0.7,on-grid,traditional,no
+3605,Energy & ICT,Street Light,Tawang,Lumla,Manpat,27.53305,91.71475,pakka road,4g unreliable,vodafone#bsnl#airtel,0.9,on-grid,traditional,no
+3606,Energy & ICT,Street Light,Tawang,Lumla,Manpat,27.53091,91.71374,pakka road,4g unreliable,vodafone#bsnl#airtel,0.3,on-grid,traditional,no
+3608,Energy & ICT,Street Light,Tawang,Lumla,Manpat,27.53093,91.71445,pakka road,4g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+3609,Energy & ICT,Street Light,Tawang,Lumla,Manpat,27.53085,91.71428,pakka road,4g unreliable,vodafone#bsnl#airtel,0.1,on-grid,traditional,no
+3615,Energy & ICT,Street Light,Tawang,Lumla,Manpat,27.53608,91.71793,pakka road,4g unreliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,no
+3621,Energy & ICT,Street Light,Lower Subansiri,Ziro,Bamin,27.56865,93.82942,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+3712,Energy & ICT,Street Light,Lower Subansiri,Ziro,Lempiya,27.5892,93.86494,pakka road,2g reliable,vodafone#bsnl#airtel,50.0,off- grid,traditional,no
+3766,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.55898,93.84717,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,off- grid,traditional,no
+3769,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.5592,93.84669,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,off- grid,traditional,no
+3771,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.55913,93.84729,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+3774,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.55947,93.84904,kacha road,2g reliable,vodafone#bsnl#airtel,0.0,on-grid,traditional,no
+3779,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.55946,93.84847,kacha road,2g reliable,vodafone#bsnl#airtel,0.0,on-grid,traditional,no
+3781,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.55938,93.84811,kacha road,2g reliable,vodafone#bsnl#airtel,0.0,on-grid,traditional,no
+3783,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.55917,93.84748,pakka road,2g reliable,vodafone#bsnl#airtel,0.0,on-grid,traditional,no
+3798,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.56521,93.84653,kacha road,2g reliable,vodafone#bsnl#airtel,0.0,off- grid,traditional,no
+3806,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.56727,93.84575,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,off- grid,solar,yes
+3828,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58381,93.84406,pakka road,2g unreliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+3842,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58297,93.84405,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+3844,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58285,93.84416,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+3847,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.582290000000004,93.8448,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+3850,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58202,93.844,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+3865,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.55715,93.84637,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,off- grid,traditional,no
+3869,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.55688,93.84591,kacha road,2g reliable,vodafone#airtel#bsnl,1.0,off- grid,traditional,no
+3871,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.55722,93.84593,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,off- grid,traditional,no
+3874,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.55732,93.84567,kacha road,2g reliable,vodafone#bsnl#others,1.0,off- grid,traditional,no
+3876,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.55698,93.84626,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,off- grid,traditional,no
+3879,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.55784,93.84635,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,off- grid,traditional,no
+3888,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.55821,93.84371,kacha road,2g reliable,vodafone#bsnl#airtel,0.0,on-grid,traditional,no
+3914,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.56405,93.84553,kacha road,2g reliable,N/A,1.0,on-grid,traditional,no
+3922,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.565690000000004,93.84338,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,off- grid,traditional,no
+3964,Energy & ICT,Street Light,Lower Subansiri,Ziro,Bamin,27.56977,93.82898,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+3968,Energy & ICT,Street Light,Lower Subansiri,Ziro,Bamin,27.56948,93.82797,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,yes
+3969,Energy & ICT,Street Light,Lower Subansiri,Ziro,Bamin,27.56941,93.82838,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+3970,Energy & ICT,Street Light,Lower Subansiri,Ziro,Bamin,27.569370000000006,93.82813,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+3974,Energy & ICT,Street Light,Lower Subansiri,Ziro (Sadar),Hong Niitii,27.55548,93.85441,pakka road,3g reliable,vodafone#bsnl#airtel,3.0,off- grid,traditional,no
+3981,Energy & ICT,Street Light,Lower Subansiri,Ziro (Sadar),Hong Niitii,27.5571,93.84776,pakka road,3g reliable,vodafone#bsnl#airtel,3.0,off- grid,traditional,no
+4003,Energy & ICT,Street Light,Lower Subansiri,Ziro (Sadar),Hong Niitii,27.55851,93.84844,pakka road,3g reliable,vodafone#bsnl#airtel,3.0,on-grid,traditional,no
+4005,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.56985,93.82703,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,yes
+4006,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.57008,93.82725,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+4007,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.5702,93.82754,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,yes
+4008,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.57023,93.82775,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,yes
+4010,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.57004,93.82779,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+4013,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.56979,93.82789,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+4015,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.5698,93.8268,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,yes
+4016,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.56961,93.82672,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,yes
+4017,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.56952,93.82633,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,yes
+4019,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.57025,93.82741,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+4021,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.570190000000004,93.82705,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,yes
+4022,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.57021,93.82712,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+4029,Energy & ICT,Street Light,Lower Subansiri,Ziro,Bamin,27.56918,93.82802,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+4030,Energy & ICT,Street Light,Lower Subansiri,Ziro,Bamin,27.56958,93.82858,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+4033,Energy & ICT,Street Light,Lower Subansiri,Ziro,Bamin,27.56933,93.82939,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+4040,Energy & ICT,Street Light,Lower Subansiri,Ziro,Bamin,27.56951,93.82918,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+4041,Energy & ICT,Street Light,Lower Subansiri,Ziro,Bamin,27.56635,93.83075,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+4050,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.57018,93.82863,kacha road,3g reliable,vodafone#bsnl#airtel,2.0,on-grid,solar,no
+4079,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59872,93.83874,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4080,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59875,93.83888,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4292,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58376,93.84119,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+4301,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58363,93.84028,kacha road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+4309,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.583640000000006,93.84071,kacha road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+4313,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58421,93.84095,kacha road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+4315,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58394,93.8418,pakka road with block point,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+4330,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58359,93.84322,kacha road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+4374,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.57103,93.82887,pakka road,3g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4414,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59829,93.84008,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4451,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.5973,93.84098,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4452,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59688,93.84105,pakka road,2g reliable,airtel#bsnl#vodafone,1.0,on-grid,traditional,no
+4453,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59664,93.8414,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4457,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59613,93.8408,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4458,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59592,93.84053,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4465,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.587020000000006,93.84537,kacha road,2g unreliable,vodafone#bsnl#jio,0.5,on-grid,traditional,no
+4482,Energy & ICT,Street Light,Lower Subansiri,Ziro (Sadar),Hong Niitii,27.55746,93.84862,footway,3g reliable,vodafone#bsnl#airtel,3.0,off- grid,traditional,no
+4592,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.57028,93.82808,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+4601,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.57036,93.82862,kacha road,3g reliable,vodafone#bsnl#airtel,2.0,on-grid,solar,no
+4602,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.5703,93.82839,kacha road,3g reliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,yes
+4603,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.57027,93.82841,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,no
+4653,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59746,93.84195,footway,2g reliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,no
+4654,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59725,93.84249,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4657,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59701,93.84249,pakka road,2g reliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,no
+4661,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59727,93.84268,footway,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4665,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59751,93.84298,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4667,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59784,93.84281,footway,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4674,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.597590000000004,93.84313,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4676,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.5977,93.84336,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4678,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59782,93.84351,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4681,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59823,93.84329,footway,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4682,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59818,93.84349,footway,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4683,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59841,93.84339,footway,2g reliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,no
+4684,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59744,93.84382,footway,2g reliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,no
+4685,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59755,93.84371,footway,2g reliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,no
+4686,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59735,93.84384,footway,2g reliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,no
+4687,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59727,93.84369,footway,2g reliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,no
+4688,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59697,93.8437,footway,2g reliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,no
+4690,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59729,93.84312,footway,2g reliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,no
+4693,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59786,93.84384,pakka road,2g reliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,no
+4695,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.5981,93.84361,footway,2g reliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,no
+4696,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59796,93.84441,pakka road,2g reliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,no
+4699,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59736,93.84442,footway,2g reliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,no
+4700,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.5979,93.84418,pakka road,2g reliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,no
+4701,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.5973,93.84408,footway,2g reliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,no
+4703,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59715,93.84357,footway,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4704,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59692,93.84327,footway,2g reliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,no
+4716,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.595540000000003,93.84545,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4725,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59586,93.84562,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4727,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.5965,93.84571,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4729,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59731,93.84549,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4731,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59808,93.84517,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4732,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59833,93.84496,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4860,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58412,93.84467,kacha road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+4863,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58404,93.84429,kacha road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+4968,Energy & ICT,Street Light,Lower Subansiri,Ziro,Molyang (Tajang),27.55512,93.8979,pakka road,2g unreliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+4971,Energy & ICT,Street Light,Lower Subansiri,Ziro,Molyang (Tajang),27.58434,93.86768,pakka road,2g reliable,vodafone#bsnl#airtel,1.5,on-grid,traditional,no
+4972,Energy & ICT,Street Light,Lower Subansiri,Ziro,Molyang (Tajang),27.6025,93.83053,pakka road,2g reliable,vodafone#bsnl#airtel,1.5,on-grid,traditional,no
+4997,Energy & ICT,Street Light,Lower Subansiri,Ziro (Sadar),Hong Niitii,27.55761,93.84865,pakka road,3g reliable,vodafone#bsnl#airtel,3.0,off- grid,traditional,no
+5030,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.570220000000006,93.828,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,yes
+5055,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.57056,93.82821,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,yes
+5060,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.5706,93.82866,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,yes
+5062,Energy & ICT,Street Light,Lower Subansiri,Ziro,Michi,27.57055,93.82846,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,yes
+5102,Energy & ICT,Street Light,Lower Subansiri,Ziro,Modang Tage,27.57379,93.8312,pakka road,3g unreliable,vodafone#bsnl#airtel,5.0,on-grid,traditional,no
+5112,Energy & ICT,Street Light,Lower Subansiri,Ziro,Modang Tage,27.5729,93.82899,pakka road,3g unreliable,vodafone#bsnl#airtel,5.0,on-grid,traditional,no
+5202,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.59433,93.84382,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5203,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.59442,93.84506,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5205,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.59454,93.84542,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5239,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59819,93.84614,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5260,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59555,93.84012,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,off- grid,traditional,no
+5262,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.59545,93.84037,pakka road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5267,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.59556,93.8409,footway,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5268,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.59563,93.84073,footway,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5270,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.5956,93.84122,footway,2g reliable,vodafone#airtel#bsnl,1.0,on-grid,traditional,no
+5272,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.59491,93.84086,footway,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5273,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.59492,93.84064,footway,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5274,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.59496,93.84045,footway,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5276,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.59482,93.8401,footway,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5278,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.594590000000004,93.8398,footway,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5280,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.59444,93.84008,footway,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5281,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.59458,93.8407,footway,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5284,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.59403,93.84058,footway,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5285,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.59426,93.8409,footway,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5286,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.594620000000006,93.84041,footway,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5287,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.59408,93.841,footway,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5291,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.59461,93.84129,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5293,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.59407,93.8415,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5294,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.59396,93.8414,footway,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5345,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.56035,93.84932,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,off- grid,solar,yes
+5421,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.586,93.84448,kacha road,2g unreliable,vodafone#bsnl#airtel,0.0,on-grid,traditional,no
+5425,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58629,93.84486,kacha road,2g unreliable,vodafone#bsnl#airtel,0.0,on-grid,traditional,no
+5468,Energy & ICT,Street Light,Lower Subansiri,Ziro,Kalong,27.589540000000003,93.8428,footway,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+5763,Energy & ICT,Street Light,Lower Subansiri,Ziro (Sadar),Hong Niitii,27.55759,93.84945,pakka road,3g reliable,vodafone#bsnl#airtel,3.0,off- grid,traditional,no
+5765,Energy & ICT,Street Light,Lower Subansiri,Ziro (Sadar),Hong Niitii,27.557170000000006,93.84955,pakka road,3g reliable,vodafone#bsnl#airtel,3.0,off- grid,traditional,no
+5805,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58303,93.84431,kacha road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+5807,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58363,93.84424,kacha road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+5875,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58053,93.84525,pakka road,2g unreliable,vodafone#bsnl#airtel,0.0,on-grid,traditional,no
+5889,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58123,93.84539,kacha road,2g unreliable,vodafone#bsnl#airtel,0.0,on-grid,traditional,no
+5895,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58123,93.84572,kacha road,2g unreliable,vodafone#bsnl#airtel,0.0,on-grid,traditional,no
+5900,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58059,93.84641,kacha road,2g unreliable,vodafone#bsnl#airtel,0.0,on-grid,traditional,no
+5905,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58114,93.84643,kacha road,2g unreliable,vodafone#bsnl#airtel,0.0,on-grid,traditional,no
+5925,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58296,93.84478,kacha road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+5926,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58303,93.84427,kacha road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+5940,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58292,93.84329,kacha road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+5943,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58297,93.8436,kacha road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+5944,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58278,93.84305,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+5998,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58192,93.8431,kacha road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+6001,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58211,93.84338,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+6005,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58234,93.84382,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+6012,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.5825,93.84358,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+6024,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58234,93.84382,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+6026,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.5825,93.84358,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+6070,Energy & ICT,Street Light,Papumpare,Itanagar,Ganga,27.08615,93.59527,pakka road,4g+ reliable,vodafone#idea#bsnl#jio#airtel#others,0.6,on-grid,solar,yes
+6076,Energy & ICT,Street Light,Papumpare,Itanagar,Ganga,27.087190000000003,93.59509,pakka road,4g+ reliable,vodafone#bsnl#jio#airtel,1.5,on-grid,solar,yes
+6091,Energy & ICT,Street Light,Papumpare,Itanagar,Ganga,27.087290000000007,93.59239,pakka road,4g+ reliable,vodafone#bsnl#jio#airtel,2.0,on-grid,solar,yes
+6095,Energy & ICT,Street Light,Papumpare,Itanagar,Ganga,27.08732,93.59207,pakka road,4g+ reliable,vodafone#idea#bsnl#jio#airtel#others,2.0,on-grid,solar,yes
+6151,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.597590000000004,93.85541,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+6152,Energy & ICT,Street Light,Lower Subansiri,Ziro,Reru,27.59801,93.85556,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+6154,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58426,93.84282,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+6160,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58445,93.84305,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+6161,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58449,93.84308,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+6162,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58461,93.8432,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+6165,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58434,93.84332,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+6189,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58186,93.8392,kacha road,2g unreliable,vodafone#bsnl#airtel,0.0,on-grid,traditional,no
+6203,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.584290000000006,93.8438,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+6204,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58398,93.84408,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+6246,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58425,93.84371,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+6247,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58465,93.84361,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+6248,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58486,93.84344,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+6336,Energy & ICT,Street Light,West Siang,Kamba,Kambu,28.26096,94.68356,kacha road,3g reliable,vodafone#bsnl#airtel,6.0,off- grid,solar,yes
+6700,Energy & ICT,Street Light,West Siang,Kamba,Kambu,28.26717,94.68536,kacha road,3g reliable,vodafone#bsnl#airtel,6.0,off- grid,solar,yes
+6706,Energy & ICT,Street Light,West Siang,Kamba,Kambu,28.26894,94.68405,kacha road,3g reliable,vodafone#bsnl#airtel,6.0,off- grid,solar,yes
+6715,Energy & ICT,Street Light,West Siang,Kamba,Kambu,28.26534,94.68269,kacha road,3g reliable,vodafone#bsnl#airtel,6.0,off- grid,solar,yes
+6719,Energy & ICT,Street Light,West Siang,Kamba,Kambu,28.26592,94.6858,kacha road,3g reliable,vodafone#bsnl#airtel,6.0,off- grid,solar,yes
+6742,Energy & ICT,Street Light,East Siang,Pasighat,Balek,28.06124,95.28288,pakka road,4g+ reliable,bsnl#jio#airtel,10.0,on-grid,solar,yes
+6921,Energy & ICT,Street Light,Lower Subansiri,Ziro,Old Ziro,27.58434,93.82648,pakka road,2g reliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,no
+6922,Energy & ICT,Street Light,Lower Subansiri,Ziro,Old Ziro,27.559990000000006,93.78529,pakka road,2g reliable,vodafone#bsnl#airtel,5.0,on-grid,traditional,no
+6928,Energy & ICT,Street Light,Lower Subansiri,Ziro,Lempiya,27.63301,93.84846,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+6929,Energy & ICT,Street Light,Lower Subansiri,Ziro,Lempiya,27.602840000000004,93.83475,kacha road,2g reliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+6934,Energy & ICT,Street Light,Lower Subansiri,Ziro,Lempiya,27.5892,93.86494,pakka road,2g reliable,vodafone#bsnl#airtel,50.0,off- grid,traditional,no
+7010,Energy & ICT,Street Light,Papumpare,Doimukh,Soppo,27.21394,93.80065,kacha road,2g unreliable,bsnl#jio#airtel,1.0,off- grid,traditional,yes
+7011,Energy & ICT,Street Light,Papumpare,Doimukh,Soppo,27.21363,93.80046,kacha road,2g unreliable,jio#bsnl#airtel,1.0,off- grid,traditional,yes
+7014,Energy & ICT,Street Light,Papumpare,Doimukh,Soppo,27.21354,93.80139,pakka road,2g unreliable,bsnl#jio#airtel,1.0,on-grid,solar,yes
+7037,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58282,93.84071,pakka road,2g unreliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+7101,Energy & ICT,Street Light,Shi-Yomi,Monigong,Karle,28.74836,94.29272,pakka road,2g unreliable,bsnl,0.0,off- grid,solar,yes
+7145,Energy & ICT,Street Light,Lower Subansiri,Ziro,Modang Tage,27.57287,93.8293,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,yes
+7151,Energy & ICT,Street Light,Lower Subansiri,Ziro,Modang Tage,27.57311,93.82979,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+7153,Energy & ICT,Street Light,Lower Subansiri,Ziro,Modang Tage,27.573290000000004,93.82979,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,yes
+7154,Energy & ICT,Street Light,Lower Subansiri,Ziro,Modang Tage,27.57335,93.82943,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,yes
+7155,Energy & ICT,Street Light,Lower Subansiri,Ziro,Modang Tage,27.573390000000003,93.82957,kacha road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+7161,Energy & ICT,Street Light,Lower Subansiri,Ziro,Modang Tage,27.57382,93.82978,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,yes
+7176,Energy & ICT,Street Light,Lower Subansiri,Ziro,Sibe,27.548440000000006,93.80925,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,solar,yes
+7177,Energy & ICT,Street Light,Lower Subansiri,Ziro,Sibe,27.54829,93.80943,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+7181,Energy & ICT,Street Light,Lower Subansiri,Ziro,Sibe,27.54788,93.80999,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+7182,Energy & ICT,Street Light,Lower Subansiri,Ziro,Sibe,27.54771,93.81005,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+7185,Energy & ICT,Street Light,Lower Subansiri,Ziro,Sibe,27.54746,93.81243,pakka road,3g reliable,vodafone#bsnl#airtel,0.2,on-grid,solar,yes
+7189,Energy & ICT,Street Light,Lower Subansiri,Ziro,Bamin,27.56973,93.82858,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+7223,Energy & ICT,Street Light,Lower Subansiri,Ziro (Sadar),Hong Niitii,27.52397,93.83984,kacha road,2g unreliable,bsnl,6.0,off- grid,solar,yes
+7227,Energy & ICT,Street Light,Lower Subansiri,Ziro (Sadar),Hong Niitii,27.522890000000004,93.83894,kacha road,2g unreliable,bsnl,6.0,off- grid,solar,yes
+7236,Energy & ICT,Street Light,Papumpare,Doimukh,Soppo,27.21234,93.8018,pakka road,2g unreliable,bsnl#jio#airtel,1.0,on-grid,traditional,yes
+7237,Energy & ICT,Street Light,Papumpare,Doimukh,Soppo,27.2131,93.80178,pakka road,2g unreliable,bsnl#jio#airtel,1.0,on-grid,traditional,yes
+7240,Energy & ICT,Street Light,Papumpare,Doimukh,Soppo,27.21186,93.80194,pakka road,2g unreliable,bsnl#jio#airtel,1.0,on-grid,traditional,yes
+7241,Energy & ICT,Street Light,Papumpare,Doimukh,Soppo,27.21121,93.80214,pakka road,2g unreliable,bsnl#jio#airtel,1.0,on-grid,solar,yes
+955,Energy & ICT,Street Light,Changlang,Changlang,Changlang (CT),27.13573,95.72546,pakka road with block point,4g+ reliable,vodafone#bsnl#jio#airtel,0.3,on-grid,traditional,no
+976,Energy & ICT,Street Light,Changlang,Changlang,Changlang (CT),27.13645,95.7265,pakka road with block point,4g+ reliable,vodafone#bsnl#jio#airtel,0.3,off- grid,traditional,no
+981,Energy & ICT,Street Light,Changlang,Changlang,Changlang (CT),27.13745,95.72617,pakka road with block point,4g+ reliable,vodafone#bsnl#jio#airtel,0.5,on-grid,traditional,no
+1007,Energy & ICT,Street Light,Changlang,Changlang,Changlang (CT),27.144440000000003,95.73737,pakka road,4g+ reliable,vodafone#bsnl#jio#airtel,0.0,off- grid,solar,no
+1037,Energy & ICT,Street Light,Changlang,Changlang,Changlang (CT),27.12745,95.70635,kacha road,3g reliable,vodafone#bsnl#jio#airtel,0.3,on-grid,traditional,no
+1060,Energy & ICT,Street Light,East Siang,Pasighat,Rengging,28.14157,95.27327,pakka road,2g reliable,vodafone#bsnl#jio#airtel,1.0,off- grid,solar,yes
+1311,Energy & ICT,Street Light,Lower Subansiri,Ziro,Tajang,27.62241,93.84606,kacha road,2g unreliable,bsnl#airtel,0.0,off- grid,solar,yes
+1317,Energy & ICT,Street Light,Lower Subansiri,Ziro,Tajang,27.59981,93.82494,kacha road with block point,2g reliable,vodafone#bsnl#airtel,5.0,off- grid,traditional,no
+1408,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58318,93.84432,pakka road with block point,3g unreliable,vodafone#bsnl#airtel,1.0,on-grid,traditional,no
+1413,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hari,27.58416,93.84125,kacha road,3g unreliable,vodafone#bsnl#airtel,1.0,off- grid,traditional,no
+1424,Energy & ICT,Street Light,East Siang,Pasighat,Rengging,28.141690000000004,95.27356,pakka road,2g reliable,vodafone#bsnl#jio#airtel,1.0,off- grid,solar,no
+1426,Energy & ICT,Street Light,East Siang,Pasighat,Rengging,28.14223,95.27397,footway,2g unreliable,vodafone#bsnl#jio#airtel,1.0,off- grid,solar,yes
+1430,Energy & ICT,Street Light,East Siang,Pasighat,Rengging,28.142570000000006,95.27246,footway,2g reliable,vodafone#bsnl#jio#airtel,1.0,off- grid,solar,yes
+1433,Energy & ICT,Street Light,East Siang,Pasighat,Rengging,28.14272,95.27175,footway,2g reliable,bsnl#airtel,1.0,off- grid,solar,yes
+1435,Energy & ICT,Street Light,East Siang,Pasighat,Rengging,28.14226,95.27211,footway,2g reliable,bsnl,1.0,off- grid,solar,yes
+1436,Energy & ICT,Street Light,East Siang,Pasighat,Rengging,28.14247,95.27209,footway,2g reliable,bsnl,1.0,off- grid,solar,yes
+1439,Energy & ICT,Street Light,East Siang,Pasighat,Rengging,28.1413,95.27287,pakka road,2g reliable,N/A,1.0,off- grid,solar,yes
+1441,Energy & ICT,Street Light,East Siang,Pasighat,Rengging,28.14177,95.2723,footway,2g reliable,bsnl,1.0,off- grid,solar,yes
+1442,Energy & ICT,Street Light,East Siang,Pasighat,Rengging,28.14217,95.27272,footway,2g reliable,bsnl,1.0,off- grid,solar,yes
+1444,Energy & ICT,Street Light,East Siang,Pasighat,Rengging,28.14146,95.27317,pakka road,2g reliable,bsnl,1.0,off- grid,solar,yes
+1579,Energy & ICT,Street Light,West Kameng,Singchung,Singchung,27.19927,92.47532,pakka road,3g reliable,vodafone#bsnl#airtel,0.611,on-grid,traditional,no
+1584,Energy & ICT,Street Light,West Kameng,Singchung,Singchung,27.19806,92.47395,pakka road,3g reliable,vodafone#bsnl#airtel,0.4,on-grid,traditional,no
+1586,Energy & ICT,Street Light,West Kameng,Singchung,Singchung,27.19753,92.47386,pakka road,3g reliable,vodafone#bsnl#airtel,0.3,on-grid,traditional,no
+1588,Energy & ICT,Street Light,West Kameng,Singchung,Singchung,27.196790000000004,92.47385,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+1596,Energy & ICT,Street Light,West Kameng,Singchung,Singchung,27.1963,92.47478,pakka road,3g reliable,vodafone#bsnl#airtel,0.3,on-grid,traditional,no
+1600,Energy & ICT,Street Light,West Kameng,Singchung,Singchung,27.195190000000004,92.47426,pakka road,3g reliable,vodafone#bsnl#airtel,0.5,on-grid,traditional,no
+1607,Energy & ICT,Street Light,West Kameng,Singchung,Singchung,27.19471,92.47235,pakka road,3g reliable,vodafone#bsnl#airtel,0.0,on-grid,traditional,no
+1817,Energy & ICT,Street Light,Lower Subansiri,Pistana,Did,27.59461,93.68,footway,4g unreliable,vodafone#airtel,0.1,on-grid,traditional,no
+1869,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.58363,93.82995,kacha road,3g unreliable,vodafone#bsnl#airtel,2.0,on-grid,traditional,no
+2073,Energy & ICT,Street Light,Lower Subansiri,Ziro,Hong,27.527390000000004,93.83453,kacha road,2g reliable,vodafone#bsnl,17.0,off- grid,solar,yes
+3530,Energy & ICT,Street Light,East Siang,Pasighat,Boyng,28.056590000000003,95.28889,pakka road,4g unreliable,vodafone#idea#bsnl#jio#airtel,20.0,on-grid,solar,no

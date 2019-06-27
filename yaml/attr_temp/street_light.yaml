@@ -1,0 +1,39 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  road_connectivity:
+                        What is the type of the road available to the asset?:
+                              format: normal_string
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the asset?:
+                              format: normal_string
+      general:
+            communication:
+                  mobile:
+                        What are different Mobile network service providers available at the location?:
+                              format: multi_select
+      specific:
+            X1:
+                  y1:
+                        How far is this street light from the nearest substation or transformer ?:
+                              format: number
+            X2:
+                  y2:
+                        Which type of street light is this?:
+                              format: normal_string
+            X3:
+                  y3:
+                        What is the system of street lights used?:
+                              format: normal_string
+            X4:
+                  y4:
+                        Has the street light been installed with the help of APEDA ?:
+                              format: normal_string
