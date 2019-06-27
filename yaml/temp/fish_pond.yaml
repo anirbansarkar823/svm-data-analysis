@@ -1,0 +1,107 @@
+# fish pond: sheet4, sheet5 
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:
+                        access:
+                                start: 15          
+                                end: 16        
+                        road_connectivity:
+                                start: 16         
+                                end: 17       
+                        public_transport:
+                                start: 17       
+                                end: 18       
+                        mobile_connectivity:
+                                start: 18      
+                                end: 19      
+                infrastructure:    
+                        security:
+                                start: 25      
+                                end: 26      
+
+        general:     
+                employability:
+                        staff:
+                                start: 26      
+                                end: 27           
+                water:
+                        water_for_operational_purposes:
+                                start: 27
+                                end: 28     
+                sanitation:       
+                        waste_management:
+                                start: 29      
+                                end: 30           
+                energy:
+                        electricity:
+                                start: 31       
+                                end: 32      
+                alternate_energy:
+                        alternate_energy:  
+                                start: 33       
+                                end: 35      
+                communication: 
+                        mobile:
+                                start: 19
+                                end: 20      
+                record_maintenance:
+                        records:
+                                start: 40      
+                                end: 41      
+                govt_support:
+                        support:
+                                start: 42      
+                                end: 43
+                ngo_support:
+                        support:
+                                start: 43 
+                                end: 44    
+                digital_technologies:
+                        awareness:
+                                start: 45      
+                                end: 46      
+        specific:
+                inputs:
+                        procurement:
+                                start: 47        
+                                end: 48
+                        chemical_inputs:
+                                start: 49
+                                end: 50
+                        organic_inputs:
+                                start: 50
+                                end: 51
+                marketing:
+                        advertisement:
+                                start: 51
+                                end: 52
+                products:
+                        quantity:
+                                start: 52
+                                end: 53
+                        cost:
+                                start: 54
+                                end: 55
+                        cost_policy:
+                                start: 57
+                                end: 58
+                customers:
+                        type:
+                                start: 55
+                                end: 56  
+                logistics:
+                        transport_of_goods:
+                                start: 56 
+                                end: 57

@@ -1,0 +1,312 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              access:
+                                    weight: ''
+                                    questions:
+                                          How many times did you go to the fish pond until it was open?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the fish pond?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road with block point: ''
+                                                      footway: ''
+                                                      kacha road with block point: ''
+                                                      kacha road: ''
+                                                      pakka road: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel from the fish pond to avail public transport facility? (Approx in K.M):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the fish pond?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      4g+ reliable: ''
+                                                      3g reliable: ''
+                                                      2g unreliable: ''
+                                                      nil: ''
+                                                      4g unreliable: ''
+                                                      3g unreliable: ''
+                                                      2g reliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the type of security available for the fish pond?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      watchman: ''
+                                                      none: ''
+                                                      compound wall\/ fencing: ''
+      general:
+            weight: ''
+            variables:
+                  employability:
+                        weight: ''
+                        sub_parameters:
+                              staff:
+                                    weight: ''
+                                    questions:
+                                          How many are employed in the fish pond?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  water:
+                        weight: ''
+                        sub_parameters:
+                              water_for_operational_purposes:
+                                    weight: ''
+                                    questions:
+                                          Where do you get water for operational purposes for the fish pond?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      spring water: ''
+                                                      water from government: ''
+                                                      ground water: ''
+                                                      river or canal: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          How do you deal with the waste generated from the fish pond?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      discarded in open field: ''
+                                                      burnt within the premises: ''
+                                                      discarded in water bodies: ''
+                                                      none: ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply for the fish pond?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available for the fish pond?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      diesel generator: ''
+                                                      invertor: ''
+                                                      none: ''
+                                          How many hours do you rely on the alternative energy source in a day for the fish pond?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of the fish pond?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      vodafone: ''
+                                                      airtel: ''
+                                                      idea: ''
+                                                      bsnl: ''
+                                                      jio: ''
+                  record_maintenance:
+                        weight: ''
+                        sub_parameters:
+                              records:
+                                    weight: ''
+                                    questions:
+                                          How do you maintain records for operations of the fish pond?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      traditional book keeping: ''
+                                                      digital records- using computer/mobile: ''
+                                                      others: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the fish pond gets support from government agencies?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+                                                      marketing support: ''
+                                                      support via subsidies: ''
+                                                      support via schemes: ''
+                                                      technical support: ''
+                                                      financial support: ''
+                  ngo_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          Do you get any support from NGO(s) for the fish pond?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  digital_technologies:
+                        weight: ''
+                        sub_parameters:
+                              awareness:
+                                    weight: ''
+                                    questions:
+                                          Are you using digital technologies that can be used in the fish pond?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+      specific:
+            weight: ''
+            variables:
+                  inputs:
+                        weight: ''
+                        sub_parameters:
+                              procurement:
+                                    weight: ''
+                                    questions:
+                                          Where do you primarily procure inputs required for the Fish Pond?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      none: ''
+                                                      local supplier: ''
+                                                      others: ''
+                                                      government agency: ''
+                                                      supplier in other states: ''
+                              chemical_inputs:
+                                    weight: ''
+                                    questions:
+                                          What are different chemical inputs used in the fish pond?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+                                                      fertilizer: ''
+                                                      weedicides: ''
+                                                      others: ''
+                              organic_inputs:
+                                    weight: ''
+                                    questions:
+                                          What are different organic inputs used in the fish pond?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+                                                      fertilizer: ''
+                                                      weedicides: ''
+                                                      others: ''
+                  marketing:
+                        weight: ''
+                        sub_parameters:
+                              advertisement:
+                                    weight: ''
+                                    questions:
+                                          How does this Asset advertise about the products produced in the fish pond?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      village meeting: ''
+                                                      marketing team\/ sales agents: ''
+                                                      others: ''
+                                                      posters\/ display boards: ''
+                                                      announcements \/ broadcast: ''
+                  products:
+                        weight: ''
+                        sub_parameters:
+                              quantity:
+                                    weight: ''
+                                    questions:
+                                          How many KGs of fish are procured from fish pond per year?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              cost:
+                                    weight: ''
+                                    questions:
+                                          What is the average cost per unit of the products produced from the fish pond?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              cost_policy:
+                                    weight: ''
+                                    questions:
+                                          How do you determine the selling price of the products?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      other: ''
+                                                      dependent on buyers price: ''
+                                                      government fixed: ''
+                                                      based on market price: ''
+                                                      bargaining: ''
+                  customers:
+                        weight: ''
+                        sub_parameters:
+                              type:
+                                    weight: ''
+                                    questions:
+                                          Which type of customers purchase the products produced in the fish pond?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      research agencies: ''
+                                                      others: ''
+                                                      ngo: ''
+                                                      farmers: ''
+                                                      govt. agencies: ''
+                  logistics:
+                        weight: ''
+                        sub_parameters:
+                              transport_of_goods:
+                                    weight: ''
+                                    questions:
+                                          How does the customers transport the goods produced from the fish pond?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      mini luggage transport vehicle: ''
+                                                      2 wheeler: ''
+                                                      others: ''
+                                                      tempo\/auto: ''
+                                                      head load: ''
+                                                      sumo\/tracker: ''

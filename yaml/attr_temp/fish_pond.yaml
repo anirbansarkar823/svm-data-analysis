@@ -1,0 +1,103 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  access:
+                        How many times did you go to the fish pond until it was open?:
+                              format: number
+                  road_connectivity:
+                        What is the type of the road available to the fish pond?:
+                              format: normal_string
+                  public_transport:
+                        How much distance should one travel from the fish pond to avail public transport facility? (Approx in K.M):
+                              format: number
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the fish pond?:
+                              format: normal_string
+            infrastructure:
+                  security:
+                        What is the type of security available for the fish pond?:
+                              format: multi_select
+      general:
+            employability:
+                  staff:
+                        How many are employed in the fish pond?:
+                              format: number
+            water:
+                  water_for_operational_purposes:
+                        Where do you get water for operational purposes for the fish pond?:
+                              format: normal_string
+            sanitation:
+                  waste_management:
+                        How do you deal with the waste generated from the fish pond?:
+                              format: normal_string
+            energy:
+                  electricity:
+                        Do you have grid connection for energy supply for the fish pond?:
+                              format: normal_string
+            alternate_energy:
+                  alternate_energy:
+                        What is the alternative energy source available for the fish pond?:
+                              format: normal_string
+                        How many hours do you rely on the alternative energy source in a day for the fish pond?:
+                              format: number
+            communication:
+                  mobile:
+                        What are different Mobile network service providers available at the location of the fish pond?:
+                              format: multi_select
+            record_maintenance:
+                  records:
+                        How do you maintain records for operations of the fish pond?:
+                              format: normal_string
+            govt_support:
+                  support:
+                        What are the areas the fish pond gets support from government agencies?:
+                              format: multi_select
+            ngo_support:
+                  support:
+                        Do you get any support from NGO(s) for the fish pond?:
+                              format: normal_string
+            digital_technologies:
+                  awareness:
+                        Are you using digital technologies that can be used in the fish pond?:
+                              format: normal_string
+      specific:
+            inputs:
+                  procurement:
+                        Where do you primarily procure inputs required for the Fish Pond?:
+                              format: normal_string
+                  chemical_inputs:
+                        What are different chemical inputs used in the fish pond?:
+                              format: multi_select
+                  organic_inputs:
+                        What are different organic inputs used in the fish pond?:
+                              format: multi_select
+            marketing:
+                  advertisement:
+                        How does this Asset advertise about the products produced in the fish pond?:
+                              format: multi_select
+            products:
+                  quantity:
+                        How many KGs of fish are procured from fish pond per year?:
+                              format: number
+                  cost:
+                        What is the average cost per unit of the products produced from the fish pond?:
+                              format: number
+                  cost_policy:
+                        How do you determine the selling price of the products?:
+                              format: normal_string
+            customers:
+                  type:
+                        Which type of customers purchase the products produced in the fish pond?:
+                              format: multi_select
+            logistics:
+                  transport_of_goods:
+                        How does the customers transport the goods produced from the fish pond?:
+                              format: multi_select
