@@ -1,0 +1,41 @@
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:         
+                        road_connectivity:
+                                start: 15         
+                                end: 16             
+                        mobile_connectivity:
+                                start: 16      
+                                end: 17      
+        general:
+                communication:       
+                        mobile:
+                                start: 17      
+                                end: 18            
+        specific:
+                X1:
+                        y1:
+                                start: 23
+                                end: 24
+                        y2:
+                                start: 24
+                                end: 25
+                X2:
+                        y1:
+                                start: 25
+                                end: 26
+                        y2:
+                                start: 26
+                                end: 27

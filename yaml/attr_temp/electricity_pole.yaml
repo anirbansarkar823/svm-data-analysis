@@ -1,0 +1,37 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  road_connectivity:
+                        What is the type of the road available to the asset?:
+                              format: normal_string
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the asset?:
+                              format: normal_string
+      general:
+            communication:
+                  mobile:
+                        What are different Mobile network service providers available at the location?:
+                              format: multi_select
+      specific:
+            X1:
+                  y1:
+                        Does this electricity pole also have telephone lines ?:
+                              format: normal_string
+                  y2:
+                        What is the electricity pole made of ?:
+                              format: multi_select
+            X2:
+                  y1:
+                        What is the frequency of maintenance or safety audit ?:
+                              format: normal_string
+                  y2:
+                        Are the wires insulated ?:
+                              format: normal_string
