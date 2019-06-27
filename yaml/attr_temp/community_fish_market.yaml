@@ -1,0 +1,161 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  access:
+                        How many times did you go to the unit until it was open?:
+                              format: number
+                  road_connectivity:
+                        What is the type of the road available to the market?:
+                              format: normal_string
+                  public_transport:
+                        How much distance should one travel from the market to avail public transport facility? (Approx in K.M):
+                              format: number
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the market?:
+                              format: normal_string
+            infrastructure:
+                  building_type:
+                        What is the type of structure of the market?:
+                              format: normal_string
+                  security:
+                        What is the type of security available for the market?:
+                              format: multi_select
+      general:
+            availability:
+                  working_hours:
+                        'What are the working hours of the market?(Ex: 9.00A.M-5.A.M)':
+                              format: time
+                  working_days:
+                        What are the working days of the market?:
+                              format: multi_select
+            employability:
+                  staff:
+                        How many people are working in the market?:
+                              format: number
+            water:
+                  drinking_water:
+                        Where do you get drinking water from for using at the market?:
+                              format: normal_string
+                  water_for_operational_purposes:
+                        Where do you get water for operational purposes for the market?:
+                              format: normal_string
+            sanitation:
+                  toilets:
+                        Are there toilets available for public and employees' usage at the market?:
+                              format: normal_string
+                  waste_management:
+                        How do you deal with the fish waste generated from the market?:
+                              format: normal_string
+                  general_cleanliness:
+                        Are the premises of market cleaned with disinfectant regularly?:
+                              format: normal_string
+                        How frequently are the premises at the market cleaned with disinfectant in a week?:
+                              format: number
+            energy:
+                  electricity:
+                        Do you have grid connection for energy supply for the market?:
+                              format: normal_string
+            alternate_energy:
+                  alternate_energy:
+                        What is the alternative energy source available for the market?:
+                              format: normal_string
+                        How many hours do you rely on the alternative energy source in a day for the unit?:
+                              format: number
+            communication:
+                  mobile:
+                        What are different Mobile network service providers available at the location of the unit?:
+                              format: multi_select
+                  telephone:
+                        Is there landline connectivity for the market?:
+                              format: normal_string
+                  broadband:
+                        Does the market have wired internet connection?:
+                              format: normal_string
+            record_maintenance:
+                  records:
+                        How do people maintain records for operations of the market?:
+                              format: normal_string
+            govt_support:
+                  support:
+                        What are the areas the market gets support from government agencies?:
+                              format: multi_select
+            ngo_support:
+                  support:
+                        Do you get any support from NGO(s) for the market?:
+                              format: normal_string
+            digital_technologies:
+                  awareness:
+                        Are you using digital technologies in the market?:
+                              format: normal_string
+      specific:
+            inputs:
+                  procurement:
+                        Where do you primarily procure inputs required for the market?:
+                              format: normal_string
+            infrastructure:
+                  storage:
+                        Where do you store the produce sold in the shops?:
+                              format: normal_string
+            marketing:
+                  advertisement:
+                        How does the market advertise about the services available?:
+                              format: multi_select
+            operations:
+                  operational_cost:
+                        What is the average operational cost per month to run the stall?:
+                              format: number
+                  income:
+                        What is the average income per month from each stall?:
+                              format: number
+                  permission:
+                        What kind of permission is required to setup a stall in the market?:
+                              format: normal_string
+                  setup_cost:
+                        What is the amount to be paid to setup a stall in the market?(In Rupees):
+                              format: number
+                  payment_mechanism:
+                        What is the payment mechanism used in the market?:
+                              format: multi_select
+                  weghing_mechanism:
+                        What is the weighing mechanism used in the market?:
+                              format: normal_string
+            products:
+                  number:
+                        How many types of products are available in the market?:
+                              format: number
+                  cost:
+                        What is the average cost of the top 5 most purchased goods in market?(In Rupees):
+                              format: number
+                  cost_policy:
+                        How does sellers decide the selling price of the products?:
+                              format: multi_select
+            customers:
+                  type:
+                        Which type of customers purchase the fish from the market?:
+                              format: multi_select
+                  number:
+                        How many customers purchase the inputs from the market in a week??:
+                              format: number
+            logistics:
+                  transport_of_goods:
+                        How do the customers transport goods from the market?:
+                              format: multi_select
+            inventory:
+                  cold_storage:
+                        Do you have a cold storage facility?:
+                              format: normal_string
+            food_wastage:
+                  X:
+                        How many Kgs of fish got wasted last week?:
+                              format: number
+                  documentation:
+                        How do you document wastage of food?:
+                              format: normal_string

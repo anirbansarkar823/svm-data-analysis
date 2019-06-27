@@ -1,0 +1,162 @@
+# community fish market:sheet2, sheet3 
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:
+                        access:
+                                start: 15          
+                                end: 16        
+                        road_connectivity:
+                                start: 16         
+                                end: 17       
+                        public_transport:
+                                start: 17       
+                                end: 18       
+                        mobile_connectivity:
+                                start: 18      
+                                end: 19      
+                infrastructure:
+                        building_type: 
+                                start: 25    
+                                end: 26    
+                        security:
+                                start: 26      
+                                end: 27      
+        general:  
+                availability:
+                        working_hours: 
+                                start: 27       
+                                end: 28    
+                        working_days:
+                                start: 28      
+                                end: 29
+                employability:
+                        staff:
+                                start: 29      
+                                end: 30         
+                water:
+                        drinking_water:
+                                start: 30
+                                end: 31
+                        water_for_operational_purposes:
+                                start: 32
+                                end: 33     
+                sanitation: 
+                        toilets:
+                                start: 34
+                                end: 35
+                        waste_management:
+                                start: 38      
+                                end: 39     
+                        general_cleanliness:
+                                start: 44      
+                                end: 46      
+                energy:
+                        electricity:
+                                start: 46       
+                                end: 47      
+                alternate_energy:
+                        alternate_energy:  
+                                start: 48       
+                                end: 50      
+                communication: 
+                        mobile:
+                                start: 19
+                                end: 20
+                        telephone:
+                                start: 55
+                                end: 56
+                        broadband:
+                                start: 57
+                                end: 58
+                record_maintenance:
+                        records:
+                                start: 59      
+                                end: 60      
+                govt_support:
+                        support:
+                                start: 61      
+                                end: 62
+                ngo_support:
+                        support:
+                                start: 62 
+                                end: 63   
+                digital_technologies:
+                        awareness:
+                                start: 64      
+                                end: 65      
+        specific:
+                inputs:
+                        procurement:
+                                start: 66        
+                                end: 67
+                infrastructure:    
+                        storage: 
+                                start: 68   
+                                end: 69 
+                marketing:
+                        advertisement:
+                                start: 70
+                                end: 71
+                operations:
+                        operational_cost:
+                                start: 71 
+                                end: 72
+                        income:
+                                start: 72
+                                end: 73
+                        permission:
+                                start: 73
+                                end: 74
+                        setup_cost:
+                                start: 75
+                                end: 76
+                        payment_mechanism:
+                                start: 77
+                                end: 78
+                        weghing_mechanism:
+                                start: 78
+                                end: 79
+                products:
+                        number:
+                                start: 79
+                                end: 80
+                        cost:
+                                start: 81
+                                end: 82
+                        cost_policy:
+                                start: 83
+                                end: 84
+                customers:
+                        type:
+                                start: 84
+                                end: 85   
+                        number:
+                                start: 85 
+                                end: 86
+                logistics:
+                        transport_of_goods:
+                                start: 86 
+                                end: 87
+                inventory:
+                        cold_storage:
+                                start: 87
+                                end: 88
+                food_wastage:
+                        X:
+                                start: 89
+                                end: 90
+                        documentation:
+                                start: 90
+                                end: 91
