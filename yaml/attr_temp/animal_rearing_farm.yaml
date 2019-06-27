@@ -1,0 +1,179 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  access:
+                        How many times did you go there until it was open?:
+                              format: number
+                  road_connectivity:
+                        What is the type of the road available to the asset?:
+                              format: normal_string
+                  public_transport:
+                        How much distance should one travel from the asset to avail public transport facility? (in K.M):
+                              format: number
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the asset?:
+                              format: normal_string
+            infrastructure:
+                  building_type:
+                        What is the type of structure of the asset?:
+                              format: normal_string
+                  security:
+                        What is the type of security available for the asset?:
+                              format: multi_select
+      general:
+            availability:
+                  working_hours:
+                        'What are the working hours of the asset?(Ex: 9.00A.M-5.A.M)':
+                              format: time
+                  working_days:
+                        What are the working days of that asset?:
+                              format: multi_select
+            employability:
+                  non_technical_staff:
+                        How many Non Technical staff are employed in/for that asset?:
+                              format: number
+                  technical_staff:
+                        How many Technical staff are employed in/for that asset?:
+                              format: number
+            water:
+                  drinking_water:
+                        Where do you get drinking water from for using at the asset?:
+                              format: normal_string
+                  water_for_operational_purposes:
+                        Where do you get water for operational purposes for the asset?:
+                              format: normal_string
+            sanitation:
+                  toilets:
+                        Are there toilets available for public and employees usage at the asset?:
+                              format: normal_string
+                  waste_management:
+                        How do you deal with the waste generated from that asset?:
+                              format: normal_string
+                  general_cleanliness:
+                        Are the premises of the asset cleaned with disinfectant regularly?:
+                              format: normal_string
+                        How frequently are the premises at the asset cleaned with disinfectant in a week?:
+                              format: normal_string
+            energy:
+                  electricity:
+                        Do you have grid connection for energy supply for the asset?:
+                              format: normal_string
+            alternate_energy:
+                  alternate_energy:
+                        What is the alternative energy source available for that asset?:
+                              format: normal_string
+            communication:
+                  telephone:
+                        Is there landline connectivity for that asset?:
+                              format: normal_string
+                  broadband:
+                        Does the asset have wired internet connection?:
+                              format: normal_string
+                  mobile:
+                        What are different Mobile network service providers available at the location of the asset?:
+                              format: multi_select
+            govt_support:
+                  support:
+                        What are the areas the asset gets support from government agencies (not for customers)?:
+                              format: multi_select
+            ngo_support:
+                  support:
+                        Do you get any support from NGO(s) for the asset?:
+                              format: normal_string
+            inputs:
+                  inputs:
+                        Where do you procure inputs required for that asset?:
+                              format: normal_string
+            marketing:
+                  advertisement:
+                        How does the asset advertise about the services available?:
+                              format: multi_select
+            digital_technologies:
+                  awareness:
+                        Are you using any digital tools like for your operations for the asset?:
+                              format: normal_string
+            records_maintenance:
+                  records:
+                        How do you maintain records for operations for the asset?:
+                              format: normal_string
+      specific:
+            X1:
+                  Y:
+                        What is the breed of cattle reared in the animal rearing farm?:
+                              format: multi_select
+            X2:
+                  Y:
+                        What is the number of cattle reared in the animal rearing farm?:
+                              format: number
+            X3:
+                  Y:
+                        What is the type of structure of the farm?:
+                              format: normal_string
+            X4:
+                  Y:
+                        What is the size of the farm?:
+                              format: number
+            X5:
+                  Y:
+                        Where are the calfs/ cattle procured from?:
+                              format: multi_select
+            X6:
+                  Y:
+                        What are different equipments available in the farm?:
+                              format: multi_select
+            X7:
+                  Y:
+                        Where do you procure feed & other inputs required?:
+                              format: multi_select
+            X8:
+                  Y:
+                        What is the purpose of rearing Animal?:
+                              format: multi_select
+            X9:
+                  Y:
+                        No. of people employed through the Animal farm?:
+                              format: number
+            X10:
+                  Y:
+                        Where do you procure medicines/ vaccines for the Animal?:
+                              format: multi_select
+            X11:
+                  Y:
+                        When was the last time the animals were vaccinated?:
+                              format: normal_string
+            X12:
+                  Y:
+                        How frequently does the Vety doctor/Animal husbandry department visits the farm?:
+                              format: normal_string
+            X13:
+                  Y:
+                        What is the Most common disease for the Animals?:
+                              format: normal_string
+            X14:
+                  Y:
+                        Are the Animals artificially inseminated?:
+                              format: normal_string
+            X15:
+                  Y:
+                        Where do you market the milk/ meat produced from the farm?:
+                              format: multi_select
+            X16:
+                  Y:
+                        On an average what is the selling price of cattle?:
+                              format: number
+            X17:
+                  Y:
+                        Do the Vety doctors comes to the farm to check the diseases?:
+                              format: normal_string
+            X18:
+                  Y:
+                        Is there any epidemic which have affected the farm in past?:
+                              format: normal_string

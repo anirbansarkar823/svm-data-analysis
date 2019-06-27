@@ -50,6 +50,8 @@ def format_time(df, col):
             hours = 12+end_hr-start_hr
         elif end_hr >= 12 and start_hr < 12:
             hours = end_hr-start_hr
+        elif end_hr >= 12 and start_hr >= 12 and end_hr >= start_hr:
+            hours = end_hr - start_hr
         elif end_hr < 12 and start_hr >= 12:
             hours = 24+end_hr-start_hr
         else:
