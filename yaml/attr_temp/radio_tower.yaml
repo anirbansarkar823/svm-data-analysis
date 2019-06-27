@@ -1,0 +1,44 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  road_connectivity:
+                        What is the type of the road available to the asset?:
+                              format: normal_string
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the asset?:
+                              format: normal_string
+      general:
+            communication:
+                  mobile:
+                        What are different Mobile network service providers available at the location?:
+                              format: multi_select
+      specific:
+            spect:
+                  material:
+                        What material is the tower made of ?:
+                              format: multi_select
+                  transmit:
+                        What is transmitted with this tower?:
+                              format: normal_string
+                  y:
+                        What is the respective signal power (for each given option) in kW?:
+                              format: number
+                  height:
+                        What height has this station (in meters)?:
+                              format: number
+            operations:
+                  proximity_energy_supply:
+                        How far is the nearest Substation or Switchyard (in km)?:
+                              format: number
+            X:
+                  maintenance:
+                        What is the frequency of maintenance or safety audit ?:
+                              format: normal_string

@@ -1,0 +1,106 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road: ''
+                                                      kacha road: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      nil: ''
+                                                      2g reliable: ''
+                                                      3g unreliable: ''
+                                                      2g unreliable: ''
+      general:
+            weight: ''
+            variables:
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      bsnl: ''
+                                                      vodafone: ''
+                                                      jio: ''
+                                                      airtel: ''
+      specific:
+            weight: ''
+            variables:
+                  spect:
+                        weight: ''
+                        sub_parameters:
+                              material:
+                                    weight: ''
+                                    questions:
+                                          What material is the tower made of ?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      tubular steel: ''
+                                                      steel lattice: ''
+                                                      reinforced concrete: ''
+                                                      fiberglass and other composite networks: ''
+                              transmit:
+                                    weight: ''
+                                    questions:
+                                          What is transmitted with this tower?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      cellular network: ''
+                                                      municipal wireless network: ''
+                              y:
+                                    weight: ''
+                                    questions:
+                                          What is the respective signal power (for each given option) in kW?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              height:
+                                    weight: ''
+                                    questions:
+                                          What height has this station (in meters)?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  operations:
+                        weight: ''
+                        sub_parameters:
+                              proximity_energy_supply:
+                                    weight: ''
+                                    questions:
+                                          How far is the nearest Substation or Switchyard (in km)?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X:
+                        weight: ''
+                        sub_parameters:
+                              maintenance:
+                                    weight: ''
+                                    questions:
+                                          What is the frequency of maintenance or safety audit ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      yearly: ''
