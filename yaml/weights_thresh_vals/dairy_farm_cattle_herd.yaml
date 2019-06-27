@@ -1,0 +1,522 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              access:
+                                    weight: ''
+                                    questions:
+                                          How many times did you go there until it was open?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road with block point: ''
+                                                      kacha road: ''
+                                                      pakka road: ''
+                                                      footway: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel from the asset to avail public transport facility? (in K.M):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      4g unreliable: ''
+                                                      4g+ reliable: ''
+                                                      3g reliable: ''
+                                                      2g reliable: ''
+                                                      3g unreliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka/permenant(steel,concrete,etc.,): ''
+                                                      kacha/temporary(wood,bamboo,etc.,): ''
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the type of security available for the asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      others: ''
+                                                      compound wall\/ fencing: ''
+                                                      watchman: ''
+                                                      none: ''
+      general:
+            weight: ''
+            variables:
+                  availability:
+                        weight: ''
+                        sub_parameters:
+                              working_hours:
+                                    weight: ''
+                                    questions:
+                                          'What are the working hours of the asset?(Ex: 9.00A.M-5.A.M)':
+                                                weight: ''
+                                                format: time
+                                                threshold: ''
+                              working_days:
+                                    weight: ''
+                                    questions:
+                                          What are the working days of that asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      sunday: ''
+                                                      wednesday: ''
+                                                      friday: ''
+                                                      thursday: ''
+                                                      tuesday: ''
+                                                      saturday: ''
+                                                      monday: ''
+                  employability:
+                        weight: ''
+                        sub_parameters:
+                              non_technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many Non Technical staff are employed in/for that asset?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many Technical staff are employed in/for that asset?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  water:
+                        weight: ''
+                        sub_parameters:
+                              drinking_water:
+                                    weight: ''
+                                    questions:
+                                          Where do you get drinking water from for using at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      ground water: ''
+                                                      spring water: ''
+                                                      tap water from government: ''
+                              water_for_operational_purposes:
+                                    weight: ''
+                                    questions:
+                                          Where do you get water for operational purposes for the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      water from government: ''
+                                                      river or canal: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              toilets:
+                                    weight: ''
+                                    questions:
+                                          Are there toilets available for public and employees usage at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          How do you deal with the agricultural waste generated from that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      burnt within the premises: ''
+                                                      others: ''
+                                                      discarded in open field: ''
+                                                      discarded in water bodies: ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of the asset cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                                          How frequently are the premises at the asset cleaned with disinfectant in a week?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      '3.0': ''
+                                                      '7.0': ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply for the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      none: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              telephone:
+                                    weight: ''
+                                    questions:
+                                          Is there landline connectivity for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              broadband:
+                                    weight: ''
+                                    questions:
+                                          Does the asset have wired internet connection?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of the asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      vodafone: ''
+                                                      jio: ''
+                                                      bsnl: ''
+                                                      idea: ''
+                                                      airtel: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the asset gets support from government agencies (not for customers)?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      financial support: ''
+                                                      marketing support: ''
+                                                      none: ''
+                  ngo_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          Do you get any support from NGO(s) for the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  inputs:
+                        weight: ''
+                        sub_parameters:
+                              inputs:
+                                    weight: ''
+                                    questions:
+                                          Where do you procure inputs required for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      government agency: ''
+                                                      local supplier: ''
+                                                      supplier in other states: ''
+                                                      none: ''
+                  marketing:
+                        weight: ''
+                        sub_parameters:
+                              advertisement:
+                                    weight: ''
+                                    questions:
+                                          How does the asset advertise about the services available?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      others: ''
+                                                      posters\/ display boards: ''
+                                                      marketing team\/ sales agents: ''
+                                                      village meeting: ''
+                  digital_technologies:
+                        weight: ''
+                        sub_parameters:
+                              awareness:
+                                    weight: ''
+                                    questions:
+                                          Are you using any digital tools like for your operations for the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  records_maintenance:
+                        weight: ''
+                        sub_parameters:
+                              records:
+                                    weight: ''
+                                    questions:
+                                          How do you maintain records for operations for the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      traditional book keeping: ''
+      specific:
+            weight: ''
+            variables:
+                  X1:
+                        weight: ''
+                        sub_parameters:
+                              Y:
+                                    weight: ''
+                                    questions:
+                                          What is the breed of cattle reared in the dairy farm/ herd:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      indegenous cow: ''
+                                                      exotic cow: ''
+                  X2:
+                        weight: ''
+                        sub_parameters:
+                              Y:
+                                    weight: ''
+                                    questions:
+                                          What is the number of cattle reared in the dairy farm/herd?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X3:
+                        weight: ''
+                        sub_parameters:
+                              Y:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of the dairy farm/ herd?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      open land: ''
+                                                      permanent shed: ''
+                                                      temporary shed: ''
+                  X4:
+                        weight: ''
+                        sub_parameters:
+                              Y:
+                                    weight: ''
+                                    questions:
+                                          What is the size of the dairy farm/ herd?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X5:
+                        weight: ''
+                        sub_parameters:
+                              Y:
+                                    weight: ''
+                                    questions:
+                                          Where are the calfs/ cattle procured from?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      govt. agency: ''
+                                                      others: ''
+                                                      local market: ''
+                                                      from fellow farmers: ''
+                  X6:
+                        weight: ''
+                        sub_parameters:
+                              Y:
+                                    weight: ''
+                                    questions:
+                                          What are different equipments available in the dairy farm/herd?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      feed preparation equipment: ''
+                                                      others: ''
+                                                      milk-fat separating unit: ''
+                  X7:
+                        weight: ''
+                        sub_parameters:
+                              Y:
+                                    weight: ''
+                                    questions:
+                                          Where do you procure feed & other inputs required?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      govt. agency: ''
+                                                      others: ''
+                                                      local market: ''
+                                                      from fellow farmers: ''
+                  X8:
+                        weight: ''
+                        sub_parameters:
+                              Y:
+                                    weight: ''
+                                    questions:
+                                          What is the cattle raised for?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      milk: ''
+                  X9:
+                        weight: ''
+                        sub_parameters:
+                              Y:
+                                    weight: ''
+                                    questions:
+                                          No. of people employed through the dairy farm?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X10:
+                        weight: ''
+                        sub_parameters:
+                              Y:
+                                    weight: ''
+                                    questions:
+                                          Where do you procure medicines/ vaccines for the cattle?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      govt agency: ''
+                                                      others: ''
+                                                      local market: ''
+                                                      none: ''
+                  X11:
+                        weight: ''
+                        sub_parameters:
+                              Y:
+                                    weight: ''
+                                    questions:
+                                          When was the last time the animals were vaccinated?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      6-12 months back: ''
+                                                      more than two years back: ''
+                                                      last six months: ''
+                  X12:
+                        weight: ''
+                        sub_parameters:
+                              Y:
+                                    weight: ''
+                                    questions:
+                                          How frequently does the Vety doctor/Animal husbandry department visits the farm?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      not fixed: ''
+                                                      once a year: ''
+                  X14:
+                        weight: ''
+                        sub_parameters:
+                              Y:
+                                    weight: ''
+                                    questions:
+                                          Are the cattle artificially inseminated?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  X15:
+                        weight: ''
+                        sub_parameters:
+                              Y:
+                                    weight: ''
+                                    questions:
+                                          How much milk is produced from the farm per day?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X16:
+                        weight: ''
+                        sub_parameters:
+                              Y:
+                                    weight: ''
+                                    questions:
+                                          Where do you market the milk/ meat produced from the farm?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      milk processing unit: ''
+                                                      others: ''
+                                                      local market: ''
+                                                      personal consumption: ''
+                  X17:
+                        weight: ''
+                        sub_parameters:
+                              Y:
+                                    weight: ''
+                                    questions:
+                                          How do you pack the milk to sell in the market?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      steel/brass vessels: ''
+                                                      others: ''
+                                                      milk containers: ''
+                  X18:
+                        weight: ''
+                        sub_parameters:
+                              Y:
+                                    weight: ''
+                                    questions:
+                                          Do the vety doctors comes to the farm to check the diseases?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  X19:
+                        weight: ''
+                        sub_parameters:
+                              Y:
+                                    weight: ''
+                                    questions:
+                                          Is there any epidemic which have affected the farm in past?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
