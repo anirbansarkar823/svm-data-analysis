@@ -1,0 +1,133 @@
+# hatcheries: sheet6. 
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:
+                        access:
+                                start: 15          
+                                end: 16        
+                        road_connectivity:
+                                start: 16         
+                                end: 17       
+                        public_transport:
+                                start: 17       
+                                end: 18       
+                        mobile_connectivity:
+                                start: 18      
+                                end: 19      
+                infrastructure:
+                        building_type: 
+                                start: 25    
+                                end: 26    
+                        security:
+                                start: 26      
+                                end: 27      
+
+        general:
+                availability:
+                        working_hours: 
+                                start: 27       
+                                end: 28    
+                        working_days:
+                                start: 28      
+                                end: 29
+                employability:
+                        technical_staff:
+                                start: 29      
+                                end: 30
+                        non_technical_staff:
+                                start: 30
+                                end: 31
+                water:
+                        drinking_water:
+                                start: 31
+                                end: 32
+                        water_for_operational_purposes:
+                                start: 33
+                                end: 34     
+                sanitation: 
+                        waste_management:
+                                start: 39      
+                                end: 40     
+                        general_cleanliness:
+                                start: 41      
+                                end: 43      
+                energy:
+                        electricity:
+                                start: 43       
+                                end: 45      
+                alternate_energy:
+                        alternate_energy:  
+                                start: 45       
+                                end: 46      
+                communication: 
+                        telephone:
+                                start: 51
+                                end: 52
+                        broadband:
+                                start: 53
+                                end: 54
+                        mobile:
+                                start: 19
+                                end: 20      
+                record_maintenance:
+                        records:
+                                start: 55      
+                                end: 56      
+                govt_support:
+                        support:
+                                start: 57      
+                                end: 58
+                ngo_support:
+                        support:
+                                start: 58 
+                                end: 59    
+                digital_technologies:
+                        awareness:
+                                start: 60      
+                                end: 61      
+        specific:
+                inputs:
+                        procurement:
+                                start: 62        
+                                end: 63
+                        chemical_inputs:
+                                start: 64
+                                end: 65
+                marketing:
+                        advertisement:
+                                start: 66
+                                end: 67
+                operations:
+                        operational_cost:
+                                start: 67
+                                end: 68
+                products:
+                        number:
+                                start: 68
+                                end: 69 
+                        cost:
+                                start: 70
+                                end: 71
+                customers:
+                        type:
+                                start: 72
+                                end: 73
+                        number:
+                                start: 74
+                                end: 75
+                logistics:
+                        transport_of_goods:
+                                start: 75 
+                                end: 76
