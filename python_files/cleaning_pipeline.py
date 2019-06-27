@@ -46,17 +46,23 @@ def format_time(df, col):
         end_hr, end_min = digit_list[2], digit_list[3]
         if end_hr < 12 and start_hr < 12 and start_hr < end_hr:
             hours = end_hr-start_hr
+            minutes = end_min-start_min
         elif end_hr < 12 and start_hr < 12 and end_hr < start_hr:
             hours = 12+end_hr-start_hr
+            minutes = end_min-start_min
         elif end_hr >= 12 and start_hr < 12:
             hours = end_hr-start_hr
+            minutes = end_min-start_min
         elif end_hr >= 12 and start_hr >= 12 and end_hr >= start_hr:
             hours = end_hr - start_hr
+            minutes = end_min-start_min
         elif end_hr < 12 and start_hr >= 12:
             hours = 24+end_hr-start_hr
+            minutes = end_min-start_min
         else:
             hours = 0
-        df.loc[df[col]==o_val,col] = 60*hours+(end_min-start_min)
+            minutes = 0
+        df.loc[df[col]==o_val,col] = 60*hours+minutes
 
 
 def format_normal_string(df, col):
