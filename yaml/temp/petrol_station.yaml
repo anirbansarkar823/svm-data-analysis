@@ -1,0 +1,76 @@
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:        
+                        road_connectivity:
+                                start: 15         
+                                end: 16             
+                        mobile_connectivity:
+                                start: 16      
+                                end: 17          
+
+        general:  
+                employability:
+                        technical_staff:
+                                start: 23      
+                                end: 24     
+                        non_technical_staff:
+                                start: 24      
+                                end: 25                
+                communication:
+                        telephone:
+                                start: 32      
+                                end: 33        
+                        broadband:
+                                start: 34      
+                                end: 35      
+                        mobile:
+                                start: 17      
+                                end: 18    
+                record_maintenance:
+                        records:
+                                start: 25      
+                                end: 26      
+                govt_support:
+                        support:
+                                start: 27      
+                                end: 28            
+                digital_technologies:
+                        awareness:
+                                start: 30      
+                                end: 31             
+        specific:
+                specs:
+                        y1:
+                                start: 36
+                                end: 37
+                        y2:
+                                start: 37
+                                end: 38
+                issues:
+                        y1:
+                                start: 38
+                                end: 39
+                documentation:
+                        y1:
+                                start: 39
+                                end: 40
+                safety:
+                        y2:
+                                start: 40
+                                end: 41
+                transportation:
+                        y1:
+                                start: 41
+                                end: 42
