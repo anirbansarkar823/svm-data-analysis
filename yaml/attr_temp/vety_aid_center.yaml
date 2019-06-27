@@ -1,0 +1,128 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  access:
+                        How many times did you go there until it was open?:
+                              format: number
+                  road_connectivity:
+                        What is the type of the road available to the asset?:
+                              format: normal_string
+                  public_transport:
+                        How much distance should one travel from this asset to avail public transport facility? (in K.M):
+                              format: number
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the asset?:
+                              format: normal_string
+            infrastructure:
+                  building_type:
+                        What is the type of structure of this asset?:
+                              format: normal_string
+                  security:
+                        What is the type of security available for the asset?:
+                              format: multi_select
+      general:
+            availability:
+                  working_hours:
+                        What is the working hours of your VAC?:
+                              format: time
+                  working_days:
+                        What are the working days of the VAC?:
+                              format: multi_select
+            employability:
+                  non_technical_staff:
+                        How many non-medical staffs are there?:
+                              format: number
+                  technical_staff:
+                        What is the medical staff strength of your VAC?:
+                              format: number
+            water:
+                  drinking_water:
+                        Where do you get drinking water from for using at VAC?:
+                              format: normal_string
+                  water_for_operational_purposes:
+                        Where do you get water for operational purposes in VAC?:
+                              format: normal_string
+            sanitation:
+                  toilets:
+                        Is there running water available in the toilets at the asset?:
+                              format: number
+                  waste_management:
+                        How do you deal with the waste generated from the VAC?:
+                              format: normal_string
+                  general_cleanliness:
+                        Are the premises of the VAC cleaned with disinfectant regularly?:
+                              format: normal_string
+                        How frequently are the premises at this asset cleaned with disinfectant in a week?:
+                              format: number
+            energy:
+                  electricity:
+                        Do you have grid connection for energy supply for this asset?:
+                              format: normal_string
+            alternate_energy:
+                  alternate_energy:
+                        What is the alternative energy source available for that asset?:
+                              format: normal_string
+            communication:
+                  telephone:
+                        Is there landline connectivity for that asset?:
+                              format: normal_string
+                  broadband:
+                        Does this asset have wired internet connection?:
+                              format: normal_string
+                  mobile:
+                        What are different Mobile network service providers available at the location of this asset?:
+                              format: multi_select
+            govt_support:
+                  support:
+                        What are the areas the asset gets support from government agencies (not for customers)?:
+                              format: multi_select
+            ngo_support:
+                  support:
+                        Do you get any support from NGO(s) for this asset?:
+                              format: normal_string
+            digital_technologies:
+                  awareness:
+                        Are you using digital tools for your operations for this asset?:
+                              format: normal_string
+      specific:
+            usage:
+                  visits:
+                        How many people visit your VAC on an average in a month?:
+                              format: number
+            infrastructure:
+                  wards:
+                        Is there separate wards for different animals?:
+                              format: normal_string
+            facilities:
+                  specialist:
+                        Do you have any specialist for any animal?:
+                              format: normal_string
+                  operation_theatre:
+                        Do you have an operation theatre?:
+                              format: normal_string
+                  equipments:
+                        What equipments do you have in VAC?:
+                              format: normal_string
+            services:
+                  cost:
+                        Are the services free of cost?:
+                              format: normal_string
+                  capacity:
+                        How many animals can be accommodated in the centre?:
+                              format: number
+            outreach:
+                  awareness:
+                        Do you organise awareness camp in the village?:
+                              format: normal_string
+            waste_management:
+                  body_discards:
+                        How do you discard the animal who died of any disease?:
+                              format: multi_select
