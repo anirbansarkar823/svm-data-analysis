@@ -1,4 +1,5 @@
 SVM_DIR=~/Documents/svm
+CODE_DIR="$SVM_DIR/python_files"
 YML_DIR="$SVM_DIR/yaml"
 YML_TMP="$YML_DIR/temp"
 YML_ATR="$YML_DIR/attr_temp"
@@ -50,9 +51,9 @@ then
 	mkdir -p "$CSV_SC"
 fi
 
-alias clean='python cleaning_pipeline.py'
-alias gen_wtv='python gen_clean_final.py'
-alias score='python scoring.py'
+alias clean="python $CODE_DIR/cleaning_pipeline.py"
+alias gen_wtv="python $CODE_DIR/gen_clean_final.py"
+alias score="python $CODE_DIR/scoring.py"
 
 export SVM_DIR
 export YML_TMP
