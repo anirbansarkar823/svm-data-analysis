@@ -1,0 +1,116 @@
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:
+                        access:
+                                start: 15          
+                                end: 16        
+                        road_connectivity:
+                                start: 16         
+                                end: 17       
+                        public_transport:
+                                start: 17       
+                                end: 18       
+                        mobile_connectivity:
+                                start: 18      
+                                end: 19      
+                infrastructure:     
+                        security:
+                                start: 25      
+                                end: 26      
+        general:  
+                employability:
+                        technical_staff: 
+                                start: 26       
+                                end: 27    
+                        non_technical_staff:
+                                start: 27      
+                                end: 28    
+                water:
+                        drinking_water:
+                                start: 28
+                                end: 29  
+                sanitation:  
+                        waste_management:
+                                start: 30      
+                                end: 31     
+                communication: 
+                        mobile:
+                                start: 19
+                                end: 20
+                        telephone:
+                                start: 32
+                                end: 33
+                        broadband:
+                                start: 34
+                                end: 35
+                record_maintenance:
+                        records:
+                                start: 36      
+                                end: 37      
+                govt_support:
+                        support:
+                                start: 38      
+                                end: 39
+                ngo_support:
+                        support:
+                                start: 39 
+                                end: 40
+                digital_technologies:
+                        awareness:
+                                start: 41     
+                                end: 42     
+        specific:
+                specs:
+                        y1:
+                                start: 43
+                                end: 44
+                        y2:
+                                start: 44
+                                end: 45
+                        y4:
+                                start: 45 
+                                end: 46
+                        y5:
+                                start: 46
+                                end: 47
+                        y7:
+                                start: 47
+                                end: 48
+                        y8:
+                                start: 48
+                                end: 49
+                        y9:
+                                start: 49
+                                end: 50
+                target_audience:
+                        y1:
+                                start: 50
+                                end: 51
+                X1:
+                        y1:
+                                start: 51
+                                end: 52
+                X2:
+                        y2:
+                                start: 53
+                                end: 54
+                X3:
+                        y3:
+                                start: 55
+                                end: 56
+                maintenance:
+                        y1:
+                                start: 54
+                                end: 55

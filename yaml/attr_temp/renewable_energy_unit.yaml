@@ -1,0 +1,112 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  access:
+                        How many times did you go there until it was open?:
+                              format: number
+                  road_connectivity:
+                        What is the type of the road available to the asset?:
+                              format: normal_string
+                  public_transport:
+                        How much distance should one travel to avail public transport facility? (in K.M):
+                              format: number
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the asset?:
+                              format: normal_string
+            infrastructure:
+                  security:
+                        What is the type of security available for the asset?:
+                              format: multi_select
+      general:
+            employability:
+                  technical_staff:
+                        How many Technical staff are employed in/for the facility?:
+                              format: number
+                  non_technical_staff:
+                        How many Non Technical staff are employed in/for the facility?:
+                              format: number
+            water:
+                  drinking_water:
+                        Where do you get drinking water from?:
+                              format: normal_string
+            sanitation:
+                  waste_management:
+                        How do you deal with the waste generated from the facility?:
+                              format: normal_string
+            communication:
+                  mobile:
+                        What are different Mobile network service providers available at the location?:
+                              format: multi_select
+                  telephone:
+                        Do you have landline connectivity:
+                              format: normal_string
+                  broadband:
+                        Do you have wired internet connection:
+                              format: normal_string
+            record_maintenance:
+                  records:
+                        How do you maintain records for operations?:
+                              format: normal_string
+            govt_support:
+                  support:
+                        What are the areas you get support from government agencies?:
+                              format: multi_select
+            ngo_support:
+                  support:
+                        Do you get any support from NGO(s)?:
+                              format: normal_string
+            digital_technologies:
+                  awareness:
+                        Are you using digital tools for your operations?:
+                              format: normal_string
+      specific:
+            specs:
+                  y1:
+                        What is the type of renewable energy unit ?:
+                              format: multi_select
+                  y2:
+                        What is the type of operating voltage?:
+                              format: normal_string
+                  y4:
+                        What is the created energy of this unit (in kWh)?:
+                              format: number
+                  y5:
+                        What is the peak power of this unit (kWh)?:
+                              format: number
+                  y7:
+                        How many villagers can be provided sufficient electricity from this unit?:
+                              format: number
+                  y8:
+                        Do you use smart metering ?:
+                              format: normal_string
+                  y9:
+                        What are the issues pertaning to maintenance ?:
+                              format: multi_select
+            target_audience:
+                  y1:
+                        What are the categories of customers availing power from this asset?:
+                              format: multi_select
+            X1:
+                  y1:
+                        Where is the nearest grid connected Solar PV Power generating station?:
+                              format: normal_string
+            X2:
+                  y2:
+                        Have you ever initiated or tried a Biomass gasifier project in Arunachal Pradesh?:
+                              format: normal_string
+            X3:
+                  y3:
+                        What is the size of Biogas plant implemented by the APEDA?:
+                              format: normal_string
+            maintenance:
+                  y1:
+                        What is the frequency of maintenance or safety audit ?:
+                              format: normal_string
