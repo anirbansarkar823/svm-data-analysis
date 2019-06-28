@@ -1,0 +1,303 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              access:
+                                    weight: ''
+                                    questions:
+                                          How many times did you go there until it was open?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road: ''
+                                                      kacha road with block point: ''
+                                                      kacha road: ''
+                                                      pakka road with block point: ''
+                                                      footway: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel from this Shop to avail public transport facility? (in K.M):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      2g reliable: ''
+                                                      3g unreliable: ''
+                                                      2g unreliable: ''
+                                                      3g reliable: ''
+                                                      4g unreliable: ''
+                                                      4g+ reliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of this Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka/permenant(steel,concrete,etc.,): ''
+                                                      kacha/temporary(wood,bamboo,etc.,): ''
+      general:
+            weight: ''
+            variables:
+                  availability:
+                        weight: ''
+                        sub_parameters:
+                              working_hours:
+                                    weight: ''
+                                    questions:
+                                          'What are the working hours of this Shop?(Ex: 9.00A.M-5.A.M)':
+                                                weight: ''
+                                                format: time
+                                                threshold: ''
+                              working_days:
+                                    weight: ''
+                                    questions:
+                                          What are the working days of that Shop?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      wednesday: ''
+                                                      monday: ''
+                                                      saturday: ''
+                                                      friday: ''
+                                                      tuesday: ''
+                                                      thusday: ''
+                  employability:
+                        weight: ''
+                        sub_parameters:
+                              technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many people are working in the Shop?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  water:
+                        weight: ''
+                        sub_parameters:
+                              drinking_water:
+                                    weight: ''
+                                    questions:
+                                          Where do you get drinking water from for using at this Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      ground water: ''
+                                                      spring water: ''
+                                                      bottled water: ''
+                                                      others: ''
+                                                      tap water from government: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              toilets:
+                                    weight: ''
+                                    questions:
+                                          Are there toilets available for public usage at this Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          How do you deal with the waste generated from that Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      burnt within the premises: ''
+                                                      discarded in open field: ''
+                                                      none: ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of this Shop cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                                          How frequently are the premises at this Shop cleaned with disinfectant in a week?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      '5': ''
+                                                      '3': ''
+                                                      '6': ''
+                                                      '>7': ''
+                                                      '1': ''
+                                                      '2': ''
+                                                      '7': ''
+                                                      '4': ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply for this Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available for that Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      solar unit: ''
+                                                      diesel generator: ''
+                                                      invertor: ''
+                                                      none: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              telephone:
+                                    weight: ''
+                                    questions:
+                                          Is there landline connectivity for that Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                              broadband:
+                                    weight: ''
+                                    questions:
+                                          Does this Shop have wired internet connection?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this Shop?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      jio: ''
+                                                      idea: ''
+                                                      others: ''
+                                                      airtel: ''
+                                                      bsnl: ''
+                                                      vodafone: ''
+                  record_maintenance:
+                        weight: ''
+                        sub_parameters:
+                              records:
+                                    weight: ''
+                                    questions:
+                                          How do you maintain records for this Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      traditional book keeping: ''
+                                                      others: ''
+                                                      none: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the Shop gets support from government agencies?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      support via subsidies: ''
+                                                      none: ''
+                  ngo_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          Do you get any support from NGO(s) for this Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  digital_technologies:
+                        weight: ''
+                        sub_parameters:
+                              awareness:
+                                    weight: ''
+                                    questions:
+                                          Are you aware of digital technologies that can be used in the Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+      specific:
+            weight: ''
+            variables:
+                  tech_scope:
+                        weight: ''
+                        sub_parameters:
+                              digital_technology:
+                                    weight: ''
+                                    questions:
+                                          Do you have a POS device in your shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  market_reach:
+                        weight: ''
+                        sub_parameters:
+                              partnership:
+                                    weight: ''
+                                    questions:
+                                          From where the goods are brought to the shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      whole seller: ''
+                                                      authorized distributor: ''
+                                                      other shop: ''
+                  transportation:
+                        weight: ''
+                        sub_parameters:
+                              operations:
+                                    weight: ''
+                                    questions:
+                                          How are the goods transported to the shop?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      private car: ''
+                                                      load carriage: ''
+                                                      bike: ''
+                                                      others: ''
+                                                      rental vehicle: ''
