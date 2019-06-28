@@ -1,0 +1,132 @@
+#bamboo processing unit: sheet9, sheet11
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:
+                        access:
+                                start: 15      
+                                end: 16      
+                        road_connectivity:
+                                start: 16       
+                                end: 17     
+                        public_transport:
+                                start: 17     
+                                end: 18        
+                        mobile_connectivity:
+                                start: 18    
+                                end: 19    
+                infrastructure:
+                        security: 
+                                start: 25  
+                                end: 26
+
+        general:
+                availability:
+                        working_hours: 
+                                start: 26     
+                                end: 27  
+                        working_days:
+                                start: 27    
+                                end: 28  
+                employability:
+                        technical_staff:
+                                start: 28    
+                                end: 29
+                        non_technical_staff:
+                                start: 29
+                                end: 30
+                water:
+                        drinking_water:
+                                start: 30    
+                                end: 31    
+                sanitation:
+                        toilets:
+                                start: 32    
+                                end: 33    
+                        waste_management:
+                                start: 36    
+                                end: 37          
+                energy:
+                        electricity:
+                                start: 38   
+                                end: 39    
+                alternate_energy:
+                        alternate_energy:  
+                                start: 40     
+                                end: 41    
+                communication:
+                        telephone:
+                                start: 47    
+                                end: 48     
+                        broadband:
+                                start: 49    
+                                end: 50    
+                        mobile:
+                                start: 19    
+                                end: 20  
+                record_maintenance:
+                        records:
+                                start: 51    
+                                end: 52    
+                govt_support:
+                        support:
+                                start: 53    
+                                end: 54
+                ngo_support:
+                        support:
+                                start: 54
+                                end: 55  
+                digital_technologies:
+                        awareness:
+                                start: 56    
+                                end: 57      
+        specific:
+                basic info:
+                        description:
+                                start: 58 
+                                end: 59
+                        equipment:
+                                start: 60
+                                end: 61
+                        activities:
+                                start: 61 
+                                end: 62
+                operations:
+                        input_supplier1:
+                                start: 62
+                                end: 63
+                        product_market:
+                                start: 64
+                                end: 65
+                        input_supplier2:
+                                start: 65
+                                end: 66
+                        accessibility:
+                                start: 66
+                                end: 67
+                market:
+                        branding:
+                                start: 67
+                                end: 68
+                business_specific:
+                        revenue:
+                                start: 69
+                                end: 70
+                        cost:
+                                start: 70
+                                end: 71
+                customer:
+                        catalogue:
+                                start: 71
+                                end: 72
