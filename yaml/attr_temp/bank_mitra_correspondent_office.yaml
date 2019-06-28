@@ -1,0 +1,101 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  access:
+                        How many times did you go there until it was open?:
+                              format: number
+                  road_connectivity:
+                        What is the type of the road available to the asset?:
+                              format: normal_string
+                  public_transport:
+                        How much distance should one travel from this asset to avail public transport facility? (in K.M):
+                              format: number
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the asset?:
+                              format: normal_string
+            infrastructure:
+                  building_type:
+                        What is the type of structure of this asset?:
+                              format: normal_string
+                  security:
+                        What is the type of security available for the asset?:
+                              format: multi_select
+      general:
+            availability:
+                  working_hours:
+                        What are the working hours of this asset?:
+                              format: time
+                  working_days:
+                        What are the working days of that asset?:
+                              format: multi_select
+            water:
+                  drinking_water:
+                        Where do you get drinking water from for using at this asset?:
+                              format: normal_string
+            sanitation:
+                  toilets:
+                        Are there toilets available for public and employees usage at this asset?:
+                              format: normal_string
+                  waste_management:
+                        How do you deal with the waste generated from that asset?:
+                              format: normal_string
+                  general_cleanliness:
+                        Are the premises of this asset cleaned with disinfectant regularly?:
+                              format: normal_string
+                        How frequently are the premises at this asset cleaned with disinfectant in a week?:
+                              format: number
+            energy:
+                  electricity:
+                        Do you have grid connection for energy supply for this asset?:
+                              format: normal_string
+            alternate_energy:
+                  alternate_energy:
+                        What is the alternative energy source available for that asset?:
+                              format: normal_string
+            communication:
+                  telephone:
+                        Is there landline connectivity for that asset?:
+                              format: normal_string
+                  broadband:
+                        Does this asset have wired internet connection?:
+                              format: normal_string
+                  mobile:
+                        What are different Mobile network service providers available at the location of this asset?:
+                              format: multi_select
+            record_maintenance:
+                  records:
+                        How do you maintain records for operations for this asset?:
+                              format: normal_string
+            digital_technologies:
+                  awareness:
+                        Are you using of digital tools for your operations for this asset?:
+                              format: normal_string
+      specific:
+            accessibility:
+                  utilization:
+                        How many accounts does the Bank Correspondent (BC) open on an average month?:
+                              format: number
+            digital_technology:
+                  equipment:
+                        Has the Banking Correspondent been provided with a POS device?:
+                              format: normal_string
+            capacity_strength:
+                  area_covered:
+                        How many villages have been assigned to the Bank correspondent?:
+                              format: number
+            X:
+                  household_covered:
+                        How many households have been allocated to the Bank correspondent in the village?:
+                              format: number
+            utility_usability:
+                  place_of_operation:
+                        Where is the Bank Correspondent performing the operations from?:
+                              format: normal_string
