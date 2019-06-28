@@ -1,0 +1,102 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  access:
+                        How many times did you go there until it was open?:
+                              format: number
+                  road_connectivity:
+                        What is the type of the road available to the FCI Godown/Ware House?:
+                              format: normal_string
+                  public_transport:
+                        How much distance should one travel from this FCI Godown/Ware House to avail public transport facility? (in K.M):
+                              format: number
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the FCI Godown/Ware House?:
+                              format: normal_string
+            infrastructure:
+                  building_type:
+                        What is the type of structure of this FCI Godown/Ware House?:
+                              format: normal_string
+      general:
+            availability:
+                  working_hours:
+                        'What are the working hours of this FCI Godown/Ware House?(Ex: 9.00A.M-5.A.M)':
+                              format: time
+                  working_days:
+                        What are the working days of that FCI Godown/Ware House?:
+                              format: multi_select
+            employability:
+                  technical_staff:
+                        How many people are working in the FCI Godown/Ware House?:
+                              format: number
+            water:
+                  drinking_water:
+                        Where do you get drinking water from for using at this FCI Godown/Ware House?:
+                              format: normal_string
+            sanitation:
+                  toilets:
+                        Are there toilets available for public usage at this FCI Godown/Ware House?:
+                              format: normal_string
+                  waste_management:
+                        How do you deal with the waste generated from that FCI Godown/Ware House?:
+                              format: normal_string
+                  general_cleanliness:
+                        Are the premises of this FCI Godown/Ware House cleaned with disinfectant regularly?:
+                              format: normal_string
+                        How frequently are the premises at this FCI Godown/Ware House cleaned with disinfectant in a week?:
+                              format: number
+            energy:
+                  electricity:
+                        Do you have grid connection for energy supply for this FCI Godown/Ware House?:
+                              format: normal_string
+            alternate_energy:
+                  alternate_energy:
+                        What is the alternative energy source available for that FCI Godown/Ware House?:
+                              format: normal_string
+            communication:
+                  telephone:
+                        Is there landline connectivity for that FCI Godown/Ware House?:
+                              format: normal_string
+                  broadband:
+                        Does this FCI Godown/Ware House have wired internet connection?:
+                              format: normal_string
+                  mobile:
+                        What are different Mobile network service providers available at the location of this office?:
+                              format: multi_select
+            record_maintenance:
+                  records:
+                        How do you maintain records for this FCI Godown/Ware House?:
+                              format: normal_string
+            govt_support:
+                  support:
+                        What are the areas the FCI Godown/Ware House gets support from government agencies?:
+                              format: multi_select
+            ngo_support:
+                  support:
+                        Do you get any support from NGO(s) for this FCI Godown/Ware House?:
+                              format: normal_string
+            digital_technologies:
+                  awareness:
+                        Are you using any digital technologies that can be used in the FCI Godown/Ware House?:
+                              format: normal_string
+      specific:
+            govt_support:
+                  support:
+                        What are the areas the asset gets support from government agencies?:
+                              format: multi_select
+            frequency:
+                  operations:
+                        How frequently is the supply provided?:
+                              format: normal_string
+            emergency_tools:
+                  maintenance:
+                        How are goods Loaded/Unloaded?:
+                              format: normal_string
