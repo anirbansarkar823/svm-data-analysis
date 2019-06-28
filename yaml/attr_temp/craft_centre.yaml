@@ -1,0 +1,136 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  access:
+                        How many times did you go there until it was open?:
+                              format: number
+                  road_connectivity:
+                        What is the type of the road available to the asset ?:
+                              format: normal_string
+                  public_transport:
+                        How much distance should one travel from this asset to avail public transport facility? (in K.M):
+                              format: number
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the asset?:
+                              format: normal_string
+            infrastructure:
+                  security:
+                        What is the type of security available for the asset?:
+                              format: multi_select
+      general:
+            availability:
+                  working_hours:
+                        What are the working hours of this asset?:
+                              format: time
+                  working_days:
+                        What are the working days of that asset?:
+                              format: multi_select
+            employability:
+                  technical_staff:
+                        How many Technical staff are employed in/for that asset?:
+                              format: number
+                  non_technical_staff:
+                        How many Non Technical staff are employed in/for that asset?:
+                              format: number
+            water:
+                  drinking_water:
+                        Where do you get drinking water from for using at this asset?:
+                              format: normal_string
+            sanitation:
+                  toilets:
+                        Are there toilets available for public usage at this asset?:
+                              format: normal_string
+                  waste_management:
+                        How do you deal with the waste generated from that asset?:
+                              format: normal_string
+            energy:
+                  electricity:
+                        Do you have grid connection for energy supply for this asset?:
+                              format: normal_string
+            alternate_energy:
+                  alternate_energy:
+                        What is the alternative energy source available for that asset?:
+                              format: normal_string
+            communication:
+                  telephone:
+                        Is there landline connectivity for that asset?:
+                              format: normal_string
+                  broadband:
+                        Does this asset have wired internet connection?:
+                              format: normal_string
+                  mobile:
+                        What are different Mobile network service providers available at the location of this asset?:
+                              format: multi_select
+            record_maintenance:
+                  records:
+                        How do you maintain records for this asset?:
+                              format: normal_string
+            govt_support:
+                  support:
+                        What are the areas the asset gets support from government agencies?:
+                              format: multi_select
+            ngo_support:
+                  support:
+                        Do you get any support from NGO(s) for this asset?:
+                              format: normal_string
+            digital_technologies:
+                  awareness:
+                        Are you using any digital technologies that can be used in the asset?:
+                              format: normal_string
+      specific:
+            basic info:
+                  description:
+                        Which of the follwing training is provided in the centre?:
+                              format: multi_select
+                  number_of_seats:
+                        How many seats are available in the craft centres?:
+                              format: number
+                  student_enrolled:
+                        How many students are enrolled in the craft centre?:
+                              format: number
+                  trainers_employed:
+                        How many trainers are employed in the craft centre?:
+                              format: number
+                  duration:
+                        What are the duration of the courses you offer?:
+                              format: multi_select
+                  asset_potential:
+                        Which course has the maximum number of enrolments:
+                              format: normal_string
+            asset_utilisation:
+                  course_completion:
+                        What percentage of enrolled students successfully completed the course?:
+                              format: number
+                  professional_undertaking:
+                        What proportion of the passed-out students take the training into the professional front?:
+                              format: normal_string
+            operations:
+                  incentives_for_students:
+                        What incentives are provided to the students enrolled in the centre?:
+                              format: multi_select
+                  product_market:
+                        Where are the finished products sold?:
+                              format: multi_select
+                  payment_mode:
+                        Which mode of payment do you accept?:
+                              format: multi_select
+            marketing:
+                  means_of_advertisement:
+                        How are the courses advertised to prospective trainees?:
+                              format: multi_select
+            market:
+                  branding:
+                        Are the products sold in your emporium branded?:
+                              format: normal_string
+            customer:
+                  catalogue:
+                        Do you have a catalogue of the products made?:
+                              format: normal_string
