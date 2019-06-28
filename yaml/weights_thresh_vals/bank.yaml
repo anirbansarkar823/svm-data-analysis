@@ -1,0 +1,339 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              access:
+                                    weight: ''
+                                    questions:
+                                          How many times did you go there until it was open?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road with block point: ''
+                                                      pakka road: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel from this asset to avail public transport facility? (in K.M):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      3g reliable: ''
+                                                      4g unreliable: ''
+                                                      4g reliabke: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka/permenant(steel,concrete,etc.,): ''
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the type of security available for the asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      compound wall\/ fencing: ''
+                                                      security cameras: ''
+                                                      security guard: ''
+      general:
+            weight: ''
+            variables:
+                  availability:
+                        weight: ''
+                        sub_parameters:
+                              working_hours:
+                                    weight: ''
+                                    questions:
+                                          What are the working hours of this asset?:
+                                                weight: ''
+                                                format: time
+                                                threshold: ''
+                              working_days:
+                                    weight: ''
+                                    questions:
+                                          What are the working days of that asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      thursday: ''
+                                                      friday: ''
+                                                      monday: ''
+                                                      tuesday: ''
+                                                      saturday: ''
+                                                      wednesday: ''
+                  employability:
+                        weight: ''
+                        sub_parameters:
+                              technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many Technical staff are employed in/for that asset?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              non_technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many Non Technical staff are employed in/for that asset?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  water:
+                        weight: ''
+                        sub_parameters:
+                              drinking_water:
+                                    weight: ''
+                                    questions:
+                                          Where do you get drinking water from for using at this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      tap water from government: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              toilets:
+                                    weight: ''
+                                    questions:
+                                          Are there toilets available for public and employees usage at this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          How do you deal with the waste generated from that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      burnt within the premises: ''
+                                                      discarded in govt. designated sites: ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of this asset cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                          How frequently are the premises at this asset cleaned with disinfectant in a week?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      invertor: ''
+                                                      diesel generator: ''
+                                                      others: ''
+                                          How many hours do you rely on the alternative energy source in a day for that asset?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              telephone:
+                                    weight: ''
+                                    questions:
+                                          Is there landline connectivity for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              broadband:
+                                    weight: ''
+                                    questions:
+                                          Does this asset have wired internet connection?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      airtel: ''
+                                                      vodafone: ''
+                                                      bsnl: ''
+                                                      jio: ''
+                  record_maintenance:
+                        weight: ''
+                        sub_parameters:
+                              records:
+                                    weight: ''
+                                    questions:
+                                          How do you maintain records for operations for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      digital records- using computer/mobile: ''
+                                                      digital records-online: ''
+                  digital_technologies:
+                        weight: ''
+                        sub_parameters:
+                              awareness:
+                                    weight: ''
+                                    questions:
+                                          Are you using digital tools for your operations for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+      specific:
+            weight: ''
+            variables:
+                  asset_utilisation:
+                        weight: ''
+                        sub_parameters:
+                              services:
+                                    weight: ''
+                                    questions:
+                                          How many accounts have been registered with your bank branch in total?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X1:
+                        weight: ''
+                        sub_parameters:
+                              y1:
+                                    weight: ''
+                                    questions:
+                                          How many people from the village(Selected Smart Village) have an account in your bank branch?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X2:
+                        weight: ''
+                        sub_parameters:
+                              y2:
+                                    weight: ''
+                                    questions:
+                                          ? What percentage of the accounts registered
+                                                from the selected village are dormant?
+                                                (No deposit or withdrawal in the last
+                                                12 months)
+                                          :     weight: ''
+                                                format: number
+                                                threshold: ''
+                  services:
+                        weight: ''
+                        sub_parameters:
+                              y3:
+                                    weight: ''
+                                    questions:
+                                          How many bank mitras has your bank employed for the selected village at the moment?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X3:
+                        weight: ''
+                        sub_parameters:
+                              y4:
+                                    weight: ''
+                                    questions:
+                                          How many transactions does the bank mitra in the selected village conduct on an average month ?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              y6:
+                                    weight: ''
+                                    questions:
+                                          What percentage of people availing your bank services in the selected village conduct digital transactions?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  utility_usability:
+                        weight: ''
+                        sub_parameters:
+                              y5:
+                                    weight: ''
+                                    questions:
+                                          How many ATMs does the bank have within the district?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              y8:
+                                    weight: ''
+                                    questions:
+                                          How often is the ATM replenished with cash in a week?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              y9:
+                                    weight: ''
+                                    questions:
+                                          How many times is cash missing per ATM on average per week?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  footfall:
+                        weight: ''
+                        sub_parameters:
+                              y7:
+                                    weight: ''
+                                    questions:
+                                          What is the monthly footfall in an average ATM?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  facilities:
+                        weight: ''
+                        sub_parameters:
+                              y10:
+                                    weight: ''
+                                    questions:
+                                          Which of the following facilities does the bank have?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      display of information regarding banking facilities: ''
+                                                      attached atms: ''
