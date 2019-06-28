@@ -1,0 +1,191 @@
+#sub-center: sheet13, sheet14, sheet 15
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:
+                        access:
+                                start: 15      
+                                end: 16      
+                        road_connectivity:
+                                start: 16       
+                                end: 17     
+                        public_transport:
+                                start: 17     
+                                end: 18        
+                        mobile_connectivity:
+                                start: 20    
+                                end: 21    
+                infrastructure:
+                         building_type: 
+                                start: 18  
+                                end: 19  
+                         security:
+                                start: 19    
+                                end: 20    
+        general:
+                availability:
+                        working_hours: 
+                                start: 27     
+                                end: 28  
+                        working_days:
+                                start: 28    
+                                end: 29  
+                employability:
+                        technical_staff:
+                                start: 29    
+                                end: 30
+                        non_technical_staff:
+                                start: 30
+                                end: 31
+                water:
+                        drinking_water:
+                                start: 31   
+                                end: 32
+                        water_for_operational_purposes:
+                                start: 33
+                                end: 34
+                sanitation:
+                        toilets:
+                                start: 35    
+                                end: 36    
+                        waste_management:
+                                start: 39    
+                                end: 40
+                        general_cleanliness:
+                                start: 41
+                                end: 43
+                energy:
+                        electricity:
+                                start: 43  
+                                end: 44    
+                alternate_energy:
+                        alternate_energy:  
+                                start: 45     
+                                end: 46    
+                communication:
+                        telephone:
+                                start: 52    
+                                end: 53     
+                        broadband:
+                                start: 54    
+                                end: 55    
+                        mobile:
+                                start: 21   
+                                end: 22
+                record_maintenance:
+                        records:
+                                start: 56    
+                                end: 57    
+                govt_support:
+                        support:
+                                start: 58    
+                                end: 59
+                ngo_support:
+                        support:
+                                start: 59
+                                end: 60 
+                inputs:
+                        inputs:
+                                start: 61
+                                end: 62
+                marketing:
+                        advertisement:
+                                start: 63
+                                end: 64
+        specific:
+               operations:
+                        presence:
+                                start: 64
+                                end: 67
+                        availability:
+                                start: 67
+                                end: 68
+                        patients:
+                                start: 68
+                                end: 69
+                        traction:
+                                start: 69
+                                end: 70
+               employment:
+                        y:
+                                start: 70
+                                end: 71
+               capacity:
+                        efficiency:
+                                start: 71
+                                end: 72
+                        y1:     
+                                start: 72
+                                end: 73
+               assets:
+                        y1:
+                                start: 73
+                                end: 74
+                        y2:
+                                start: 74
+                                end: 75
+                        y3:
+                                start: 76
+                                end: 77
+                        y4:
+                                start: 78
+                                end: 79
+               services:
+                        y1:
+                                start: 79
+                                end: 80
+                        y2: 
+                                start: 81
+                                end: 82
+                        y3:
+                                start: 82
+                                end: 83
+                        y4:
+                                start: 83
+                                end: 84
+                        y5:
+                                start: 84
+                                end: 85
+                        y6:
+                                start: 87
+                                end: 88
+                        y7:
+                                start: 88
+                                end: 89
+                        y8:
+                                start: 89
+                                end: 90
+               digital_tools:
+                        record_maintenance:
+                                start: 90
+                                end: 91
+               others:
+                        y1:
+                                start: 91
+                                end: 92
+                        y2:
+                                start: 92
+                                end: 93
+                        y3:
+                                start: 93
+                                end: 94
+                        y4:
+                                start: 94
+                                end: 95
+                        y5:
+                                start: 95
+                                end: 96
+                        y6:
+                                start: 96
+                                end: 97
