@@ -1,0 +1,129 @@
+#reeling and peeling only one data, which is also rejected
+
+#sericulture plantation: sheet5, sheet 6
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:
+                        access:
+                                start: 15      
+                                end: 16      
+                        road_connectivity:
+                                start: 16       
+                                end: 17     
+                        public_transport:
+                                start: 17     
+                                end: 18        
+                        mobile_connectivity:
+                                start: 18    
+                                end: 19    
+                infrastructure:
+                        security: 
+                                start: 24  
+                                end: 25
+
+        general:
+                availability:
+                        working_hours: 
+                                start: 25     
+                                end: 26 
+                        working_days:
+                                start: 26    
+                                end: 27  
+                employability:
+                        technical_staff:
+                                start: 27    
+                                end: 28
+                        non_technical_staff:
+                                start: 28
+                                end: 29
+                water:
+                        drinking_water:
+                                start: 29    
+                                end: 30    
+                sanitation:
+                        toilets:
+                                start: 31    
+                                end: 32    
+                        waste_management:
+                                start: 35    
+                                end: 36      
+                energy:
+                        electricity:
+                                start: 37   
+                                end: 38    
+                alternate_energy:
+                        alternate_energy:  
+                                start: 38     
+                                end: 39    
+                communication:
+                        telephone:
+                                start: 45    
+                                end: 46     
+                        broadband:
+                                start: 47    
+                                end: 48    
+                        mobile:
+                                start: 19    
+                                end: 20  
+                record_maintenance:
+                        records:
+                                start: 49   
+                                end: 50    
+                govt_support:
+                        support:
+                                start: 51    
+                                end: 52
+                ngo_support:
+                        support:
+                                start: 52
+                                end: 53  
+                digital_technologies:
+                        awareness:
+                                start: 54    
+                                end: 55      
+        specific:
+                basic_info:
+                        raw_material:
+                                start: 56
+                                end: 57
+                        input_size:
+                                start: 57
+                                end: 58
+                        employment:
+                                start: 58
+                                end: 59
+                        input_type:
+                                start: 59
+                                end: 60
+                        input_variety:
+                                start: 60
+                                end: 61
+                operations:
+                        product_market:
+                                start: 61
+                                end: 62
+                        transportation:
+                                start: 62
+                                end: 63
+                        input:
+                                start: 63
+                                end: 65
+                business_specific:
+                        revenue:
+                                start: 66
+                                end: 67
+                        operation_cost:
+                                start: 67
+                                end: 68
