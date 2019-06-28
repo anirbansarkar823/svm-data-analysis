@@ -1,0 +1,87 @@
+#ATM: sheet 5 and sheet6
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:
+                        access:
+                                start: 15          
+                                end: 16        
+                        road_connectivity:
+                                start: 16         
+                                end: 17       
+                        public_transport:
+                                start: 17       
+                                end: 18         
+                        mobile_connectivity:
+                                start: 18      
+                                end: 19      
+                infrastructure:
+                        building_type: 
+                                start: 25    
+                                end: 26    
+                        security:
+                                start: 26      
+                                end: 27      
+        general:
+                availability:
+                        working_hours: 
+                                start: 27       
+                                end: 28    
+                        working_days:
+                                start: 28      
+                                end: 29
+                employability:
+                        technical_staff:
+                                start: 29    
+                                end: 30    
+                        non_technical_staff:
+                                start: 30    
+                                end: 31
+                sanitation:      
+                        waste_management:
+                                start: 31      
+                                end: 32       
+                        general_cleanliness:
+                                start: 33      
+                                end: 35      
+                energy:
+                        electricity:
+                                start: 35     
+                                end: 36      
+                alternate_energy:
+                        alternate_energy:  
+                                start: 37       
+                                end: 38      
+                communication:     
+                        mobile:
+                                start: 19      
+                                end: 20            
+        specific:
+                basic_info:
+                        infrastructure:
+                                start: 44
+                                end: 45
+                facilities:
+                        cash_deposits:
+                                start: 45
+                                end: 46
+                        swayam:
+                                start: 47
+                                end: 48
+                        public_sector:
+                                start: 49
+                                end: 50
+                        audible:
+                                start: 51
+                                end: 52
