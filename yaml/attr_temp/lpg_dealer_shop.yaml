@@ -1,0 +1,105 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  access:
+                        How many times did you go there until it was open?:
+                              format: number
+                  road_connectivity:
+                        What is the type of the road available to the LPG Dealer/Shop?:
+                              format: normal_string
+                  public_transport:
+                        How much distance should one travel from this LPG Dealer/Shop to avail public transport facility? (in K.M):
+                              format: number
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the LPG Dealer/Shop?:
+                              format: normal_string
+            infrastructure:
+                  building_type:
+                        What is the type of structure of this LPG Dealer/Shop?:
+                              format: normal_string
+      general:
+            availability:
+                  working_hours:
+                        What are the working hours of this LPG Dealer/Shop?:
+                              format: time
+                  working_days:
+                        What are the working days of that LPG Dealer/Shop?:
+                              format: multi_select
+            employability:
+                  technical_staff:
+                        How many people are working in the LPG Dealer/Shop?:
+                              format: number
+            water:
+                  drinking_water:
+                        Where do you get drinking water from for using at this LPG Dealer/Shop?:
+                              format: normal_string
+            sanitation:
+                  toilets:
+                        Are there toilets available for public usage at this LPG Dealer/Shop?:
+                              format: normal_string
+                  waste_management:
+                        How do you deal with the waste generated from that LPG Dealer/Shop?:
+                              format: normal_string
+                  general_cleanliness:
+                        Are the premises of this LPG Dealer/Shop cleaned with disinfectant regularly?:
+                              format: normal_string
+                        How frequently are the premises at this LPG Dealer/Shop cleaned with disinfectant in a week?:
+                              format: normal_string
+            energy:
+                  electricity:
+                        Do you have grid connection for energy supply for this LPG Dealer/Shop?:
+                              format: normal_string
+            alternate_energy:
+                  alternate_energy:
+                        What is the alternative energy source available for that LPG Dealer/Shop?:
+                              format: normal_string
+            communication:
+                  telephone:
+                        Is there landline connectivity for that LPG Dealer/Shop?:
+                              format: normal_string
+                  broadband:
+                        Does this LPG Dealer/Shop have wired internet connection?:
+                              format: normal_string
+                  mobile:
+                        What are different Mobile network service providers available at the location of this LPG Dealer/Shop?:
+                              format: multi_select
+            record_maintenance:
+                  records:
+                        How do you maintain records for this LPG Dealer/Shop?:
+                              format: normal_string
+            govt_support:
+                  support:
+                        What are the areas the LPG Dealer/Shop gets support from government agencies?:
+                              format: multi_select
+            ngo_support:
+                  support:
+                        Do you get any support from NGO(s) for this LPG Dealer/Shop?:
+                              format: normal_string
+            digital_technologies:
+                  awareness:
+                        Are you using any digital technologies that can be used in the LPG Dealer/Shop?:
+                              format: normal_string
+      specific:
+            transportation:
+                  servicesH:
+                        Is Home delivery service available?:
+                              format: normal_string
+                  servicesT:
+                        Is there Telephone booking facility available?:
+                              format: normal_string
+            emergency_tools:
+                  maintenance:
+                        Is there any fire equipment in the centre?:
+                              format: normal_string
+            X:
+                  employment:
+                        Are the Employees sufficient in the shop?:
+                              format: normal_string
