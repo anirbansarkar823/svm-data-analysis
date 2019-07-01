@@ -1,0 +1,409 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road: ''
+                                                      kacha road: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel from this asset to avail public transport facility? (in K.M):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      4g unreliable: ''
+                                                      3g unreliable: ''
+                                                      4g reliable: ''
+                                                      3g reliable: ''
+                                                      2g reliable: ''
+      general:
+            weight: ''
+            variables:
+                  employability:
+                        weight: ''
+                        sub_parameters:
+                              technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many technical staff are employed in/for that asset?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              non_technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many non-technical staff are employed in/ for that asset:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  water:
+                        weight: ''
+                        sub_parameters:
+                              drinking_water:
+                                    weight: ''
+                                    questions:
+                                          Where do you get drinking water from for using at this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      bottled water: ''
+                                                      tap water from government: ''
+                              water_for_operational_purposes:
+                                    weight: ''
+                                    questions:
+                                          Where do you get water for operational purposes for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      water from government: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              toilets:
+                                    weight: ''
+                                    questions:
+                                          Are there toilets available for guests and employees' usage at this homestay?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of this home-stay cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      solar unit: ''
+                                                      invertor: ''
+                                                      none: ''
+                                                      diesel generator: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              telephone:
+                                    weight: ''
+                                    questions:
+                                          Is there landline connectivity for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              broadband:
+                                    weight: ''
+                                    questions:
+                                          Does this asset have wired internet connection?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      vodafone: ''
+                                                      bsnl: ''
+                                                      jio: ''
+                                                      airtel: ''
+                  record_maintenance:
+                        weight: ''
+                        sub_parameters:
+                              records:
+                                    weight: ''
+                                    questions:
+                                          How do you maintain operational records for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      digital records- using computer/mobile: ''
+                                                      traditional book keeping: ''
+                                                      digital records-online: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the asset gets support from government agencies (not for customers)?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      marketing support: ''
+                                                      financial support: ''
+                                                      others: ''
+                                                      technical support: ''
+                                                      nil: ''
+                                                      support via schemes: ''
+                  digital_technologies:
+                        weight: ''
+                        sub_parameters:
+                              awareness:
+                                    weight: ''
+                                    questions:
+                                          Are you using digital tools for your operations in this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+      specific:
+            weight: ''
+            variables:
+                  services:
+                        weight: ''
+                        sub_parameters:
+                              number_single_rooms:
+                                    weight: ''
+                                    questions:
+                                          How many single-rooms are available for guests?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              maximum_capacity1:
+                                    weight: ''
+                                    questions:
+                                          How many shared-rooms are available for guests?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              maximum_capacity2:
+                                    weight: ''
+                                    questions:
+                                          What categories of rooms are available in the hotel or resorts?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      deluxe rooms: ''
+                                                      others: ''
+                                                      family rooms: ''
+                                                      single bedrooms: ''
+                                                      suites: ''
+                                                      dormitory: ''
+                              maximum_capacity3:
+                                    weight: ''
+                                    questions:
+                                          How many people do you host on an average per month?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              maximum_capacity4:
+                                    weight: ''
+                                    questions:
+                                          What modes of payment do you accept?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      credit card: ''
+                                                      cash payment: ''
+                                                      e-payment: ''
+                                                      debit card: ''
+                              maximum_capacity5:
+                                    weight: ''
+                                    questions:
+                                          How many guests can you accommodate at a time at maximum?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              fees_charged:
+                                    weight: ''
+                                    questions:
+                                          What is the average amount charged for a day's booking for a single-room?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              general_provisions:
+                                    weight: ''
+                                    questions:
+                                          What other facilities are available in this facility?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      parking lots: ''
+                                                      garden: ''
+                                                      vehicle arrangement: ''
+                                                      recreation centre: ''
+                                                      laundry service: ''
+                                                      television: ''
+                                                      room heater: ''
+                                                      newspapers: ''
+                                                      restaurant: ''
+                                                      geyser: ''
+                                                      conference halls: ''
+                                                      none of the above: ''
+                                                      telephone service: ''
+                              disabled_friendly_provisions:
+                                    weight: ''
+                                    questions:
+                                          What are the provision available for the differently abled?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      ramps: ''
+                                                      none of the above: ''
+                                                      others: ''
+                  potential:
+                        weight: ''
+                        sub_parameters:
+                              traction:
+                                    weight: ''
+                                    questions:
+                                          When do you receive the maximum number of tourist?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      march: ''
+                                                      august: ''
+                                                      december: ''
+                                                      february: ''
+                                                      october: ''
+                                                      november: ''
+                                                      april: ''
+                                                      september: ''
+                                                      january: ''
+                                                      may: ''
+                                                      july: ''
+                                                      june: ''
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              mode_of_transportation:
+                                    weight: ''
+                                    questions:
+                                          How do tourists commute to your facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      pvt cars: ''
+                                                      private cab services booked by themselves: ''
+                                                      cab service provide by your home-stay: ''
+                                                      bus/ sumo facilities nearby: ''
+                  marketing_and_advertisement:
+                        weight: ''
+                        sub_parameters:
+                              presence_online:
+                                    weight: ''
+                                    questions:
+                                          Which online portal are you registered with?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      through social media: ''
+                                                      go ibibo: ''
+                                                      yatra: ''
+                                                      none of the above: ''
+                                                      make my trip: ''
+                              means_of_advertisement1:
+                                    weight: ''
+                                    questions:
+                                          How is the home-stay advertised to prospective visitors?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      others: ''
+                                                      advertising by the tourism dept: ''
+                                                      newspaper advertisements: ''
+                                                      display boards in and around the site: ''
+                                                      booking sites: ''
+                                                      word of mouth from former customers: ''
+                                                      online portals and articles: ''
+                              means_of_advertisement2:
+                                    weight: ''
+                                    questions:
+                                          Which of the following means of advertisement bring you the maximum customers?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      advertising by the tourism dept: ''
+                                                      display boards in and around the site: ''
+                                                      booking sites: ''
+                                                      word of mouth from former customers: ''
+                                                      online portals and articles: ''
+                              tracking:
+                                    weight: ''
+                                    questions:
+                                          Are you asking your customers how they got to know about your place?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  partnership:
+                        weight: ''
+                        sub_parameters:
+                              partnering_agencies:
+                                    weight: ''
+                                    questions:
+                                          Which of the following agencies are you collaborating with?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      tourism centres: ''
+                                                      trekking guides: ''
+                                                      cab services: ''
+                                                      tour operators: ''
+                                                      government departments: ''
+                                                      none of the above: ''
+                  business_specific:
+                        weight: ''
+                        sub_parameters:
+                              revenue_generated:
+                                    weight: ''
+                                    questions:
+                                          What is the total monthly revenue generated?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              cost_incurred:
+                                    weight: ''
+                                    questions:
+                                          What is the monthly operations cost of the home-stay?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''

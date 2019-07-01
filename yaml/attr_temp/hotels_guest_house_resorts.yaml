@@ -1,0 +1,133 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  road_connectivity:
+                        What is the type of the road available to the asset?:
+                              format: normal_string
+                  public_transport:
+                        How much distance should one travel from this asset to avail public transport facility? (in K.M):
+                              format: number
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the asset?:
+                              format: normal_string
+      general:
+            employability:
+                  technical_staff:
+                        How many technical staff are employed in/for that asset?:
+                              format: number
+                  non_technical_staff:
+                        How many non-technical staff are employed in/ for that asset:
+                              format: number
+            water:
+                  drinking_water:
+                        Where do you get drinking water from for using at this asset?:
+                              format: normal_string
+                  water_for_operational_purposes:
+                        Where do you get water for operational purposes for this asset?:
+                              format: normal_string
+            sanitation:
+                  toilets:
+                        Are there toilets available for guests and employees' usage at this homestay?:
+                              format: normal_string
+                  general_cleanliness:
+                        Are the premises of this home-stay cleaned with disinfectant regularly?:
+                              format: normal_string
+            energy:
+                  electricity:
+                        Do you have grid connection for energy supply for this asset?:
+                              format: normal_string
+            alternate_energy:
+                  alternate_energy:
+                        What is the alternative energy source available for that asset?:
+                              format: normal_string
+            communication:
+                  telephone:
+                        Is there landline connectivity for that asset?:
+                              format: normal_string
+                  broadband:
+                        Does this asset have wired internet connection?:
+                              format: normal_string
+                  mobile:
+                        What are different Mobile network service providers available at the location of this asset?:
+                              format: multi_select
+            record_maintenance:
+                  records:
+                        How do you maintain operational records for this asset?:
+                              format: normal_string
+            govt_support:
+                  support:
+                        What are the areas the asset gets support from government agencies (not for customers)?:
+                              format: multi_select
+            digital_technologies:
+                  awareness:
+                        Are you using digital tools for your operations in this asset?:
+                              format: normal_string
+      specific:
+            services:
+                  number_single_rooms:
+                        How many single-rooms are available for guests?:
+                              format: number
+                  maximum_capacity1:
+                        How many shared-rooms are available for guests?:
+                              format: number
+                  maximum_capacity2:
+                        What categories of rooms are available in the hotel or resorts?:
+                              format: multi_select
+                  maximum_capacity3:
+                        How many people do you host on an average per month?:
+                              format: number
+                  maximum_capacity4:
+                        What modes of payment do you accept?:
+                              format: multi_select
+                  maximum_capacity5:
+                        How many guests can you accommodate at a time at maximum?:
+                              format: number
+                  fees_charged:
+                        What is the average amount charged for a day's booking for a single-room?:
+                              format: number
+                  general_provisions:
+                        What other facilities are available in this facility?:
+                              format: multi_select
+                  disabled_friendly_provisions:
+                        What are the provision available for the differently abled?:
+                              format: normal_string
+            potential:
+                  traction:
+                        When do you receive the maximum number of tourist?:
+                              format: multi_select
+            accessibility:
+                  mode_of_transportation:
+                        How do tourists commute to your facility?:
+                              format: normal_string
+            marketing_and_advertisement:
+                  presence_online:
+                        Which online portal are you registered with?:
+                              format: multi_select
+                  means_of_advertisement1:
+                        How is the home-stay advertised to prospective visitors?:
+                              format: multi_select
+                  means_of_advertisement2:
+                        Which of the following means of advertisement bring you the maximum customers?:
+                              format: normal_string
+                  tracking:
+                        Are you asking your customers how they got to know about your place?:
+                              format: normal_string
+            partnership:
+                  partnering_agencies:
+                        Which of the following agencies are you collaborating with?:
+                              format: multi_select
+            business_specific:
+                  revenue_generated:
+                        What is the total monthly revenue generated?:
+                              format: number
+                  cost_incurred:
+                        What is the monthly operations cost of the home-stay?:
+                              format: number
