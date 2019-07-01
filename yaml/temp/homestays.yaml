@@ -1,0 +1,138 @@
+#homestays: sheet6, sheet7
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:      
+                        road_connectivity:
+                                start: 15         
+                                end: 16       
+                        public_transport:
+                                start: 16       
+                                end: 17            
+                        mobile_connectivity:
+                                start: 17      
+                                end: 18     
+                infrastructure:
+                        building_type: 
+                                start: 24   
+                                end: 25
+        general:    
+                employability:
+                        staff:
+                                start: 25      
+                                end: 26  
+                water:
+                        drinking_water:
+                                start: 52       
+                                end: 53
+                        water_for_operational_purposes:
+                                start: 54
+                                end: 55
+                sanitation:
+                        toilets:
+                                start: 44       
+                                end: 45        
+                        general_cleanliness:
+                                start: 48     
+                                end: 49
+                waste:
+                        waste_management:
+                                start: 50       
+                                end: 51
+                energy:
+                        electricity:
+                                start: 26      
+                                end: 27      
+                alternate_energy:
+                        alternate_energy:  
+                                start: 28       
+                                end: 29      
+                communication:
+                        telephone:
+                                start: 35     
+                                end: 36        
+                        broadband:
+                                start: 37      
+                                end: 38      
+                        mobile:
+                                start: 18      
+                                end: 19      
+                record_maintenance:
+                        records:
+                                start: 39     
+                                end: 40
+                govt_support:
+                        support:
+                                start: 41    
+                                end: 42  
+                digital_technologies:
+                        awareness:
+                                start: 42    
+                                end: 43      
+        specific:
+                basic_info:
+                        number_single_rooms:
+                                start: 57
+                                end: 58
+                        number_shared_rooms:
+                                start: 59
+                                end: 60
+                        number_customers:
+                                start: 60
+                                end: 61
+                        maximum_capacity:
+                                start: 61
+                                end: 62
+                        fees_charged:
+                                start: 58
+                                end: 59
+                potential:  
+                        traction:
+                                start: 62
+                                end: 63
+                services:
+                        food:
+                                start: 63
+                                end: 64
+                accessibiltiy:
+                        means_of_transportation:
+                                start: 64
+                                end: 65
+                marketing_and_advertisement:
+                        online_portal:
+                                start: 66
+                                end: 67
+                        means_of_advertisement1:
+                                start: 65
+                                end: 66
+                        tracking:   
+                                start: 67
+                                end: 68
+                        customer_relations:
+                                start: 68
+                                end: 69
+                business_specific:
+                        renenue_generated:
+                                start: 69
+                                end: 70
+                        operations_cost:
+                                start: 70
+                                end: 71
+                experience:
+                        specialities:
+                                start: 71
+                                end: 72
+                        community_involvement:
+                                start: 73
+                                end: 74                        
