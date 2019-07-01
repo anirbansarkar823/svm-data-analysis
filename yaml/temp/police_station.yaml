@@ -1,0 +1,159 @@
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:
+                        access:
+                                start: 15      
+                                end: 16      
+                        road_connectivity:
+                                start: 16       
+                                end: 17     
+                        public_transport:
+                                start: 17     
+                                end: 18         
+                        mobile_connectivity:
+                                start: 18    
+                                end: 19  
+                infrastructure:
+                        building_type: 
+                                start: 25  
+                                end: 26
+                        security:
+                                start: 26    
+                                end: 27  
+        general:      
+                water:
+                        drinking_water:
+                                start: 27    
+                                end: 28  
+                sanitation:
+                        toilets:
+                                start: 29    
+                                end: 30      
+                energy:
+                        electricity:
+                                start: 33    
+                                end: 34  
+                alternate_energy:
+                        alternate_energy:  
+                                start: 35     
+                                end: 36  
+                communication:
+                        telephone:
+                                start: 42    
+                                end: 43   
+                        broadband:
+                                start: 44    
+                                end: 45  
+                        mobile:
+                                start: 19    
+                                end: 20  
+                digital_technologies:
+                        awareness:
+                                start: 46    
+                                end: 47   
+        specific:
+                strength:
+                        strength1:
+                                start: 48
+                                end: 49
+                        strength2:
+                                start: 52
+                                end: 53
+                operations:
+                        operations:
+                                start: 49
+                                end: 50
+                inclusiveness:
+                        inclusiveness1:
+                                start: 50
+                                end: 51
+                        inclusiveness2:
+                                start: 59
+                                end: 60
+                        inclusiveness3:
+                                start: 60 
+                                end: 61
+                accessibility:
+                        responsibility:
+                                start: 51
+                                end: 52
+                digital_technology:
+                        digital_technology1:
+                                start: 53
+                                end: 54
+                        digital_technology2:
+                                start: 54
+                                end: 55
+                        digital_technology3:
+                                start: 64
+                                end: 65
+                        digital_technology4:
+                                start: 66
+                                end: 67
+                utilization:
+                        utilization1:
+                                start: 55
+                                end: 56
+                        utilization2:
+                                start: 56
+                                end: 57
+                        utilization3:
+                                start: 57
+                                end: 58
+                        utilization4:
+                                start: 58
+                                end: 59
+                asset_need:
+                        asset_need1:
+                                start: 61
+                                end: 62
+                        asset_need2:
+                                start: 62
+                                end: 63
+                        asset_need3:
+                                start: 77
+                                end: 78
+                services:
+                        services:
+                                start: 67
+                                end: 68
+                facilities:
+                        facilities1:
+                                start: 68
+                                end: 69
+                        facilities2:
+                                start: 69
+                                end: 70
+                        facilities3:
+                                start: 70
+                                end: 71
+                activities:
+                        activities:
+                                start: 71
+                                end: 72
+                community_outreach:
+                        community_outreach1:
+                                start: 73
+                                end: 74
+                        community_outreach2:
+                                start: 74
+                                end: 75
+                        community_outreach3:
+                                start: 76
+                                end: 77
+                execution:
+                        weapons:
+                                start: 78
+                                end: 79

@@ -1,0 +1,157 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  access:
+                        How many times did you go there until it was open?:
+                              format: number
+                  road_connectivity:
+                        What is the type of the road available to the asset?:
+                              format: normal_string
+                  public_transport:
+                        How much distance should one travel from this asset to avail public transport facility? (in K.M):
+                              format: number
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the asset?:
+                              format: normal_string
+            infrastructure:
+                  building_type:
+                        What is the type of structure of this asset?:
+                              format: normal_string
+                  security:
+                        What is the type of security available for the asset?:
+                              format: multi_select
+      general:
+            water:
+                  drinking_water:
+                        Where do you get drinking water from for using at this asset?:
+                              format: normal_string
+            sanitation:
+                  toilets:
+                        Are there toilets available for public and employees usage at this asset?:
+                              format: normal_string
+            energy:
+                  electricity:
+                        Do you have grid connection for energy supply for this asset?:
+                              format: normal_string
+            alternate_energy:
+                  alternate_energy:
+                        What is the alternative energy source available for that asset?:
+                              format: normal_string
+            communication:
+                  telephone:
+                        Is there landline connectivity for that asset?:
+                              format: normal_string
+                  broadband:
+                        Does this asset have wired internet connection?:
+                              format: normal_string
+                  mobile:
+                        What are different Mobile network service providers available at the location of this asset?:
+                              format: multi_select
+            digital_technologies:
+                  awareness:
+                        Are you using digital tools like online record-keeping for your operations for this asset?:
+                              format: normal_string
+      specific:
+            strength:
+                  strength1:
+                        How many police personnel are employed in the police station?:
+                              format: number
+                  strength2:
+                        How many police personnel are available at the police station at the moment?:
+                              format: number
+            operations:
+                  operations:
+                        How many police personnel among them are in the officer rank (PSI and above)?:
+                              format: number
+            inclusiveness:
+                  inclusiveness1:
+                        How many women personnel are employed in the police station?:
+                              format: number
+                  inclusiveness2:
+                        What percentage of complainants are female on an average day?:
+                              format: number
+                  inclusiveness3:
+                        "Is there any women\u2019s cell or women\u2019s grievance redressal cell in the police station?":
+                              format: normal_string
+            accessibility:
+                  responsibility:
+                        For how many villages (among the smart villages) is this police station and its respective outposts responsible?:
+                              format: number
+            digital_technology:
+                  digital_technology1:
+                        How many CCTV cameras are installed within the jurisdiction of the police station?:
+                              format: number
+                  digital_technology2:
+                        Does the police station have a record of the CCTV footage captured in its jurisdiction?:
+                              format: normal_string
+                  digital_technology3:
+                        Does the Police station have a Crime and Criminal Tracking Network & Systems (CCTNS) facility?:
+                              format: normal_string
+                  digital_technology4:
+                        How many wireless phones (walkie talkies) are there in the police station?:
+                              format: number
+            utilization:
+                  utilization1:
+                        How many PCR calls does the station receive on an average day?:
+                              format: number
+                  utilization2:
+                        How many people come to the police station on an average day?:
+                              format: number
+                  utilization3:
+                        How many Non-cognizable offences are registered in the police station on an average day?:
+                              format: number
+                  utilization4:
+                        How many FIRs are registered in the police station in a day?:
+                              format: number
+            asset_need:
+                  asset_need1:
+                        What are the two most common complaints in the police station from population?:
+                              format: multi_select
+                  asset_need2:
+                        How many complains did you get within the last month regarding not reaching fast enough to the areas needed?:
+                              format: number
+                  asset_need3:
+                        ? What is the crime rate (number of incidents per 100,000
+                              of the population) per year in the jurisdiction of the
+                              police station?
+                        :     format: number
+            services:
+                  services:
+                        Which of the following provisions are there in the police station?:
+                              format: multi_select
+            facilities:
+                  facilities1:
+                        Which of these services are functioning on a daily basis?:
+                              format: multi_select
+                  facilities2:
+                        Is there a canteen/ tiffin service/ eatery/ food stall that provides food to the police personnel in the police station?:
+                              format: normal_string
+                  facilities3:
+                        How many patrolling van/public PCRs does the police station have?:
+                              format: number
+            activities:
+                  activities:
+                        Does the police station conduct awareness programs in the community?:
+                              format: normal_string
+            community_outreach:
+                  community_outreach1:
+                        What are the means of communication between the police and the community?:
+                              format: multi_select
+                  community_outreach2:
+                        Are public town meeting held with the community or councils in the village?:
+                              format: normal_string
+                  community_outreach3:
+                        How does the public perceive the police?:
+                              format: normal_string
+            execution:
+                  weapons:
+                        What kind of weapons does this police station have?:
+                              format: multi_select

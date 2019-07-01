@@ -1,0 +1,414 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              access:
+                                    weight: ''
+                                    questions:
+                                          How many times did you go there until it was open?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel from this asset to avail public transport facility? (in K.M):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      4g unreliable: ''
+                                                      4g reliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka/permenant(steel,concrete,etc.,): ''
+                                                      kacha/temporary(wood,bamboo,etc.,): ''
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the type of security available for the asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      security guard: ''
+                                                      none: ''
+                                                      compound wall\/ fencing: ''
+      general:
+            weight: ''
+            variables:
+                  water:
+                        weight: ''
+                        sub_parameters:
+                              drinking_water:
+                                    weight: ''
+                                    questions:
+                                          Where do you get drinking water from for using at this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      tap water from government: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              toilets:
+                                    weight: ''
+                                    questions:
+                                          Are there toilets available for public and employees usage at this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      none: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              telephone:
+                                    weight: ''
+                                    questions:
+                                          Is there landline connectivity for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                              broadband:
+                                    weight: ''
+                                    questions:
+                                          Does this asset have wired internet connection?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      vodafone: ''
+                                                      jio: ''
+                                                      airtel: ''
+                                                      bsnl: ''
+                  digital_technologies:
+                        weight: ''
+                        sub_parameters:
+                              awareness:
+                                    weight: ''
+                                    questions:
+                                          Are you using digital tools like online record-keeping for your operations for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      i plan to use in future: ''
+      specific:
+            weight: ''
+            variables:
+                  strength:
+                        weight: ''
+                        sub_parameters:
+                              strength1:
+                                    weight: ''
+                                    questions:
+                                          How many police personnel are employed in the police station?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              strength2:
+                                    weight: ''
+                                    questions:
+                                          How many police personnel are available at the police station at the moment?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  operations:
+                        weight: ''
+                        sub_parameters:
+                              operations:
+                                    weight: ''
+                                    questions:
+                                          How many police personnel among them are in the officer rank (PSI and above)?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  inclusiveness:
+                        weight: ''
+                        sub_parameters:
+                              inclusiveness1:
+                                    weight: ''
+                                    questions:
+                                          How many women personnel are employed in the police station?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              inclusiveness2:
+                                    weight: ''
+                                    questions:
+                                          What percentage of complainants are female on an average day?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              inclusiveness3:
+                                    weight: ''
+                                    questions:
+                                          "Is there any women\u2019s cell or women\u2019s grievance redressal cell in the police station?":
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              responsibility:
+                                    weight: ''
+                                    questions:
+                                          For how many villages (among the smart villages) is this police station and its respective outposts responsible?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  digital_technology:
+                        weight: ''
+                        sub_parameters:
+                              digital_technology1:
+                                    weight: ''
+                                    questions:
+                                          How many CCTV cameras are installed within the jurisdiction of the police station?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              digital_technology2:
+                                    weight: ''
+                                    questions:
+                                          Does the police station have a record of the CCTV footage captured in its jurisdiction?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              digital_technology3:
+                                    weight: ''
+                                    questions:
+                                          Does the Police station have a Crime and Criminal Tracking Network & Systems (CCTNS) facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                              digital_technology4:
+                                    weight: ''
+                                    questions:
+                                          How many wireless phones (walkie talkies) are there in the police station?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  utilization:
+                        weight: ''
+                        sub_parameters:
+                              utilization1:
+                                    weight: ''
+                                    questions:
+                                          How many PCR calls does the station receive on an average day?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              utilization2:
+                                    weight: ''
+                                    questions:
+                                          How many people come to the police station on an average day?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              utilization3:
+                                    weight: ''
+                                    questions:
+                                          How many Non-cognizable offences are registered in the police station on an average day?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              utilization4:
+                                    weight: ''
+                                    questions:
+                                          How many FIRs are registered in the police station in a day?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  asset_need:
+                        weight: ''
+                        sub_parameters:
+                              asset_need1:
+                                    weight: ''
+                                    questions:
+                                          What are the two most common complaints in the police station from population?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      others: ''
+                                                      land dispute: ''
+                                                      domestic disputes: ''
+                                                      domestic violence: ''
+                                                      physical assault: ''
+                              asset_need2:
+                                    weight: ''
+                                    questions:
+                                          How many complains did you get within the last month regarding not reaching fast enough to the areas needed?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              asset_need3:
+                                    weight: ''
+                                    questions:
+                                          ? What is the crime rate (number of incidents
+                                                per 100,000 of the population) per
+                                                year in the jurisdiction of the police
+                                                station?
+                                          :     weight: ''
+                                                format: number
+                                                threshold: ''
+                  services:
+                        weight: ''
+                        sub_parameters:
+                              services:
+                                    weight: ''
+                                    questions:
+                                          Which of the following provisions are there in the police station?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none of the above: ''
+                                                      printing and scanning facilities: ''
+                                                      cctvs within the police compound: ''
+                  facilities:
+                        weight: ''
+                        sub_parameters:
+                              facilities1:
+                                    weight: ''
+                                    questions:
+                                          Which of these services are functioning on a daily basis?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none of the above: ''
+                                                      printing and scanning facilities: ''
+                                                      cctvs within the police compound: ''
+                              facilities2:
+                                    weight: ''
+                                    questions:
+                                          Is there a canteen/ tiffin service/ eatery/ food stall that provides food to the police personnel in the police station?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              facilities3:
+                                    weight: ''
+                                    questions:
+                                          How many patrolling van/public PCRs does the police station have?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  activities:
+                        weight: ''
+                        sub_parameters:
+                              activities:
+                                    weight: ''
+                                    questions:
+                                          Does the police station conduct awareness programs in the community?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  community_outreach:
+                        weight: ''
+                        sub_parameters:
+                              community_outreach1:
+                                    weight: ''
+                                    questions:
+                                          What are the means of communication between the police and the community?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none of the above: ''
+                                                      meetings with the community: ''
+                                                      through schools and other institutions: ''
+                                                      through speakers: ''
+                              community_outreach2:
+                                    weight: ''
+                                    questions:
+                                          Are public town meeting held with the community or councils in the village?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              community_outreach3:
+                                    weight: ''
+                                    questions:
+                                          How does the public perceive the police?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      cordial: ''
+                                                      through fir: ''
+                                                      with respect: ''
+                                                      nothing: ''
+                  execution:
+                        weight: ''
+                        sub_parameters:
+                              weapons:
+                                    weight: ''
+                                    questions:
+                                          What kind of weapons does this police station have?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      tear gas: ''
+                                                      guns: ''
+                                                      lathis: ''
