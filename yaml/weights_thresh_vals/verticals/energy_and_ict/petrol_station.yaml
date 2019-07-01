@@ -1,0 +1,177 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      4g unreliable: ''
+                                                      4g+ reliable: ''
+      general:
+            weight: ''
+            variables:
+                  employability:
+                        weight: ''
+                        sub_parameters:
+                              technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many Technical staff are employed for that asset?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              non_technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many Non Technical staff are employed for that asset:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              telephone:
+                                    weight: ''
+                                    questions:
+                                          Do you have landline connectivity?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              broadband:
+                                    weight: ''
+                                    questions:
+                                          Do you have wired internet connection?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      bsnl: ''
+                                                      airtel: ''
+                                                      vodafone: ''
+                                                      jio: ''
+                  record_maintenance:
+                        weight: ''
+                        sub_parameters:
+                              records:
+                                    weight: ''
+                                    questions:
+                                          How do you maintain records for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      traditional book keeping: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas you get support from government agencies (not for customers)?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+                  digital_technologies:
+                        weight: ''
+                        sub_parameters:
+                              awareness:
+                                    weight: ''
+                                    questions:
+                                          Are you using digital tools for your operations?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+      specific:
+            weight: ''
+            variables:
+                  specs:
+                        weight: ''
+                        sub_parameters:
+                              y1:
+                                    weight: ''
+                                    questions:
+                                          What is the storage capacity in total (in litre)?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              y2:
+                                    weight: ''
+                                    questions:
+                                          What type of meterbox is used ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      analog/mechanical: ''
+                                                      digital: ''
+                  issues:
+                        weight: ''
+                        sub_parameters:
+                              y1:
+                                    weight: ''
+                                    questions:
+                                          How often do you face technical issues which affect supply per week?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  documentation:
+                        weight: ''
+                        sub_parameters:
+                              y1:
+                                    weight: ''
+                                    questions:
+                                          How do you document technical failures?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      traditional book keeping: ''
+                                                      no documentation: ''
+                                                      others: ''
+                                                      digital: ''
+                  safety:
+                        weight: ''
+                        sub_parameters:
+                              y2:
+                                    weight: ''
+                                    questions:
+                                          Is sufficient and adequate fire fighting equipment available?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                  transportation:
+                        weight: ''
+                        sub_parameters:
+                              y1:
+                                    weight: ''
+                                    questions:
+                                          How is the supply being transported to and from deposit?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      oil tankers: ''

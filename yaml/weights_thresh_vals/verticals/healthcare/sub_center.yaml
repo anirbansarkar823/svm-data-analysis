@@ -1,0 +1,597 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              access:
+                                    weight: ''
+                                    questions:
+                                          How many times did you go there until it was open?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road: ''
+                                                      pakka road with block point: ''
+                                                      kacha road: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel from this asset to avail public transport facility?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      3g reliable: ''
+                                                      2g reliable: ''
+                                                      4g+ reliable: ''
+                                                      nil: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka/permenant(steel,concrete,etc.,): ''
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the type of security available for the asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+                                                      watchman: ''
+                                                      compound wall\/ fencing: ''
+      general:
+            weight: ''
+            variables:
+                  availability:
+                        weight: ''
+                        sub_parameters:
+                              working_hours:
+                                    weight: ''
+                                    questions:
+                                          What are the working hours of this asset?:
+                                                weight: ''
+                                                format: time
+                                                threshold: ''
+                              working_days:
+                                    weight: ''
+                                    questions:
+                                          What are the working days of that asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      tuesday: ''
+                                                      wednesday: ''
+                                                      thursday: ''
+                                                      friday: ''
+                                                      monday: ''
+                                                      saturday: ''
+                  employability:
+                        weight: ''
+                        sub_parameters:
+                              technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many Technical staff are employed in/for that asset?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              non_technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many Non Technical staff are employed in/for that asset?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  water:
+                        weight: ''
+                        sub_parameters:
+                              drinking_water:
+                                    weight: ''
+                                    questions:
+                                          Where do you get drinking water from for using at this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      tap water from government: ''
+                              water_for_operational_purposes:
+                                    weight: ''
+                                    questions:
+                                          Where do you get water for operational purposes for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      water from government: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              toilets:
+                                    weight: ''
+                                    questions:
+                                          Are there toilets available for public usage and employees at this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          How do you deal with the medical waste generated from that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      burnt within the premises: ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of this asset cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                                          How frequently are the premises at this asset cleaned with disinfectant in a week?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      '3': ''
+                                                      '2': ''
+                                                      '1': ''
+                                                      '5': ''
+                                                      more than 7 times: ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      none: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              telephone:
+                                    weight: ''
+                                    questions:
+                                          Is there landline connectivity for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              broadband:
+                                    weight: ''
+                                    questions:
+                                          Does this asset have wired internet connection?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      vodafone: ''
+                                                      jio: ''
+                                                      airtel: ''
+                  record_maintenance:
+                        weight: ''
+                        sub_parameters:
+                              records:
+                                    weight: ''
+                                    questions:
+                                          How do you maintain operational records for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      traditional book keeping: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the asset gets support from government agencies (not for customers)?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      financial support: ''
+                                                      technical support: ''
+                                                      insurance support: ''
+                                                      none: ''
+                  ngo_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          Do you get any support from NGO(s) for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  inputs:
+                        weight: ''
+                        sub_parameters:
+                              inputs:
+                                    weight: ''
+                                    questions:
+                                          Where do you procure inputs required for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      government agency: ''
+                                                      none: ''
+                  marketing:
+                        weight: ''
+                        sub_parameters:
+                              advertisement:
+                                    weight: ''
+                                    questions:
+                                          How does this asset advertise about the services available?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      village meeting: ''
+                                                      others: ''
+                                                      announcements \/ broadcast: ''
+                                                      posters\/ display boards: ''
+      specific:
+            weight: ''
+            variables:
+                  operations:
+                        weight: ''
+                        sub_parameters:
+                              presence:
+                                    weight: ''
+                                    questions:
+                                          How many doctors are present at this point?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                                          How many nurses are present at this point?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                                          How many staff are present at this point?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              availability:
+                                    weight: ''
+                                    questions:
+                                          Is FRU functional 24*7 hours?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                              patients:
+                                    weight: ''
+                                    questions:
+                                          How many patients visit this facility on an average in a month?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              traction:
+                                    weight: ''
+                                    questions:
+                                          Which months have maximum footfall ?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      april: ''
+                                                      august: ''
+                                                      july: ''
+                                                      may: ''
+                                                      june: ''
+                  employment:
+                        weight: ''
+                        sub_parameters:
+                              y:
+                                    weight: ''
+                                    questions:
+                                          People from which fields are working in the Sub-centre?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      cold chain & vaccine logistic assistant: ''
+                                                      pharmacist - pharmacist (ayush): ''
+                                                      gnm\/ anm -: ''
+                                                      public health nurse: ''
+                                                      none of the above: ''
+                                                      mo ayush: ''
+                                                      lab. technician: ''
+                  capacity:
+                        weight: ''
+                        sub_parameters:
+                              efficiency:
+                                    weight: ''
+                                    questions:
+                                          How many beds are available in this facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      5-10 bedded: ''
+                                                      0-5 bedded: ''
+                                                      no beds available: ''
+                              y1:
+                                    weight: ''
+                                    questions:
+                                          What is the average occupancy rate?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  assets:
+                        weight: ''
+                        sub_parameters:
+                              y1:
+                                    weight: ''
+                                    questions:
+                                          What Medicines are available?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      cuts and wounds: ''
+                                                      chlordiazepoxide: ''
+                                                      enovid: ''
+                                                      'antiseptics: prevention of germ growth near burns': ''
+                                                      'analgesics: reducing pain (painkillers)': ''
+                                                      'tranquilizers: meprobamate': ''
+                                                      chlorpromazine: ''
+                                                      reserpine: ''
+                                                      'antimalarial drugs: treating malaria': ''
+                                                      ors: ''
+                                                      diazepam: ''
+                                                      'antipyretics: reducing fever (pyrexia\/pyresis)': ''
+                                                      and \"triphasic\" pill: ''
+                                                      and alprazolam: ''
+                                                      'hormone replacements: premarin oral contraceptives': ''
+                                                      \"biphasic\" pill: ''
+                                                      'antibiotics: inhibiting germ growth': ''
+                              y2:
+                                    weight: ''
+                                    questions:
+                                          Does this facility have a bloodbank?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              y3:
+                                    weight: ''
+                                    questions:
+                                          Is this facility equipped for operation of tele-medicine?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              y4:
+                                    weight: ''
+                                    questions:
+                                          Is there an emergency vehicle available ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  services:
+                        weight: ''
+                        sub_parameters:
+                              y1:
+                                    weight: ''
+                                    questions:
+                                          What kind of specialist services are available ?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      public health nurse: ''
+                                                      none of the above: ''
+                                                      physician: ''
+                              y2:
+                                    weight: ''
+                                    questions:
+                                          What kind of tests are conducted in the Sub centre?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      blood: ''
+                                                      malaria: ''
+                                                      sugar and maleria: ''
+                                                      blood test: ''
+                              y3:
+                                    weight: ''
+                                    questions:
+                                          What services are available in First Referral Unit (FRU) of this CHC?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      provision of warmth: ''
+                                                      family planning services: ''
+                                                      none of the above: ''
+                                                      referral services: ''
+                                                      child heath: ''
+                                                      including blood pressure: ''
+                                                      maternal health: ''
+                                                      monitoring of vital signs: ''
+                              y4:
+                                    weight: ''
+                                    questions:
+                                          What kind of emergency services are available?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      road traffic accidents: ''
+                                                      burns and trauma: ''
+                                                      none: ''
+                                                      paediatrics: ''
+                                                      stroke: ''
+                                                      others: ''
+                                                      gynecology: ''
+                              y5:
+                                    weight: ''
+                                    questions:
+                                          Do you conduct health camps?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      i don't know: ''
+                                                      'yes': ''
+                                                      'no': ''
+                              y6:
+                                    weight: ''
+                                    questions:
+                                          Do you have in house Pharmacy ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                              y7:
+                                    weight: ''
+                                    questions:
+                                          Is at least one doctor available during your operational hours?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                              y8:
+                                    weight: ''
+                                    questions:
+                                          Are offered services free of cost?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      i don't know: ''
+                                                      half/half: ''
+                                                      most are for free: ''
+                  digital_tools:
+                        weight: ''
+                        sub_parameters:
+                              record_maintenance:
+                                    weight: ''
+                                    questions:
+                                          Which of the following data is maintained online?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      drugs: ''
+                                                      health service delivery data: ''
+                                                      none: ''
+                                                      accounts: ''
+                                                      attendance of employees: ''
+                  others:
+                        weight: ''
+                        sub_parameters:
+                              y1:
+                                    weight: ''
+                                    questions:
+                                          Are you running Jan Aushadhi Kendras ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      not aware: ''
+                                                      'no': ''
+                              y2:
+                                    weight: ''
+                                    questions:
+                                          What are the 3 most common cases of your patients?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      mild fever, accidents: ''
+                                                      malaria, fever and typhoid: ''
+                                                      diarroheea ,cough and cold: ''
+                                                      fever, dyriah and cough: ''
+                                                      hypertension, diabetes: ''
+                                                      fever, malaria, and allergy: ''
+                                                      daireah malaria dysentery: ''
+                                                      malaria, cough,diarrhea: ''
+                                                      fever/cough/lose motion and cut injury.: ''
+                                                      cold fever, cugh & diarrihaie: ''
+                              y3:
+                                    weight: ''
+                                    questions:
+                                          Did you tie up with any health insurance company?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              y4:
+                                    weight: ''
+                                    questions:
+                                          Are there areas which need to be improved?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      climating of the rooms: ''
+                                                      need for new medical equipiment: ''
+                                                      etc.: ''
+                                                      stock of medicines & consumables: ''
+                                                      infrastructure of the facility such as water supply: ''
+                                                      diagnostic services: ''
+                                                      discharge time: ''
+                                                      pharmacy: ''
+                                                      cleanliness: ''
+                                                      requisition of medical equipment: ''
+                                                      direct benefit transfer: ''
+                                                      ventilation: ''
+                                                      on time reporting of doctors: ''
+                                                      quality of care: ''
+                                                      appointment of vacant posts: ''
+                                                      on time payment of salaries: ''
+                                                      staff etc: ''
+                              y5:
+                                    weight: ''
+                                    questions:
+                                          How many villages does this SC serve ?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              y6:
+                                    weight: ''
+                                    questions:
+                                          Is this Sub-Centre rented or owned by Gov.?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      owned by government: ''

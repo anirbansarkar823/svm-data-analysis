@@ -1,0 +1,458 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              access:
+                                    weight: ''
+                                    questions:
+                                          How many times did you go there until it was open?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      footway: ''
+                                                      pakka road: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel to avail public transport facility? (in K.M):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              school_buses:
+                                    weight: ''
+                                    questions:
+                                          How many school buses go to this asset?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      2g reliable: ''
+                                                      2g unreliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      kacha/temporary(wood,bamboo,etc.,): ''
+                                                      pakka/permanent(steel,concrete,etc.): ''
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the type of security available for the asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+                                                      watchman: ''
+                                                      compound wall\/ fencing: ''
+                                                      security cameras: ''
+                              land:
+                                    weight: ''
+                                    questions:
+                                          What is the total campus area?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+      general:
+            weight: ''
+            variables:
+                  availability:
+                        weight: ''
+                        sub_parameters:
+                              working_hours:
+                                    weight: ''
+                                    questions:
+                                          'What are the working hours of the facility?(Ex: 9.00A.M-5: 00P.M)':
+                                                weight: ''
+                                                format: time
+                                                threshold: ''
+                              working_days:
+                                    weight: ''
+                                    questions:
+                                          What are the working days of the facility?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      thursday: ''
+                                                      monday: ''
+                                                      saturday: ''
+                                                      tuesday: ''
+                                                      wednesday: ''
+                                                      friday: ''
+                  employability:
+                        weight: ''
+                        sub_parameters:
+                              teachers:
+                                    weight: ''
+                                    questions:
+                                          How many teachers are employed in the facility?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              support_staff:
+                                    weight: ''
+                                    questions:
+                                          How many support staff are employed in the facility?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  water:
+                        weight: ''
+                        sub_parameters:
+                              drinking_water:
+                                    weight: ''
+                                    questions:
+                                          Where do you get drinking water from?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      ground water: ''
+                                          How much do you pay per litre of bottled water?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              toilets:
+                                    weight: ''
+                                    questions:
+                                          Are there toilets available for public usage?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                                          Are there toilets available separately as per gender?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                          Is there running water available in the toilets at this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                          Is there soap for hand-wash available at this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          How do you deal with the waste generated from the facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      burnt within the premises: ''
+                                                      none: ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                                          How frequently are the premises cleaned with disinfectant in a week?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                                          How many hours per day are you facing power cuts?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available in the facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      invertor: ''
+                                                      none: ''
+                                          How many hours do you rely on the alternative energy source in a day?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              telephone:
+                                    weight: ''
+                                    questions:
+                                          Do you have landline connectivity?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              broadband:
+                                    weight: ''
+                                    questions:
+                                          Do you have wired internet connection?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  record_maintenance:
+                        weight: ''
+                        sub_parameters:
+                              records:
+                                    weight: ''
+                                    questions:
+                                          How do you maintain records?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      digital records - using computer/mobile: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas you get support from government agencies?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+                  educational_materials:
+                        weight: ''
+                        sub_parameters:
+                              textbooks:
+                                    weight: ''
+                                    questions:
+                                          Where do you get textbooks for educational purposes?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      supplier in other states: ''
+                                                      none: ''
+                              curriculum:
+                                    weight: ''
+                                    questions:
+                                          Where do you get the curriculum for classes and educational programs?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      supplier in other states: ''
+                                                      others: ''
+                  digital_technologies:
+                        weight: ''
+                        sub_parameters:
+                              awareness:
+                                    weight: ''
+                                    questions:
+                                          Are you using digital tools for your operations?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  health:
+                        weight: ''
+                        sub_parameters:
+                              checkups:
+                                    weight: ''
+                                    questions:
+                                          Are there checkups or medical facilities available?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                                          What is the frequency of these checkups?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      once a 3-6 months: ''
+                              meals:
+                                    weight: ''
+                                    questions:
+                                          Are there any meals served?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                                          Is the nutritional value monitored?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                  facilities:
+                        weight: ''
+                        sub_parameters:
+                              recreational:
+                                    weight: ''
+                                    questions:
+                                          Is there presence of any recreational/playing material for the kids?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                              residential:
+                                    weight: ''
+                                    questions:
+                                          What kind of residential facilities are available?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      none: ''
+                                                      dormitories: ''
+                              classrooms:
+                                    weight: ''
+                                    questions:
+                                          How many classrooms are there in the institute ?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              auditorium:
+                                    weight: ''
+                                    questions:
+                                          Does the institute have a hall or auditorium?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                              libraries:
+                                    weight: ''
+                                    questions:
+                                          Does the institute have a designated library?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  educational_statistics:
+                        weight: ''
+                        sub_parameters:
+                              enrollment_population:
+                                    weight: ''
+                                    questions:
+                                          How many students are enrolled in the special school?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              extra_curriculars:
+                                    weight: ''
+                                    questions:
+                                          Apart from academics what are the co-curricular activities available for students ?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      arts: ''
+                                                      none: ''
+                                                      dance: ''
+                                                      sports: ''
+                              dropouts:
+                                    weight: ''
+                                    questions:
+                                          What is the percentage of drop-outs?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      more than 40 %: ''
+                                                      0-10%: ''
+                                          What is the reason for dropouts?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      others: ''
+                                                      health issues: ''
+                  disaster_preparedness:
+                        weight: ''
+                        sub_parameters:
+                              disaster_drills:
+                                    weight: ''
+                                    questions:
+                                          Are there any disaster management courses or drills practice at the institute?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+      specific:
+            weight: ''
+            variables:
+                  general_information:
+                        weight: ''
+                        sub_parameters:
+                              age_group:
+                                    weight: ''
+                                    questions:
+                                          What is the age group of students coming to the institute?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      none: ''
+                                                      6 to 15: ''
+                              funding:
+                                    weight: ''
+                                    questions:
+                                          Are there any funding opportunities in the institute?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              certification:
+                                    weight: ''
+                                    questions:
+                                          Are the teachers certified?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  partnerships:
+                        weight: ''
+                        sub_parameters:
+                              affiliations:
+                                    weight: ''
+                                    questions:
+                                          What affiliations does this institute have?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      cbse: ''
+                                                      none: ''

@@ -1,0 +1,325 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              access:
+                                    weight: ''
+                                    questions:
+                                          How many times did you go there until it was open?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel from this asset to avail public transport facility? (in K.M):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      2g reliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka/permenant(steel,concrete,etc.,): ''
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the type of security available for the asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+      general:
+            weight: ''
+            variables:
+                  availability:
+                        weight: ''
+                        sub_parameters:
+                              working_hours:
+                                    weight: ''
+                                    questions:
+                                          What is the working hours of your VAC?:
+                                                weight: ''
+                                                format: time
+                                                threshold: ''
+                              working_days:
+                                    weight: ''
+                                    questions:
+                                          What are the working days of the VAC?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      sunday: ''
+                                                      thursday: ''
+                                                      wednesday: ''
+                                                      monday: ''
+                                                      saturday: ''
+                                                      friday: ''
+                                                      tuesday: ''
+                  employability:
+                        weight: ''
+                        sub_parameters:
+                              non_technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many non-medical staffs are there?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              technical_staff:
+                                    weight: ''
+                                    questions:
+                                          What is the medical staff strength of your VAC?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  water:
+                        weight: ''
+                        sub_parameters:
+                              drinking_water:
+                                    weight: ''
+                                    questions:
+                                          Where do you get drinking water from for using at VAC?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      tap water from government: ''
+                              water_for_operational_purposes:
+                                    weight: ''
+                                    questions:
+                                          Where do you get water for operational purposes in VAC?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      water from government: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              toilets:
+                                    weight: ''
+                                    questions:
+                                          Is there running water available in the toilets at the asset?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          How do you deal with the waste generated from the VAC?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      burnt within the premises: ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of the VAC cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                          How frequently are the premises at this asset cleaned with disinfectant in a week?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      none: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              telephone:
+                                    weight: ''
+                                    questions:
+                                          Is there landline connectivity for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              broadband:
+                                    weight: ''
+                                    questions:
+                                          Does this asset have wired internet connection?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      jio: ''
+                                                      bsnl: ''
+                                                      airtel: ''
+                                                      vodafone: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the asset gets support from government agencies (not for customers)?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+                  ngo_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          Do you get any support from NGO(s) for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  digital_technologies:
+                        weight: ''
+                        sub_parameters:
+                              awareness:
+                                    weight: ''
+                                    questions:
+                                          Are you using digital tools for your operations for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+      specific:
+            weight: ''
+            variables:
+                  usage:
+                        weight: ''
+                        sub_parameters:
+                              visits:
+                                    weight: ''
+                                    questions:
+                                          How many people visit your VAC on an average in a month?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              wards:
+                                    weight: ''
+                                    questions:
+                                          Is there separate wards for different animals?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  facilities:
+                        weight: ''
+                        sub_parameters:
+                              specialist:
+                                    weight: ''
+                                    questions:
+                                          Do you have any specialist for any animal?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              operation_theatre:
+                                    weight: ''
+                                    questions:
+                                          Do you have an operation theatre?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              equipments:
+                                    weight: ''
+                                    questions:
+                                          What equipments do you have in VAC?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      nil: ''
+                  services:
+                        weight: ''
+                        sub_parameters:
+                              cost:
+                                    weight: ''
+                                    questions:
+                                          Are the services free of cost?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                              capacity:
+                                    weight: ''
+                                    questions:
+                                          How many animals can be accommodated in the centre?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  outreach:
+                        weight: ''
+                        sub_parameters:
+                              awareness:
+                                    weight: ''
+                                    questions:
+                                          Do you organise awareness camp in the village?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  waste_management:
+                        weight: ''
+                        sub_parameters:
+                              body_discards:
+                                    weight: ''
+                                    questions:
+                                          How do you discard the animal who died of any disease?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      burial: ''

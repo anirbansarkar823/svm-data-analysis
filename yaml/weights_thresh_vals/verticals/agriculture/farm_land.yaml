@@ -1,0 +1,483 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              access:
+                                    weight: ''
+                                    questions:
+                                          How many times did you go to the farm land until it was open and accesible?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the farm land?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road with block point: ''
+                                                      pakka road: ''
+                                                      kacha road with block point: ''
+                                                      kacha road: ''
+                                                      footway: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel from the farm land to avail public transport facility? (Approx in K.M):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the farm land?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      4g+ reliable: ''
+                                                      nil: ''
+                                                      3g unreliable: ''
+                                                      2g reliable: ''
+                                                      4g unreliable: ''
+                                                      2g unreliable: ''
+                                                      3g reliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of the farm land?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka/permenant(steel,concrete,etc.,): ''
+                                                      kacha/temporary(wood,bamboo,etc.,): ''
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the type of security available for the farm land?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      watchman: ''
+                                                      compound wall\/ fencing: ''
+                                                      none: ''
+                                                      others: ''
+      general:
+            weight: ''
+            variables:
+                  employability:
+                        weight: ''
+                        sub_parameters:
+                              staff:
+                                    weight: ''
+                                    questions:
+                                          How many are employed in the farm land?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  water:
+                        weight: ''
+                        sub_parameters:
+                              water_for_operational_purposes:
+                                    weight: ''
+                                    questions:
+                                          Where do you get water for operational purposes for the farm land?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      river or canal: ''
+                                                      others: ''
+                                                      water from government: ''
+                                                      spring water: ''
+                                                      ground water: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          How do you deal with the agricultural waste generated from the farm land?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      discarded in open field: ''
+                                                      none: ''
+                                                      discarded in water bodies: ''
+                                                      burnt within the premises: ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of farm land cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                                          How frequently are the premises at the farm land cleaned with disinfectant in a week?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      '7': ''
+                                                      '4': ''
+                                                      '3': ''
+                                                      '6': ''
+                                                      '5': ''
+                                                      '>7': ''
+                                                      '1': ''
+                                                      '2': ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply for the farm land?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                                          How many hours per day are you facing power cuts in the farm land?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available for the farm land?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      solar unit: ''
+                                                      none: ''
+                                                      diesel generator: ''
+                                                      invertor: ''
+                                                      others: ''
+                                                      kerosene generator: ''
+                                          How many hours do you rely on the alternative energy source in a day for the farm land?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of the farm land?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      airtel: ''
+                                                      jio: ''
+                                                      others: ''
+                                                      bsnl: ''
+                                                      vodafone: ''
+                                                      idea: ''
+                  record_maintenance:
+                        weight: ''
+                        sub_parameters:
+                              records:
+                                    weight: ''
+                                    questions:
+                                          How do you maintain records for operations of the farm land?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      digital records- using computer/mobile: ''
+                                                      traditional book keeping: ''
+                                                      others: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the farm land gets support from government agencies (not for your customers)?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      financial support: ''
+                                                      marketing support: ''
+                                                      insurance support: ''
+                                                      support via subsidies: ''
+                                                      none: ''
+                                                      technical support: ''
+                                                      others: ''
+                                                      transport support: ''
+                                                      support via schemes: ''
+                  ngo_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          Do you get any support from NGO(s) for the farm land?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  digital_technologies:
+                        weight: ''
+                        sub_parameters:
+                              awareness:
+                                    weight: ''
+                                    questions:
+                                          Are you using digital technologies that can be used in the farm land?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+      specific:
+            weight: ''
+            variables:
+                  inputs:
+                        weight: ''
+                        sub_parameters:
+                              procurement:
+                                    weight: ''
+                                    questions:
+                                          Where do you procure inputs required for the farm land?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      none: ''
+                                                      government agency: ''
+                                                      local supplier: ''
+                                                      others: ''
+                                                      supplier in other states: ''
+                              chemical_inputs:
+                                    weight: ''
+                                    questions:
+                                          What are different chemical inputs used in the farm land?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      fertilizer: ''
+                                                      none: ''
+                                                      others: ''
+                                                      pesticide: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              covering_material:
+                                    weight: ''
+                                    questions:
+                                          What is the type of covering material used in the farm land?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      polysheet: ''
+                                                      lath/bamboo: ''
+                                                      none: ''
+                                                      others: ''
+                                                      green mesh: ''
+                  irrigation:
+                        weight: ''
+                        sub_parameters:
+                              water_source:
+                                    weight: ''
+                                    questions:
+                                          What is the water source used for irrigation mechanism?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      river/stream: ''
+                                                      others: ''
+                                                      rainfed: ''
+                                                      ground water: ''
+                              type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of irrigation mechanism used in the farm land?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      drip irrigation: ''
+                                                      canal irrigation: ''
+                                                      sprinklers: ''
+                                                      others: ''
+                                                      rose can: ''
+                  marketing:
+                        weight: ''
+                        sub_parameters:
+                              advertisement:
+                                    weight: ''
+                                    questions:
+                                          How does the farm land advertise about the services available?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      posters\/ display boards: ''
+                                                      announcements \/ broadcast: ''
+                                                      village meeting: ''
+                                                      others: ''
+                                                      marketing team\/ sales agents: ''
+                  operations:
+                        weight: ''
+                        sub_parameters:
+                              operational_cost:
+                                    weight: ''
+                                    questions:
+                                          What is the average operational cost per month to run the farm land?(Excluding Salary of the Employees):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  products:
+                        weight: ''
+                        sub_parameters:
+                              quantity:
+                                    weight: ''
+                                    questions:
+                                          How much amount of products are produced in the farm land in a year?(In K.G):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              cost:
+                                    weight: ''
+                                    questions:
+                                          What is the average cost per K.G of the products produced from the farm land?(In Rupees):
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      101-200: ''
+                                                      '>300': ''
+                                                      201-300: ''
+                                                      1-100: ''
+                              type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of agriculture products produced in the farm land?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      millet potato, rice, wheat, maize: ''
+                                                      maize: ''
+                                                      apple: ''
+                                                      tomato: ''
+                                                      small bamboo: ''
+                                                      kiwi anfcorn: ''
+                                                      potatoes: ''
+                                                      tabi bamboo: ''
+                                                      lichi plantation: ''
+                                                      rice,mize: ''
+                                                      millet, rice, maize, potatos, wheat: ''
+                                                      lichi trees: ''
+                                                      bamboo, kiwi, maize, every vegetables etc: ''
+                                                      green tea: ''
+                                                      cabbage, potato, tomato, chilli,: ''
+                                                      vegetables: ''
+                                                      paddy: ''
+                                                      lichhi, pineapple, palm leave, etc: ''
+                                                      potato , beans: ''
+                                                      banana: ''
+                                                      bamboo garden: ''
+                                                      lemon, potato,brinjal and stebia: ''
+                                                      local rices: ''
+                                                      tree plantation: ''
+                                                      kiwi fruits: ''
+                                                      palm leave: ''
+                                                      vegetable: ''
+                                                      crop: ''
+                                                      maize field: ''
+                                                      bamboo: ''
+                                                      tomato and potato: ''
+                                                      bamboo (taib local): ''
+                                                      banana plantation: ''
+                                                      palm: ''
+                                                      herbal tea, beatle nut and mango: ''
+                                                      beans, cauliflower, ginger, cucumber, cabbage, corn, green vegitables, tomato, etc.: ''
+                                                      cardamom: ''
+                                                      large cardamom: ''
+                                                      arecanut: ''
+                                                      apple and kiwi: ''
+                                                      fern leaf & banana: ''
+                                                      seasonally veg: ''
+                                                      potato ,beens: ''
+                                                      rice, yam, tapioca: ''
+                                                      kiwi, green vegetable, cabbage, cauliflower, beans, corn, chilli, pears, etc.: ''
+                                                      fern leaf: ''
+                                                      tea leaf garden: ''
+                                                      maize and wheat: ''
+                                                      kiwi,orange,walnut: ''
+                                                      maize,kiwi, orange: ''
+                                                      potato beens: ''
+                                                      orange: ''
+                                                      apple, potato: ''
+                                                      large cardamon: ''
+                                                      rice and maize: ''
+                                                      maize potato: ''
+                                                      bamboo banana: ''
+                                                      rice and wheat: ''
+                                                      orange garden: ''
+                                                      maize, etc: ''
+                                                      '500': ''
+                                                      cardamom and arecanut: ''
+                                                      rice and millet: ''
+                                                      palm leaf (toku patta): ''
+                                                      kiwi: ''
+                                                      potatos: ''
+                                                      green vegetables: ''
+                                                      cabbage, cauliflower, corn, bean, green vegetables, tomatos, chilli,etc.: ''
+                                                      mastard leaf: ''
+                                                      horticulture: ''
+                                                      cardamon: ''
+                                                      rice only: ''
+                                                      large bamboo: ''
+                                                      bamboo plantations: ''
+                                                      apple pear plum: ''
+                                                      kiwu: ''
+                                                      fern leaf plantations garden: ''
+                                                      kiwi, apple,vegetables: ''
+                                                      crop and til: ''
+                                                      tamato, chilli, cabbage, cauliflower, vegetables, etc.: ''
+                                                      vegetarian n maize: ''
+                                                      palm leaf & bamboo: ''
+                                                      white ,rice and millet: ''
+                                                      cabbage, califlower, beans, etc: ''
+                                                      tea leaf: ''
+                                                      lichhi: ''
+                                                      rice: ''
+                                                      fern leaf for roofing: ''
+                  customers:
+                        weight: ''
+                        sub_parameters:
+                              type:
+                                    weight: ''
+                                    questions:
+                                          Which type of customers purchase the products produced in the farm land?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      farmers: ''
+                                                      ngo: ''
+                                                      govt. agencies: ''
+                                                      none: ''
+                                                      research organizations: ''
+                                                      others: ''
+                  logistics:
+                        weight: ''
+                        sub_parameters:
+                              transport_of_goods:
+                                    weight: ''
+                                    questions:
+                                          How does the customers transport the goods produced from the farm land?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      huge luggage transport vehicle: ''
+                                                      2 wheeler: ''
+                                                      head load: ''
+                                                      mini luggage transport vehicle: ''
+                                                      sumo\/tracker: ''
+                                                      others: ''
+                                                      tempo\/auto: ''

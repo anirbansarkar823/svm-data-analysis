@@ -1,0 +1,356 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              access:
+                                    weight: ''
+                                    questions:
+                                          How many times did you go there until it was open?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road with block point: ''
+                                                      kacha road: ''
+                                                      pakka road: ''
+                                                      footway: ''
+                                                      kacha road with block point: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel to avail public transport facility?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      4g reliable: ''
+                                                      2g reliable: ''
+                                                      3g reliable: ''
+                                                      3g unreliable: ''
+                                                      2g unreliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the type of security available for the asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      security cameras: ''
+                                                      security guard: ''
+                                                      none: ''
+                                                      compound wall\/ fencing: ''
+                                                      watchman: ''
+      general:
+            weight: ''
+            variables:
+                  availability:
+                        weight: ''
+                        sub_parameters:
+                              working_hours:
+                                    weight: ''
+                                    questions:
+                                          How many Technical staff are employed in/for that asset?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              working_days:
+                                    weight: ''
+                                    questions:
+                                          How many Non Technical staff are employed in/for that asset?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          How do you deal with the waste generated from this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      burnt within the premises: ''
+                                                      discarded in govt. designated sites: ''
+                                                      discarded in open field: ''
+                                                      discarded in water bodies: ''
+                                                      none: ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available in case of power failure from regular supplier for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      invertor: ''
+                                                      solar unit: ''
+                                                      diesel generator: ''
+                                                      kerosene generator: ''
+                                                      none: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      airtel: ''
+                                                      jio: ''
+                                                      bsnl: ''
+                                                      idea: ''
+                                                      vodafone: ''
+                              telephone:
+                                    weight: ''
+                                    questions:
+                                          Do you have landline connectivity for telephone?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              broadband:
+                                    weight: ''
+                                    questions:
+                                          Do you have wired internet connection?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  record_maintenance:
+                        weight: ''
+                        sub_parameters:
+                              records:
+                                    weight: ''
+                                    questions:
+                                          How do you maintain records of operations?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      digital records- using computer/mobile: ''
+                                                      others: ''
+                                                      traditional book keeping: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas you get support from government agencies (not for costumers)?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      others: ''
+                                                      transport support: ''
+                                                      insurance support: ''
+                                                      support via schemes: ''
+                                                      technical support: ''
+                                                      marketing support: ''
+                                                      support via subsidies: ''
+                                                      none: ''
+                                                      financial support: ''
+                  ngo_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          Do you get any support from NGO(s)?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+      specific:
+            weight: ''
+            variables:
+                  quality:
+                        weight: ''
+                        sub_parameters:
+                              y1:
+                                    weight: ''
+                                    questions:
+                                          How many hours on average do you apply load shedding per day meaning facing Brown Outs?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      4-8hrs: ''
+                                                      8-12hrs: ''
+                                                      0-4hrs: ''
+                              y2:
+                                    weight: ''
+                                    questions:
+                                          How many hours are you facing power cuts on average per day meaning black outs?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      4-8hrs: ''
+                                                      0-4hrs: ''
+                              y3:
+                                    weight: ''
+                                    questions:
+                                          How do you record hours of load shedding and blackouts?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      traditional book keeping: ''
+                                                      digital records - using computers/mobile: ''
+                                                      no records: ''
+                              y4:
+                                    weight: ''
+                                    questions:
+                                          How are staff trained to handle transformers ?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      previous experience: ''
+                                                      by the department: ''
+                                                      on the job: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              y1:
+                                    weight: ''
+                                    questions:
+                                          What type of substation is this?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      distribution: ''
+                                                      collector: ''
+                                                      switching: ''
+                                                      converter: ''
+                                                      transmission: ''
+                              y2:
+                                    weight: ''
+                                    questions:
+                                          What is the type of operating voltage?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      low voltage: ''
+                                                      high voltage: ''
+                                                      medium voltage: ''
+                              y3:
+                                    weight: ''
+                                    questions:
+                                          What is the number of transformers linked to the substation ?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              y4:
+                                    weight: ''
+                                    questions:
+                                          What are the issues pertaining to maintenance to ensure technical functionality ?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      skilled manpower: ''
+                                                      training: ''
+                                                      timely funds for maintenance: ''
+                                                      other: ''
+                              y5:
+                                    weight: ''
+                                    questions:
+                                          Do you use smart metering ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  target_audience:
+                        weight: ''
+                        sub_parameters:
+                              y1:
+                                    weight: ''
+                                    questions:
+                                          What are the categories of customers availing power from this substation?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      others: ''
+                                                      households: ''
+                                                      industrial: ''
+                                                      commercial: ''
+                                                      agriculture: ''
+                  source_of_energy:
+                        weight: ''
+                        sub_parameters:
+                              energy:
+                                    weight: ''
+                                    questions:
+                                          What is the source of power to the asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      hydro: ''
+                                                      others: ''
+                                                      integrated solar: ''
+                                                      thermal: ''
+                  solar_energy:
+                        weight: ''
+                        sub_parameters:
+                              grid_con:
+                                    weight: ''
+                                    questions:
+                                          What is the minimum distance to the nearest grid connected Solar PV Power generating station?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              off_grid:
+                                    weight: ''
+                                    questions:
+                                          Where is the nearest Off grid Solar PV generating station ?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  maintenance:
+                        weight: ''
+                        sub_parameters:
+                              y1:
+                                    weight: ''
+                                    questions:
+                                          How many times has there been maintenance or safety audits in the last year ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      never done: ''
+                                                      1-2 times: ''
+                                                      11-12 times: ''
+                                                      5-6 times: ''
+                                                      3-4 times: ''
+                                                      7-8 times: ''

@@ -1,0 +1,252 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              access:
+                                    weight: ''
+                                    questions:
+                                          How many times did you go there until it was open?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel from this asset to avail public transport facility? (in K.M):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      4g unreliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka/permenant(steel,concrete,etc.,): ''
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the type of security available for the asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+      general:
+            weight: ''
+            variables:
+                  availability:
+                        weight: ''
+                        sub_parameters:
+                              working_hours:
+                                    weight: ''
+                                    questions:
+                                          What are the working hours of this asset?:
+                                                weight: ''
+                                                format: time
+                                                threshold: ''
+                              working_days:
+                                    weight: ''
+                                    questions:
+                                          What are the working days of that asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      saturday: ''
+                                                      friday: ''
+                                                      thursday: ''
+                                                      tuesday: ''
+                                                      wednesday: ''
+                                                      monday: ''
+                  water:
+                        weight: ''
+                        sub_parameters:
+                              drinking_water:
+                                    weight: ''
+                                    questions:
+                                          Where do you get drinking water from for using at this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      tap water from government: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              toilets:
+                                    weight: ''
+                                    questions:
+                                          Are there toilets available for public and employees usage at this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          How do you deal with the waste generated from that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      discarded in open field: ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of this asset cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                          How frequently are the premises at this asset cleaned with disinfectant in a week?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      none: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              telephone:
+                                    weight: ''
+                                    questions:
+                                          Is there landline connectivity for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              broadband:
+                                    weight: ''
+                                    questions:
+                                          Does this asset have wired internet connection?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      airtel: ''
+                                                      bsnl: ''
+                                                      vodafone: ''
+                  record_maintenance:
+                        weight: ''
+                        sub_parameters:
+                              records:
+                                    weight: ''
+                                    questions:
+                                          How do you maintain records for operations for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      digital records- using computer/mobile: ''
+                  digital_technologies:
+                        weight: ''
+                        sub_parameters:
+                              awareness:
+                                    weight: ''
+                                    questions:
+                                          Are you using of digital tools for your operations for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+      specific:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              utilization:
+                                    weight: ''
+                                    questions:
+                                          How many accounts does the Bank Correspondent (BC) open on an average month?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  digital_technology:
+                        weight: ''
+                        sub_parameters:
+                              equipment:
+                                    weight: ''
+                                    questions:
+                                          Has the Banking Correspondent been provided with a POS device?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  capacity_strength:
+                        weight: ''
+                        sub_parameters:
+                              area_covered:
+                                    weight: ''
+                                    questions:
+                                          How many villages have been assigned to the Bank correspondent?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X:
+                        weight: ''
+                        sub_parameters:
+                              household_covered:
+                                    weight: ''
+                                    questions:
+                                          How many households have been allocated to the Bank correspondent in the village?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  utility_usability:
+                        weight: ''
+                        sub_parameters:
+                              place_of_operation:
+                                    weight: ''
+                                    questions:
+                                          Where is the Bank Correspondent performing the operations from?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      shops: ''

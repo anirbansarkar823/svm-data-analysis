@@ -1,0 +1,421 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              access:
+                                    weight: ''
+                                    questions:
+                                          How many times did you go to the unit until it was open?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the market?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel from the market to avail public transport facility? (Approx in K.M):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the market?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      4g+ reliable: ''
+                                                      4g unreliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of the market?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      kacha/temporary(wood,bamboo,etc.,): ''
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the type of security available for the market?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+      general:
+            weight: ''
+            variables:
+                  availability:
+                        weight: ''
+                        sub_parameters:
+                              working_hours:
+                                    weight: ''
+                                    questions:
+                                          'What are the working hours of the market?(Ex: 9.00A.M-5.A.M)':
+                                                weight: ''
+                                                format: time
+                                                threshold: ''
+                              working_days:
+                                    weight: ''
+                                    questions:
+                                          What are the working days of the market?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      friday: ''
+                                                      monday: ''
+                                                      thursday: ''
+                                                      saturday: ''
+                                                      tuesday: ''
+                                                      wednesday: ''
+                                                      sunday: ''
+                  employability:
+                        weight: ''
+                        sub_parameters:
+                              staff:
+                                    weight: ''
+                                    questions:
+                                          How many people are working in the market?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  water:
+                        weight: ''
+                        sub_parameters:
+                              drinking_water:
+                                    weight: ''
+                                    questions:
+                                          Where do you get drinking water from for using at the market?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      tap water from government: ''
+                              water_for_operational_purposes:
+                                    weight: ''
+                                    questions:
+                                          Where do you get water for operational purposes for the market?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      water from government: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              toilets:
+                                    weight: ''
+                                    questions:
+                                          Are there toilets available for public and employees' usage at the market?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          How do you deal with the fish waste generated from the market?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      discarded in water bodies: ''
+                                                      burnt within the premises: ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of market cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                                          How frequently are the premises at the market cleaned with disinfectant in a week?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply for the market?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available for the market?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      none: ''
+                                          How many hours do you rely on the alternative energy source in a day for the unit?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of the unit?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      airtel: ''
+                                                      bsnl: ''
+                                                      jio: ''
+                                                      vodafone: ''
+                              telephone:
+                                    weight: ''
+                                    questions:
+                                          Is there landline connectivity for the market?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              broadband:
+                                    weight: ''
+                                    questions:
+                                          Does the market have wired internet connection?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  record_maintenance:
+                        weight: ''
+                        sub_parameters:
+                              records:
+                                    weight: ''
+                                    questions:
+                                          How do people maintain records for operations of the market?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      traditional book keeping: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the market gets support from government agencies?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+                  ngo_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          Do you get any support from NGO(s) for the market?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  digital_technologies:
+                        weight: ''
+                        sub_parameters:
+                              awareness:
+                                    weight: ''
+                                    questions:
+                                          Are you using digital technologies in the market?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+      specific:
+            weight: ''
+            variables:
+                  inputs:
+                        weight: ''
+                        sub_parameters:
+                              procurement:
+                                    weight: ''
+                                    questions:
+                                          Where do you primarily procure inputs required for the market?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      local supplier: ''
+                                                      supplier in other states: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              storage:
+                                    weight: ''
+                                    questions:
+                                          Where do you store the produce sold in the shops?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      private godown/warehouse: ''
+                                                      none: ''
+                  marketing:
+                        weight: ''
+                        sub_parameters:
+                              advertisement:
+                                    weight: ''
+                                    questions:
+                                          How does the market advertise about the services available?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      others: ''
+                                                      marketing team\/ sales agents: ''
+                  operations:
+                        weight: ''
+                        sub_parameters:
+                              operational_cost:
+                                    weight: ''
+                                    questions:
+                                          What is the average operational cost per month to run the stall?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              income:
+                                    weight: ''
+                                    questions:
+                                          What is the average income per month from each stall?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              permission:
+                                    weight: ''
+                                    questions:
+                                          What kind of permission is required to setup a stall in the market?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      none: ''
+                                                      permission from the market union: ''
+                              setup_cost:
+                                    weight: ''
+                                    questions:
+                                          What is the amount to be paid to setup a stall in the market?(In Rupees):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              payment_mechanism:
+                                    weight: ''
+                                    questions:
+                                          What is the payment mechanism used in the market?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      cash: ''
+                              weghing_mechanism:
+                                    weight: ''
+                                    questions:
+                                          What is the weighing mechanism used in the market?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      mechanical weighing scale: ''
+                  products:
+                        weight: ''
+                        sub_parameters:
+                              number:
+                                    weight: ''
+                                    questions:
+                                          How many types of products are available in the market?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              cost:
+                                    weight: ''
+                                    questions:
+                                          What is the average cost of the top 5 most purchased goods in market?(In Rupees):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              cost_policy:
+                                    weight: ''
+                                    questions:
+                                          How does sellers decide the selling price of the products?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      based on market price: ''
+                  customers:
+                        weight: ''
+                        sub_parameters:
+                              type:
+                                    weight: ''
+                                    questions:
+                                          Which type of customers purchase the fish from the market?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      individual: ''
+                                                      farmers: ''
+                              number:
+                                    weight: ''
+                                    questions:
+                                          How many customers purchase the inputs from the market in a week??:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  logistics:
+                        weight: ''
+                        sub_parameters:
+                              transport_of_goods:
+                                    weight: ''
+                                    questions:
+                                          How do the customers transport goods from the market?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      tempo\/auto: ''
+                                                      2 wheeler: ''
+                  inventory:
+                        weight: ''
+                        sub_parameters:
+                              cold_storage:
+                                    weight: ''
+                                    questions:
+                                          Do you have a cold storage facility?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  food_wastage:
+                        weight: ''
+                        sub_parameters:
+                              X:
+                                    weight: ''
+                                    questions:
+                                          How many Kgs of fish got wasted last week?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              documentation:
+                                    weight: ''
+                                    questions:
+                                          How do you document wastage of food?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      none: ''

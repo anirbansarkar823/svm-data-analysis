@@ -1,0 +1,461 @@
+sections:
+  observation:
+    weight: '# fill with weights #'
+    variables:
+      accessibility:
+        weight: '# fill with weights #'
+        sub_parameters:
+          access:
+            weight: '# fill with weights #'
+            questions:
+              How many times did you go there until it was open?:
+                weight: '# fill with weights #'
+                threshold: '# fill with threshold #'
+          road_connectivity:
+            weight: '# fill with weights #'
+            questions:
+              What is the type of the road available to the asset?:
+                weight: '# fill with weights #'
+                values:
+                  kacha road: '# fill with value #'
+                  footway: '# fill with value #'
+                  kacha road with block point: '# fill with value #'
+                  pakka road: '# fill with value #'
+          public_transport:
+            weight: '# fill with weights #'
+            questions:
+              distance travelled in km to avail public transport:
+                weight: '# fill with weights #'
+                threshold: '# fill with threshold #'
+          school_buses:
+            weight: '# fill with weights #'
+            questions:
+              How many buses go to this asset?:
+                weight: '# fill with weights #'
+                threshold: '# fill with threshold #'
+          mobile_connectivity:
+            weight: '# fill with weights #'
+            questions:
+              What is the type of the mobile network available at the asset?:
+                weight: '# fill with weights #'
+                values:
+                  4g unreliable: '# fill with value #'
+                  none: '# fill with value #'
+                  2g unreliable: '# fill with value #'
+                  4g+ reliable: '# fill with value #'
+                  2g reliable: '# fill with value #'
+                  3g unreliable: '# fill with value #'
+                  3g reliable: '# fill with value #'
+      infrastructure:
+        weight: '# fill with weights #'
+        sub_parameters:
+          building_type:
+            weight: '# fill with weights #'
+            questions:
+              What is the type of structure of this asset?:
+                weight: '# fill with weights #'
+                values:
+                  kacha/temporary(wood,bamboo,etc.,): '# fill with value #'
+                  pakka/permanent(steel,concrete,etc.): '# fill with value #'
+          security:
+            weight: '# fill with weights #'
+            questions:
+              What is the type of security available for the asset?:
+                weight: '# fill with weights #'
+                values:
+                  others: '# fill with value #'
+                  watchman: '# fill with value #'
+                  compound wall/fencing: '# fill with value #'
+                  none: '# fill with value #'
+          land:
+            weight: '# fill with weights #'
+            questions:
+              What is the total campus area?:
+                weight: '# fill with weights #'
+                threshold: '# fill with threshold #'
+  general:
+    weight: '# fill with weights #'
+    variables:
+      availability:
+        weight: '# fill with weights #'
+        sub_parameters:
+          working_hours:
+            weight: '# fill with weights #'
+            questions:
+              work duration per day in minutes:
+                weight: '# fill with weights #'
+                threshold: '# fill with threshold #'
+          working_days:
+            weight: '# fill with weights #'
+            questions:
+              What are the working days of the facility?:
+                weight: '# fill with weights #'
+                values:
+                  friday: '# fill with value #'
+                  monday: '# fill with value #'
+                  saturday: '# fill with value #'
+                  sunday: '# fill with value #'
+                  tuesday: '# fill with value #'
+                  thursday: '# fill with value #'
+                  wednesday: '# fill with value #'
+      employability:
+        weight: '# fill with weights #'
+        sub_parameters:
+          teachers:
+            weight: '# fill with weights #'
+            questions:
+              How many teachers are employed in the facility?:
+                weight: '# fill with weights #'
+                threshold: '# fill with threshold #'
+          support_staff:
+            weight: '# fill with weights #'
+            questions:
+              How many support staff are employed in the facility?:
+                weight: '# fill with weights #'
+                threshold: '# fill with threshold #'
+      water:
+        weight: '# fill with weights #'
+        sub_parameters:
+          drinking_water:
+            weight: '# fill with weights #'
+            questions:
+              Where do you get drinking water from?:
+                weight: '# fill with weights #'
+                values:
+                  ground water: '# fill with value #'
+                  others: '# fill with value #'
+                  bottled water: '# fill with value #'
+                  tap water from government: '# fill with value #'
+              cost per litre of bottled water in rupees:
+                weight: '# fill with weights #'
+                threshold: '# fill with threshold #'
+      sanitation:
+        weight: '# fill with weights #'
+        sub_parameters:
+          toilets:
+            weight: '# fill with weights #'
+            questions:
+              Are there toilets available for public usage?:
+                weight: '# fill with weights #'
+                values:
+                  'no': '# fill with value #'
+                  'yes': '# fill with value #'
+              Are there toilets available separately as per gender?:
+                weight: '# fill with weights #'
+                values:
+                  'no': '# fill with value #'
+                  'yes': '# fill with value #'
+              Is there running water available in the toilets at this asset?:
+                weight: '# fill with weights #'
+                values:
+                  'no': '# fill with value #'
+                  'yes': '# fill with value #'
+              Is there soap for handwash available at this asset?:
+                weight: '# fill with weights #'
+                values:
+                  'no': '# fill with value #'
+                  'yes': '# fill with value #'
+          waste_management:
+            weight: '# fill with weights #'
+            questions:
+              How do you deal with the waste generated from the facility?:
+                weight: '# fill with weights #'
+                values:
+                  discarded in govt. designated sites: '# fill with value #'
+                  discarded in water bodies: '# fill with value #'
+                  discarded in open field#burnt within the premises: '# fill with
+                    value #'
+                  none: '# fill with value #'
+          general_cleanliness:
+            weight: '# fill with weights #'
+            questions:
+              Are the premises cleaned with disinfectant regularly?:
+                weight: '# fill with weights #'
+                values:
+                  'no': '# fill with value #'
+                  'yes': '# fill with value #'
+              How frequently are the premises cleaned with disinfectant in a week?:
+                weight: '# fill with weights #'
+                values:
+                  '5': '# fill with value #'
+                  '4': '# fill with value #'
+                  '3': '# fill with value #'
+                  '6': '# fill with value #'
+                  '7': '# fill with value #'
+                  '1': '# fill with value #'
+                  '2': '# fill with value #'
+                  more than 7 times a week: '# fill with value #'
+      energy:
+        weight: '# fill with weights #'
+        sub_parameters:
+          electricity:
+            weight: '# fill with weights #'
+            questions:
+              Do you have grid connection for energy supply?:
+                weight: '# fill with weights #'
+                values:
+                  'no': '# fill with value #'
+                  'yes': '# fill with value #'
+              How many hours per day are you facing power cuts?:
+                weight: '# fill with weights #'
+                threshold: '# fill with threshold #'
+      alternate_energy:
+        weight: '# fill with weights #'
+        sub_parameters:
+          alternate_energy:
+            weight: '# fill with weights #'
+            questions:
+              What is the alternative energy source available in the facility?:
+                weight: '# fill with weights #'
+                values:
+                  others: '# fill with value #'
+                  none: '# fill with value #'
+                  solar unit: '# fill with value #'
+              How many hours do you rely on the alternative energy source in a day?:
+                weight: '# fill with weights #'
+                threshold: '# fill with threshold #'
+      communication:
+        weight: '# fill with weights #'
+        sub_parameters:
+          telephone:
+            weight: '# fill with weights #'
+            questions:
+              Do you have landline connectivity:
+                weight: '# fill with weights #'
+                values:
+                  'no': '# fill with value #'
+          broadband:
+            weight: '# fill with weights #'
+            questions:
+              Do you have wired internet connection?:
+                weight: '# fill with weights #'
+                values:
+                  'no': '# fill with value #'
+          mobile:
+            weight: '# fill with weights #'
+            questions:
+              What are different Mobile network service providers available at the location of this asset?:
+                weight: '# fill with weights #'
+                values:
+                  vodafone: '# fill with value #'
+                  jio: '# fill with value #'
+                  airtel: '# fill with value #'
+                  bsnl: '# fill with value #'
+      record_maintenance:
+        weight: '# fill with weights #'
+        sub_parameters:
+          records:
+            weight: '# fill with weights #'
+            questions:
+              How do you maintain records for operations?:
+                weight: '# fill with weights #'
+                values:
+                  others: '# fill with value #'
+                  record is not maintained: '# fill with value #'
+                  traditional book: '# fill with value #'
+      govt_support:
+        weight: '# fill with weights #'
+        sub_parameters:
+          support:
+            weight: '# fill with weights #'
+            questions:
+              What are the areas you get support from government agencies for the facility?:
+                weight: '# fill with weights #'
+                values:
+                  technical support: '# fill with value #'
+                  none: '# fill with value #'
+                  others: '# fill with value #'
+                  financial support: '# fill with value #'
+                  transport support: '# fill with value #'
+              What are the areas you get support from government agencies for your students?:
+                weight: '# fill with weights #'
+                values:
+                  technical support: '# fill with value #'
+                  none: '# fill with value #'
+                  others: '# fill with value #'
+                  transportation support: '# fill with value #'
+                  financial support: '# fill with value #'
+      educational_materials:
+        weight: '# fill with weights #'
+        sub_parameters:
+          textbooks:
+            weight: '# fill with weights #'
+            questions:
+              Where do you gets textbooks for the children?:
+                weight: '# fill with weights #'
+                values:
+                  local supplier: '# fill with value #'
+                  government agency: '# fill with value #'
+                  supplier in other states: '# fill with value #'
+                  none: '# fill with value #'
+          curriculum:
+            weight: '# fill with weights #'
+            questions:
+              Where do you get the curriculum for classes and educational programs?:
+                weight: '# fill with weights #'
+                values:
+                  local supplier: '# fill with value #'
+                  government agency: '# fill with value #'
+                  supplier in other states: '# fill with value #'
+                  self-created#others: '# fill with value #'
+      digital_technologies:
+        weight: '# fill with weights #'
+        sub_parameters:
+          awareness:
+            weight: '# fill with weights #'
+            questions:
+              Are you using digital tools for teaching?:
+                weight: '# fill with weights #'
+                values:
+                  'no': '# fill with value #'
+      health:
+        weight: '# fill with weights #'
+        sub_parameters:
+          checkups:
+            weight: '# fill with weights #'
+            questions:
+              Are there checkups or medical facilities available?:
+                weight: '# fill with weights #'
+                values:
+                  'no': '# fill with value #'
+                  'yes': '# fill with value #'
+              What is the frequency of these checkups?:
+                weight: '# fill with weights #'
+                values:
+                  not fixed: '# fill with value #'
+                  atleast once a month: '# fill with value #'
+                  atleast once in three month: '# fill with value #'
+                  once a year: '# fill with value #'
+                  atleast once a six month: '# fill with value #'
+          meals:
+            weight: '# fill with weights #'
+            questions:
+              Are there any meals served?:
+                weight: '# fill with weights #'
+                values:
+                  'no': '# fill with value #'
+                  'yes': '# fill with value #'
+              Is the nutritional value monitored?:
+                weight: '# fill with weights #'
+                values:
+                  'no': '# fill with value #'
+                  'yes': '# fill with value #'
+      facilities:
+        weight: '# fill with weights #'
+        sub_parameters:
+          recreational:
+            weight: '# fill with weights #'
+            questions:
+              Is there presence of any recreational/playing material for the kids?:
+                weight: '# fill with weights #'
+                values:
+                  'no': '# fill with value #'
+                  'yes': '# fill with value #'
+          residential:
+            weight: '# fill with weights #'
+            questions:
+              What kind of residential facilities are available?:
+                weight: '# fill with weights #'
+                values:
+                  dormitories: '# fill with value #'
+                  none: '# fill with value #'
+                  off-site residential areas: '# fill with value #'
+          classrooms:
+            weight: '# fill with weights #'
+            questions:
+              How many classrooms are there in the institute ?:
+                weight: '# fill with weights #'
+                threshold: '# fill with threshold #'
+      educational_statistics:
+        weight: '# fill with weights #'
+        sub_parameters:
+          enrollment_population:
+            weight: '# fill with weights #'
+            questions:
+              How many people are enrolled or are students at this asset?:
+                weight: '# fill with weights #'
+                threshold: '# fill with threshold #'
+          extra_curriculars:
+            weight: '# fill with weights #'
+            questions:
+              Apart from academics what are the co-curricular activities available for students ?:
+                weight: '# fill with weights #'
+                values:
+                  art: '# fill with value #'
+                  dance: '# fill with value #'
+                  sports: '# fill with value #'
+                  others: '# fill with value #'
+          dropouts:
+            weight: '# fill with weights #'
+            questions:
+              What is the percentage of drop-outs?:
+                weight: '# fill with weights #'
+                values:
+                  0-10%: '# fill with value #'
+                  20-40%: '# fill with value #'
+                  '>40%': '# fill with value #'
+                  10-20%: '# fill with value #'
+              What is the reason for dropouts?:
+                weight: '# fill with weights #'
+                values:
+                  lack of awareness: '# fill with value #'
+                  parallel studies: '# fill with value #'
+                  health issues: '# fill with value #'
+                  others: '# fill with value #'
+                  accessibility: '# fill with value #'
+                  easy money: '# fill with value #'
+      disaster_preparedness:
+        weight: '# fill with weights #'
+        sub_parameters:
+          disaster_drills:
+            weight: '# fill with weights #'
+            questions:
+              Are there any disaster management courses or drills practice at the institute?:
+                weight: '# fill with weights #'
+                values:
+                  'no': '# fill with value #'
+                  'yes': '# fill with value #'
+  specific:
+    weight: '# fill with weights #'
+    variables:
+      diversity:
+        weight: '# fill with weights #'
+        sub_parameters:
+          gender_equality:
+            weight: '# fill with weights #'
+            questions:
+              To how many women is this institution providing services?:
+                weight: '# fill with weights #'
+                values:
+                  0-5: '# fill with value #'
+                  6-10: '# fill with value #'
+                  21-40: '# fill with value #'
+                  11-20: '# fill with value #'
+      govt_supplies:
+        weight: '# fill with weights #'
+        sub_parameters:
+          supplies:
+            weight: '# fill with weights #'
+            questions:
+              Do the centers get timely supplies of the government goods?:
+                weight: '# fill with weights #'
+                values:
+                  'no': '# fill with value #'
+                  'yes': '# fill with value #'
+              What is the source of the supplies?:
+                weight: '# fill with weights #'
+                values:
+                  ngos: '# fill with value #'
+                  government: '# fill with value #'
+                  communities: '# fill with value #'
+          funding:
+            weight: '# fill with weights #'
+            questions:
+              For what all materials the government is providing fund ?:
+                weight: '# fill with weights #'
+                values:
+                  other: '# fill with value #'
+                  food: '# fill with value #'
+                  uniform: '# fill with value #'
+                  travel: '# fill with value #'
+                  books: '# fill with value #'

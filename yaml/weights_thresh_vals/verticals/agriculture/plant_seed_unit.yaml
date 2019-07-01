@@ -1,0 +1,456 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              access:
+                                    weight: ''
+                                    questions:
+                                          How many times did you go to the unit until it was open?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the unit?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road with block point: ''
+                                                      kacha road with block point: ''
+                                                      pakka road: ''
+                                                      footway: ''
+                                                      kacha road: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel from the unit to avail public transport facility? (Approx in K.M):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the unit?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      3g unreliable: ''
+                                                      4g+ reliable: ''
+                                                      2g unreliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of the unit?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      kacha/temporary(wood,bamboo,etc.,): ''
+                                                      pakka/permenant(steel,concrete,etc.,): ''
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the type of security available for the unit?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      compound wall\/ fencing: ''
+                                                      others: ''
+                                                      none: ''
+                                                      watchman: ''
+      general:
+            weight: ''
+            variables:
+                  availability:
+                        weight: ''
+                        sub_parameters:
+                              working_hours:
+                                    weight: ''
+                                    questions:
+                                          'What are the working hours of the unit?(Ex: 9.00A.M-5.A.M)':
+                                                weight: ''
+                                                format: time
+                                                threshold: ''
+                              working_days:
+                                    weight: ''
+                                    questions:
+                                          What are the working days of the unit?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      wednesday: ''
+                                                      monday: ''
+                                                      friday: ''
+                                                      sunday: ''
+                                                      saturday: ''
+                                                      tuesday: ''
+                                                      thursday: ''
+                  employability:
+                        weight: ''
+                        sub_parameters:
+                              non_technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many Non Technical staff are employed in the unit?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many Technical staff are employed in the unit?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  water:
+                        weight: ''
+                        sub_parameters:
+                              drinking_water:
+                                    weight: ''
+                                    questions:
+                                          Where do you get drinking water from for using at the unit?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      tap water from government: ''
+                                                      bottled water: ''
+                                                      spring water: ''
+                                          How much do you pay per litre of bottled water? (In Rupees):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              water_for_operational_purposes:
+                                    weight: ''
+                                    questions:
+                                          Where do you get water for operational purposes for the unit?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      river or canal: ''
+                                                      ground water: ''
+                                                      water from government: ''
+                                                      spring water: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              toilets:
+                                    weight: ''
+                                    questions:
+                                          Are there toilets available for public and employees usage at the unit?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          How do you deal with the agricultural waste generated from the unit?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      discarded in open field: ''
+                                                      others: ''
+                                                      burnt within the premises: ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of unit cleaned regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                                          How frequently are the premises at the unit cleaned with disinfectant in a week?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply for the unit?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                                          How many hours per day are you facing power cuts in the unit?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available for the unit?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      none: ''
+                                          How many hours do you rely on the alternative energy source in a day for the unit?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              telephone:
+                                    weight: ''
+                                    questions:
+                                          Is there landline connectivity for the unit?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              broadband:
+                                    weight: ''
+                                    questions:
+                                          Does the unit have wired internet connection?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of the unit?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      airtel: ''
+                                                      bsnl: ''
+                                                      vodafone: ''
+                                                      jio: ''
+                  record_maintenance:
+                        weight: ''
+                        sub_parameters:
+                              records:
+                                    weight: ''
+                                    questions:
+                                          How do you maintain records for operations of the unit?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      traditional book keeping: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the unit gets support from government agencies (not for your customers)?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+                                                      support via schemes: ''
+                                                      transport support: ''
+                  ngo_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          Do you get any support from NGO(s) for the unit?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  digital_technologies:
+                        weight: ''
+                        sub_parameters:
+                              awareness:
+                                    weight: ''
+                                    questions:
+                                          Are you using digital technologies that can be used in the unit?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+      specific:
+            weight: ''
+            variables:
+                  inputs:
+                        weight: ''
+                        sub_parameters:
+                              procurement:
+                                    weight: ''
+                                    questions:
+                                          Where do you procure inputs required for the unit?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      none: ''
+                                                      local supplier: ''
+                                                      supplier in other states: ''
+                              chemical_inputs:
+                                    weight: ''
+                                    questions:
+                                          What are different chemical inputs used in the unit?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      growth harmones: ''
+                                                      pesticide: ''
+                                                      none: ''
+                                                      fertilizer: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              cultivation:
+                                    weight: ''
+                                    questions:
+                                          What type(s) of green house present in the unit?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      net house: ''
+                                                      lath house\/bamboo house: ''
+                                                      none: ''
+                                                      poly house: ''
+                  irrigation:
+                        weight: ''
+                        sub_parameters:
+                              water_source:
+                                    weight: ''
+                                    questions:
+                                          What is the water source used for irrigation mechanism?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      river/stream: ''
+                                                      ground water: ''
+                                                      rainfed: ''
+                              type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of irrigation mechanism used in the unit?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      sprinklers: ''
+                                                      others: ''
+                  marketing:
+                        weight: ''
+                        sub_parameters:
+                              advertisement:
+                                    weight: ''
+                                    questions:
+                                          How does the unit advertise about the services available?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      village meeting: ''
+                                                      others: ''
+                  operations:
+                        weight: ''
+                        sub_parameters:
+                              operational_cost:
+                                    weight: ''
+                                    questions:
+                                          What is the average operational cost per month to run the unit?(Excluding Salary of the Employees):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              inventory_capacity:
+                                    weight: ''
+                                    questions:
+                                          How many square meters are available for storage of the seeds/ plants produced?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  products:
+                        weight: ''
+                        sub_parameters:
+                              number:
+                                    weight: ''
+                                    questions:
+                                          How many types of plants/ seeds are available in the unit?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              type1:
+                                    weight: ''
+                                    questions:
+                                          What are the 5 major type of plants/seeds purchased by the customers from the unit?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      maiz banana fine apple: ''
+                                                      tomato: ''
+                                                      none: ''
+                                                      tea: ''
+                                                      tomato, cabbage, chills, byako: ''
+                                                      litchi, pineapple, banana, lemon: ''
+                                                      canuts: ''
+                                                      cabbage.chilley. tomato. potato. brinjal: ''
+                              type2:
+                                    weight: ''
+                                    questions:
+                                          Are the seeds / plants sold to the customers organic?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                              cost:
+                                    weight: ''
+                                    questions:
+                                          What is the average cost per plant/ per pack of seeds in the unit?(In Rupees):
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      1-100: ''
+                                                      101-200: ''
+                  customers:
+                        weight: ''
+                        sub_parameters:
+                              type:
+                                    weight: ''
+                                    questions:
+                                          Which type of customers purchase the plants/seeds from the unit?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      others: ''
+                                                      farmers: ''
+                                                      ngo: ''
+                                                      govt. agencies: ''
+                                                      research organizations: ''
+                              number:
+                                    weight: ''
+                                    questions:
+                                          How many customers purchase the plants/seeds from the unit in a year?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  logistics:
+                        weight: ''
+                        sub_parameters:
+                              transport_of_goods:
+                                    weight: ''
+                                    questions:
+                                          How does the customers transport the goods purchased from the unit?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      others: ''
+                                                      head load: ''
+                                                      huge luggage transport vehicle: ''
+                                                      2 wheeler: ''
+                                                      tempo\/auto: ''
+                                                      sumo\/tracker: ''

@@ -1,0 +1,381 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              access:
+                                    weight: ''
+                                    questions:
+                                          How many times did you go there until it was open?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel from this asset to avail public transport facility?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      3g reliable: ''
+                                                      4g unreliable: ''
+                                                      4g+ reliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka/permenant(steel,concrete,etc.,): ''
+                                                      kacha/temporary(wood,bamboo,etc.,): ''
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the type of security available for the asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+      general:
+            weight: ''
+            variables:
+                  availability:
+                        weight: ''
+                        sub_parameters:
+                              working_hours:
+                                    weight: ''
+                                    questions:
+                                          What are the working hours of this asset?:
+                                                weight: ''
+                                                format: time
+                                                threshold: ''
+                              working_days:
+                                    weight: ''
+                                    questions:
+                                          What are the working days of that asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      tuesday: ''
+                                                      sunday: ''
+                                                      thursday: ''
+                                                      wednesday: ''
+                                                      saturday: ''
+                                                      friday: ''
+                                                      monday: ''
+                  employability:
+                        weight: ''
+                        sub_parameters:
+                              technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many Technical staff are employed in/for that asset?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              non_technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many Non-Technical staff are employed in/for that asset?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  water:
+                        weight: ''
+                        sub_parameters:
+                              drinking_water:
+                                    weight: ''
+                                    questions:
+                                          Where do you get drinking water from for using at this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      tap water from government: ''
+                                                      ground water: ''
+                                                      bottled water: ''
+                              water_for_operational_purposes:
+                                    weight: ''
+                                    questions:
+                                          Where do you get water for operational purposes for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      ground water: ''
+                                                      water from government: ''
+                                                      spring water: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              toilets:
+                                    weight: ''
+                                    questions:
+                                          Are there toilets available for public and employees usage at this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          How do you deal with the medical waste generated from that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      discarded in govt. designated sites: ''
+                                                      burnt within the premises: ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of this asset cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                          How frequently are the premises at this asset cleaned with disinfectant in a week?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      '1': ''
+                                                      '2': ''
+                                                      '3': ''
+                                                      '4': ''
+                                                      '5': ''
+                                                      '6': ''
+                                                      '7': ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      none: ''
+                                                      invertor: ''
+                                                      solar unit: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      jio: ''
+                                                      bsnl: ''
+                                                      vodafone: ''
+                                                      idea: ''
+                                                      airtel: ''
+                  record_maintenance:
+                        weight: ''
+                        sub_parameters:
+                              records:
+                                    weight: ''
+                                    questions:
+                                          How do you maintain operational records for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      traditional book keeping: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the asset gets support from government agencies (not for customers)?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+                  ngo_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          Do you get any support from NGO(s) for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  inputs:
+                        weight: ''
+                        sub_parameters:
+                              inputs:
+                                    weight: ''
+                                    questions:
+                                          Where do you procure inputs required for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      local supplier: ''
+                                                      supplier in other states: ''
+                  marketing:
+                        weight: ''
+                        sub_parameters:
+                              advertisement:
+                                    weight: ''
+                                    questions:
+                                          How does this asset advertise about the services available?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      others: ''
+                                                      village meeting: ''
+                                                      posters\/ display boards: ''
+      specific:
+            weight: ''
+            variables:
+                  operations:
+                        weight: ''
+                        sub_parameters:
+                              patients:
+                                    weight: ''
+                                    questions:
+                                          How many patients visit this facility on an average in a month?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              traction:
+                                    weight: ''
+                                    questions:
+                                          Which months have maximum footfall ?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      july: ''
+                                                      january: ''
+                                                      september: ''
+                                                      may: ''
+                                                      march: ''
+                                                      october: ''
+                                                      august: ''
+                                                      june: ''
+                  assets:
+                        weight: ''
+                        sub_parameters:
+                              y1:
+                                    weight: ''
+                                    questions:
+                                          What Medicines are available?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      and \"triphasic\" pill: ''
+                                                      and alprazolam: ''
+                                                      \"biphasic\" pill: ''
+                                                      and simvastatin ors: ''
+                                                      'analgesics: reducing pain (painkillers)': ''
+                                                      'antimalarial drugs: treating malaria': ''
+                                                      'antipyretics: reducing fever (pyrexia\/pyresis)': ''
+                                                      pravastatin: ''
+                                                      cuts and wounds: ''
+                                                      'stimulants: methylphenidate': ''
+                                                      ors: ''
+                                                      'oral contraceptives: enovid': ''
+                                                      amphetamine: ''
+                                                      'antiseptics: prevention of germ growth near burns': ''
+                                                      reserpine: ''
+                                                      diazepam: ''
+                                                      'tranquilizers: meprobamate': ''
+                                                      chlordiazepoxide: ''
+                                                      'antibiotics: inhibiting germ growth': ''
+                                                      'statins: lovastatin': ''
+                                                      chlorpromazine: ''
+                  digital_tools:
+                        weight: ''
+                        sub_parameters:
+                              record_maintenance:
+                                    weight: ''
+                                    questions:
+                                          Which of the following data is maintained online?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+                                                      drugs: ''
+                              y1:
+                                    weight: ''
+                                    questions:
+                                          Which digital tools are you using, if any?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+                  others:
+                        weight: ''
+                        sub_parameters:
+                              y1:
+                                    weight: ''
+                                    questions:
+                                          Are you running Jan Aushadhi Kendras ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      not aware: ''
+                              y2:
+                                    weight: ''
+                                    questions:
+                                          Did you tie up with any health insurance company?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                              y3:
+                                    weight: ''
+                                    questions:
+                                          How many villages does this pharmacy serve ?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              y4:
+                                    weight: ''
+                                    questions:
+                                          Do you have proper cold chain system ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''

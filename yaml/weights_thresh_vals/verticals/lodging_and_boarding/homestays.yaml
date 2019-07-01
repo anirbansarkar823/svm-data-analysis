@@ -1,0 +1,392 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the home-stay?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road: ''
+                                                      footway: ''
+                                                      kacha road: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel from this asset to avail public transport facility?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the homestay?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      4g reliable: ''
+                                                      3g unreliable: ''
+                                                      4g unreliable: ''
+                                                      2g reliable: ''
+                                                      3g reliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of this home-stay?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka/permenant(steel,concrete,etc.): ''
+      general:
+            weight: ''
+            variables:
+                  employability:
+                        weight: ''
+                        sub_parameters:
+                              staff:
+                                    weight: ''
+                                    questions:
+                                          How many staff are employed in/for that home-stay?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  water:
+                        weight: ''
+                        sub_parameters:
+                              drinking_water:
+                                    weight: ''
+                                    questions:
+                                          Where do you get drinking water from for using at this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      tap water from government: ''
+                                                      ground water: ''
+                              water_for_operational_purposes:
+                                    weight: ''
+                                    questions:
+                                          Where do you get water for operational purposes for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      ground water: ''
+                                                      water from government: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              toilets:
+                                    weight: ''
+                                    questions:
+                                          Are there toilets available for guests and employees' usage at this home-stay?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of this home-stay cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  waste:
+                        weight: ''
+                        sub_parameters:
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          How do you deal with the waste generated from that home-stay?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      burnt within the premises: ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply for this home-stay?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available for that home-stay?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      solar unit: ''
+                                                      none of the above: ''
+                                                      diesel generator: ''
+                                                      invertor: ''
+                                                      kerosene generator: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              telephone:
+                                    weight: ''
+                                    questions:
+                                          Is there landline connectivity for that home-stay?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              broadband:
+                                    weight: ''
+                                    questions:
+                                          Does this home-stay have wired internet connection?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      vodafone: ''
+                                                      jio: ''
+                                                      idea: ''
+                                                      bsnl: ''
+                                                      airtel: ''
+                                                      uninor: ''
+                  record_maintenance:
+                        weight: ''
+                        sub_parameters:
+                              records:
+                                    weight: ''
+                                    questions:
+                                          How do you maintain operational records for this home-stay?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      traditional book keeping: ''
+                                                      digital records- using computer/mobile: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the home-stay gets support from government agencies (not for customers)?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      support via schemes: ''
+                                                      insurance support: ''
+                                                      others: ''
+                                                      support via subsidies: ''
+                                                      technical support: ''
+                                                      financial support: ''
+                                                      nil: ''
+                  digital_technologies:
+                        weight: ''
+                        sub_parameters:
+                              awareness:
+                                    weight: ''
+                                    questions:
+                                          Are you using any digital tools for your operations for this home-stay?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+      specific:
+            weight: ''
+            variables:
+                  basic_info:
+                        weight: ''
+                        sub_parameters:
+                              number_single_rooms:
+                                    weight: ''
+                                    questions:
+                                          How many single-rooms are available for guests?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              number_shared_rooms:
+                                    weight: ''
+                                    questions:
+                                          How many shared-rooms are available for guests?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              number_customers:
+                                    weight: ''
+                                    questions:
+                                          How many people do you host on an average per month?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              maximum_capacity:
+                                    weight: ''
+                                    questions:
+                                          How many guests can you accommodate at a time at maximum?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              fees_charged:
+                                    weight: ''
+                                    questions:
+                                          What is the average amount charged for a day's booking for a single room?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  potential:
+                        weight: ''
+                        sub_parameters:
+                              traction:
+                                    weight: ''
+                                    questions:
+                                          What is the best time for tourist to come to the home-stays?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      october: ''
+                                                      march: ''
+                                                      june: ''
+                                                      november: ''
+                                                      december: ''
+                                                      january: ''
+                                                      august: ''
+                                                      may: ''
+                                                      february: ''
+                                                      july: ''
+                                                      september: ''
+                                                      aprill: ''
+                  services:
+                        weight: ''
+                        sub_parameters:
+                              food:
+                                    weight: ''
+                                    questions:
+                                          What type of food is served?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      both: ''
+                  accessibiltiy:
+                        weight: ''
+                        sub_parameters:
+                              means_of_transportation:
+                                    weight: ''
+                                    questions:
+                                          How do tourists commute to the home-stay?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      bus\/ sumo facilities nearby: ''
+                                                      others: ''
+                                                      private cab services booked by themselves: ''
+                                                      pvt cars: ''
+                                                      cab service provide by your home-stay: ''
+                  marketing_and_advertisement:
+                        weight: ''
+                        sub_parameters:
+                              online_portal:
+                                    weight: ''
+                                    questions:
+                                          Which online portal(s) are you registered with?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      booking sites: ''
+                                                      others: ''
+                                                      word of mouth from former customers: ''
+                                                      advertising by the tourism dept: ''
+                                                      newspaper advertisements: ''
+                                                      display boards in and around the site: ''
+                                                      online portals and articles: ''
+                              means_of_advertisement1:
+                                    weight: ''
+                                    questions:
+                                          How is the home-stay advertised to prospective visitors?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      booking sites: ''
+                                                      others: ''
+                                                      word of mouth from former customers: ''
+                                                      advertising by the tourism dept: ''
+                                                      newspaper advertisements: ''
+                                                      display boards in and around the site: ''
+                                                      online portals and articles: ''
+                              tracking:
+                                    weight: ''
+                                    questions:
+                                          Are you asking your customers how they got to know about your place?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                              customer_relations:
+                                    weight: ''
+                                    questions:
+                                          How do you maintain relations with your existing customers?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      through social media: ''
+                                                      text messages: ''
+                                                      emails: ''
+                                                      phone calls: ''
+                  business_specific:
+                        weight: ''
+                        sub_parameters:
+                              renenue_generated:
+                                    weight: ''
+                                    questions:
+                                          What is the total monthly revenue generated?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              operations_cost:
+                                    weight: ''
+                                    questions:
+                                          What is the monthly operations cost of the home-stay?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  experience:
+                        weight: ''
+                        sub_parameters:
+                              specialities:
+                                    weight: ''
+                                    questions:
+                                          Which of these experiences does your home-stay offer to the tourist?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none of the above: ''
+                                                      local song and dance performance: ''
+                                                      traditional food and beverages: ''
+                                                      village tour: ''
+                                                      experience of weaving: ''
+                                                      interaction with communities: ''
+                              community_involvement:
+                                    weight: ''
+                                    questions:
+                                          How many people from the community are involved in the running of the home-stay?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''

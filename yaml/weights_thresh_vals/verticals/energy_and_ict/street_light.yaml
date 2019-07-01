@@ -1,0 +1,100 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road: ''
+                                                      kacha road: ''
+                                                      pakka road with block point: ''
+                                                      footway: ''
+                                                      kacha road with block point: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      2g reliable: ''
+                                                      3g reliable: ''
+                                                      2g unreliable: ''
+                                                      4g unreliable: ''
+                                                      3g unreliable: ''
+                                                      4g+ reliable: ''
+      general:
+            weight: ''
+            variables:
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      jio: ''
+                                                      airtel: ''
+                                                      bsnl: ''
+                                                      vodafone: ''
+                                                      idea: ''
+                                                      others: ''
+      specific:
+            weight: ''
+            variables:
+                  X1:
+                        weight: ''
+                        sub_parameters:
+                              y1:
+                                    weight: ''
+                                    questions:
+                                          How far is this street light from the nearest substation or transformer ?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X2:
+                        weight: ''
+                        sub_parameters:
+                              y2:
+                                    weight: ''
+                                    questions:
+                                          Which type of street light is this?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      on-grid: ''
+                                                      off- grid: ''
+                  X3:
+                        weight: ''
+                        sub_parameters:
+                              y3:
+                                    weight: ''
+                                    questions:
+                                          What is the system of street lights used?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      solar: ''
+                                                      traditional: ''
+                  X4:
+                        weight: ''
+                        sub_parameters:
+                              y4:
+                                    weight: ''
+                                    questions:
+                                          Has the street light been installed with the help of APEDA ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''

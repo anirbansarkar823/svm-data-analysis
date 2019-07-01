@@ -1,0 +1,288 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              access:
+                                    weight: ''
+                                    questions:
+                                          How many times did you go there until it was open?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the LPG Dealer/Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      kacha road: ''
+                                                      pakka road: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel from this LPG Dealer/Shop to avail public transport facility? (in K.M):
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the LPG Dealer/Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      2g reliable: ''
+                                                      4g+ reliable: ''
+                                                      3g reliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of this LPG Dealer/Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka/permenant(steel,concrete,etc.,): ''
+                                                      kacha/temporary(wood,bamboo,etc.,): ''
+      general:
+            weight: ''
+            variables:
+                  availability:
+                        weight: ''
+                        sub_parameters:
+                              working_hours:
+                                    weight: ''
+                                    questions:
+                                          What are the working hours of this LPG Dealer/Shop?:
+                                                weight: ''
+                                                format: time
+                                                threshold: ''
+                              working_days:
+                                    weight: ''
+                                    questions:
+                                          What are the working days of that LPG Dealer/Shop?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      wednesday: ''
+                                                      tuesday: ''
+                                                      friday: ''
+                                                      saturday: ''
+                                                      sunday: ''
+                                                      monday: ''
+                                                      thusday: ''
+                  employability:
+                        weight: ''
+                        sub_parameters:
+                              technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many people are working in the LPG Dealer/Shop?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  water:
+                        weight: ''
+                        sub_parameters:
+                              drinking_water:
+                                    weight: ''
+                                    questions:
+                                          Where do you get drinking water from for using at this LPG Dealer/Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      tap water from government: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              toilets:
+                                    weight: ''
+                                    questions:
+                                          Are there toilets available for public usage at this LPG Dealer/Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          How do you deal with the waste generated from that LPG Dealer/Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      burnt within the premises: ''
+                                                      none: ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of this LPG Dealer/Shop cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                                          How frequently are the premises at this LPG Dealer/Shop cleaned with disinfectant in a week?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      more than 7 times: ''
+                                                      '7': ''
+                                                      '1': ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply for this LPG Dealer/Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available for that LPG Dealer/Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      invertor: ''
+                                                      others: ''
+                                                      none: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              telephone:
+                                    weight: ''
+                                    questions:
+                                          Is there landline connectivity for that LPG Dealer/Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              broadband:
+                                    weight: ''
+                                    questions:
+                                          Does this LPG Dealer/Shop have wired internet connection?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this LPG Dealer/Shop?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      jio: ''
+                                                      airtel: ''
+                                                      vodafone: ''
+                                                      bsnl: ''
+                  record_maintenance:
+                        weight: ''
+                        sub_parameters:
+                              records:
+                                    weight: ''
+                                    questions:
+                                          How do you maintain records for this LPG Dealer/Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      traditional book keeping: ''
+                                                      digital records-online: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the LPG Dealer/Shop gets support from government agencies?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      financial support: ''
+                                                      none: ''
+                  ngo_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          Do you get any support from NGO(s) for this LPG Dealer/Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  digital_technologies:
+                        weight: ''
+                        sub_parameters:
+                              awareness:
+                                    weight: ''
+                                    questions:
+                                          Are you using any digital technologies that can be used in the LPG Dealer/Shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+      specific:
+            weight: ''
+            variables:
+                  transportation:
+                        weight: ''
+                        sub_parameters:
+                              servicesH:
+                                    weight: ''
+                                    questions:
+                                          Is Home delivery service available?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                              servicesT:
+                                    weight: ''
+                                    questions:
+                                          Is there Telephone booking facility available?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  emergency_tools:
+                        weight: ''
+                        sub_parameters:
+                              maintenance:
+                                    weight: ''
+                                    questions:
+                                          Is there any fire equipment in the centre?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  X:
+                        weight: ''
+                        sub_parameters:
+                              employment:
+                                    weight: ''
+                                    questions:
+                                          Are the Employees sufficient in the shop?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''

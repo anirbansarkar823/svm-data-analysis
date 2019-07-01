@@ -1,0 +1,101 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road with block point: ''
+                                                      kacha road with block point: ''
+                                                      pakka road: ''
+                                                      footway: ''
+                                                      kacha road: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      3g unreliable: ''
+                                                      2g reliable: ''
+                                                      nil: ''
+                                                      4g reliable: ''
+                                                      4g unreliable: ''
+                                                      2g unreliable: ''
+                                                      3g reliable: ''
+      general:
+            weight: ''
+            variables:
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      bsnl: ''
+                                                      idea: ''
+                                                      others: ''
+                                                      airtel: ''
+                                                      jio: ''
+                                                      vodafone: ''
+      specific:
+            weight: ''
+            variables:
+                  X1:
+                        weight: ''
+                        sub_parameters:
+                              y1:
+                                    weight: ''
+                                    questions:
+                                          Does this electricity pole also have telephone lines ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                              y2:
+                                    weight: ''
+                                    questions:
+                                          What is the electricity pole made of ?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      rail: ''
+                                                      bamboo: ''
+                                                      steel: ''
+                                                      concrete: ''
+                  X2:
+                        weight: ''
+                        sub_parameters:
+                              y1:
+                                    weight: ''
+                                    questions:
+                                          What is the frequency of maintenance or safety audit ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      irregular: ''
+                                                      yearly: ''
+                                                      others: ''
+                                                      monthly: ''
+                              y2:
+                                    weight: ''
+                                    questions:
+                                          Are the wires insulated ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
