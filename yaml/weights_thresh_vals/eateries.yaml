@@ -1,0 +1,312 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the home-stay?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      kaccha road: ''
+                                                      pakka road: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel from this asset to avail public transport facility?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the home-stay?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      4g unreliable: ''
+                                                      4g reliable: ''
+                                                      3g unreliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of this home-stay?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      kacha/temporary(wood,bamboo,etc.,): ''
+                                                      pakka/permenant(steel,concrete,etc.,): ''
+      general:
+            weight: ''
+            variables:
+                  employability:
+                        weight: ''
+                        sub_parameters:
+                              staff:
+                                    weight: ''
+                                    questions:
+                                          How many staff are employed in/for that asset?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  water:
+                        weight: ''
+                        sub_parameters:
+                              drinking_water:
+                                    weight: ''
+                                    questions:
+                                          Where do you get drinking water from for using at this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      tap water from government: ''
+                              water_for_operational_purposes:
+                                    weight: ''
+                                    questions:
+                                          Where do you get water for operational purposes for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      water from government: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              toilets:
+                                    weight: ''
+                                    questions:
+                                          Are there toilets available for guests and employees' usage at the eatery?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of this home-stay cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  waste:
+                        weight: ''
+                        sub_parameters:
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          How do you deal with the waste generated in the eatery?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      discarded in govt. designated sites: ''
+                                                      discarded in water bodies: ''
+                                                      others: ''
+                                                      burnt within the premises: ''
+                                                      discarded in open field: ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      invertor: ''
+                                                      none: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              telephone:
+                                    weight: ''
+                                    questions:
+                                          Is there landline connectivity for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              broadband:
+                                    weight: ''
+                                    questions:
+                                          Does this asset have wired internet connection?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      jio: ''
+                                                      airtel: ''
+                                                      vodafone: ''
+                                                      others: ''
+                                                      bsnl: ''
+                                                      idea: ''
+                  record_maintenance:
+                        weight: ''
+                        sub_parameters:
+                              records:
+                                    weight: ''
+                                    questions:
+                                          How do you maintain operational records for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      traditional book keeping: ''
+                  digital_technologies:
+                        weight: ''
+                        sub_parameters:
+                              awareness:
+                                    weight: ''
+                                    questions:
+                                          Are you using any digital tools for your operations for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+      specific:
+            weight: ''
+            variables:
+                  basic_info:
+                        weight: ''
+                        sub_parameters:
+                              description:
+                                    weight: ''
+                                    questions:
+                                          Select the category applicable:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      home cooked-food shop: ''
+                                                      restaurant: ''
+                                                      others: ''
+                                                      tea or coffee shop: ''
+                              seating_capacity:
+                                    weight: ''
+                                    questions:
+                                          What is the seating capacity in your restaurant/ shop?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              speciality:
+                                    weight: ''
+                                    questions:
+                                          Which types of food is served?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      indian cuisine: ''
+                                                      others: ''
+                                                      fast-food: ''
+                                                      chinese cuisine: ''
+                                                      tribal food: ''
+                              range_of_food:
+                                    weight: ''
+                                    questions:
+                                          Which of the following is served?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      both: ''
+                                                      vegetarian: ''
+                                                      non-vegetarian: ''
+                  strength_capacity:
+                        weight: ''
+                        sub_parameters:
+                              customers:
+                                    weight: ''
+                                    questions:
+                                          How many customers does the place serve per day?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  payment:
+                        weight: ''
+                        sub_parameters:
+                              mode_of_payment:
+                                    weight: ''
+                                    questions:
+                                          Which of the following modes of payment do you accept?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      cash payment: ''
+                  facilities:
+                        weight: ''
+                        sub_parameters:
+                              home_delivery:
+                                    weight: ''
+                                    questions:
+                                          Do you offer home-delivery services?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  cold_storage:
+                        weight: ''
+                        sub_parameters:
+                              cold_storage:
+                                    weight: ''
+                                    questions:
+                                          Are you processing perishable goods?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  marketing_and_advertisement:
+                        weight: ''
+                        sub_parameters:
+                              presence_online:
+                                    weight: ''
+                                    questions:
+                                          Which online portal are you registered with?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      not registered with online portals: ''
+                              means_of_advertisement1:
+                                    weight: ''
+                                    questions:
+                                          How is the eatery advertised to prospective visitors?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none of the above: ''
+                                                      display boards in and around the site: ''
+                                                      word of mouth from former customers: ''
+                              tracking:
+                                    weight: ''
+                                    questions:
+                                          Are you asking your customers how they got to know about your place?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
