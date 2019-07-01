@@ -1,0 +1,137 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  access:
+                        How many times did you go there until it was open?:
+                              format: number
+                  road_connectivity:
+                        What is the type of the road available to the SHG office?:
+                              format: normal_string
+                  public_transport:
+                        How much distance should one travel from this SHG office to avail public transport facility? (in K.M):
+                              format: number
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the SHG office?:
+                              format: normal_string
+            infrastructure:
+                  building_type:
+                        What is the type of structure of this SHG office?:
+                              format: normal_string
+                  security:
+                        What is the type of security available for the asset?:
+                              format: multi_select
+      general:
+            availability:
+                  working_hours:
+                        'What are the working hours of this SHG office?(Ex: 9.00A.M-5.A.M)':
+                              format: time
+                  working_days:
+                        What are the working days of that SHG office?:
+                              format: multi_select
+            employability:
+                  staff:
+                        How many people are working in the SHG office?:
+                              format: number
+            water:
+                  drinking_water:
+                        Where do you get drinking water from for using at this SHG office?:
+                              format: normal_string
+            sanitation:
+                  toilets:
+                        Are there toilets available for public usage at this SHG office?:
+                              format: normal_string
+                  waste_management:
+                        How do you deal with the waste generated from that SHG office?:
+                              format: normal_string
+                  general_cleanliness:
+                        Are the premises of this SHG office cleaned with disinfectant regularly?:
+                              format: normal_string
+            energy:
+                  electricity:
+                        Do you have grid connection for energy supply for this asset?:
+                              format: normal_string
+            alternate_energy:
+                  alternate_energy:
+                        What is the alternative energy source available for that SHG office?:
+                              format: normal_string
+            communication:
+                  telephone:
+                        Is there landline connectivity for that SHG office?:
+                              format: normal_string
+                  broadband:
+                        Does this SHG office have wired internet connection?:
+                              format: normal_string
+                  mobile:
+                        What are different Mobile network service providers available at the location of this SHG office?:
+                              format: multi_select
+            record_maintenance:
+                  records:
+                        How do you maintain records for this SHG office?:
+                              format: normal_string
+            govt_support:
+                  support:
+                        What are the areas the SHG office gets support from government agencies?:
+                              format: multi_select
+            ngo_support:
+                  support:
+                        Do you get any support from NGO(s) for this SHG office?:
+                              format: normal_string
+            digital_technologies:
+                  awareness:
+                        Are you using digital technologies that can be used in the SHG office?:
+                              format: normal_string
+      specific:
+            availability:
+                  meeting:
+                        How frequently is the meeting conducted?:
+                              format: normal_string
+            employability:
+                  group_type:
+                        What type of the Group is engaged in the SHG?:
+                              format: normal_string
+                  group_size:
+                        How many people are enrolled in the SHG?:
+                              format: number
+            efficiency:
+                  savings_frequency:
+                        Indicate the frequency of meetings happened for money collection?:
+                              format: normal_string
+                  fund_potential:
+                        Indicate the amount of money collected from every member per meeting?:
+                              format: number
+                        Indicate the total amount received by the SHG till today?:
+                              format: number
+                  credit_utilization:
+                        What are the purposes of Credit Utilization?:
+                              format: multi_select
+                  roi:
+                        Did the SHG lend money to other non group entities?:
+                              format: normal_string
+            ngo_support:
+                  support:
+                        Name the organization, which promoted the SHG?:
+                              format: normal_string
+            marketing:
+                  advertisement:
+                        How does this asset advertise about the services available?:
+                              format: multi_select
+            activity:
+                  intervention_area:
+                        What types of intervention/social action programmes/activities/awareness taken up by SHG?:
+                              format: multi_select
+            govt_certification1:
+                  policy:
+                        Is that SHG also registered under any other legal provisions?:
+                              format: normal_string
+            govt_certification2:
+                  policy:
+                        Whether the SHG is affiliated to any of the following?:
+                              format: normal_string

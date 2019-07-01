@@ -1,0 +1,140 @@
+#livelihood
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:
+                        access:
+                                start: 15      
+                                end: 16      
+                        road_connectivity:
+                                start: 16       
+                                end: 17     
+                        public_transport:
+                                start: 17     
+                                end: 18        
+                        mobile_connectivity:
+                                start: 18    
+                                end: 19    
+                infrastructure:
+                         building_type: 
+                                start: 25  
+                                end: 26  
+                         security:
+                                start: 26    
+                                end: 27    
+        general:
+                availability:
+                        working_hours: 
+                                start: 27     
+                                end: 28  
+                        working_days:
+                                start: 28    
+                                end: 29  
+                employability:
+                        staff:
+                                start: 29    
+                                end: 30
+                water:
+                        drinking_water:
+                                start: 30   
+                                end: 31
+                sanitation:
+                        toilets:
+                                start: 32    
+                                end: 33    
+                        waste_management:
+                                start: 36    
+                                end: 37
+                        general_cleanliness:
+                                start: 38
+                                end: 39
+                energy:
+                        electricity:
+                                start: 40  
+                                end: 41    
+                alternate_energy:
+                        alternate_energy:  
+                                start: 42     
+                                end: 43  
+                communication:
+                        telephone:
+                                start: 49    
+                                end: 50     
+                        broadband:
+                                start: 51    
+                                end: 52    
+                        mobile:
+                                start: 19   
+                                end: 20
+                record_maintenance:
+                        records:
+                                start: 53    
+                                end: 54  
+                govt_support:
+                        support:
+                                start: 55    
+                                end: 56
+                ngo_support:
+                        support:
+                                start: 56
+                                end: 57
+                digital_technologies:
+                        awareness:
+                                start: 58   
+                                end: 59
+        specific:
+                availability:
+                        meeting:
+                                start: 61
+                                end: 62
+                employability:
+                        group_type:
+                                start: 62
+                                end: 63
+                        group_size:
+                                start: 63
+                                end: 64
+                efficiency:
+                        savings_frequency:
+                                start: 64
+                                end: 65
+                        fund_potential:
+                                start: 65
+                                end: 67
+                        credit_utilization:
+                                start: 67
+                                end: 68
+                        roi:
+                                start: 68
+                                end: 69
+                ngo_support:
+                        support:
+                                start: 70
+                                end: 71
+                marketing:
+                        advertisement:
+                                start: 72
+                                end: 73
+                activity:
+                        intervention_area:
+                                start: 73
+                                end: 74
+                govt_certification1:
+                        policy:
+                                start: 74
+                                end: 75
+                govt_certification2:
+                        policy: 
+                                start: 76
+                                end: 77
