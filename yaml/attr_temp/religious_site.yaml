@@ -1,0 +1,102 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  access:
+                        How many times did you go there until it was open?:
+                              format: number
+                  road_connectivity:
+                        What is the type of the road available to the asset?:
+                              format: multi_select
+                  public_transport:
+                        How much distance should one travel from this asset to avail public transport facility?:
+                              format: number
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the asset?:
+                              format: normal_string
+            infrastructure:
+                  building_type:
+                        What is the type of structure of this asset?:
+                              format: normal_string
+                  security:
+                        What is the type of security available for the asset?:
+                              format: multi_select
+      general:
+            availability:
+                  working_hours:
+                        What are the working hours of this asset?:
+                              format: time
+                  working_days:
+                        What are the working days of that asset?:
+                              format: multi_select
+            water:
+                  drinking_water:
+                        Where do you get drinking water from for using at this asset?:
+                              format: normal_string
+                  water_for_operational_purposes:
+                        Where do you get water for operational purposes for this asset?:
+                              format: normal_string
+            sanitation:
+                  toilets:
+                        Are there toilets available for public and employees usage at this asset?:
+                              format: normal_string
+                  waste_management:
+                        How do you deal with the waste generated from that asset?:
+                              format: normal_string
+                  general_cleanliness:
+                        Are the premises of this asset cleaned with disinfectant regularly?:
+                              format: normal_string
+            energy:
+                  electricity:
+                        Do you have grid connection for energy supply for this asset?:
+                              format: normal_string
+            alternate_energy:
+                  alternate_energy:
+                        What is the alternative energy source available for that asset?:
+                              format: normal_string
+            communication:
+                  telephone:
+                        Is there landline connectivity for that asset?:
+                              format: normal_string
+                  mobile:
+                        What are different Mobile network service providers available at the location of this asset?:
+                              format: multi_select
+            digital_technologies:
+                  awareness:
+                        Are you using digital tools for your operations for this asset?:
+                              format: normal_string
+      specific:
+            basic_info:
+                  description:
+                        Which of the following religious structure is it?:
+                              format: normal_string
+                  year_of_establishment:
+                        On which year was the structure established?:
+                              format: number
+            footfall:
+                  footfall:
+                        What is the average footfall in a week?:
+                              format: number
+            potential:
+                  traction:
+                        What is the maximum footfall during these religious festivals ?:
+                              format: number
+            facilities:
+                  physical_structure:
+                        Which of the following does the compound have?:
+                              format: multi_select
+            community_involvement:
+                  community_involvement:
+                        Describe the involvement of the local community in running and management of the site?:
+                              format: normal_string
+            inclusiveness:
+                  provisions_for_the_handicapped:
+                        What are the provisions available for the differently abled?:
+                              format: normal_string
