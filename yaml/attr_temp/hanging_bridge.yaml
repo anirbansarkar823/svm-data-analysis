@@ -1,0 +1,49 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  road_connectivity:
+                        What is the type of the road available to the asset?:
+                              format: normal_string
+                  public_transport:
+                        How much distance should one travel from this asset to avail public transport facility?:
+                              format: number
+            potential:
+                  structure:
+                        Which of the following materials is the bridge made up of?:
+                              format: multi_select
+      specific:
+            basics:
+                  construction_year:
+                        In which year was the bridge built?:
+                              format: number
+            maintenance:
+                  last_maintenance:
+                        When was the last technical maintenance and audit for the bridge?:
+                              format: normal_string
+            utility:
+                  capacity1:
+                        What is the length of the bridge ?:
+                              format: normal_string
+                  capacity2:
+                        What is the maximum height the bridge is above the ground?:
+                              format: number
+                  capacity3:
+                        What is the maximum load that the bridge can support at a time?:
+                              format: number
+                  capacity5:
+                        Which of the following can the bridge support?:
+                              format: multi_select
+                  purpose1:
+                        What kind of connectivity is the bridge utilized for?:
+                              format: normal_string
+                  purpose2:
+                        Is the bridge the sole means of transportation between the two end points?:
+                              format: normal_string

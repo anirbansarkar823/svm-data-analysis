@@ -1,0 +1,121 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      footway: ''
+                                                      pakka road: ''
+                                                      kaccha road: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel from this asset to avail public transport facility?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  potential:
+                        weight: ''
+                        sub_parameters:
+                              structure:
+                                    weight: ''
+                                    questions:
+                                          Which of the following materials is the bridge made up of?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      others: ''
+                                                      bamboo or wood: ''
+                                                      iron and steel: ''
+                                                      ropes: ''
+      specific:
+            weight: ''
+            variables:
+                  basics:
+                        weight: ''
+                        sub_parameters:
+                              construction_year:
+                                    weight: ''
+                                    questions:
+                                          In which year was the bridge built?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  maintenance:
+                        weight: ''
+                        sub_parameters:
+                              last_maintenance:
+                                    weight: ''
+                                    questions:
+                                          When was the last technical maintenance and audit for the bridge?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      8-12 months: ''
+                                                      20-24 months: ''
+                                                      16-20 months: ''
+                                                      12-16 months: ''
+                                                      more than 2 years: ''
+                                                      0-4 months: ''
+                  utility:
+                        weight: ''
+                        sub_parameters:
+                              capacity1:
+                                    weight: ''
+                                    questions:
+                                          What is the length of the bridge ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      100-200m: ''
+                                                      200-300m: ''
+                                                      0-100m: ''
+                              capacity2:
+                                    weight: ''
+                                    questions:
+                                          What is the maximum height the bridge is above the ground?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              capacity3:
+                                    weight: ''
+                                    questions:
+                                          What is the maximum load that the bridge can support at a time?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              capacity5:
+                                    weight: ''
+                                    questions:
+                                          Which of the following can the bridge support?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      two wheelers: ''
+                                                      individual persons only: ''
+                              purpose1:
+                                    weight: ''
+                                    questions:
+                                          What kind of connectivity is the bridge utilized for?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      inter-village: ''
+                                                      intra-village: ''
+                              purpose2:
+                                    weight: ''
+                                    questions:
+                                          Is the bridge the sole means of transportation between the two end points?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''

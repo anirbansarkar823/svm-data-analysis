@@ -1,0 +1,324 @@
+times_visited_before_open:
+  question: How many times did you go there until it was open?
+  threshold: ''
+  weight: ''
+type_road_available_to_asset:
+  question: What is the type of the road available to the asset?
+  values:
+    kacha road with block point: ''
+    kacha road: ''
+    pakka road: ''
+    footway: ''
+  weight: ''
+distance_travelled_to_avail_public_transport_in_km:
+  question: How much distance should one travel to avail public transport facility?
+    (in K.M)
+  threshold: ''
+  weight: ''
+type_of_mobile_network_available:
+  question: What is the type of the mobile network available at the asset?
+  values:
+    4g u n r e l i a b l e: ''
+    4g r e l i a b l e: ''
+    2g r e l i a b l e: ''
+    3g r e l i a b l e: ''
+    n o n e: ''
+    2g u n r e l i a b l e: ''
+    3g u n r e l i a b l e: ''
+  weight: ''
+mobile_network_service_providers_available:
+  question: What are different Mobile network service providers available at the location
+    of this asset?
+  values:
+    vodafone: ''
+    airtel: ''
+    jio: ''
+    bsnl: ''
+  weight: ''
+type_of_structure_of_asset:
+  question: What is the type of structure of this asset?
+  values:
+    kacha temporary wood bamboo etc: ''
+    pakka permanent steel concrete etc: ''
+  weight: ''
+type_of_security_available:
+  question: What is the type of security available for the asset?
+  values:
+    compound wall\/fencing: ''
+    watchman: ''
+    others: ''
+    none: ''
+  weight: ''
+working_hours_of_facility:
+  question: 'What are the working hours of the facility?(Ex: 9.00A.M-5:00P.M)'
+  threshold: ''
+  weight: ''
+working_days_of_facility:
+  question: What are the working days of the facility?
+  values:
+    tuesday: ''
+    thursday: ''
+    sunday: ''
+    monday: ''
+    saturday: ''
+    friday: ''
+    wednesday: ''
+  weight: ''
+no_of_teachers_employed_in_facility:
+  question: How many teachers are employed in the facility?
+  threshold: ''
+  weight: ''
+no_of_support_staff_employed_in_facility:
+  question: How many support staff are employed in the facility?
+  threshold: ''
+  weight: ''
+drinking_water_source:
+  question: Where do you get drinking water from?
+  values:
+    ground water: ''
+    bottled water: ''
+    others: ''
+    tap water from government: ''
+  weight: ''
+cost_per_litre_bottled_water_in_rupees:
+  question: How much do you pay per litre of bottled water? (In Rupees)
+  threshold: ''
+  weight: ''
+toilets_available_for_public:
+  question: Are there toilets available for public usage?
+  values:
+    'Yes': ''
+    'No': ''
+  weight: ''
+toilets_available_separately_per_gender:
+  question: Are there toilets available separately as per gender?
+  values:
+    'Yes': ''
+    'No': ''
+  weight: ''
+running_water_available_in_toilets:
+  question: Is there running water available in the toilets at this asset?
+  values:
+    'Yes': ''
+    'No': ''
+  weight: ''
+soap_for_handwash_available:
+  question: Is there soap for handwash available at this asset?
+  values:
+    'Yes': ''
+    'No': ''
+  weight: ''
+facility_waste_management:
+  question: How do you deal with the waste generated from the facility?
+  values:
+    burnt within the premises: ''
+    discarded in water bodies: ''
+    none: ''
+    discarded in open field: ''
+    discarded in govt designated sites: ''
+  weight: ''
+premises_cleaned_with_disinfectant_regularly:
+  question: Are the premises cleaned with disinfectant regularly?
+  values:
+    'Yes': ''
+    'No': ''
+  weight: ''
+frequency_cleaning_with_disinfectant_per_week:
+  question: How frequently are the premises cleaned with disinfectant in a week?
+  threshold: ''
+  weight: ''
+grid_connection_for_energy_supply:
+  question: Do you have grid connection for energy supply?
+  values:
+    'Yes': ''
+    'No': ''
+  weight: ''
+hours_per_day_with_power_cuts:
+  question: How many hours per day are you facing power cuts?
+  threshold: ''
+  weight: ''
+alternative_energy_source_available:
+  question: What is the alternative energy source available in the facility?
+  values:
+    None: ''
+    Others: ''
+    Solar Unit: ''
+  weight: ''
+alternative_energy_source_per_day_in_hours:
+  question: How many hours do you rely on the alternative energy source in a day?
+  threshold: ''
+  weight: ''
+maintain_records_for_operations:
+  question: How do you maintain records for operations?
+  values:
+    record is not maintained: ''
+    traditional book: ''
+    others: ''
+  weight: ''
+areas_getting_support_from_govt_agencies_facility:
+  question: What are the areas you get support from government agencies for the facility?
+  values:
+    financial support: ''
+    others: ''
+    technical support: ''
+    none: ''
+    transport support: ''
+  weight: ''
+areas_getting_support_from_govt_agencies_students:
+  question: What are the areas you get support from government agencies for your students?
+  values:
+    financial support: ''
+    others: ''
+    technical support: ''
+    none: ''
+    transportation support: ''
+  weight: ''
+textbooks_source_for_children:
+  question: Where do you gets textbooks for the children?
+  values:
+    government agency: ''
+    supplier in other states: ''
+    local supplier: ''
+    none: ''
+  weight: ''
+total_campus_area:
+  question: What is the total campus area?
+  threshold: ''
+  weight: ''
+curriculum_for_classes:
+  question: Where do you get the curriculum for classes and educational programs?
+  values:
+    government agency: ''
+    self created: ''
+    others: ''
+    supplier in other states: ''
+    local supplier: ''
+  weight: ''
+digital_tools_for_teaching:
+  question: Are you using digital tools for teaching?
+  values:
+    'No': ''
+  weight: ''
+purpose_digital_teaching:
+  question: For what purpose are you using these?
+  threshold: ''
+  weight: ''
+checkups_or_medical_facilities_available:
+  question: Are there checkups or medical facilities available?
+  values:
+    'Yes': ''
+    'No': ''
+  weight: ''
+frequency_of_checkups:
+  question: What is the frequency of these checkups?
+  values:
+    atleast once in three month: ''
+    atleast once a six month: ''
+    not fixed: ''
+    once a year: ''
+    atleast once a month: ''
+  weight: ''
+any_meals_served:
+  question: Are there any meals served?
+  values:
+    'Yes': ''
+    'No': ''
+  weight: ''
+nutritional_value_monitored:
+  question: Is the nutritional value monitored?
+  values:
+    'Yes': ''
+    'No': ''
+  weight: ''
+recreation_and_playing_material_kids:
+  question: Is there presence of any recreational/playing material for the kids?
+  values:
+    'Yes': ''
+    'No': ''
+  weight: ''
+kind_residential_facilities:
+  question: What kind of residential facilities are available?
+  values:
+    dormitories: ''
+    off site residential areas: ''
+    none: ''
+  weight: ''
+classrooms_count:
+  question: How many classrooms are there in the institute ?
+  threshold: ''
+  weight: ''
+student_enrolled:
+  question: How many people are enrolled or are students at this asset?
+  threshold: ''
+  weight: ''
+co-curricular_activities_for_students:
+  question: Apart from academics what are the co-curricular activities available for
+    students ?
+  values:
+    dance: ''
+    art: ''
+    others: ''
+    sports: ''
+  weight: ''
+percentage_drop_outs:
+  question: What is the percentage of drop-outs?
+  values:
+    '>40%': ''
+    0-10%: ''
+    10-20%: ''
+    20-40%: ''
+  weight: ''
+reason_dropouts:
+  question: What is the reason for dropouts?
+  values:
+    lack of awareness: ''
+    parallel studies: ''
+    easy money: ''
+    others: ''
+    accessibility: ''
+    health issues: ''
+  weight: ''
+disaster_management_courses_or_drills:
+  question: Are there any disaster management courses or drills practice at the institute?
+  values:
+    'Yes': ''
+    'No': ''
+  weight: ''
+no_of_women_served:
+  question: To how many women is this institution providing services?
+  values:
+    11-20: ''
+    6-10: ''
+    21-40: ''
+    0-5: ''
+  weight: ''
+buses_to_asset:
+  question: How many buses go to this asset?
+  values:
+    '0': ''
+    '1': ''
+  weight: ''
+timely_supplies_of_govt_goods:
+  question: Do the centers get timely supplies of the government goods?
+  values:
+    'Yes': ''
+    'No': ''
+  weight: ''
+source_of_supplies:
+  question: What is the source of the supplies?
+  values:
+    ? ''
+    : ''
+    ngos: ''
+    government: ''
+    communities: ''
+  weight: ''
+materials_the_govt_is_providing_fund:
+  question: For what all materials the government is providing fund ?
+  values:
+    other: ''
+    food: ''
+    travel: ''
+    books: ''
+    uniform: ''
+  weight: ''
