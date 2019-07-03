@@ -1,3 +1,4 @@
+ques_start_index: 8
 sections:
       observation:
             weight: 30
@@ -30,7 +31,7 @@ sections:
                                           How much distance should one travel to avail public transport facility? (in K.M):
                                                 weight: 100
                                                 format: number
-                                                threshold: 5km
+                                                threshold: '0#5'
                               school_buses:
                                     weight: 10
                                     questions:
@@ -73,7 +74,7 @@ sections:
                                           What is the total campus area?:
                                                 weight: 100
                                                 format: number
-                                                threshold: 2acres
+                                                threshold: 2
       general:
             weight: 30
             variables:
@@ -86,7 +87,7 @@ sections:
                                           What are the working hours of the facility?:
                                                 weight: 100
                                                 format: time
-                                                threshold: 5hours
+                                                threshold: 300
                               working_days:
                                     weight: 50
                                     questions:
@@ -136,7 +137,7 @@ sections:
                                           How much do you pay per litre of bottled water? (In Rupees):
                                                 weight: 10
                                                 format: number
-                                                threshold: 0
+                                                threshold: '0#20'
                   sanitation:
                         weight: 10
                         sub_parameters:
@@ -147,8 +148,8 @@ sections:
                                                 weight: 0
                                                 format: normal_string
                                                 values:
-                                                      'yes': 0
-                                                      'no': 1
+                                                      'yes': 1
+                                                      'no': 0
                                           Are there toilets available separately as per gender?:
                                                 weight: 40
                                                 format: normal_string
@@ -215,26 +216,7 @@ sections:
                                           How many hours per day are you facing power cuts?:
                                                 weight: 50
                                                 format: number
-                                                threshold: 5hours
-                  alternate_energy:
-                        weight: 0
-                        sub_parameters:
-                              alternate_energy:
-                                    weight: 0
-                                    questions:
-                                          What is the alternative energy source available in the facility?:
-                                                weight: 0
-                                                format: multi_select
-                                                values:
-                                                      invertor: 0
-                                                      diesel generator: 0
-                                                      kerosene generator: 0
-                                                      solar unit: 0
-                                                      bio mass unit: 0
-                                          How many hours do you rely on the alternative energy source in a day?:
-                                                weight: 0
-                                                format: number
-                                                threshold: 0
+                                                threshold: '0#5'
                   communication:
                         weight: 2
                         sub_parameters:
@@ -340,43 +322,6 @@ sections:
                                                 values:
                                                       'no': 0
                                                       'yes': 1
-                  health:
-                        weight: 0
-                        sub_parameters:
-                              checkups:
-                                    weight: 0
-                                    questions:
-                                          Are there checkups or medical facilities available?:
-                                                weight: 0
-                                                format: normal_string
-                                                values:
-                                                      'no': 1
-                                                      'yes': 0
-                                          What is the frequency of these checkups?:
-                                                weight: 0
-                                                format: normal_string
-                                                values:
-                                                      less than once a year: 0
-                                                      once in 0-3 months: 0
-                                                      once in 3-6 months: 0
-                                                      once in 6-9 months: 0
-                                                      once in 9-12months: 0
-                                                      not fixed: 0
-                              meals:
-                                    weight: 0
-                                    questions:
-                                          Are there any meals served?:
-                                                weight: 0
-                                                format: normal_string
-                                                values:
-                                                      'no': 1
-                                                      'yes': 0
-                                          Is the nutritional value monitored:
-                                                weight: 0
-                                                format: normal_string
-                                                values:
-                                                      'yes': 0
-                                                      'no': 1
                   facilities:
                         weight: 2
                         sub_parameters:
@@ -413,8 +358,8 @@ sections:
                                                 weight: 0
                                                 format: normal_string
                                                 values:
-                                                      'no': 1
-                                                      'yes': 0
+                                                      'no': 0
+                                                      'yes': 1
                               labs:
                                     weight: 20
                                     questions:
@@ -448,27 +393,6 @@ sections:
                                                 weight: 100
                                                 format: number
                                                 threshold: 100
-                              dropouts:
-                                    weight: 0
-                                    questions:
-                                          What is the percentage of drop-outs?:
-                                                weight: 0
-                                                format: normal_string
-                                                values:
-                                                      0-10%: 0
-                                                      10-20%: 0
-                                                      20-40%: 0
-                                                      '>40%': 0
-                                          What is the reason for dropouts?:
-                                                weight: 0
-                                                format: multi_select
-                                                values:
-                                                      others: 0
-                                                      health issues: 0
-                                                      parallel studies: 0
-                                                      easy money: 0
-                                                      lack of awareness: 0
-                                                      accessibility: 0
                   disaster_preparedness:
                         weight: 2
                         sub_parameters:
@@ -497,6 +421,7 @@ sections:
                                                       science: 1
                                                       math: 1
                                                       english: 1
+                                                      others: 1
                               fees:
                                     weight: 50
                                     questions:
