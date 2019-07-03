@@ -1,0 +1,149 @@
+#adventure sports: sheet7
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:
+                        access:
+                                start: 15      
+                                end: 16
+                        road_connectivity:
+                                start: 16       
+                                end: 17   
+                        public_transport:
+                                start: 17     
+                                end: 18       
+                        mobile_connectivity:
+                                start: 18  
+                                end: 19
+                potential:
+                        security:
+                                start: 25     
+                                end: 26  
+        general:
+                availability:
+                        working_hours: 
+                                start: 26     
+                                end: 27  
+                        working_days:
+                                start: 27    
+                                end: 28  
+                employability:
+                        technical_staff:
+                                start: 28     
+                                end: 29     
+                        not_technical_staff:
+                                start: 29    
+                                end: 30    
+                water:
+                        drinking_water:
+                                start: 30     
+                                end: 31
+                        water_for_operational_purposes:
+                                start: 32
+                                end: 33
+                sanitation:
+                        toilets:
+                                start: 34   
+                                end: 35  
+                        waste_management:
+                                start: 38    
+                                end: 39     
+                        general_cleanliness:
+                                start: 40    
+                                end: 41    
+                energy:
+                        electricity:
+                                start: 42    
+                                end: 43     
+                alternate_energy:
+                        alternate_energy:  
+                                start: 44     
+                                end: 45    
+                communication:
+                        telephone:
+                                start: 51    
+                                end: 52     
+                        broadband:
+                                start: 53    
+                                end: 54  
+                        mobile:
+                                start: 19    
+                                end: 20    
+                record_maintenance:
+                        records:
+                                start: 55   
+                                end: 56    
+                govt_support:
+                        support:
+                                start: 57    
+                                end: 58
+                ngo_support:
+                        support:
+                                start: 58
+                                end: 59
+                input:
+                        inputs:
+                                start: 60
+                                end: 61
+                marketing:
+                        advertisement:
+                                start: 62
+                                end: 63
+        specific:
+                basic_info:
+                        services:
+                                start: 63
+                                end: 64
+                        documentation:
+                                start: 66
+                                end: 67
+                        tourist_season:
+                                start: 67
+                                end: 68
+                facilities:
+                        physical_structure:
+                                start: 68
+                                end: 69
+                marketing_and_advertising:
+                        advertisement_means:
+                                start: 70
+                                end: 71
+                        online_portals:
+                                start: 72
+                                end: 73
+                partnerships:
+                        partneships:
+                                start: 69
+                                end: 70
+                X1:
+                        tracking:
+                                start: 73
+                                end: 74
+                X2:
+                        advertisement_means:
+                                start: 71
+                                end: 72
+                operations:
+                        certification:
+                                start: 74
+                                end: 75
+                        safety_measures:
+                                start: 75
+                                end: 76
+                        tech_maintenance:
+                                start: 76
+                                end: 77
+                        accidents:
+                                start: 77
+                                end: 78
