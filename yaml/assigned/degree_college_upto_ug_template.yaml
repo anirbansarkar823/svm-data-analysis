@@ -1,3 +1,4 @@
+ques_start_index: 8
 sections:
       observation: 
             weight: 20
@@ -30,7 +31,7 @@ sections:
                                           How much distance should one travel to avail public transport facility? (in K.M):
                                                 weight: 100
                                                 format: number
-                                                threshold: 5 km
+                                                threshold: '0#5'
                               school_buses:
                                     weight: 10
                                     questions:
@@ -82,7 +83,7 @@ sections:
                                           What is the total campus area?: 
                                                 weight: 100 
                                                 format: number
-                                                threshold: 5 acres
+                                                threshold: 5
       general:
             weight: 30
             variables:
@@ -95,7 +96,7 @@ sections:
                                           What are the working hours of the facility?:
                                                 weight: 100
                                                 format: time
-                                                threshold: 8 hours
+                                                threshold: 480
                               working_days:
                                     weight: 50
                                     questions:
@@ -145,19 +146,13 @@ sections:
                                           How much do you pay per litre of bottled water? (In Rupees):
                                                 weight: 10
                                                 format: number
-                                                threshold: 0
+                                                threshold: '0#20'
                   sanitation:
                         weight: 10
                         sub_parameters:
                               toilets:
                                     weight: 40
                                     questions:
-                                          Are there toilets available for public usage?:
-                                                weight: 0
-                                                format: normal_string
-                                                values:
-                                                      'yes': 0
-                                                      'no': 1
                                           Is there toilets available separately for boys and girls?:
                                                 weight: 40
                                                 format: normal_string
@@ -224,7 +219,7 @@ sections:
                                           How many hours per day are you facing power cuts at this asset?:
                                                 weight: 50
                                                 format: number
-                                                threshold: 5 hours
+                                                threshold: '0#5'
                   alternate_energy:
                         weight: 2
                         sub_parameters:
@@ -244,7 +239,7 @@ sections:
                                           How many hours do you rely on the alternative energy source in a day?:
                                                 weight: 50
                                                 format: number
-                                                threshold: 5 hours
+                                                threshold: 5
                   communication:
                         weight: 5
                         sub_parameters:
@@ -291,7 +286,7 @@ sections:
                                                 weight: 100
                                                 format: multi_select
                                                 values:
-                                                      keeping digital records - using computer/mobile: 2
+                                                      digital records - using computer/mobile: 2
                                                       traditional book keeping: 1
                                                       digital records- online: 3
                                                       other: 0
@@ -383,7 +378,7 @@ sections:
                                                 weight: 40
                                                 format: normal_string
                                                 values:
-                                                      'yes': 0
+                                                      'yes': 1
                                                       'no': 0
                   facilities:
                         weight: 10
@@ -512,7 +507,7 @@ sections:
                                           What is the average fee per student?:
                                                 weight: 100
                                                 format: number
-                                                threshold: 20 thousand
+                                                threshold: '0#20000'
                   organizations:
                         weight: 20
                         sub_parameters:
