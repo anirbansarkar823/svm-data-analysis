@@ -1,0 +1,163 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  access:
+                        How many times did you go there until it was open?:
+                              format: number
+                  road_connectivity:
+                        What is the type of the road available to the asset?:
+                              format: normal_string
+                  public_transport:
+                        How much distance should one travel from this asset to avail public transport facility?:
+                              format: normal_string
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the asset?:
+                              format: normal_string
+            potential:
+                  structure:
+                        What is the type of structure of this asset?:
+                              format: normal_string
+                  security:
+                        What is the type of security available for the asset?:
+                              format: multi_select
+      general:
+            availability:
+                  working_hours:
+                        What are the working hours of this asset?:
+                              format: time
+                  working_days:
+                        What are the working days of that asset?:
+                              format: multi_select
+            employability:
+                  teachers:
+                        How many Technical staff are employed in/for that asset?:
+                              format: number
+                  support_staff:
+                        How many Non Technical staff are employed in/for that asset?:
+                              format: number
+            water:
+                  drinking_water:
+                        Where do you get drinking water from for using at this asset?:
+                              format: normal_string
+                  water_for_operational_purposes:
+                        Where do you get water for operational purposes for this asset?:
+                              format: normal_string
+            sanitation:
+                  toilets:
+                        Are there toilets available for public and employees usage at this asset?:
+                              format: normal_string
+                  waste_management:
+                        How do you deal with the waste generated from that asset?:
+                              format: normal_string
+                  general_cleanliness:
+                        Are the premises of this asset cleaned with disinfectant regularly?:
+                              format: normal_string
+            energy:
+                  electricity:
+                        Do you have grid connection for energy supply for this asset?:
+                              format: normal_string
+            alternate_energy:
+                  alternate_energy:
+                        What is the alternative energy source available for that asset?:
+                              format: normal_string
+            communication:
+                  telephone:
+                        Is there landline connectivity for that asset?:
+                              format: normal_string
+                  broadband:
+                        Does this asset have wired internet connection?:
+                              format: normal_string
+                  mobile:
+                        What are different Mobile network service providers available at the location of this asset?:
+                              format: multi_select
+            record_maintenance:
+                  records:
+                        How do you maintain records for operations for this asset?:
+                              format: normal_string
+            govt_support:
+                  support:
+                        What are the areas the asset gets support from government agencies (not for customers)?:
+                              format: multi_select
+            ngo_support:
+                  support:
+                        Do you get any support from NGO(s) for this asset?:
+                              format: normal_string
+            input:
+                  inputs:
+                        Where do you procure inputs required for that asset?:
+                              format: normal_string
+            marketing:
+                  advertisement:
+                        How does this asset advertise about the services available?:
+                              format: multi_select
+            digital_technologies:
+                  awareness:
+                        Are you using digital tools for your operations for this asset?:
+                              format: normal_string
+      specific:
+            basic_info:
+                  description:
+                        Select the category applicable:
+                              format: normal_string
+                  year_of_establishment:
+                        In which year was the site established?:
+                              format: number
+                  entry_fees:
+                        What is the entry fee charge?:
+                              format: number
+            employees:
+                  personnel:
+                        Who among the following are available at the site?:
+                              format: multi_select
+            footfall:
+                  footfall:
+                        What is the footfall in a week?:
+                              format: number
+            potential:
+                  traction:
+                        On which months do you receive the maximum number of customers?:
+                              format: multi_select
+            facilities:
+                  physical_structure:
+                        Which of the following does the compound have?:
+                              format: multi_select
+                  provisions_for_the_handicapped:
+                        What are the provisions available for the differently-abled?:
+                              format: multi_select
+            marketing_and_advertisement:
+                  marketing_and_advertisement_digital_technology:
+                        Can entry tickets be booked online?:
+                              format: normal_string
+                  advertisement_means1:
+                        How is the place advertised to prospective visitors?:
+                              format: multi_select
+                  tracking:
+                        Are you asking your visitors how they got to know about you?:
+                              format: normal_string
+                  advertisement_means2:
+                        Which of the following means of advertisement bring you the maximum customers?:
+                              format: normal_string
+            X:
+                  government_promotion:
+                        "Is the site listed in the tourism department\u2019s website?":
+                              format: normal_string
+            maintenance:
+                  maintenance:
+                        How often is technical maintenance work done in the spot?:
+                              format: normal_string
+            community_involvement:
+                  community_involvement:
+                        Describe the involvement of the local community in the running and management of the structure?:
+                              format: normal_string
+            conservation:
+                  convervation_groups:
+                        Are entities working for the conservation of the site?:
+                              format: normal_string
