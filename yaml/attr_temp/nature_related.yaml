@@ -1,0 +1,84 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  road_connectivity:
+                        What is the type of the road available to the asset?:
+                              format: normal_string
+                  public_transport:
+                        How much distance should one travel from this asset to avail public transport facility?:
+                              format: number
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the asset?:
+                              format: normal_string
+      general:
+            water:
+                  drinking_water:
+                        Where do you get drinking water from for using at this asset?:
+                              format: normal_string
+            sanitation:
+                  toilets:
+                        Are there toilets available for public usage and for the employees at this asset?:
+                              format: normal_string
+                  waste_management:
+                        How do you deal with the waste created from visitors at this site?:
+                              format: normal_string
+            communication:
+                  mobile:
+                        What are different Mobile network service providers available at the location of this asset?:
+                              format: multi_select
+            digital_technologies:
+                  awareness:
+                        Do you use digital tools for your operations for this asset?:
+                              format: normal_string
+      specific:
+            basic_info:
+                  y:
+                        Select the categories applicable:
+                              format: normal_string
+            footfall:
+                  footfall:
+                        What is the footfall in a week?:
+                              format: number
+                  traction:
+                        On which months do you receive the maximum number of customers?:
+                              format: multi_select
+            operations:
+                  entry_fee:
+                        What is the entry fee charge?:
+                              format: number
+                  advertisement_means:
+                        How is the place advertised to prospective visitors?:
+                              format: multi_select
+            X2:
+                  government_promotion:
+                        "Is the site listed in the tourism department\u2019s website?":
+                              format: normal_string
+                  physical_structures:
+                        Which of the following does the compound have?:
+                              format: multi_select
+                  experience_based:
+                        Which of the following provisions are available?:
+                              format: multi_select
+                  provisions_for_the_handcapped:
+                        What are the provisions available for the differently abled?:
+                              format: normal_string
+            maintenance:
+                  maintenance:
+                        How often is the cleaning and maintenance work done in the spot?:
+                              format: normal_string
+            conservation:
+                  conservation:
+                        Are there entities working for the conservation of the spot?:
+                              format: normal_string
+            community_involvement:
+                  community_involvement:
+                        Describe the involvement of the local community in the running and management of the structure?:
+                              format: normal_string

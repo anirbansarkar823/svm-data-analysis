@@ -1,0 +1,258 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available to the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      kaccha road: ''
+                                                      pakka road: ''
+                              public_transport:
+                                    weight: ''
+                                    questions:
+                                          How much distance should one travel from this asset to avail public transport facility?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      2g unreliable: ''
+                                                      4g unreliable: ''
+                                                      3g unreliable: ''
+                                                      2g reliable: ''
+                                                      4g reliable: ''
+                                                      3g reliable: ''
+      general:
+            weight: ''
+            variables:
+                  water:
+                        weight: ''
+                        sub_parameters:
+                              drinking_water:
+                                    weight: ''
+                                    questions:
+                                          Where do you get drinking water from for using at this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      spring water: ''
+                                                      tap water from government: ''
+                                                      ground water: ''
+                                                      bottled water: ''
+                                                      others: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              toilets:
+                                    weight: ''
+                                    questions:
+                                          Are there toilets available for public usage and for the employees at this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          How do you deal with the waste created from visitors at this site?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      discarded in open field: ''
+                                                      burnt within the premises: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      airtel: ''
+                                                      jio: ''
+                                                      vodafone: ''
+                                                      bsnl: ''
+                                                      idea: ''
+                  digital_technologies:
+                        weight: ''
+                        sub_parameters:
+                              awareness:
+                                    weight: ''
+                                    questions:
+                                          Do you use digital tools for your operations for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+      specific:
+            weight: ''
+            variables:
+                  basic_info:
+                        weight: ''
+                        sub_parameters:
+                              y:
+                                    weight: ''
+                                    questions:
+                                          Select the categories applicable:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      lake: ''
+                                                      pond: ''
+                                                      forest: ''
+                                                      waterfall: ''
+                                                      river: ''
+                                                      hot spring: ''
+                                                      others: ''
+                  footfall:
+                        weight: ''
+                        sub_parameters:
+                              footfall:
+                                    weight: ''
+                                    questions:
+                                          What is the footfall in a week?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              traction:
+                                    weight: ''
+                                    questions:
+                                          On which months do you receive the maximum number of customers?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      november: ''
+                                                      october: ''
+                                                      january: ''
+                                                      june: ''
+                                                      july: ''
+                                                      march: ''
+                                                      august: ''
+                                                      may: ''
+                                                      april: ''
+                                                      september: ''
+                                                      february: ''
+                                                      december: ''
+                  operations:
+                        weight: ''
+                        sub_parameters:
+                              entry_fee:
+                                    weight: ''
+                                    questions:
+                                          What is the entry fee charge?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              advertisement_means:
+                                    weight: ''
+                                    questions:
+                                          How is the place advertised to prospective visitors?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      advertising by the tourism dept: ''
+                                                      word of mouth from former customers: ''
+                                                      social media: ''
+                                                      display boards around the site: ''
+                                                      online portals and articles: ''
+                                                      none of the above: ''
+                  X2:
+                        weight: ''
+                        sub_parameters:
+                              government_promotion:
+                                    weight: ''
+                                    questions:
+                                          "Is the site listed in the tourism department\u2019s website?":
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                              physical_structures:
+                                    weight: ''
+                                    questions:
+                                          Which of the following does the compound have?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      dustbins: ''
+                                                      public washrooms: ''
+                                                      display of information about the structure: ''
+                                                      none of the above: ''
+                                                      parking area: ''
+                              experience_based:
+                                    weight: ''
+                                    questions:
+                                          Which of the following provisions are available?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      photographers on the site: ''
+                                                      safaris or other on-site vehicle facilities: ''
+                                                      boating: ''
+                                                      tour guides: ''
+                                                      none of the above: ''
+                              provisions_for_the_handcapped:
+                                    weight: ''
+                                    questions:
+                                          What are the provisions available for the differently abled?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      none of the above: ''
+                  maintenance:
+                        weight: ''
+                        sub_parameters:
+                              maintenance:
+                                    weight: ''
+                                    questions:
+                                          How often is the cleaning and maintenance work done in the spot?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      everyday: ''
+                                                      once a week: ''
+                                                      less than once a week: ''
+                                                      alternative days: ''
+                  conservation:
+                        weight: ''
+                        sub_parameters:
+                              conservation:
+                                    weight: ''
+                                    questions:
+                                          Are there entities working for the conservation of the spot?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  community_involvement:
+                        weight: ''
+                        sub_parameters:
+                              community_involvement:
+                                    weight: ''
+                                    questions:
+                                          Describe the involvement of the local community in the running and management of the structure?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      minimal involvement: ''
+                                                      no involvement: ''
+                                                      high involvement: ''
+                                                      satisfactory involvement: ''

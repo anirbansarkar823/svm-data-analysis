@@ -1,0 +1,89 @@
+#nature related: sheet2
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:      
+                        road_connectivity:
+                                start: 15       
+                                end: 16   
+                        public_transport:
+                                start: 16     
+                                end: 17       
+                        mobile_connectivity:
+                                start: 17    
+                                end: 18     
+        general:      
+                water:
+                        drinking_water:
+                                start: 24    
+                                end: 25  
+                sanitation:
+                        toilets:
+                                start: 26    
+                                end: 27  
+                        waste_management:
+                                start: 30    
+                                end: 31              
+                communication:     
+                        mobile:
+                                start: 18    
+                                end: 19           
+                digital_technologies:
+                        awareness:
+                                start: 32    
+                                end: 33      
+        specific:
+                basic_info:
+                        y:
+                                start: 34
+                                end: 35
+                footfall:
+                        footfall:
+                                start: 36
+                                end: 37
+                        traction:
+                                start: 38
+                                end: 39
+                operations:
+                        entry_fee:
+                                start: 39
+                                end: 40
+                        advertisement_means:
+                                start: 40
+                                end: 41
+                X2:
+                        government_promotion:
+                                start: 41
+                                end: 42
+                        physical_structures:
+                                start: 42
+                                end: 43
+                        experience_based:
+                                start: 43
+                                end: 44
+                        provisions_for_the_handcapped:
+                                start: 44
+                                end: 45
+                maintenance:
+                        maintenance:
+                                start: 46
+                                end: 47
+                conservation:
+                        conservation:
+                                start: 47
+                                end: 48
+                community_involvement:
+                        community_involvement:
+                                start: 49
+                                end: 50
