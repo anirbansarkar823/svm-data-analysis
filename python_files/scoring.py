@@ -93,12 +93,6 @@ def set_prec(df, start, decimals=4):
         df.loc[:,col] = np.round(df[col], decimals=decimals)
 
 
-# F_TR_G = 'thresh_general'
-# F_MC_MS_G = 'multi_choice_multi_select'
-# F_MC_SS_G = 'multi_choice_single_select'
-# F_TR_UP_LM_L = 'thresh_upper_lower_lim_low'
-# F_TR_UP_LM_H = 'thresh_upper_lower_lim_high'
-
 FUNCS = {
         #: score_thresh_general,
         FR_T_MULT_SEL: score_mult_mult_sel_general,

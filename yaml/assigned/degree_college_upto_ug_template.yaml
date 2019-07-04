@@ -96,7 +96,7 @@ sections:
                                           What are the working hours of the facility?:
                                                 weight: 100
                                                 format: time
-                                                threshold: 480
+                                                threshold: 420
                               working_days:
                                     weight: 50
                                     questions:
@@ -219,7 +219,7 @@ sections:
                                           How many hours per day are you facing power cuts at this asset?:
                                                 weight: 50
                                                 format: number
-                                                threshold: '0#5'
+                                                threshold: 5
                   alternate_energy:
                         weight: 2
                         sub_parameters:
@@ -228,7 +228,7 @@ sections:
                                     questions:
                                           What is the alternative energy source available in the facility?:
                                                 weight: 50
-                                                format: normal_string
+                                                format: multi_select
                                                 values:
                                                       diesel generator: 2
                                                       none: 0
@@ -239,7 +239,7 @@ sections:
                                           How many hours do you rely on the alternative energy source in a day?:
                                                 weight: 50
                                                 format: number
-                                                threshold: 5
+                                                threshold: '0#5'
                   communication:
                         weight: 5
                         sub_parameters:
@@ -289,7 +289,7 @@ sections:
                                                       digital records - using computer/mobile: 2
                                                       traditional book keeping: 1
                                                       digital records- online: 3
-                                                      other: 0
+                                                      others: 0
                   govt_support:
                         weight: 10
                         sub_parameters:
@@ -507,7 +507,7 @@ sections:
                                           What is the average fee per student?:
                                                 weight: 100
                                                 format: number
-                                                threshold: '0#20000'
+                                                threshold: 20000
                   organizations:
                         weight: 20
                         sub_parameters:
@@ -526,7 +526,7 @@ sections:
                                                 format: normal_string
                                                 values:
                                                       'yes': 1
-                                                      'no' :  0
+                                                      'no' : 0
                   partnerships:
                         weight: 10
                         sub_parameters:
@@ -551,5 +551,3 @@ sections:
                                                 values:
                                                       'yes': 1
                                                       'no': 0
-
-   
