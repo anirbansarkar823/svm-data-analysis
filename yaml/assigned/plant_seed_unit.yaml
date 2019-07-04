@@ -1,0 +1,474 @@
+ques_start_index: 8
+sections:
+      observation:
+            weight: 30
+            variables:
+                  accessibility:
+                        weight: 60
+                        sub_parameters:
+                              access:
+                                    weight: 20
+                                    questions:
+                                          How many times did you go to the unit until it was open?:
+                                                weight: 100
+                                                format: number
+                                                threshold: 3
+                              road_connectivity:
+                                    weight: 30
+                                    questions:
+                                          What is the type of the road available to the unit?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      pakka road with block point: 3
+                                                      kacha road with block point: 1
+                                                      pakka road: 4
+                                                      footway: 1
+                                                      kacha road: 2
+                              public_transport:
+                                    weight: 30
+                                    questions:
+                                          How much distance should one travel from the unit to avail public transport facility? (Approx in K.M):
+                                                weight: 100
+                                                format: number
+                                                threshold: '0#4'
+                              mobile_connectivity:
+                                    weight: 20
+                                    questions:
+                                          What is the type of the mobile network available at the unit?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      3g unreliable: 3
+                                                      4g+ reliable: 6
+                                                      2g unreliable: 1
+                                                      2g reliable: 2
+                                                      3g reliable: 4
+                                                      4g unreliable: 5
+                  infrastructure:
+                        weight: 40
+                        sub_parameters:
+                              building_type:
+                                    weight: 50
+                                    questions:
+                                          What is the type of structure of the unit?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      kacha/temporary(wood,bamboo,etc.,): 0
+                                                      pakka/permenant(steel,concrete,etc.,): 1
+                              security:
+                                    weight: 50
+                                    questions:
+                                          What is the type of security available for the unit?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      compound wall\/ fencing: 2
+                                                      others: 1
+                                                      none: 0
+                                                      watchman\/gaurd: 2
+                                                      security camera: 3
+      general:
+            weight: 30
+            variables:
+                  availability:
+                        weight: 10
+                        sub_parameters:
+                              working_hours:
+                                    weight: 50
+                                    questions:
+                                          'What are the working hours of the unit?(Ex: 9.00A.M-5.A.M)':
+                                                weight: 100
+                                                format: time
+                                                threshold: 480
+                              working_days:
+                                    weight: 50
+                                    questions:
+                                          What are the working days of the unit?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      wednesday: 1
+                                                      monday: 1
+                                                      friday: 1
+                                                      sunday: 1
+                                                      saturday: 1
+                                                      tuesday: 1
+                                                      thursday: 1
+                  employability:
+                        weight: 10
+                        sub_parameters:
+                              non_technical_staff:
+                                    weight: 3
+                                    questions:
+                                          How many Non Technical staff are employed in the unit?:
+                                                weight: 100
+                                                format: number
+                                                threshold: 2
+                              technical_staff:
+                                    weight: 70
+                                    questions:
+                                          How many Technical staff are employed in the unit?:
+                                                weight: 100
+                                                format: number
+                                                threshold: 3
+                  water:
+                        weight: 10
+                        sub_parameters:
+                              drinking_water:
+                                    weight: 50
+                                    questions:
+                                          Where do you get drinking water from for using at the unit?:
+                                                weight: 80
+                                                format: multi_select
+                                                values:
+                                                      tap water from government: 4
+                                                      bottled water: 2
+                                                      spring water: 2
+                                                      groundwater: 3
+                                          How much do you pay per litre of bottled water? (In Rupees):
+                                                weight: 20
+                                                format: number
+                                                threshold: '0#20'
+                              water_for_operational_purposes:
+                                    weight: 50
+                                    questions:
+                                          Where do you get water for operational purposes for the unit?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      river or canal: 2
+                                                      ground water: 3
+                                                      water from government: 4
+                                                      spring water: 2
+                  sanitation:
+                        weight: 10
+                        sub_parameters:
+                              toilets:
+                                    weight: 40
+                                    questions:
+                                          Are there toilets available for public and employees usage at the unit?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+                              waste_management:
+                                    weight: 30
+                                    questions:
+                                          How do you deal with the agricultural waste generated from the unit?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      discarded in open field: 2
+                                                      others: 1
+                                                      burnt within the premises: 2
+                                                      disacreded in water bodies: 1
+                                                      disacrded in  govt designated sites: 4
+                              general_cleanliness:
+                                    weight: 30
+                                    questions:
+                                          Are the premises of unit cleaned regularly?:
+                                                weight: 70
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+                                          How frequently are the premises at the unit cleaned with disinfectant in a week?:
+                                                weight: 30
+                                                format: number
+                                                threshold: 2
+                  energy:
+                        weight: 10
+                        sub_parameters:
+                              electricity:
+                                    weight: 100
+                                    questions:
+                                          Do you have grid connection for energy supply for the unit?:
+                                                weight: 70
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+                                          How many hours per day are you facing power cuts in the unit?:
+                                                weight: 30
+                                                format: number
+                                                threshold: '0#5'
+                  alternate_energy:
+                        weight: 5
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: 100
+                                    questions:
+                                          What is the alternative energy source available for the unit?:
+                                                weight: 60
+                                                format: multi_select
+                                                values:
+                                                      others: 1
+                                                      none: 0
+                                                      biomass unit: 3
+                                                      solar unit: 4
+                                                      inteverter: 3
+                                                      kerosene generator: 2
+                                                      diesel generator: 2
+                                          How many hours do you rely on the alternative energy source in a day for the unit?:
+                                                weight: 40
+                                                format: number
+                                                threshold: 5
+                  communication:
+                        weight: 10
+                        sub_parameters:
+                              telephone:
+                                    weight: 10
+                                    questions:
+                                          Is there landline connectivity for the unit?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+                              broadband:
+                                    weight: 50
+                                    questions:
+                                          Does the unit have wired internet connection?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+                              mobile:
+                                    weight: 40
+                                    questions:
+                                          What are different Mobile network service providers available at the location of the unit?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      airtel: 1
+                                                      bsnl: 1
+                                                      vodafone: 1
+                                                      jio: 1
+                                                      idea: 1
+                  record_maintenance:
+                        weight: 10
+                        sub_parameters:
+                              records:
+                                    weight: 100
+                                    questions:
+                                          How do you maintain records for operations of the unit?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      others: 1
+                                                      traditional book keeping: 2
+                                                      digital records\/mobile-computers: 3
+                                                      digital online: 4
+                  govt_support:
+                        weight: 10
+                        sub_parameters:
+                              support:
+                                    weight: 100
+                                    questions:
+                                          What are the areas the unit gets support from government agencies (not for your customers)?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      none: 1
+                                                      support via schemes: 3
+                                                      transport support: 2
+                                                      technical support: 3
+                                                      financial support: 3
+                  ngo_support:
+                        weight: 5
+                        sub_parameters:
+                              support:
+                                    weight: 100
+                                    questions:
+                                          Do you get any support from NGO(s) for the unit?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+                  digital_technologies:
+                        weight: 10
+                        sub_parameters:
+                              awareness:
+                                    weight: 100
+                                    questions:
+                                          Are you using digital technologies that can be used in the unit?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+      specific:
+            weight: 40
+            variables:
+                  inputs:
+                        weight: 10
+                        sub_parameters:
+                              procurement:
+                                    weight: 50
+                                    questions:
+                                          Where do you procure inputs required for the unit?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      none: 0
+                                                      local supplier: 3
+                                                      supplier in other states: 2
+                                                      government agencies: 3
+                                                      research organisation: 3
+                              chemical_inputs:
+                                    weight: 50
+                                    questions:
+                                          What are different chemical inputs used in the unit?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      growth harmones: 1
+                                                      pesticide: 1
+                                                      none: 0
+                                                      fertilizer: 1
+                  infrastructure:
+                        weight: 15
+                        sub_parameters:
+                              cultivation:
+                                    weight: 100
+                                    questions:
+                                          What type(s) of green house present in the unit?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      net house: 2
+                                                      lath house\/bamboo house: 2
+                                                      none: 0
+                                                      poly house: 3
+                                                      mesh house: 2
+                                                      glass house: 3
+                  irrigation:
+                        weight: 10
+                        sub_parameters:
+                              water_source:
+                                    weight: 50
+                                    questions: 
+                                          What is the water source used for irrigation mechanism?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      others: 1
+                                                      river/stream: 2
+                                                      ground water: 3
+                                                      rainfed: 2
+                                                      lake\/pond: 2
+                              type:
+                                    weight: 50
+                                    questions:
+                                          What is the type of irrigation mechanism used in the unit?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      sprinklers: 3
+                                                      others: 1
+                                                      rose can: 2
+                                                      drip irrigation: 3
+                                                      canal irrigation: 2
+                  marketing:
+                        weight: 15
+                        sub_parameters:
+                              advertisement:
+                                    weight: 100
+                                    questions:
+                                          How does the unit advertise about the services available?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      village meeting: 2
+                                                      others: 1
+                                                      marketing agents\/ sales agents: 3
+                                                      annoubcemnets/ broadcast: 2
+                                                      display/ posters: 2
+                  operations:
+                        weight: 10
+                        sub_parameters:
+                              operational_cost:
+                                    weight: 50
+                                    questions:
+                                          What is the average operational cost per month to run the unit?(Excluding Salary of the Employees):
+                                                weight: 100
+                                                format: number
+                                                threshold: 20000
+                              inventory_capacity:
+                                    weight: 50
+                                    questions:
+                                          How many square meters are available for storage of the seeds/ plants produced?:
+                                                weight: 100
+                                                format: number
+                                                threshold: 300
+                  products:
+                        weight: 20
+                        sub_parameters:
+                              number:
+                                    weight: 30
+                                    questions:
+                                          How many types of plants/ seeds are available in the unit?:
+                                                weight: 100
+                                                format: number
+                                                threshold: 100
+                              type:
+                                    weight: 40
+                                    questions: 
+                                          Are the seeds / plants sold to the customers organic?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+                              cost:
+                                    weight: 30
+                                    questions:
+                                          What is the average cost per plant/ per pack of seeds in the unit?(In Rupees):
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      1-100: 1
+                                                      101-200: 1 
+                  customers:
+                        weight: 10
+                        sub_parameters:
+                              type:
+                                    weight: 50
+                                    questions:
+                                          Which type of customers purchase the plants/seeds from the unit?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      others: 1
+                                                      farmers: 3
+                                                      ngo: 2
+                                                      govt. agencies: 2
+                                                      research organizations: 2
+                              number:
+                                    weight: 50
+                                    questions:
+                                          How many customers purchase the plants/seeds from the unit in a year?:
+                                                weight: 100
+                                                format: number
+                                                threshold: 500
+                  logistics:
+                        weight: 10
+                        sub_parameters:
+                              transport_of_goods:
+                                    weight: 100
+                                    questions:
+                                          How does the customers transport the goods purchased from the unit?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      others: 1
+                                                      head load: 1
+                                                      huge luggage transport vehicle: 3
+                                                      2 wheeler: 2
+                                                      tempo\/auto: 2
+                                                      sumo\/tracker: 2

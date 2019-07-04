@@ -58,8 +58,8 @@ grouping:
                                 start: 34      
                                 end: 38      
                         waste_management:
-                                start: 39      
-                                end: 40       
+                                start: 38      
+                                end: 39       
                         general_cleanliness:
                                 start: 40      
                                 end: 42      
