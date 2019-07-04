@@ -1,0 +1,109 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  road_connectivity:
+                        What is the type of the road available near to that asset?:
+                              format: normal_string
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the asset?:
+                              format: normal_string
+            infrastructure:
+                  building_type:
+                        What is the type of structure of this asset?:
+                              format: normal_string
+                  security:
+                        What is the type of security available for the asset?:
+                              format: multi_select
+      general:
+            availability:
+                  working_hours:
+                        What are the working hours of this asset?:
+                              format: time
+            sanitation:
+                  waste_management:
+                        Where does the waste water generated from that asset goes to?:
+                              format: normal_string
+                  general_cleanliness:
+                        Are the premises of this asset cleaned with disinfectant regularly?:
+                              format: normal_string
+            energy:
+                  electricity:
+                        Do you have grid connection for energy supply for this asset?:
+                              format: normal_string
+            alternate_energy:
+                  alternate_energy:
+                        What is the alternative energy source available for that asset?:
+                              format: normal_string
+            communication:
+                  mobile:
+                        What are different Mobile network service providers available at the location of this asset?:
+                              format: multi_select
+            govt_support:
+                  support:
+                        What are the areas the asset gets support from government agencies (not for customers)?:
+                              format: multi_select
+      specific:
+            X1:
+                  water:
+                        What is the source of Water to the Public toilet ?:
+                              format: normal_string
+            X2:
+                  area:
+                        What is the area of the Public toilet ?:
+                              format: number
+            X3:
+                  ownership:
+                        Who constructed the Public toilet ?:
+                              format: normal_string
+            X4:
+                  infrastructure:
+                        The Asset is Constructed by which Material ?:
+                              format: multi_select
+            X5:
+                  damages:
+                        Are there any leakages from the Public Toilet ?:
+                              format: normal_string
+            X6:
+                  availability:
+                        How many toilets are available for men?:
+                              format: number
+            X7:
+                  availability:
+                        How many toilets are available for women?:
+                              format: number
+            X8:
+                  availability:
+                        Is there running water available in the toilets at this asset?:
+                              format: normal_string
+            X9:
+                  y:
+                        Is there soap for handwash available at this asset?:
+                              format: normal_string
+            X10:
+                  charges:
+                        How much is the fee for using this toilet (in rupees)?:
+                              format: number
+            X11:
+                  y:
+                        Was the toilet clean when you went there? (please do it for assessment):
+                              format: normal_string
+            X12:
+                  sanitation:
+                        Is the public toilet connected with a sewer drainage?:
+                              format: normal_string
+            X13:
+                  usage:
+                        How many people are using this public toilet on average per day?:
+                              format: number
+            X14:
+                  maintainence:
+                        What is the frequency of technical maintenance or safety audit ?:
+                              format: normal_string

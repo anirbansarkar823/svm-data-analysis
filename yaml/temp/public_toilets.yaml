@@ -1,0 +1,114 @@
+#public toilets: sheet8, sheet9, sheet10
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:     
+                        road_connectivity:
+                                start: 15       
+                                end: 16        
+                        mobile_connectivity:
+                                start: 16    
+                                end: 17    
+                infrastructure:
+                        building_type: 
+                                start: 23  
+                                end: 24  
+                        security:
+                                start: 24   
+                                end: 25  
+        general:  
+                availability:
+                        working_hours: 
+                                start: 25     
+                                end: 26    
+                sanitation:   
+                        waste_management:
+                                start: 27     
+                                end: 28      
+                        general_cleanliness:
+                                start: 29    
+                                end: 30
+                energy:
+                        electricity:
+                                start: 31    
+                                end: 32    
+                alternate_energy:
+                        alternate_energy:  
+                                start: 33      
+                                end: 34
+                communication:     
+                        mobile:
+                                start: 17    
+                                end: 18    
+                govt_support:
+                        support:
+                                start: 26  
+                                end: 27  
+        specific:
+                X1:
+                        water:
+                                start: 40
+                                end: 41
+                X2:
+                        area:
+                                start: 42
+                                end: 43
+                X3:
+                        ownership:
+                                start: 43
+                                end: 44
+                X4:
+                        infrastructure:
+                                start: 45
+                                end: 46
+                X5:
+                        damages:
+                                start: 46
+                                end: 47
+                X6:
+                        availability:
+                                start: 47
+                                end: 48
+                X7:
+                        availability:
+                                start: 48
+                                end: 49
+                X8:
+                        availability:
+                                start: 49
+                                end: 50
+                X9:
+                        y:
+                                start: 50
+                                end: 51
+                X10:
+                        charges:
+                                start: 51
+                                end: 52
+                X11:
+                        y:
+                                start: 55 
+                                end: 56
+                X12:
+                        sanitation:
+                                start: 52
+                                end: 53
+                X13:
+                        usage:
+                                start: 53
+                                end: 54
+                X14:
+                        maintainence:
+                                start: 54
+                                end: 55
