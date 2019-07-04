@@ -110,6 +110,7 @@ def score(df, dfout, attrd):
         for tag, tagd in atr.items():
             if tag == 'weight':
                 continue
+            print(tag)
             frmt = tagd.get('format', False)
             if frmt:
                 ques.append(tag)
