@@ -1,0 +1,158 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available near to that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      kacha road: ''
+                                                      pakka road: ''
+                                                      footway: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      3g reliable: ''
+                                                      2g unreliable: ''
+                                                      2g reliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka/permenant(steel,concrete,etc.,): ''
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the type of security available for the asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+      general:
+            weight: ''
+            variables:
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          Where does the waste water generated from that asset goes to?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      none: ''
+                                                      mixes with the near by water bodies: ''
+                                                      discarded in open field: ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of this asset cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      vodafone: ''
+                                                      jio: ''
+                                                      airtel: ''
+                                                      bsnl: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the asset gets support from government agencies (not for customers)?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      support via schemes: ''
+                                                      none: ''
+      specific:
+            weight: ''
+            variables:
+                  X1:
+                        weight: ''
+                        sub_parameters:
+                              damages:
+                                    weight: ''
+                                    questions:
+                                          Have you observed any leakages from the Hand pump ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  X2:
+                        weight: ''
+                        sub_parameters:
+                              ownership:
+                                    weight: ''
+                                    questions:
+                                          Who installed the hand pump?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      communities: ''
+                                                      government: ''
+                  X3:
+                        weight: ''
+                        sub_parameters:
+                              infrastructure:
+                                    weight: ''
+                                    questions:
+                                          Which material used for constructing that hand pump?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      cast iron: ''
+                  X4:
+                        weight: ''
+                        sub_parameters:
+                              infrastructure:
+                                    weight: ''
+                                    questions:
+                                          The Hand Pump Platform/ Basement is made up of which material ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      concrete: ''
+                  X5:
+                        weight: ''
+                        sub_parameters:
+                              status:
+                                    weight: ''
+                                    questions:
+                                          What is the Condition of the hand pump?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      no external defects: ''
+                                                      rusted: ''

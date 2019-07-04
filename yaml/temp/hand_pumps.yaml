@@ -1,0 +1,66 @@
+#handpumps: sheet6
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:     
+                        road_connectivity:
+                                start: 15       
+                                end: 16        
+                        mobile_connectivity:
+                                start: 16    
+                                end: 17    
+                infrastructure:
+                        building_type: 
+                                start: 23  
+                                end: 24  
+                        security:
+                                start: 24   
+                                end: 25      
+        general:     
+                sanitation:   
+                        waste_management:
+                                start: 26    
+                                end: 27     
+                        general_cleanliness:
+                                start: 28    
+                                end: 29         
+                communication:     
+                        mobile:
+                                start: 17    
+                                end: 18    
+                govt_support:
+                        support:
+                                start: 25  
+                                end: 26  
+        specific:
+                X1:
+                        damages:
+                                start: 30
+                                end: 31
+                X2:
+                        ownership:
+                                start: 31
+                                end: 32
+                X3:
+                        infrastructure:
+                                start: 32
+                                end: 33
+                X4:
+                        infrastructure:
+                                start: 34
+                                end: 35
+                X5:
+                        status:
+                                start: 35
+                                end: 36
