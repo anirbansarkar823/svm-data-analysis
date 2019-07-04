@@ -1,0 +1,75 @@
+#over ground tanks: sheet2
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:      
+                        road_connectivity:
+                                start: 15       
+                                end: 16       
+                        mobile_connectivity:
+                                start: 16  
+                                end: 17
+                infrastructure:
+                        building_type: 
+                                start: 23  
+                                end: 24   
+        general:
+                sanitation:  
+                        waste_management:
+                                start: 25    
+                                end: 26   
+                        general_cleanliness:
+                                start: 27    
+                                end: 28       
+                communication:  
+                        mobile:
+                                start: 17   
+                                end: 18       
+                govt_support:
+                        support:
+                                start: 24    
+                                end: 25       
+        specific:
+                X1:
+                        infrastructure:
+                                start: 29
+                                end: 30
+                X2:
+                        damages:
+                                start: 30
+                                end: 31
+                X3:
+                        capacity:
+                                start: 31
+                                end: 32
+                X4:
+                        security:
+                                start: 32
+                                end: 33
+                X5:
+                        discharge_rate:
+                                start: 33
+                                end: 34
+                X6:
+                        flow:
+                                start: 34
+                                end: 35
+                X7:
+                        tools:
+                                start: 35
+                                end: 36
+                X8:
+                        maintenance:
+                                start: 36
+                                end: 37

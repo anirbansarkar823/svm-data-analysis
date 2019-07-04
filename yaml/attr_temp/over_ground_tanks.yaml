@@ -1,0 +1,70 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  road_connectivity:
+                        What is the type of the road available near to that asset?:
+                              format: normal_string
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the asset?:
+                              format: normal_string
+            infrastructure:
+                  building_type:
+                        What is the type of structure of this asset?:
+                              format: normal_string
+      general:
+            sanitation:
+                  waste_management:
+                        Where does the waste water generated from that asset goes to?:
+                              format: normal_string
+                  general_cleanliness:
+                        Are the premises of this asset cleaned with disinfectant regularly?:
+                              format: normal_string
+            communication:
+                  mobile:
+                        What are different Mobile network service providers available at the location of this asset?:
+                              format: multi_select
+            govt_support:
+                  support:
+                        What are the areas the asset gets support from government agencies (not for customers)?:
+                              format: multi_select
+      specific:
+            X1:
+                  infrastructure:
+                        The Over Ground water tank is made up of which Material?:
+                              format: normal_string
+            X2:
+                  damages:
+                        Are there any leakages on the tank structure?:
+                              format: normal_string
+            X3:
+                  capacity:
+                        What is the storage capacity of the tank?:
+                              format: normal_string
+            X4:
+                  security:
+                        What is the type of the material that is used to cover the roof of the tank?:
+                              format: normal_string
+            X5:
+                  discharge_rate:
+                        How many pipes have been connected to the tank?:
+                              format: normal_string
+            X6:
+                  flow:
+                        How many valves are visible to the pipes connected to the tank ?:
+                              format: normal_string
+            X7:
+                  tools:
+                        Are there any water level indicators marked?:
+                              format: normal_string
+            X8:
+                  maintenance:
+                        What is the frequency of technical maintenance or safety audit ?:
+                              format: normal_string
