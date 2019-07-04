@@ -1,0 +1,73 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  road_connectivity:
+                        What is the type of the road available near to that asset?:
+                              format: normal_string
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the asset?:
+                              format: normal_string
+            infrastructure:
+                  building_type:
+                        What is the type of structure of this asset?:
+                              format: multi_select
+                  security:
+                        What is the type of security available for the asset?:
+                              format: multi_select
+      general:
+            availability:
+                  working_hours:
+                        What are the working hours of this asset?:
+                              format: time
+            sanitation:
+                  waste_management:
+                        Where does the waste water generated from that asset goes to?:
+                              format: normal_string
+                  general_cleanliness:
+                        Are the premises of this asset cleaned with disinfectant regularly?:
+                              format: normal_string
+            energy:
+                  electricity:
+                        Do you have grid connection for energy supply for this asset?:
+                              format: normal_string
+            alternate_energy:
+                  alternate_energy:
+                        What is the alternative energy source available for that asset?:
+                              format: normal_string
+            communication:
+                  mobile:
+                        What are different Mobile network service providers available at the location of this asset?:
+                              format: multi_select
+            govt_support:
+                  support:
+                        What are the areas the asset gets support from government agencies (not for customers)?:
+                              format: multi_select
+      specific:
+            X1:
+                  security:
+                        The Pump Equipment is Housed with Which Material?:
+                              format: multi_select
+            X2:
+                  area:
+                        What is the construction area of the Pump house?:
+                              format: number
+            X3:
+                  records:
+                        How do you maintain records for operations for this asset?:
+                              format: normal_string
+            X4:
+                  capacity:
+                        How much litre of water can this pump house turnover at one time?:
+                              format: number
+            X5:
+                  capacity:
+                        How many pumps are in this pump house?:
+                              format: number

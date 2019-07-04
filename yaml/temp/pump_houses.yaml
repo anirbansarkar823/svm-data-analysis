@@ -1,0 +1,78 @@
+#pump houses: sheet11, sheet12
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:     
+                        road_connectivity:
+                                start: 15       
+                                end: 16        
+                        mobile_connectivity:
+                                start: 16    
+                                end: 17    
+                infrastructure:
+                        building_type: 
+                                start: 23  
+                                end: 24  
+                        security:
+                                start: 24   
+                                end: 25  
+        general:  
+                availability:
+                        working_hours: 
+                                start: 25     
+                                end: 26    
+                sanitation:   
+                        waste_management:
+                                start: 27     
+                                end: 28      
+                        general_cleanliness:
+                                start: 29    
+                                end: 30
+                energy:
+                        electricity:
+                                start: 31    
+                                end: 32    
+                alternate_energy:
+                        alternate_energy:  
+                                start: 33      
+                                end: 34
+                communication:     
+                        mobile:
+                                start: 17    
+                                end: 18    
+                govt_support:
+                        support:
+                                start: 26  
+                                end: 27  
+        specific:
+                X1:
+                        security:
+                                start: 40
+                                end: 41
+                X2:
+                        area:
+                                start: 41
+                                end: 42
+                X3:
+                        records:
+                                start: 42
+                                end: 43
+                X4:
+                        capacity:
+                                start: 44
+                                end: 45
+                X5:
+                        capacity:
+                                start: 45
+                                end: 46
