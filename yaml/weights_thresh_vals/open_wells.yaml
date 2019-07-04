@@ -1,0 +1,232 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available near to that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      kacha road: ''
+                                                      pakka road with block point: ''
+                                                      footway: ''
+                                                      pakka road: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      4g reliable: ''
+                                                      2g unreliable: ''
+                                                      3g reliable: ''
+                                                      2g reliable: ''
+                                                      3g unreliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      concrete: ''
+                                                      rocks: ''
+                                                      others: ''
+      general:
+            weight: ''
+            variables:
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      bsnl: ''
+                                                      jio: ''
+                                                      idea: ''
+                                                      airtel: ''
+                                                      vodafone: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the asset gets support from government agencies (not for customers)?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      financial support: ''
+                                                      none: ''
+                                                      others: ''
+      specific:
+            weight: ''
+            variables:
+                  X1:
+                        weight: ''
+                        sub_parameters:
+                              structure_type:
+                                    weight: ''
+                                    questions:
+                                          What type of Open well it is by your observation?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      deep bore well: ''
+                                                      shallow bore well: ''
+                  X2:
+                        weight: ''
+                        sub_parameters:
+                              ownership:
+                                    weight: ''
+                                    questions:
+                                          Who built the Open well?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      naturally found: ''
+                                                      others: ''
+                                                      communities: ''
+                  X3:
+                        weight: ''
+                        sub_parameters:
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the material that is primarily used to case the Open well ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      none: ''
+                                                      others: ''
+                                                      cement: ''
+                  X4:
+                        weight: ''
+                        sub_parameters:
+                              connection_type:
+                                    weight: ''
+                                    questions:
+                                          The Open well is connected to which of the following assets ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      storage tanks/ underground tanks: ''
+                                                      none: ''
+                                                      others: ''
+                                                      over ground tanks: ''
+                  X5:
+                        weight: ''
+                        sub_parameters:
+                              tools:
+                                    weight: ''
+                                    questions:
+                                          How do people fetch water from the Open well ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      none: ''
+                                                      pulley: ''
+                                                      electrical motor: ''
+                                                      with simple bucket and rope: ''
+                                                      others: ''
+                  X6:
+                        weight: ''
+                        sub_parameters:
+                              caution:
+                                    weight: ''
+                                    questions:
+                                          What is the depth of the Open well that you can observe?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      51-70m: ''
+                                                      30-50 m: ''
+                                                      above 150m: ''
+                                                      91-120m: ''
+                  X7:
+                        weight: ''
+                        sub_parameters:
+                              cross_connection:
+                                    weight: ''
+                                    questions:
+                                          What are the assets that you can observe near the Open well ?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      septic tank: ''
+                                                      none: ''
+                  X8:
+                        weight: ''
+                        sub_parameters:
+                              usage:
+                                    weight: ''
+                                    questions:
+                                          Are people using this open well on a regular basis?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  X9:
+                        weight: ''
+                        sub_parameters:
+                              y:
+                                    weight: ''
+                                    questions:
+                                          Were people drinking the water from this bore well while you visited this spot?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  X10:
+                        weight: ''
+                        sub_parameters:
+                              quality:
+                                    weight: ''
+                                    questions:
+                                          Would you drink the water from this bore well?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  X11:
+                        weight: ''
+                        sub_parameters:
+                              charges:
+                                    weight: ''
+                                    questions:
+                                          Are there any charges which come when getting water from this bore well?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  X12:
+                        weight: ''
+                        sub_parameters:
+                              maintenance:
+                                    weight: ''
+                                    questions:
+                                          What is the frequency of technical maintenance or safety audit ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      irregular: ''
+                                                      never: ''
+                                                      yearly: ''
+                                                      others: ''
+                                                      monthly: ''

@@ -1,0 +1,84 @@
+#open wells: sheet3
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:  
+                        road_connectivity:
+                                start: 15       
+                                end: 16     
+                        mobile_connectivity:
+                                start: 16    
+                                end: 17    
+                infrastructure:
+                        building_type: 
+                                start: 23 
+                                end: 24  
+        general:        
+                communication:    
+                        mobile:
+                                start: 17   
+                                end: 18  
+                govt_support:
+                        support:
+                                start: 24    
+                                end: 25       
+        specific:
+                X1:
+                        structure_type:
+                                start: 25
+                                end: 26
+                X2:
+                        ownership:
+                                start: 26
+                                end: 27
+                X3:
+                        security:
+                                start: 27
+                                end: 28
+                X4:
+                        connection_type:
+                                start: 28
+                                end: 29
+                X5:
+                        tools:
+                                start: 33
+                                end: 34
+                X6:
+                        caution:
+                                start: 34
+                                end: 35
+                X7:
+                        cross_connection:
+                                start: 35
+                                end: 36
+                X8:
+                        usage:
+                                start: 36
+                                end: 37
+                X9:
+                        y:
+                                start: 38
+                                end: 39
+                X10:
+                        quality:
+                                start: 39
+                                end: 40
+                X11:
+                        charges:
+                                start: 40
+                                end: 41
+                X12:
+                        maintenance:
+                                start: 42
+                                end: 43

@@ -1,0 +1,79 @@
+attr_seq:
+- sections
+- variables
+- sub_parameters
+- questions
+correct:
+rename:
+reformat:
+sections:
+      observation:
+            accessibility:
+                  road_connectivity:
+                        What is the type of the road available near to that asset?:
+                              format: normal_string
+                  mobile_connectivity:
+                        What is the type of the mobile network available at the asset?:
+                              format: normal_string
+            infrastructure:
+                  building_type:
+                        What is the type of structure of this asset?:
+                              format: normal_string
+      general:
+            communication:
+                  mobile:
+                        What are different Mobile network service providers available at the location of this asset?:
+                              format: multi_select
+            govt_support:
+                  support:
+                        What are the areas the asset gets support from government agencies (not for customers)?:
+                              format: multi_select
+      specific:
+            X1:
+                  structure_type:
+                        What type of Open well it is by your observation?:
+                              format: normal_string
+            X2:
+                  ownership:
+                        Who built the Open well?:
+                              format: normal_string
+            X3:
+                  security:
+                        What is the material that is primarily used to case the Open well ?:
+                              format: normal_string
+            X4:
+                  connection_type:
+                        The Open well is connected to which of the following assets ?:
+                              format: normal_string
+            X5:
+                  tools:
+                        How do people fetch water from the Open well ?:
+                              format: normal_string
+            X6:
+                  caution:
+                        What is the depth of the Open well that you can observe?:
+                              format: normal_string
+            X7:
+                  cross_connection:
+                        What are the assets that you can observe near the Open well ?:
+                              format: multi_select
+            X8:
+                  usage:
+                        Are people using this open well on a regular basis?:
+                              format: normal_string
+            X9:
+                  y:
+                        Were people drinking the water from this bore well while you visited this spot?:
+                              format: normal_string
+            X10:
+                  quality:
+                        Would you drink the water from this bore well?:
+                              format: normal_string
+            X11:
+                  charges:
+                        Are there any charges which come when getting water from this bore well?:
+                              format: normal_string
+            X12:
+                  maintenance:
+                        What is the frequency of technical maintenance or safety audit ?:
+                              format: normal_string
