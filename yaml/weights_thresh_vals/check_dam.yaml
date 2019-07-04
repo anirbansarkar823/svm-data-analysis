@@ -1,0 +1,140 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available near to that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      kacha road: ''
+                                                      kacha road with block point: ''
+                                                      pakka road: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      3g reliable: ''
+                                                      2g unreliable: ''
+                                                      2g reliable: ''
+                                                      nil: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the type of security available for the asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+                                                      watchman: ''
+      general:
+            weight: ''
+            variables:
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          Where does the waste water generated from that asset go?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      mixes with the near by water bodies: ''
+                                                      discarded in open field: ''
+                                                      none: ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of this asset cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      airtel: ''
+                                                      vodafone: ''
+                                                      bsnl: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the asset gets support from government agencies (not for customers)?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+                                                      insurance support: ''
+                                                      support via schemes: ''
+                                                      technical support: ''
+                                                      financial support: ''
+                                                      support via subsidies: ''
+      specific:
+            weight: ''
+            variables:
+                  X1:
+                        weight: ''
+                        sub_parameters:
+                              ownership:
+                                    weight: ''
+                                    questions:
+                                          Who Constructed the Check dams?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      government: ''
+                                                      farmers: ''
+                  X2:
+                        weight: ''
+                        sub_parameters:
+                              area:
+                                    weight: ''
+                                    questions:
+                                          What is the area of the check dam?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X3:
+                        weight: ''
+                        sub_parameters:
+                              infrastructure:
+                                    weight: ''
+                                    questions:
+                                          What is the height of the check dam that you observe ?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X4:
+                        weight: ''
+                        sub_parameters:
+                              infrastructure:
+                                    weight: ''
+                                    questions:
+                                          The check dam is made up of which material?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      concrete: ''
