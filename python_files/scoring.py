@@ -206,7 +206,7 @@ if __name__ == '__main__':
         drop_cols = [v for v in df.columns if not (v in ques or v in non_ques)]
         outdf.drop(columns=drop_cols, axis=1, inplace=True)
 
-        assetname = 'anganwadi_score'
+        assetname = 'overall score'
         variable_list = gen_score_sheet(outdf, attrd, assetname)
 
         set_prec(outdf, q_start)
