@@ -20,8 +20,8 @@ sections:
                                                 format: normal_string
                                                 values:
                                                       pakka road with block point: ''
-                                                      pakka road: ''
                                                       kacha road: ''
+                                                      pakka road: ''
                               public_transport:
                                     weight: ''
                                     questions:
@@ -36,12 +36,12 @@ sections:
                                                 weight: ''
                                                 format: normal_string
                                                 values:
+                                                      3g reliable: ''
+                                                      4g unreliable: ''
+                                                      3g unreliable: ''
                                                       nil: ''
                                                       4g+ reliable: ''
-                                                      3g unreliable: ''
-                                                      4g unreliable: ''
                                                       2g unreliable: ''
-                                                      3g reliable: ''
                   infrastructure:
                         weight: ''
                         sub_parameters:
@@ -82,13 +82,13 @@ sections:
                                                 weight: ''
                                                 format: multi_select
                                                 values:
-                                                      saturday: ''
                                                       friday: ''
-                                                      sunday: ''
                                                       monday: ''
+                                                      saturday: ''
                                                       thursday: ''
-                                                      tuesday: ''
                                                       wednesday: ''
+                                                      tuesday: ''
+                                                      sunday: ''
                   employability:
                         weight: ''
                         sub_parameters:
@@ -109,10 +109,10 @@ sections:
                                                 weight: ''
                                                 format: normal_string
                                                 values:
-                                                      bottled water: ''
+                                                      ground water: ''
                                                       spring water: ''
                                                       tap water from government: ''
-                                                      ground water: ''
+                                                      bottled water: ''
                                                       others: ''
                                           How much do you pay per litre of bottled water?:
                                                 weight: ''
@@ -125,10 +125,10 @@ sections:
                                                 weight: ''
                                                 format: normal_string
                                                 values:
-                                                      ground water: ''
                                                       others: ''
                                                       river or canal: ''
                                                       water from government: ''
+                                                      ground water: ''
                   sanitation:
                         weight: ''
                         sub_parameters:
@@ -139,33 +139,37 @@ sections:
                                                 weight: ''
                                                 format: normal_string
                                                 values:
-                                                      'yes': ''
                                                       'no': ''
+                                                      'yes': ''
                                           Are there toilets available seperately as per gender at the unit?:
                                                 weight: ''
                                                 format: normal_string
                                                 values:
-                                                      'yes': ''
                                                       'no': ''
+                                                      'yes': ''
                                           Is there running water available in the toilets at the unit?:
                                                 weight: ''
                                                 format: normal_string
                                                 values:
-                                                      'yes': ''
                                                       'no': ''
+                                                      'yes': ''
                                           Is there soap for handwash available at the unit?:
                                                 weight: ''
                                                 format: normal_string
                                                 values:
-                                                      'yes': ''
                                                       'no': ''
+                                                      'yes': ''
                               waste_management:
                                     weight: ''
                                     questions:
-                                          What are the other mechanism used to discard the waste from the unit?:
+                                          How do you deal with the waste generated from the market?:
                                                 weight: ''
-                                                format: number
-                                                threshold: ''
+                                                format: normal_string
+                                                values:
+                                                      discarded in govt. designated sites: ''
+                                                      burnt within the premises: ''
+                                                      none: ''
+                                                      discarded in open field: ''
                               general_cleanliness:
                                     weight: ''
                                     questions:
@@ -173,8 +177,8 @@ sections:
                                                 weight: ''
                                                 format: normal_string
                                                 values:
-                                                      'yes': ''
                                                       'no': ''
+                                                      'yes': ''
                                           How frequently are the premises at the market cleaned with disinfectant in a week?:
                                                 weight: ''
                                                 format: number
@@ -189,8 +193,8 @@ sections:
                                                 weight: ''
                                                 format: normal_string
                                                 values:
-                                                      'yes': ''
                                                       'no': ''
+                                                      'yes': ''
                                           How many hours per day are you facing power cuts in the unit?:
                                                 weight: ''
                                                 format: number
@@ -236,11 +240,11 @@ sections:
                                                 weight: ''
                                                 format: multi_select
                                                 values:
-                                                      vodafone: ''
-                                                      jio: ''
-                                                      idea: ''
-                                                      bsnl: ''
                                                       airtel: ''
+                                                      bsnl: ''
+                                                      vodafone: ''
+                                                      idea: ''
+                                                      jio: ''
                   record_maintenance:
                         weight: ''
                         sub_parameters:
@@ -263,10 +267,10 @@ sections:
                                                 weight: ''
                                                 format: multi_select
                                                 values:
-                                                      none: ''
-                                                      support via schemes: ''
                                                       marketing support: ''
+                                                      support via schemes: ''
                                                       financial support: ''
+                                                      none: ''
                   ngo_support:
                         weight: ''
                         sub_parameters:
@@ -302,8 +306,8 @@ sections:
                                                 weight: ''
                                                 format: normal_string
                                                 values:
-                                                      none: ''
                                                       local supplier: ''
+                                                      none: ''
                   infrastructure:
                         weight: ''
                         sub_parameters:
@@ -314,10 +318,10 @@ sections:
                                                 weight: ''
                                                 format: normal_string
                                                 values:
-                                                      home: ''
-                                                      within the shop: ''
                                                       private godown/warehouse: ''
+                                                      home: ''
                                                       none: ''
+                                                      within the shop: ''
                   marketing:
                         weight: ''
                         sub_parameters:
@@ -328,10 +332,10 @@ sections:
                                                 weight: ''
                                                 format: multi_select
                                                 values:
+                                                      others: ''
+                                                      marketing team\/ sales agents: ''
                                                       village meeting: ''
                                                       posters\/ display boards: ''
-                                                      marketing team\/ sales agents: ''
-                                                      others: ''
                   operations:
                         weight: ''
                         sub_parameters:
@@ -356,10 +360,10 @@ sections:
                                                 weight: ''
                                                 format: normal_string
                                                 values:
-                                                      permission from the market union: ''
-                                                      permission from village head/ community: ''
-                                                      none: ''
                                                       permission from govt. agency: ''
+                                                      permission from village head/ community: ''
+                                                      permission from the market union: ''
+                                                      none: ''
                                                       others: ''
                               setup_cost:
                                     weight: ''
@@ -375,8 +379,8 @@ sections:
                                                 weight: ''
                                                 format: normal_string
                                                 values:
-                                                      cash: ''
                                                       others: ''
+                                                      cash: ''
                               weghing_mechanism:
                                     weight: ''
                                     questions:
@@ -384,9 +388,9 @@ sections:
                                                 weight: ''
                                                 format: normal_string
                                                 values:
-                                                      none: ''
-                                                      mechanical weighing scale: ''
                                                       electronic weighing scale: ''
+                                                      mechanical weighing scale: ''
+                                                      none: ''
                   products:
                         weight: ''
                         sub_parameters:
@@ -404,15 +408,15 @@ sections:
                                                 weight: ''
                                                 format: normal_string
                                                 values:
+                                                      cardamom: ''
+                                                      vegetables: ''
                                                       tomato,potato,chilly,green veg,meat: ''
                                                       biscuit, sugar, salt, chilli and pepsi: ''
                                                       green leafy vegetables, chilly, ginger, corn, wild berries: ''
                                                       local vegitable: ''
-                                                      green vegetable,potato,tomato,onion garlic.: ''
-                                                      vegetables: ''
                                                       groceries: ''
                                                       vegetables, utensils items, cloths, fruits and beverages: ''
-                                                      cardamom: ''
+                                                      green vegetable,potato,tomato,onion garlic.: ''
                               cost:
                                     weight: ''
                                     questions:
@@ -428,15 +432,15 @@ sections:
                                                 format: normal_string
                                                 values:
                                                       market is not in use: ''
+                                                      good: ''
+                                                      as per the wholesale price: ''
+                                                      self priced: ''
                                                       kg: ''
                                                       depend on the product: ''
-                                                      process products are determine according to mrp and local items are pre-detetermine by community.: ''
-                                                      as per the wholesale price: ''
-                                                      hindi: ''
-                                                      good: ''
-                                                      green vegetables and meats: ''
                                                       market rate/ print rate: ''
-                                                      self priced: ''
+                                                      process products are determine according to mrp and local items are pre-detetermine by community.: ''
+                                                      hindi: ''
+                                                      green vegetables and meats: ''
                   customers:
                         weight: ''
                         sub_parameters:
@@ -447,11 +451,11 @@ sections:
                                                 weight: ''
                                                 format: multi_select
                                                 values:
-                                                      govt. agencies: ''
-                                                      ngo: ''
                                                       farmers: ''
-                                                      research organizations: ''
+                                                      ngo: ''
+                                                      govt. agencies: ''
                                                       others: ''
+                                                      research organizations: ''
                               number:
                                     weight: ''
                                     questions:
@@ -469,12 +473,12 @@ sections:
                                                 weight: ''
                                                 format: multi_select
                                                 values:
-                                                      2 wheeler: ''
                                                       sumo\/tracker: ''
+                                                      2 wheeler: ''
                                                       mini luggage transport vehicle: ''
                                                       head load: ''
-                                                      huge luggage transport vehicle: ''
                                                       others: ''
+                                                      huge luggage transport vehicle: ''
                                                       tempo\/auto: ''
                   inventory:
                         weight: ''
@@ -515,5 +519,5 @@ sections:
                                                 weight: ''
                                                 format: normal_string
                                                 values:
-                                                      none: ''
                                                       book keeping: ''
+                                                      none: ''
