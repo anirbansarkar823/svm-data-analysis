@@ -1,0 +1,189 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available near to that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road: ''
+                                                      kacha road: ''
+                                                      footway: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      2g reliable: ''
+                                                      4g+ reliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of this asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      ): ''
+                                                      pakka\/permenant(steel: ''
+                                                      etc.: ''
+                                                      concrete: ''
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the type of security available for the asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      compound wall\/ fencing: ''
+                                                      watchman: ''
+                                                      none: ''
+      general:
+            weight: ''
+            variables:
+                  availability:
+                        weight: ''
+                        sub_parameters:
+                              working_hours:
+                                    weight: ''
+                                    questions:
+                                          What are the working hours of this asset?:
+                                                weight: ''
+                                                format: time
+                                                threshold: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          Where does the waste water generated from that asset goes to?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      discarded in open field: ''
+                                                      mixes with the near by water bodies: ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of this asset cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      diesel generator: ''
+                                                      none: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      bsnl: ''
+                                                      vodafone: ''
+                                                      airtel: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the asset gets support from government agencies (not for customers)?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      financial support: ''
+                                                      none: ''
+      specific:
+            weight: ''
+            variables:
+                  X1:
+                        weight: ''
+                        sub_parameters:
+                              security:
+                                    weight: ''
+                                    questions:
+                                          The Pump Equipment is Housed with Which Material?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      concrete structure: ''
+                                                      pvc\/ tim sheets\/ galvanized steel: ''
+                  X2:
+                        weight: ''
+                        sub_parameters:
+                              area:
+                                    weight: ''
+                                    questions:
+                                          What is the construction area of the Pump house?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X3:
+                        weight: ''
+                        sub_parameters:
+                              records:
+                                    weight: ''
+                                    questions:
+                                          How do you maintain records for operations for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      traditional book keeping: ''
+                  X4:
+                        weight: ''
+                        sub_parameters:
+                              capacity:
+                                    weight: ''
+                                    questions:
+                                          How much litre of water can this pump house turnover at one time?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X5:
+                        weight: ''
+                        sub_parameters:
+                              capacity:
+                                    weight: ''
+                                    questions:
+                                          How many pumps are in this pump house?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''

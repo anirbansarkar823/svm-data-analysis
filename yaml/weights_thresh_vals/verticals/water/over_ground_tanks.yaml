@@ -1,0 +1,242 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available near to that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      footway: ''
+                                                      kacha road: ''
+                                                      pakka road with block point: ''
+                                                      kacha road with block point: ''
+                                                      pakka road: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      nil: ''
+                                                      4g unreliable: ''
+                                                      4g reliable: ''
+                                                      2g unreliable: ''
+                                                      2g reliable: ''
+                                                      3g reliable: ''
+                                                      3g unreliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka/permenant(steel,concrete,etc.,): ''
+                                                      kacha/temporary(wood,bamboo,etc.,): ''
+      general:
+            weight: ''
+            variables:
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          Where does the waste water generated from that asset goes to?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      discarded in govt. designated structures: ''
+                                                      discarded in open field: ''
+                                                      mixes with the near by water bodies: ''
+                                                      none: ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of this asset cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      bsnl: ''
+                                                      jio: ''
+                                                      airtel: ''
+                                                      vodafone: ''
+                                                      idea: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the asset gets support from government agencies (not for customers)?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      others: ''
+                                                      support via subsidies: ''
+                                                      technical support: ''
+                                                      financial support: ''
+                                                      support via schemes: ''
+                                                      none: ''
+      specific:
+            weight: ''
+            variables:
+                  X1:
+                        weight: ''
+                        sub_parameters:
+                              infrastructure:
+                                    weight: ''
+                                    questions:
+                                          The Over Ground water tank is made up of which Material?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      iron: ''
+                                                      steel: ''
+                                                      concrete: ''
+                                                      pvc: ''
+                                                      bamboo: ''
+                  X2:
+                        weight: ''
+                        sub_parameters:
+                              damages:
+                                    weight: ''
+                                    questions:
+                                          Are there any leakages on the tank structure?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  X3:
+                        weight: ''
+                        sub_parameters:
+                              capacity:
+                                    weight: ''
+                                    questions:
+                                          What is the storage capacity of the tank?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      '80000.0': ''
+                                                      '5000.0': ''
+                                                      '10000.0': ''
+                                                      '20.0': ''
+                                                      '150.0': ''
+                                                      '15000.0': ''
+                                                      '4000.0': ''
+                                                      '20000.0': ''
+                                                      '300.0': ''
+                                                      '3000.0': ''
+                                                      '700.0': ''
+                                                      '8000.0': ''
+                                                      '40000.0': ''
+                                                      '2500.0': ''
+                                                      '200.0': ''
+                                                      '50000.0': ''
+                                                      '2000.0': ''
+                                                      '600.0': ''
+                                                      '55000.0': ''
+                                                      '1500.0': ''
+                                                      '12000.0': ''
+                                                      '100.0': ''
+                                                      '1000.0': ''
+                                                      '6000.0': ''
+                                                      '500.0': ''
+                                                      '1400.0': ''
+                                                      '250.0': ''
+                  X4:
+                        weight: ''
+                        sub_parameters:
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the material that is used to cover the roof of the tank?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      cement slabs: ''
+                                                      tin sheets: ''
+                                                      steel: ''
+                                                      pvc sheets: ''
+                                                      none: ''
+                  X5:
+                        weight: ''
+                        sub_parameters:
+                              discharge_rate:
+                                    weight: ''
+                                    questions:
+                                          How many pipes have been connected to the tank?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      more than 4: ''
+                                                      '3.00': ''
+                                                      '1.00': ''
+                                                      '4.00': ''
+                                                      '2.00': ''
+                  X6:
+                        weight: ''
+                        sub_parameters:
+                              flow:
+                                    weight: ''
+                                    questions:
+                                          How many valves are visible to the pipes connected to the tank ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      more than 4: ''
+                                                      '3.00': ''
+                                                      '1.00': ''
+                                                      '4.00': ''
+                                                      '2.00': ''
+                  X7:
+                        weight: ''
+                        sub_parameters:
+                              tools:
+                                    weight: ''
+                                    questions:
+                                          Are there any water level indicators marked?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  X8:
+                        weight: ''
+                        sub_parameters:
+                              maintenance:
+                                    weight: ''
+                                    questions:
+                                          What is the frequency of technical maintenance or safety audit ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      monthly: ''
+                                                      irregular: ''
+                                                      never: ''
+                                                      yearly: ''

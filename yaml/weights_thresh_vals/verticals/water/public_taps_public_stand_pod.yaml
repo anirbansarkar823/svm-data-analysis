@@ -1,0 +1,308 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available near to that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      footway: ''
+                                                      pakka road: ''
+                                                      pakka road with block point: ''
+                                                      kacha road: ''
+                                                      kacha road with block point: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      3g reliable: ''
+                                                      4g reliable: ''
+                                                      2g unreliable: ''
+                                                      nil: ''
+                                                      3g unreliable: ''
+                                                      4g unreliable: ''
+                                                      2g reliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      kacha/temporary(wood,bamboo,etc.,): ''
+                                                      pakka/permenant(steel,concrete,etc.,): ''
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the type of security available for the asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      compound wall\/ fencing: ''
+                                                      none: ''
+      general:
+            weight: ''
+            variables:
+                  availability:
+                        weight: ''
+                        sub_parameters:
+                              working_hours:
+                                    weight: ''
+                                    questions:
+                                          What are the working hours of this asset?:
+                                                weight: ''
+                                                format: time
+                                                threshold: ''
+                  employability:
+                        weight: ''
+                        sub_parameters:
+                              technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many Technical staff are employed in/for that asset?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                              non_technical_staff:
+                                    weight: ''
+                                    questions:
+                                          How many Non Technical staff are employed in/for that asset?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          Where does the waste water generated from that asset goes to?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      discarded in govt. designated structures: ''
+                                                      mixes with the near by water bodies: ''
+                                                      others: ''
+                                                      discarded in open field: ''
+                                                      none: ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of this asset cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      vodafone: ''
+                                                      jio: ''
+                                                      airtel: ''
+                                                      bsnl: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the asset gets support from government agencies (not for customers)?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      support via schemes: ''
+                                                      financial support: ''
+                                                      technical support: ''
+                                                      others: ''
+                                                      none: ''
+      specific:
+            weight: ''
+            variables:
+                  availability:
+                        weight: ''
+                        sub_parameters:
+                              asset_condition:
+                                    weight: ''
+                                    questions:
+                                          Is that Tap in working condition?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      15m: ''
+                                                      'yes': ''
+                                                      300m: ''
+                                                      100m: ''
+                                                      'no': ''
+                  X2:
+                        weight: ''
+                        sub_parameters:
+                              asset_condition:
+                                    weight: ''
+                                    questions:
+                                          Is check valve working in the tap ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      10mm: ''
+                                                      'yes': ''
+                  X3:
+                        weight: ''
+                        sub_parameters:
+                              rate_of_discharge:
+                                    weight: ''
+                                    questions:
+                                          How far is the tap from the water tank/Source ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      below 200 meters: ''
+                                                      above 500 meters: ''
+                                                      '1': ''
+                                                      between 200-500 meters: ''
+                  X4:
+                        weight: ''
+                        sub_parameters:
+                              capacity:
+                                    weight: ''
+                                    questions:
+                                          What is the diameter of the Pipe ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      36mm: ''
+                                                      24mm: ''
+                                                      12mm: ''
+                                                      others: ''
+                                                      1m: ''
+                  X5:
+                        weight: ''
+                        sub_parameters:
+                              discharge_rate:
+                                    weight: ''
+                                    questions:
+                                          How many Taps are connected to one standpod?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      cement concrete: ''
+                                                      '>4': ''
+                                                      '1': ''
+                                                      '2': ''
+                  X6:
+                        weight: ''
+                        sub_parameters:
+                              discharge_rate:
+                                    weight: ''
+                                    questions:
+                                          What is the length of the service tap?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      '30': ''
+                                                      '3': ''
+                                                      '35': ''
+                                                      '10': ''
+                                                      '0': ''
+                                                      '0.1': ''
+                                                      'no': ''
+                                                      '0.5': ''
+                                                      '11': ''
+                                                      '2': ''
+                                                      '25': ''
+                                                      '5': ''
+                                                      '12': ''
+                                                      '1': ''
+                                                      '22': ''
+                                                      '50': ''
+                                                      '0.2': ''
+                                                      '15': ''
+                                                      '20': ''
+                                                      '0.7': ''
+                                                      '1.5': ''
+                  X7:
+                        weight: ''
+                        sub_parameters:
+                              infrastructure:
+                                    weight: ''
+                                    questions:
+                                          What is the basement/ foundation is made of ?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      cement: ''
+                                                      bricks: ''
+                                                      rock like structure: ''
+                                                      others: ''
+                                                      'no': ''
+                  X9:
+                        weight: ''
+                        sub_parameters:
+                              durability:
+                                    weight: ''
+                                    questions:
+                                          Is there any rust on the tap ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  X10:
+                        weight: ''
+                        sub_parameters:
+                              condition:
+                                    weight: ''
+                                    questions:
+                                          Were people drinking water while you visited this spot?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  X12:
+                        weight: ''
+                        sub_parameters:
+                              charges:
+                                    weight: ''
+                                    questions:
+                                          Are there any charges which come when getting water from this tap?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  X13:
+                        weight: ''
+                        sub_parameters:
+                              maintainence:
+                                    weight: ''
+                                    questions:
+                                          What is the frequency of technical maintenance or safety audit ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      never: ''
+                                                      yearly: ''
+                                                      others: ''
+                                                      irregular: ''
+                                                      monthly: ''

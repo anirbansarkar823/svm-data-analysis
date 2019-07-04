@@ -1,0 +1,288 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available near to that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka road: ''
+                                                      kacha road: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      4g+ reliable: ''
+                                                      2g reliable: ''
+                                                      4g unreliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      pakka/permenant(steel,concrete,etc.,)galvanized steel: ''
+                                                      kacha/temporary(wood,bamboo,etc.,): ''
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the type of security available for the asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+      general:
+            weight: ''
+            variables:
+                  availability:
+                        weight: ''
+                        sub_parameters:
+                              working_hours:
+                                    weight: ''
+                                    questions:
+                                          What are the working hours of this asset?:
+                                                weight: ''
+                                                format: time
+                                                threshold: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          Where does the waste water generated from that asset goes to?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      mixes with the near by water bodies: ''
+                                                      discarded in open field: ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of this asset cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  energy:
+                        weight: ''
+                        sub_parameters:
+                              electricity:
+                                    weight: ''
+                                    questions:
+                                          Do you have grid connection for energy supply for this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  alternate_energy:
+                        weight: ''
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: ''
+                                    questions:
+                                          What is the alternative energy source available for that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      none: ''
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      vodafone: ''
+                                                      bsnl: ''
+                                                      airtel: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the asset gets support from government agencies (not for customers)?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      others: ''
+                                                      none: ''
+      specific:
+            weight: ''
+            variables:
+                  X1:
+                        weight: ''
+                        sub_parameters:
+                              water:
+                                    weight: ''
+                                    questions:
+                                          What is the source of Water to the Public toilet ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      over head tank: ''
+                                                      normal storage tank: ''
+                  X2:
+                        weight: ''
+                        sub_parameters:
+                              area:
+                                    weight: ''
+                                    questions:
+                                          What is the area of the Public toilet ?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X3:
+                        weight: ''
+                        sub_parameters:
+                              ownership:
+                                    weight: ''
+                                    questions:
+                                          Who constructed the Public toilet ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      others: ''
+                                                      government: ''
+                  X4:
+                        weight: ''
+                        sub_parameters:
+                              infrastructure:
+                                    weight: ''
+                                    questions:
+                                          The Asset is Constructed by which Material ?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      concrete: ''
+                                                      rocks: ''
+                                                      bamboo: ''
+                  X5:
+                        weight: ''
+                        sub_parameters:
+                              damages:
+                                    weight: ''
+                                    questions:
+                                          Are there any leakages from the Public Toilet ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  X6:
+                        weight: ''
+                        sub_parameters:
+                              availability:
+                                    weight: ''
+                                    questions:
+                                          How many toilets are available for men?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X7:
+                        weight: ''
+                        sub_parameters:
+                              availability:
+                                    weight: ''
+                                    questions:
+                                          How many toilets are available for women?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X8:
+                        weight: ''
+                        sub_parameters:
+                              availability:
+                                    weight: ''
+                                    questions:
+                                          Is there running water available in the toilets at this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  X9:
+                        weight: ''
+                        sub_parameters:
+                              y:
+                                    weight: ''
+                                    questions:
+                                          Is there soap for handwash available at this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  X10:
+                        weight: ''
+                        sub_parameters:
+                              charges:
+                                    weight: ''
+                                    questions:
+                                          How much is the fee for using this toilet (in rupees)?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X11:
+                        weight: ''
+                        sub_parameters:
+                              y:
+                                    weight: ''
+                                    questions:
+                                          Was the toilet clean when you went there? (please do it for assessment):
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  X12:
+                        weight: ''
+                        sub_parameters:
+                              sanitation:
+                                    weight: ''
+                                    questions:
+                                          Is the public toilet connected with a sewer drainage?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                                                      'yes': ''
+                  X13:
+                        weight: ''
+                        sub_parameters:
+                              usage:
+                                    weight: ''
+                                    questions:
+                                          How many people are using this public toilet on average per day?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X14:
+                        weight: ''
+                        sub_parameters:
+                              maintainence:
+                                    weight: ''
+                                    questions:
+                                          What is the frequency of technical maintenance or safety audit ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      never: ''
+                                                      irregular: ''
