@@ -1,0 +1,198 @@
+sections:
+      observation:
+            weight: ''
+            variables:
+                  accessibility:
+                        weight: ''
+                        sub_parameters:
+                              road_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the road available near to that asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      footway: ''
+                                                      pakka road: ''
+                              mobile_connectivity:
+                                    weight: ''
+                                    questions:
+                                          What is the type of the mobile network available at the asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      4g reliable: ''
+                                                      2g reliable: ''
+                  infrastructure:
+                        weight: ''
+                        sub_parameters:
+                              building_type:
+                                    weight: ''
+                                    questions:
+                                          What is the type of structure of this asset?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      concrete: ''
+      general:
+            weight: ''
+            variables:
+                  communication:
+                        weight: ''
+                        sub_parameters:
+                              mobile:
+                                    weight: ''
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this asset?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      bsnl: ''
+                                                      vodafone: ''
+                                                      airtel: ''
+                  govt_support:
+                        weight: ''
+                        sub_parameters:
+                              support:
+                                    weight: ''
+                                    questions:
+                                          What are the areas the asset gets support from government agencies (not for customers)?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+                  sanitation:
+                        weight: ''
+                        sub_parameters:
+                              waste_management:
+                                    weight: ''
+                                    questions:
+                                          Where does the waste water generated from that asset goes to?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      mixed with the nearby water bodies: ''
+                              general_cleanliness:
+                                    weight: ''
+                                    questions:
+                                          Are the premises of this asset cleaned with disinfectant regularly?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+      specific:
+            weight: ''
+            variables:
+                  X1:
+                        weight: ''
+                        sub_parameters:
+                              security:
+                                    weight: ''
+                                    questions:
+                                          What is the material that is used to case the Bore well ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      cement: ''
+                  X2:
+                        weight: ''
+                        sub_parameters:
+                              connection_type:
+                                    weight: ''
+                                    questions:
+                                          The Bore well is connected to which of the following assets ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      undergroundtank: ''
+                                                      hand pump: ''
+                                                      none: ''
+                  X3:
+                        weight: ''
+                        sub_parameters:
+                              reliability:
+                                    weight: ''
+                                    questions:
+                                          How much time will it take for the water to come up after switching on the motor?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X4:
+                        weight: ''
+                        sub_parameters:
+                              caution:
+                                    weight: ''
+                                    questions:
+                                          What is the depth of the bore well that you can observe?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      30-50 m: ''
+                  X5:
+                        weight: ''
+                        sub_parameters:
+                              cross_connections:
+                                    weight: ''
+                                    questions:
+                                          What are the assets that you can observe near the Bore well ?:
+                                                weight: ''
+                                                format: multi_select
+                                                values:
+                                                      none: ''
+                  X6:
+                        weight: ''
+                        sub_parameters:
+                              capacity:
+                                    weight: ''
+                                    questions:
+                                          How much liter per day can be provided at maximum?:
+                                                weight: ''
+                                                format: number
+                                                threshold: ''
+                  X7:
+                        weight: ''
+                        sub_parameters:
+                              condition:
+                                    weight: ''
+                                    questions:
+                                          Were people drinking the water from this bore well while you visited this spot?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                                                      'no': ''
+                  X8:
+                        weight: ''
+                        sub_parameters:
+                              quality:
+                                    weight: ''
+                                    questions:
+                                          Would you drink the water from this bore well?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'yes': ''
+                  X9:
+                        weight: ''
+                        sub_parameters:
+                              charges:
+                                    weight: ''
+                                    questions:
+                                          Are there any charges which come when getting water from this bore well?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      'no': ''
+                  X10:
+                        weight: ''
+                        sub_parameters:
+                              maintenance:
+                                    weight: ''
+                                    questions:
+                                          What is the frequency of technical maintenance or safety audit ?:
+                                                weight: ''
+                                                format: normal_string
+                                                values:
+                                                      irregular: ''
+                                                      never: ''

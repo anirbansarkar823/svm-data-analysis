@@ -1,0 +1,83 @@
+#bore wells: sheet4
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:  
+                        road_connectivity:
+                                start: 15       
+                                end: 16     
+                        mobile_connectivity:
+                                start: 16    
+                                end: 17    
+                infrastructure:
+                        building_type: 
+                                start: 23 
+                                end: 24  
+        general:        
+                communication:    
+                        mobile:
+                                start: 17   
+                                end: 18  
+                govt_support:
+                        support:
+                                start: 25    
+                                end: 26
+                sanitation: 
+                        waste_management:
+                                start: 26     
+                                end: 27     
+                        general_cleanliness:
+                                start: 28    
+                                end: 29
+        specific:
+                X1:
+                        security:
+                                start: 30
+                                end: 31
+                X2:
+                        connection_type:
+                                start: 31
+                                end: 32
+                X3:
+                        reliability:
+                                start: 33
+                                end: 34
+                X4:
+                        caution:
+                                start: 34
+                                end: 35
+                X5:
+                        cross_connections:
+                                start: 35
+                                end: 36
+                X6:
+                        capacity:
+                                start: 36
+                                end: 37
+                X7:
+                        condition:
+                                start: 37
+                                end: 38
+                X8:
+                        quality:
+                                start: 38
+                                end: 39
+                X9:
+                        charges:
+                                start: 39
+                                end: 40
+                X10:
+                        maintenance:
+                                start: 41
+                                end: 42
