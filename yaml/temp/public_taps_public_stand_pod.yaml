@@ -1,0 +1,101 @@
+#Public Taps/ Public Stand Pod: sheet11, sheet12
+filter:
+        attribute: confirmation
+        value: Approved
+questions_starting_index: 15
+delete_cols:
+        - 1
+        - 4
+        - 5
+        - 6
+        - 12
+        - 13
+        - 14
+grouping:
+        observation:
+                accessibility:     
+                        road_connectivity:
+                                start: 15       
+                                end: 16        
+                        mobile_connectivity:
+                                start: 16    
+                                end: 17    
+                infrastructure:
+                        building_type: 
+                                start: 23  
+                                end: 24  
+                        security:
+                                start: 24   
+                                end: 25  
+        general:  
+                availability:
+                        working_hours: 
+                                start: 25     
+                                end: 26   
+                employability:
+                        technical_staff:
+                                start: 27    
+                                end: 28    
+                        non_technical_staff:
+                                start: 28    
+                                end: 29 
+                sanitation:   
+                        waste_management:
+                                start: 29     
+                                end: 30    
+                        general_cleanliness:
+                                start: 31    
+                                end: 32
+                communication:     
+                        mobile:
+                                start: 17    
+                                end: 18    
+                govt_support:
+                        support:
+                                start: 26  
+                                end: 27  
+        specific:
+                availability:
+                        asset_condition:
+                                start: 33
+                                end: 34
+                X2:
+                        asset_condition:
+                                start: 34
+                                end: 35
+                X3:
+                        rate_of_discharge:
+                                start: 35
+                                end: 36
+                X4:
+                        capacity:
+                                start: 36
+                                end: 37
+                X5:
+                        discharge_rate:
+                                start: 37
+                                end: 38
+                X6:
+                        discharge_rate:
+                                start: 38
+                                end: 39
+                X7:
+                        infrastructure:
+                                start: 39
+                                end: 40
+                X9:
+                        durability:
+                                start: 40
+                                end: 41
+                X10:
+                        condition:
+                                start: 41
+                                end: 42
+                X12:
+                        charges:
+                                start: 42
+                                end: 43
+                X13:
+                        maintainence:
+                                start: 44
+                                end: 45
