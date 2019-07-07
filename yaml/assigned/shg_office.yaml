@@ -1,0 +1,439 @@
+ques_start_index: 8
+sections:
+      observation:
+            weight: 30
+            variables:
+                  accessibility:
+                        weight: 60
+                        sub_parameters:
+                              access: 
+                                    weight: 30
+                                    questions:
+                                          How many times did you go there until it was open?:
+                                                weight: 100
+                                                format: number
+                                                threshold: 2
+                              road_connectivity:
+                                    weight: 25
+                                    questions:
+                                          What is the type of the road available to the SHG office?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      kacha road: 2
+                                                      pakka road: 4
+                                                      kacha road with block point: 1
+                                                      pakka road with block point: 3
+                                                      footway: 1
+                              public_transport:
+                                    weight: 25
+                                    questions:
+                                          How much distance should one travel from this SHG office to avail public transport facility? (in K.M):
+                                                weight: 100
+                                                format: number
+                                                threshold: '0#4'
+                              mobile_connectivity:
+                                    weight: 20
+                                    questions:
+                                          What is the type of the mobile network available at the SHG office?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      3g reliable: 4
+                                                      4g+ reliable: 6
+                                                      4g unreliable: 5
+                                                      3g unreliable: 3
+                                                      2g unreliable: 2
+                                                      2g reliable: 1
+                  infrastructure:
+                        weight: 40
+                        sub_parameters:
+                              building_type:
+                                    weight: 70
+                                    questions:
+                                          What is the type of structure of this SHG office?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      pakka/permenant(steel,concrete,etc.,): 0
+                                                      kacha/temporary(wood,bamboo,etc.,): 1
+                              security:
+                                    weight: 30
+                                    questions:
+                                          What is the type of security available for the asset?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      none: 0
+                                                      security camera: 4 
+                                                      security gaurd/ watchman: 2
+                                                      compound fencing: 2
+                                                      others: 1
+      general:
+            weight: 40
+            variables:
+                  availability:
+                        weight: 10
+                        sub_parameters:
+                              working_hours:
+                                    weight: 50
+                                    questions:
+                                          'What are the working hours of this SHG office?(Ex: 9.00A.M-5.A.M)':
+                                                weight: 100
+                                                format: time
+                                                threshold: 420
+                              working_days:
+                                    weight: 50
+                                    questions:
+                                          What are the working days of that SHG office?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      monday: 1
+                                                      thusday: 1
+                                                      tuesday: 1
+                                                      friday: 1
+                                                      wednesday: 1
+                                                      saturday: 1
+                                                      sunday: 1
+                  employability:
+                        weight: 10
+                        sub_parameters:
+                              staff:
+                                    weight: 100
+                                    questions:
+                                          How many people are working in the SHG office?:
+                                                weight: 100
+                                                format: number
+                                                threshold: 10
+                  water:
+                        weight: 10
+                        sub_parameters:
+                              drinking_water:
+                                    weight: 100
+                                    questions:
+                                          Where do you get drinking water from for using at this SHG office?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      others: 1
+                                                      tap water from government: 4
+                                                      bottled water: 3
+                                                      ground water: 2
+                                                      spring water: 2
+                  sanitation:
+                        weight: 10
+                        sub_parameters:
+                              toilets:
+                                    weight: 40
+                                    questions:
+                                          Are there toilets available for public usage at this SHG office?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+                              waste_management:
+                                    weight: 30
+                                    questions:
+                                          How do you deal with the waste generated from that SHG office?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      none: 0
+                                                      discarded in open field: 2
+                                                      burnt within the premises: 1
+                                                      discareded in govt designated sites: 3
+                                                      discareded in water bodies: 1
+                              general_cleanliness:
+                                    weight: 30
+                                    questions:
+                                          Are the premises of this SHG office cleaned with disinfectant regularly?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+                  energy:
+                        weight: 10
+                        sub_parameters:
+                              electricity:
+                                    weight: 100
+                                    questions:
+                                          Do you have grid connection for energy supply for this asset?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+                  alternate_energy:
+                        weight: 5
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: 100
+                                    questions:
+                                          What is the alternative energy source available for that SHG office?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      solar unit: 4
+                                                      none: 0
+                                                      biomass unit: 3
+                                                      kerosene genrator: 1
+                                                      diesel generator: 1
+                                                      inverter: 2
+                                                      others: 1
+                  communication:
+                        weight: 10
+                        sub_parameters:
+                              telephone:
+                                    weight: 20
+                                    questions:
+                                          Is there landline connectivity for that SHG office?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+                              broadband:
+                                    weight: 40
+                                    questions:
+                                          Does this SHG office have wired internet connection?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+                              mobile:
+                                    weight: 40
+                                    questions:
+                                          What are different Mobile network service providers available at the location of this SHG office?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      bsnl: 1
+                                                      airtel: 1
+                                                      vodafone: 1
+                                                      idea: 1
+                                                      jio: 1
+                                                      others: 1
+                  record_maintenance:
+                        weight: 5
+                        sub_parameters:
+                              records:
+                                    weight: 100
+                                    questions:
+                                          How do you maintain records for this SHG office?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      none: 0
+                                                      others: 1
+                                                      digital online: 3
+                                                      digital records computer/ mobile: 2
+                                                      traditional book keeping: 2
+                  govt_support:
+                        weight: 10
+                        sub_parameters:
+                              support:
+                                    weight: 100
+                                    questions:
+                                          What are the areas the SHG office gets support from government agencies?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      none: 0
+                                                      support via subsidies: 2
+                                                      financial support: 2
+                                                      technical support: 2
+                                                      transport support: 1
+                  ngo_support:
+                        weight: 10
+                        sub_parameters:
+                              support:
+                                    weight: 100
+                                    questions:
+                                          Do you get any support from NGO(s) for this SHG office?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+                  digital_technologies:
+                        weight: 10
+                        sub_parameters:
+                              awareness:
+                                    weight: 100
+                                    questions:
+                                          Are you using digital technologies that can be used in the SHG office?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+      specific:
+            weight: 40
+            variables:
+                  availability:
+                        weight: 10
+                        sub_parameters:
+                              meeting:
+                                    weight: 100
+                                    questions:
+                                          How frequently is the meeting conducted?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      not fixed: 1
+                                                      weekly: 4
+                                                      daily: 4
+                                                      quarterly: 3
+                                                      half yearly: 2
+                                                      yearly: 2
+                                                      monthly: 3
+                  employability:
+                        weight: 15
+                        sub_parameters:
+                              group_type:
+                                    weight: 50
+                                    questions:
+                                          What type of the Group is engaged in the SHG?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      savings group: 1
+                                                      farmers group: 1
+                                                      female small scale business group: 1
+                                                      male small scale business group: 1
+                                                      mixed small scale busuness group: 1
+                              group_size:
+                                    weight: 50
+                                    questions:
+                                          How many people are enrolled in the SHG?:
+                                                weight: 100
+                                                format: number
+                                                threshold: 20
+                  efficiency:
+                        weight: 20
+                        sub_parameters:
+                              savings_frequency:
+                                    weight: 25
+                                    questions:
+                                          Indicate the frequency of meetings happened for money collection?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      not fixed: 1
+                                                      weekly: 4
+                                                      monthly: 3
+                                                      quarterly: 3
+                                                      half yearly: 2
+                                                      yearly: 2
+                              fund_potential:
+                                    weight: 25
+                                    questions:
+                                          Indicate the amount of money collected from every member per meeting?:
+                                                weight: 50
+                                                format: number
+                                                threshold: 500
+                                          Indicate the total amount received by the SHG till today?:
+                                                weight: 50
+                                                format: number
+                                                threshold: 30000
+                              credit_utilization:
+                                    weight: 25
+                                    questions:
+                                          What are the purposes of Credit Utilization?:
+                                                weight: 50
+                                                format: multi_select
+                                                values:
+                                                      any other: 1
+                                                      income generation (starting business): 2
+                                                      handloom and handicraft: 2
+                                                      agriculture: 2
+                                                      consumption (domestic): 1
+                                                      emergencies: 2
+                              roi:
+                                    weight: 25
+                                    questions:
+                                          Did the SHG lend money to other non group entities?:
+                                                weight: 50
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+                  ngo_support:
+                        weight: 10
+                        sub_parameters:
+                              support:
+                                    weight: 100
+                                    questions:
+                                          Name the organization, which promoted the SHG?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      self: 1
+                                                      govt department: 2
+                                                      NGO: 2
+                                                      cooperative: 2
+                                                      bank/nbfc: 2
+                                                      any others: 1
+                  marketing:
+                        weight: 10
+                        sub_parameters:
+                              advertisement:
+                                    weight: 100
+                                    questions:
+                                          How does this asset advertise about the services available?:
+                                                weight: 100
+                                                format: multi_select
+                                                values: 
+                                                      none: 0
+                                                      village meetings: 3
+                                                      Multimedia: 2
+                                                      dispal board/ posters: 2
+                                                      marketing/sales agent: 2
+                                                      others: 1
+                                                      annoucements/broadcast: 1
+                  activity:
+                        weight: 15
+                        sub_parameters: 
+                              intervention_area:
+                                    weight: 100
+                                    questions:
+                                          What types of intervention/social action programmes/activities/awareness taken up by SHG?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      none: 0
+                                                      icds\/nutrition\/anganwadi: 1
+                                                      water and sanitation programme: 1
+                                                      health and immunization: 1
+                                                      education: 1
+                  govt_certification1:
+                        weight: 10
+                        sub_parameters:
+                              policy:
+                                    weight: 100
+                                    questions:
+                                          Is that SHG also registered under any other legal provisions?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+                  govt_certification2:
+                        weight: 10
+                        sub_parameters:
+                              policy:
+                                    weight: 100
+                                    questions:
+                                          Whether the SHG is affiliated to any of the following?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      others: 1
+                                                      nrlm: 3
+                                                      cooperative society: 2
+                                                      shg federation: 2
+                                                      ngo/nbfc: 2
