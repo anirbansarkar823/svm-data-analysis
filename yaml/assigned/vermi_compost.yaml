@@ -1,0 +1,392 @@
+ques_start_index: 8
+sections:
+      observation:
+            weight: 25
+            variables:
+                  accessibility:
+                        weight: 60
+                        sub_parameters:
+                              access:
+                                    weight: 20
+                                    questions:
+                                          How many times did you go to the vermi compost until it was open?:
+                                                weight: 100
+                                                format: number
+                                                threshold: 3
+                              road_connectivity:
+                                    weight: 30
+                                    questions:
+                                          What is the type of the road available to the vermi compost?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      footway: 0
+                                                      pakka road: 4
+                                                      pakka road with block point: 3
+                                                      kacha road: 2
+                                                      kacha road with block point: 1
+                              public_transport:
+                                    weight: 30
+                                    questions:
+                                          How much distance should one travel from the vermi compost to avail public transport facility? (Approx in K.M):
+                                                weight: 100
+                                                format: number
+                                                threshold: '0#5'
+                              mobile_connectivity:
+                                    weight: 20
+                                    questions:
+                                          What is the type of the mobile network available at the vermi compost?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      2g reliable: 2
+                                                      4g unreliable: 5
+                                                      4g reliable: 6
+                                                      3g unreliable: 3
+                                                      3g reliable: 4
+                                                      2g unreliable: 1
+                                                      none: 0
+                  infrastructure:
+                        weight: 40
+                        sub_parameters:
+                              building_type:
+                                    weight: 60
+                                    questions:
+                                          What is the type of structure of the vermi compost?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      pakka/permenant(steel,concrete,etc.,): 1
+                                                      kacha/temporary(wood,bamboo,etc.,): 0
+                              security:
+                                    weight: 40
+                                    questions:
+                                          What is the type of security available for the vermi compost?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      compound wall\/ fencing: 2
+                                                      watchman\/gaurd: 2
+                                                      security camera: 2
+                                                      others: 1
+                                                      none: 0
+      general:
+            weight: 25
+            variables:
+                  employability:
+                        weight: 20
+                        sub_parameters:
+                              staff:
+                                    weight: 100
+                                    questions:
+                                          How many are employed in the vermi compost?:
+                                                weight: 100
+                                                format: number
+                                                threshold: 3
+                  water:
+                        weight: 10
+                        sub_parameters:
+                              water_for_operational_purposes:
+                                    weight: 100
+                                    questions:
+                                          Where do you get water for operational purposes for the vermi compost?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      others: 1
+                                                      water from government: 2
+                                                      
+                  sanitation:
+                        weight: 10
+                        sub_parameters:
+                              waste_management:
+                                    weight: 60
+                                    questions:
+                                          How do you deal with the agricultural waste generated from the vermi compost?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      discarded in open field: 2
+                                                      burnt within the premises: 1
+                                                      discarded in waterbodies: 0
+                                                      others: 1
+                                                      discarded in govt designated places: 3
+                              general_cleanliness:
+                                    weight: 40
+                                    questions:
+                                          Are the premises of vermi compost cleaned with disinfectant regularly?:
+                                                weight: 50
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+                                          How frequently are the premises at the vermi compost cleaned with disinfectant in a week?:
+                                                weight: 50
+                                                format: number
+                                                threshold: 4
+                  energy:
+                        weight: 10
+                        sub_parameters:
+                              electricity:
+                                    weight: 100
+                                    questions:
+                                          Do you have grid connection for energy supply for the vermi compost?:
+                                                weight: 70
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+                                          How many hours per day are you facing power cuts in the vermi compost?:
+                                                weight: 30
+                                                format: number
+                                                threshold: '0#4' 
+                  alternate_energy: 
+                        weight: 5
+                        sub_parameters:
+                              alternate_energy:
+                                    weight: 100
+                                    questions:
+                                          What is the alternative energy source available for the vermi compost?:
+                                                weight: 60
+                                                format: multi_select
+                                                values:
+                                                      none: 0
+                                                      invetor: 3
+                                                      diesel generator: 2
+                                                      kerosene generator: 1 
+                                                      solar unit: 4
+                                                      bio mass unit: 3
+                                          How many hours do you rely on the alternative energy source in a day for the vermi compost?:
+                                                weight: 40
+                                                format: number
+                                                threshold: 5
+                  communication:
+                        weight: 10
+                        sub_parameters:
+                              mobile:
+                                    weight: 100
+                                    questions:
+                                          What are different Mobile network service providers available at the location of the vermi compost?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      bsnl: 1
+                                                      vodafone: 1
+                                                      jio: 1
+                                                      airtel: 1
+                  record_maintenance:
+                        weight: 10
+                        sub_parameters:
+                              records:
+                                    weight: 100
+                                    questions:
+                                          How do you maintain records for operations of the vermi compost?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      others: 1
+                                                      traditional book keeping: 2
+                                                      digital records\/computers\/mobiles: 2
+                                                      digital record online: 3
+                  govt_support:
+                        weight: 10
+                        sub_parameters:
+                              support:
+                                    weight: 100
+                                    questions:
+                                          What are the areas the vermi compost gets support from government agencies (not for your customers)?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      technical support: 2
+                                                      financial support: 2
+                                                      transport facilities: 1
+                                                      none: 0
+                  ngo_support:
+                        weight: 5
+                        sub_parameters:
+                              support:
+                                    weight: 100
+                                    questions:
+                                          Do you get any support from NGO(s) for the vermi compost?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+                  digital_technologies:
+                        weight: 10
+                        sub_parameters:
+                              awareness:
+                                    weight: 100
+                                    questions:
+                                          Are you using any digital technologies that can be used in the vermi compost?:
+                                                weight: 100
+                                                format: normal_string
+                                                values:
+                                                      'no': 0
+                                                      'yes': 1
+      specific:
+            weight: 50
+            variables:
+                  inputs:
+                        weight: 15
+                        sub_parameters:
+                              procurement:
+                                    weight: 50
+                                    questions:
+                                          Where do you procure inputs required for the vermi compost?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      local supplier: 3
+                                                      none: 0
+                                                      suppliers from other states: 1
+                                                      research organisation: 2
+                                                      governmnet agency: 1
+                                                      others: 1
+                                            
+                              chemical_inputs:
+                                    weight: 50
+                                    questions:
+                                          What are different chemical inputs used in the vermi compost?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      others: 1
+                                                      none: 0
+                                                      fertilizers: 1
+                                                      pesticides: 1
+                                                      growth hormones: 1
+                  infrastructure:
+                        weight: 15
+                        sub_parameters:
+                              covering_material:
+                                    weight: 100
+                                    questions:
+                                          What is the type of covering material used in the vermi compost?:
+                                                weight: 100 
+                                                format: multi_select
+                                                values:
+                                                      others: 1
+                                                      polythene sheet: 2
+                                                      soil: 1
+                                                      tin: 2
+                                                      none: 0
+                  irrigation:
+                        weight: 15
+                        sub_parameters:
+                              water_source:
+                                    weight: 75
+                                    questions:
+                                          What is the water source used for irrigation mechanism?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      others: 1
+                                                      rainfed: 1
+                                                      groundwater: 2
+                                                      lake\/pond: 2
+                                                      river\/streams: 2
+                              type:
+                                    weight: 25
+                                    questions:
+                                          What is the type of irrigation mechanism used in the vermi compost?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      others: 1
+                                                      rose can: 1
+                                                      canal irrigation: 2
+                                                      drip irrigation: 2
+                                                      sprinklers: 2
+                  marketing:
+                        weight: 15
+                        sub_parameters:
+                              advertisement:
+                                    weight: 100
+                                    questions:
+                                          How does the vermi compost advertise about the services available?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      others: 1
+                                                      broadcast\/announcement: 2
+                                                      posters\/display boards: 3
+                                                      multimedia: 3
+                                                      marketing team\/sales agent: 3
+                                                      village meeting: 4
+                  operations:
+                        weight: 15
+                        sub_parameters:
+                              operational_cost:
+                                    weight: 50
+                                    questions:
+                                          What is the average operational cost per month to run the vermi compost?(Excluding Salary of the Employees):
+                                                weight: 100
+                                                format: number
+                                                threshold: '0#15000'
+                              inventory_capacity:
+                                    weight: 50
+                                    questions:
+                                          How many cubic meters are available for storage?:
+                                                weight: 100
+                                                format: number
+                                                threshold: 1.5
+                  products:
+                        weight: 10
+                        sub_parameters:
+                              quantity:
+                                    weight: 50
+                                    questions:
+                                          How much amount of manure is produced in the vermi compost in a week?(In K.G):
+                                                weight: 100
+                                                format: number
+                                                threshold: 25
+                              cost:
+                                    weight: 50
+                                    questions:
+                                          What is the average cost per K.G of the manure from the vermi compost?(In Rupees):
+                                                weight: 100
+                                                format: number
+                                                threshold: '0#100'
+                  customers:
+                        weight: 5
+                        sub_parameters:
+                              type:
+                                    weight: 50
+                                    questions:
+                                          Which type of customers purchase the manure from the vermi compost?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      farmers: 3
+                                                      others: 1
+                                                      none: 0
+                                                      research organisatrion: 1
+                                                      ngo: 2
+                                                      govt agencies: 2
+                              number:
+                                    weight: 50
+                                    questions:
+                                          How many customers purchase the manure from the vermi compost in a year?:
+                                                weight: 100
+                                                format: number
+                                                threshold: 4000
+                  logistics:
+                        weight: 10
+                        sub_parameters:
+                              transport_of_goods:
+                                    weight: 100
+                                    questions:
+                                          How does the customers transport the goods purchased from the vermi compost?:
+                                                weight: 100
+                                                format: multi_select
+                                                values:
+                                                      others: 1
+                                                      mini luggage transport vehicle: 3
+                                                      head load: 1
+                                                      two wheeler: 2
+                                                      tempo\/auto: 3
+                                                      sumo\/tracker: 2
+                                                      heavy luggage transport vehicles: 1
