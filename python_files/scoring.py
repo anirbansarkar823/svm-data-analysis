@@ -33,7 +33,7 @@ def str_to_num(numstr):
 
 def score_mult_sing_sel_general(dfin, dfout, col, valscore):
     maxval = max(valscore.values())
-    dfvalues = [v for v in df[col].unique()]
+    dfvalues = [v for v in dfin[col].unique()]
     valseries = pd.Series(np.zeros(len(dfin[col])), index=dfin.index)
     for v in dfvalues:
         vscore = np.divide(valscore.get(v,0), maxval)
@@ -81,7 +81,7 @@ def score_thresh_upper_lower_lim_high(dfin, dfout, col, threshL, threshH):
     valseries = np.add(valseries, dfin[col] >= threshH)
     inbetween = np.logical_and(dfin[col] > threshL, dfin[col] < threshH)
     val_minus_low = np.subtract(dfin[col], threshL)
-    high_minus_low = thresh_H - threshL
+    high_minus_low = threshH - threshL
     score = np.divide(val_minus_low, high_minus_low)
     valseries = np.add(valseries, np.multiply(inbetween, score))
     dfout.loc[:,col] = valseries
